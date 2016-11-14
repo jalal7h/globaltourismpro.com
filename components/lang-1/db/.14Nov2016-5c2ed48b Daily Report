@@ -1,0 +1,365 @@
+5c2ed48b Daily Report
+77a4b159 Client Invoices
+2747ba28 Payment Gateways
+1176e069 Offline Payment
+e7e0204f There is no gateway defined.
+07dc1bcc Install
+65870bec Setup
+e59542fd Cancel
+ac5fc429 Currency rate
+cbe128ed Terminal ID
+375e1152 Username
+6960d878 Password
+203f4f06 Extra Code - 1
+8bc84aa5 Extra Code - 2
+a1536592 Extra Code - 3
+6c8e4bf7 Extra Code - 4
+fc534421 Save Changes
+b3fc354b Daily Payments (x1000)
+4e1ba3b4 Monthly Payments (x1000)
+58af9b4b Annually Payments (x1000)
+c7269345 Today
+deefe137 Yesterday
+3e67e8f7 Week
+5a0b2adc Month
+c9085159 Year
+14433bf3 Total
+f27af6d5 Payment
+073a0fe2 Credit
+9185f2bc Name
+274e95d7 There is no invoice issued for you.
+f349c408 Your Credit
+ccc96940 Account Change
+4dbe59ea Offline Payment
+2192030f Pay From Wallet
+f7a50e05 Online Payment
+201650ec Paid
+a61db866 Not Paid
+3746c405 Invoices
+b4df59bd Wallet
+8f43694d Offine
+9e3667b3 Account
+aba0dafb Card
+96170c7b Payment Method
+12a5713c Online
+709aa541 Amount
+fcd3e5a2 You will be redirected to payment gateway by clicking on the "Payment".
+0f90b24e There is no invoice with ID %%.
+264dd8b2 The invoice #%% already paid!
+11284ce9 List of unapproved payments.
+f29f5065 Payment archive
+2b0f6ee9 Payment methods
+f7aeca07 Are you sure to remove this transaction?
+8792b168 User
+fd0b5d6c Bank
+a8bc8c77 Transaction ID / Serial Number
+316e14ff Are you sure to remove?
+e7d29f3c Bank name
+546e5a91 Received
+8bcb7fa8 Account ID
+85ae8c99 Card Number
+d42f2315 Enter a new payment method
+f20f946f Save
+6c678a35 Bank Payment Form
+aa75b687 Save Payment
+e1fc9b95 No record submitted
+6dbc76d8 Are you sure to remove?
+4648a83a Edit
+68902fc1 Subcat
+895f18e2 Features of %%
+26bd4a2d Features of
+4ecded9a Last Messages
+d0835c0b Contact Setting
+e50b64a2 Email Address
+ee0a92a8 From :
+beb06ec7 To :
+b85d8443 Date :‌
+ac4f298c Reply ...
+55862f78 Send
+2836cf61 Response to your ticket on %%
+3a35d6de Your message have been sent to %%.
+53c637d3 Pending Tickets
+4d6c4988 Ticket Archive
+d438d5d7 Are you sure to remove the ticket "%%"?
+f2760d9b Admin
+7ec3c321 Are you sure to remove the ticket "%%"?
+bb362eb1 Submit a new ticket
+f0b03a9b There is no ticket submitted.
+4e1315ca No Comment
+ce42675e Comment
+522b42ec Save failed.
+8535dc8b Reply
+cdce226f Twitt
+1795de93 Your comment ...
+834ae8e3 Only members can submit comments. please %%register now%%.
+e3377831 Last comments
+ddf7136f About
+392c5e96 in reply to
+2b2b9b13 List of questions
+31f1e81c Submit a new question
+9a6a17bf New page ..
+62a75221 Change the layer title
+eda9fffa Submit a new layer
+d4c08f76 Layer type
+a2d112e3 Layer title
+7f4f41f0 Back
+c2b3e329 Save Changes
+461f1e20 Edit name
+f2da4bad New layer
+959d435b Move to up
+f74730c7 Move to down
+0bb5b642 Enable
+b6a1618e Disable
+51a94c23 Wrap in frame
+79dc5055 there is no way to disable this linkbox.
+ea6104e5 there is no way to remove this linkbox.
+746cb0ab number of links
+70fa7ec5 Linkbox details
+a672e399 Sublink
+ad00e100 Submit a new link
+15cca157 Linkbox
+1fb9af2a record
+33262055 %% not found.
+bac0c723 New %%
+573950d9 Search ...
+0d290778 Remove
+1a57b710 Enable / Disable
+2d76dbea there is no linkbox defined right now.
+b8789b28 page :
+d000946d no record found.
+fee40d36 minimum
+0de02023 maximum
+8bf63fda character
+9bae6f6c word
+ca6d2329 select
+97cbae37 display
+833e039e remove file
+53dda137 full display
+17ae70f1 Admin Profile
+9c022ed7 Administrator
+ea4e9d25 FC2
+cfafae3b Brute force attack protection.
+2a19eaf9 Back to home page
+1443f9ab the 3-digit code is not inserted
+78f8da8d wrong 3-digit code
+dab6182d wrong captcha code
+3d98fe0e wrong password
+933f6e7b Dashboard
+335c41d2 Invalid Access!
+01e88461 Logout
+13901fb0 Continent
+69a78816 Country
+091371a4 State
+7ba0c67a City
+18a06e0c Region
+1bfba9bf Street
+89b85212 Unknown
+c04b72c2 No record submitted.
+1ea64b25 Submit new %% ..
+83080534 General Setting
+665f0eb1 Subscription
+a76766de Links
+00207366 New layer type ..
+49a8157b Delimiter
+e1ccb9d9 HTML Content
+05de9b40 Social Network
+69113778 months later
+0e283f9b days later
+c8cefc8d hours later
+eb454d15 minutes later
+3d07a320 seconds later
+ccf2c805 months ago
+99ef4548 days ago
+f6d1fc7b hours ago
+1764fd35 minutes ago
+4fd0e38c seconds ago
+baad50d5 File Upload
+f29f3455 List of files
+31e67db0 file
+d9ead233 upload
+89f9cde9 Plus
+7bf7b6d7 To submit a new %% you need to register at first.
+3fe36877 The last upvotes
+0a1bb81a %% upvoted to %%.
+e16dbc84 List of Managers
+d49461b1 Submit a new manager
+c53c1e9a date of registration
+01f6f219 status
+cf73d379 Clientarea
+c69b5af5 Home
+ec02e490 Client Profile
+3e262633 Male
+09e9b534 Female
+728d39fb Please insert your name!
+6596b9aa Please insert your name correctly!
+9664cf97 Please insert your email address!
+3d8e5acb Please insert your email address correctly!
+7cf89829 The mentioned email address is already used by someone else!
+6daed7f3 Change %%
+e96702e4 Current password
+37bb99fc New password
+323e9909 Repeat password
+d94068ba Change password
+ff7d7871 Please insert the old password.
+73189538 Please insert the new password.
+52b0b54c Password does not match!
+a8c15adc Invalid password
+72c12f04 Please insert your password.
+9109c77d Please insert your password correctly.
+3660c242 Forgot password!
+1fa78c3a Please insert your email address to receive the password setup link.
+595eb3bd Email address
+bd7e1c93 Submit ticket
+8a35416b Something wrong!
+2463b9e6 Please insert the new password!
+f51eca70 Submit new password
+04d5c485 Login to clientarea
+619f65ed There is no account related to your mentioned email address.<br>You can try to %%register%% a new account with your email address.
+2d06c9a3 Your credit
+77f15609 Login to site
+b0577b8e Register
+ccb8a07a Forgot password
+8237560b Wrong %% or password
+9d0abef3 Login
+a30eb630 %%Register Now%%
+0d18be15 password
+055cc2e0 Submitting the login form you are agreeing the %%website terms%%.
+1ddc67b3 Forgot my password
+2aeea730 Are you sure to remove this client?
+19064a18 Are you sure to remove all related data this client?
+6c92b020 Please insert your email address.
+1b48ade6 The mentioned email address is already in use.
+96674680 Please insert your email address correctly.
+57cf968e Please insert your password.
+bc6a6be9 Please insert your name.
+88ac63bc Please insert your name correctly.
+7d990aeb Something wrong in registration.
+370e3b63 if you already have an account please %%login%%
+095ad6ed Submitting the registration form you are agreeing the %%website terms%%.
+52d2a43f Accounting
+1d071d44 Contact
+1e038fcc Tickets
+e98574af Comments
+9c1e6e01 FAQ
+62dd6349 Layout
+81f04f93 Link Boxes
+838c895c Position
+be17f5fe Setting
+ad798e04 Footer
+f6bfc03f Managers
+03ed6a5f Clients
+89117d5d Contact Form
+bbf6725b Header
+d74c31a7 Footer
+d5d2970c Custom Post
+a4a02f22 Forgot password form
+f31f8943 Clientarea login form
+ab018233 Registration Form
+d74bbcbe Filters
+f276085a Client Menu
+1882a406 Client Desk
+4f3383a4 Change password
+bc219889 HTML Content
+e763f3b2 Reply to Contact messages
+e0411daf Default Prompts
+f421d517 Ticket Departments
+537258c3 Small Textbox
+e4cd3988 Select Box
+c8e8ae7d Radio Button
+d2dc2356 Checkbox
+9f3b47ea Large Textbox
+6ca74114 Label
+558e2203 Delimiter
+7c8c2b51 ID
+35b6942b Client ID
+4a1b997d Order Table
+1a58619f Order ID
+ca2c265a Cost
+bfc9b6a1 Payment method
+329e3b5a Transaction
+977aa4fc Payment Date
+6213c24d Submit Date
+0d5a255d Title
+299725ce Description
+e7d3ceee Keywords
+e9615838 Icon
+43707466 Category
+45174295 Type
+9732de53 Priority
+ba4d81ef Property
+a06fbe11 Option
+b54c5213 Content Table
+d9878259 Content ID
+b2e3273e Content
+e449d100 Client name
+ad18476c Client email address
+636bc10b Cell number
+5aee668a Destination
+5a188b53 Message title
+6a784910 Message
+209bffc7 Date
+90a8cc7a Ticket Message
+24a75a0a Date
+b5388a94 Department
+fb86af48 Ticket title
+8e541706 comments
+723619d0 page
+f877b040 table name
+a1639842 table ID
+bc11582e referance comment ID
+69fac3b4 question
+2a0862a7 answer
+21add553 link
+d264af2b links
+8265d35b link title
+bfe8c4b2 link url
+ba68e000 picture
+cc59fb4a referal
+81169e13 linkbox
+634bdce5 linkbox title
+1058f393 icon
+95e14890 non-removable
+7d8129df Page title
+4880b50f Position
+c51d5a97 space
+977e3e77 Client Email Title
+d2a2276b Client Email Message
+727414ae Admin Email Title
+88eb59db Admin Email Message
+75cba620 Client SMS Message
+410c2603 Admin SMS Message
+90d29446 Table
+26174b64 Section
+68ccfd2d IP
+863d05f8 Activity
+b237640e Full name
+ba5b753b Cell
+9301e4b4 Administration State
+950aef82 Client State
+b3d9effe Post
+d14a9d49 Registration IP
+64a1336a Registration date
+561498ea Last login IP
+ff3adf01 Last login date
+35c8d3d6 Phone
+0ddba988 Address
+40abdba8 Job
+00f8b970 Workplace
+b166559c Gender
+ab421318 Phone
+9fa8e714 Fax
+fcd4cb83 Office Address
+aa3d99ab Website
+ebf287fc Site title
+f1680533 Money Unit
+1ea85b47 Template
+c2ef392f Description
+34fad4fe Website status
+9dc35274 Downtime Message
+57fda5cd Extra tags
+fdf1eea5 آدرس شرکت
+8e681593 دفتر فروش
+d6c3a8ee دفتر پشتیبانی
+7a3956f1 ارتباط با
+19f8209c تلفن
+087ea96b ایمیل

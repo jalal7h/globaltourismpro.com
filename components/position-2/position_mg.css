@@ -1,0 +1,39 @@
+
+/*admin*/
+/* 2016/10/09 */
+
+#position_mg{
+	padding-top:30px;
+	width:90%;
+	text-align:right;
+	direction:rtl;
+}
+#position_mg input[type=submit]{
+	width:80px;
+}
+#position_mg input[type=text]{
+	width:200px;
+}
+#position_mg #new{
+	padding-right:36px;
+}
+#position_mg div a img{
+	padding-left:10px;
+	padding-right:10px;
+}
+#position_mg #title{
+	padding:10px;
+	font-weight:bold;
+	color:black;
+	cursor:default;
+}
+#position_mg div .manage{
+	padding-right:10px;
+	color:blue;
+	font-weight:bold;
+}
+
+
+
+
+

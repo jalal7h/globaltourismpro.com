@@ -1,0 +1,94 @@
+
+
+
+.ezTicket_management_form {
+	display: block;
+	margin: 20px;
+	clear: both;
+	direction: rtl;
+}
+.ezTicket_management_form .head {
+	width: 100%;
+}
+.ezTicket_management_form .name {
+	width: 69.5%;
+	display: inline-block;
+	margin: 5px 0 5px 0;
+	font: normal 18px DefaultFont, tahoma;
+	height: 40px;
+}
+.ezTicket_management_form .dept {
+	width: 30%;
+	display: inline-block;
+	margin: 5px 0 5px 0;
+	font: normal 18px DefaultFont, tahoma;
+	height: 40px;
+
+}
+.ezTicket_management_form textarea {
+	width: 100%;
+	display: block;
+	height: 180px;
+	font: normal 18px DefaultFont, tahoma;
+	margin: 5px 0 5px 0;
+}
+.ezTicket_management_form input[type="submit"] {
+	margin: 22px 0 5px 0;
+	padding: 5px 30px 5px 30px;
+	float: left;
+}
+
+.ezTicket_management_form_replies {
+	border-top: 1px solid #E8F0FF;
+	clear: both;
+	margin: 25px 20px 60px 20px;
+	padding: 20px 0 0 0;
+	text-align: right;
+	direction: rtl;
+}
+.ezTicket_management_form_replies , 
+.ezTicket_management_form_replies * {
+	line-height: 20px !important;
+}
+.ezTicket_management_form_replies .r {
+	margin: 10px 0 10px 0;
+	background: #F9f9f9;
+	display:table;
+	width:100%;
+}
+.ezTicket_management_form_replies .r > * {
+	display: table-cell;
+	padding: 15px 25px 20px 0;
+}
+.ezTicket_management_form_replies .r .info {
+	width: 20%;
+	text-align: right;
+	background: rgb(240, 240, 240);
+	height: 100%;
+}
+.ezTicket_management_form_replies .r .date {
+	display: block;
+	font-size: 11px;
+	direction: ltr;
+}
+.ezTicket_management_form_replies .r .user-name {
+	font: bold 16px DefaultFont,tahoma;
+	color: rgb(71, 71, 71);
+	text-shadow: 1px 1px white;
+}
+.ezTicket_management_form_replies .r .text {
+	width: 73%;
+	font: normal 13px Tahoma;
+}
+
+.ezTicket_management_form_replies .r.admin {
+	background: #F9FCFF;
+}
+.ezTicket_management_form_replies .r.admin .info {
+	background: rgb(236, 248, 255);
+}
+
+
+
+
+

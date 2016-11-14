@@ -1,0 +1,19 @@
+
+/*admin*/
+
+.layout_mg_meta_form {
+	direction: rtl;
+	padding: 10px 50px;
+	text-align: right;
+}
+.layout_mg_meta_form span {
+	padding: 40px 0 10px 0;
+	display: inline-block;
+}
+.layout_mg_meta_form .submit-div {
+	text-align: center;
+	margin: 40px auto 80px;
+}
+.layout_mg_meta_form input[type="button"] {
+	font-size: 15px;
+}

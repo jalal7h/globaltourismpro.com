@@ -1,0 +1,109 @@
+
+.catcustomfield_formload {
+	
+}
+.catcustomfield_formload > .ccffe_thisCat {
+	margin-bottom: 15px;
+	padding-bottom: 10px;
+	border-radius: 0 0 8px 8px;
+	background-color: #f8f8f8;
+	border-radius: 8px;
+	margin-top: 20px;
+    padding-top: 2px;
+}
+.catcustomfield_formload > .ccffe_thisCat > .head {
+	padding: 10px;
+	background-color: #eee;
+	text-shadow: 1px 1px 0 #fff;
+	border-radius: 8px 8px 0 0;
+	cursor: default;
+	margin-bottom: 10px;
+}
+.catcustomfield_formload > .ccffe_thisCat > div ,
+.catcustomfield_formload > .ccffe_thisCat > label {
+	display: block;
+	padding: 10px 0;
+}
+
+.catcustomfield_formload > .ccffe_thisCat .element_name {
+	/* width: 150px; */
+	/* text-align: left; */
+	/* direction: rtl; */
+	/* display: inline-block; */
+	vertical-align: middle;
+	padding-left: 10px;
+	color: #777;
+}
+.catcustomfield_formload > .ccffe_thisCat .element_name.radio {
+	vertical-align: top;
+    padding-top: 3px;
+}
+
+.catcustomfield_formload > .ccffe_thisCat div ,
+.catcustomfield_formload > .ccffe_thisCat label {
+	margin: 6px 0 6px 20px;
+    display: block;
+}
+.catcustomfield_formload > .ccffe_thisCat label.label {
+	margin-bottom: -5px;
+	padding-bottom: 0px;
+	/* display: block; */
+}
+.catcustomfield_formload > .ccffe_thisCat .radio_c > label {
+	margin: 0 0 10px 10px;
+    display: inline-block;
+    background-color: #fff;
+    padding: 2px 10px 1px 10px;
+    border-radius: 4px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.14);
+}
+.catcustomfield_formload > .ccffe_thisCat .radio_c > label:active {
+
+}
+.catcustomfield_formload > .ccffe_thisCat label span {
+	display: inline-block;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+.catcustomfield_formload > .ccffe_thisCat .radio_c {
+	display: inline-block;
+    width: calc( 100% - 180px );
+}
+
+.catcustomfield_formload > .ccffe_thisCat textarea {
+	width: calc( 100% - 160px );
+}
+.catcustomfield_formload input[type=checkbox] {
+	left: 0px; top: 0px; right: 0px;
+	margin-left: 5px;
+	margin-right: 3px;
+}
+
+.catcustomfield_formload hr.ccfhr {
+	margin-left: 20px;
+	margin-right: 20px;	
+}
+
+
+
+.ccf_checkbox_w {
+	display: inline-block !important;
+}
+.ccf_checkbox_w label.checkbox {
+	display: inline-block;
+}
+
+
+
+
+
+
+
+
+
+
+
