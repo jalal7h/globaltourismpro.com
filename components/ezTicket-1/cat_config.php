@@ -1,4 +1,17 @@
 <?
 
-$GLOBALS['cat_items']['ezticket_dept'] = ['دپارتمان های تیکت', $inDashboard=false, $zirgoruh=false, $haveIcon=false, $haveDesc=false, $flag=true, $customFields=false, $kw=false ];
+/*********************************************/
+$GLOBALS['cat_items']['ezticket_dept'] = [
+	'name'		=> 'دپارتمان های تیکت' ,
+	'dashboard'	=> false ,
+	'sub'		=> false ,
+	'icon'		=> false ,
+	'desc'		=> false ,
+	'flag'		=> true ,
+	'ccf'		=> false ,
+	'kw'		=> false ,
+	'color'		=> false ,
+];
+/*********************************************/
+
 

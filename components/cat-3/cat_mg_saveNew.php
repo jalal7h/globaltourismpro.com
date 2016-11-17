@@ -1,6 +1,6 @@
 <?
 
-function cat_management_saveNew(){
+function cat_mg_saveNew(){
 	
 	#
 	# checking for variables

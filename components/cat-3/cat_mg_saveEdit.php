@@ -4,7 +4,7 @@
 # 2016/05/17
 # 1.2
 
-function cat_management_saveEdit(){
+function cat_mg_saveEdit(){
 	
 	$l = $_REQUEST['l'];
 	$desc = strip_tags($_REQUEST['desc']);
