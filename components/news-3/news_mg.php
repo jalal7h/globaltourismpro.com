@@ -13,6 +13,7 @@ function news_mg(){
 	$menu = array(
 		"news_mg_list" => __("لیست خبرها"),
 		"news_mg_form" => __("ثبت خبر جدید"),
+		"cat_mg&l=news" => cat_detail('news')['name'],
 	);
 	
 	listmaker_tabmenu($menu,$url);

@@ -17,5 +17,8 @@
 	margin-top: 11px;
 	padding-top: 0px !important;
 }
-
+.news_mg_form #mceu_52 {
+	width: calc( 100% - 200px );
+	display: inline-block;
+}
 

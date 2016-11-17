@@ -12,7 +12,7 @@ function news_mg_saveNew(){
 	
 	#
 	# insert
-	dbs( 'news', ['name','text','pic'=>$f[0],'tag'] );
+	dbs( 'news', ['name','cat','text','pic'=>$f[0],'tag'] );
 	
 }
 

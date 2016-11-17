@@ -15,7 +15,7 @@ function news_mg_saveEdit(){
 
 	# 
 	# update db
-	dbs( 'news', [ 'name','text','tag' ], ['id'] );
+	dbs( 'news', [ 'name','cat','text','tag' ], ['id'] );
 
 }
 
