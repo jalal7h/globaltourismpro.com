@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Nov 14, 2016 at 05:52 PM
+-- Generation Time: Nov 17, 2016 at 10:04 AM
 -- Server version: 5.6.27
 -- PHP Version: 5.6.14
 
@@ -107,7 +107,8 @@ INSERT INTO `cat` (`id`, `name`, `desc`, `kw`, `parent`, `cat`, `prio`, `logo`, 
 (23, 'دانشجو', '', '', 0, 'emplyment_status', 0, '', '', 0, 0),
 (24, 'بازنشسته', '', '', 0, 'emplyment_status', 0, '', '', 0, 0),
 (25, 'خانه دار', '', '', 0, 'emplyment_status', 0, '', '', 0, 0),
-(26, 'مایل به جواب دادن نیستم', '', '', 0, 'emplyment_status', 0, '', '', 0, 0);
+(26, 'مایل به جواب دادن نیستم', '', '', 0, 'emplyment_status', 0, '', '', 0, 0),
+(28, 'Politic', '', '', 0, 'news', 0, '', '', 1, 0);
 
 -- --------------------------------------------------------
 
@@ -293,7 +294,7 @@ CREATE TABLE `linkify` (
 
 INSERT INTO `linkify` (`id`, `name`, `url`, `pic`, `flag`, `prio`, `parent`, `cat`) VALUES
 (1, 'About Karizma', 'http://127.0.0.1/live.git/mjsafar.com/page-3.html', '', 1, 0, 0, '1'),
-(2, 'FAQ', 'http://127.0.0.1/live.git/mjsafar.com/page-20.html', '', 1, 0, 0, '3'),
+(2, 'FAQ', './faq', '', 1, 0, 0, '3'),
 (3, 'News RSS', './rss/news.xml', '', 1, 0, 0, '3'),
 (4, 'Product RSS', './rss/item.xml', '', 1, 0, 0, '3'),
 (5, 'Agency Request', './404', '', 1, 0, 0, '2');
@@ -322,6 +323,42 @@ INSERT INTO `linkify_config` (`id`, `name`, `haveSub`, `haveIcon`, `pinned`, `fl
 (1, 'Karisma', 0, 0, 0, 1, 0),
 (2, 'Connect to us', 0, 0, 0, 1, 0),
 (3, 'More', 0, 0, 0, 1, 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `news`
+--
+
+CREATE TABLE `news` (
+  `id` int(11) NOT NULL,
+  `name` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL COMMENT 'عنوان',
+  `cat` int(11) NOT NULL COMMENT 'دسته بندی',
+  `text` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL COMMENT 'شرح خبر',
+  `visit` int(11) NOT NULL,
+  `pic` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL COMMENT 'عکس',
+  `tag` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL COMMENT 'کلمات کلیدی',
+  `date_created` int(11) NOT NULL COMMENT 'تاریخ',
+  `date_updated` int(11) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci COMMENT='خبر/اخبار';
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `newsletter`
+--
+
+CREATE TABLE `newsletter` (
+  `id` int(11) NOT NULL COMMENT 'شناسه',
+  `email` varchar(255) COLLATE utf8_persian_ci NOT NULL COMMENT 'ایمیل'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci COMMENT='ایمیل/ایمیل‌ها';
+
+--
+-- Dumping data for table `newsletter`
+--
+
+INSERT INTO `newsletter` (`id`, `email`) VALUES
+(3, 'yeki@yeja.com');
 
 -- --------------------------------------------------------
 
@@ -355,7 +392,9 @@ INSERT INTO `page` (`id`, `name`, `meta_title`, `meta_kw`, `meta_desc`) VALUES
 (58, 'Register', '', '', ''),
 (59, 'Register Confirm', '', '', ''),
 (60, 'Login', '', '', ''),
-(63, 'Forgot Password', '', '', '');
+(63, 'Forgot Password', '', '', ''),
+(51, 'اخبار سایت', '', '', ''),
+(52, 'نمایش خبر', '<?\r\necho news_meta( "title" );\r\n?>', '<?\r\necho news_meta( "kw" );\r\n?>', '<?\r\necho news_meta( "desc" );\r\n?>');
 
 -- --------------------------------------------------------
 
@@ -395,7 +434,9 @@ INSERT INTO `page_layer` (`id`, `page_id`, `prio`, `func`, `type`, `name`, `data
 (58, 58, 1, 'users_register_form', 'PHP5', 'Register', '', 1, '', 1),
 (59, 59, 1, 'layout_post', 'PHP5', 'Register Confirm', '<?php users_register_do(); ?>', 1, '', 1),
 (60, 60, 1, 'users_login_form', 'PHP5', 'Login', '', 1, '', 1),
-(63, 63, 1, 'users_forgot_form', 'PHP5', 'Forgot password', '', 1, '', 1);
+(63, 63, 1, 'users_forgot_form', 'PHP5', 'Forgot password', '', 1, '', 1),
+(52, 52, 1, 'news_display', '', 'نمایش خبر', '', 1, '', 1),
+(51, 51, 1, 'news_list', '', 'اخبار سایت', '', 1, '', 1);
 
 -- --------------------------------------------------------
 
@@ -629,7 +670,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `password`, `permission`, `name`, `cell`, `wallet_credit`, `uio_date`, `flag_admin`, `flag_user`, `management_title`, `register_ip`, `register_date`, `login_ip`, `login_date`, `tell`, `address`, `profile_pic`, `im_a`, `work_at`, `gender`) VALUES
-(1, 'ogun@karisma.co.tr', 'ogun@karisma.co.tr', 2, 'Ogün Özbir', '+902123820942', 0, 1479176402, 0, 0, '', '', 0, '', 0, '', '', '', '', '', '');
+(1, 'ogun@karisma.co.tr', 'ogun@karisma.co.tr', 2, 'Ogün Özbir', '+902123820942', 0, 1479407657, 0, 0, '', '', 0, '', 0, '', '', '', '', '', '');
 
 --
 -- Indexes for dumped tables
@@ -723,6 +764,19 @@ ALTER TABLE `linkify_config`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `news`
+--
+ALTER TABLE `news`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `newsletter`
+--
+ALTER TABLE `newsletter`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `email` (`email`);
+
+--
 -- Indexes for table `page`
 --
 ALTER TABLE `page`
@@ -809,7 +863,7 @@ ALTER TABLE `billing_method`
 -- AUTO_INCREMENT for table `cat`
 --
 ALTER TABLE `cat`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 --
 -- AUTO_INCREMENT for table `catcustomfield`
 --
@@ -865,6 +919,16 @@ ALTER TABLE `linkify`
 --
 ALTER TABLE `linkify_config`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+--
+-- AUTO_INCREMENT for table `news`
+--
+ALTER TABLE `news`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `newsletter`
+--
+ALTER TABLE `newsletter`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'شناسه', AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `page`
 --
