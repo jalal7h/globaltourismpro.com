@@ -148,6 +148,22 @@ ed213d9a wrong password
 897c9fa2 Dashboard
 b2253bbc Invalid Access!
 1335703e Logout
+34ea9d92 List of news
+3b6c7f7e Submit news
+44ee9f11 Please insert your email address to receive the latest updates in your mail inbox.
+dc89ca2f Your mentioned email is already used by someone else.
+31f58360 Something wrong.
+71e5c146 Registration successful
+e9454d59 Newletter
+53ddd112 List of emails
+bec173d5 Download file of email list
+56a3c9df Email sent to %% successfuly
+ff1a2cf3 Title
+ee745c7b Message
+29be996f Send to registred emails in newsletter database
+2eb13bcf Send to clients email address
+7ca8006c Send to custom email addresses
+006ee0d8 email addresses (separate by comma)
 b77bbf2a Continent
 359a6b61 Country
 5d0228f5 State
@@ -242,6 +258,8 @@ baa04439 Comments
 4fbe1747 FAQ
 33d10611 Layout
 74fe9d9c Link Boxes
+1520520e News
+e5df36b5 Newsletter
 9bf69a29 Position
 b0cb73f9 Setting
 799cb1be Footer
@@ -251,6 +269,8 @@ d6d94244 Clients
 dceeda60 Header
 b6a8a860 Footer
 8d41f861 Custom Post
+dcab0ca1 Display news
+a5eb7f16 News list
 965804ac Forgot password form
 1875752a Clientarea login form
 bb3d7c0e Registration Form
@@ -311,12 +331,18 @@ d6ec4a46 link
 e66721ce links
 4cac8029 link title
 1f194b7e link url
-0fbde92a picture
+0fbde92a Picture
 dce7f9b4 referal
 5923bf38 linkbox
 314f0e99 linkbox title
 fb07bb29 icon
 42672d7c non-removable
+cc28d0ba news
+e5468b3a news
+3cd5b617 News title
+3d06b85b News text
+353036b9 Email
+67d02fee Emails
 f2378a36 Page title
 caf6157b Position
 e1942777 grid
