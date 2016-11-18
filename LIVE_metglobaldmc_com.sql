@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Nov 17, 2016 at 10:04 AM
+-- Generation Time: Nov 18, 2016 at 12:01 PM
 -- Server version: 5.6.27
 -- PHP Version: 5.6.14
 
@@ -274,6 +274,31 @@ INSERT INTO `faq` (`id`, `name`, `text`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `kword`
+--
+
+CREATE TABLE `kword` (
+  `id` int(11) NOT NULL,
+  `kword` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'کلمه',
+  `usage_count` int(11) NOT NULL COMMENT 'تعداد استفاده'
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `kwordusage`
+--
+
+CREATE TABLE `kwordusage` (
+  `id` int(11) NOT NULL,
+  `table_name` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `table_id` int(11) NOT NULL,
+  `kword_id` int(11) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `linkify`
 --
 
@@ -497,6 +522,7 @@ CREATE TABLE `setting` (
 
 INSERT INTO `setting` (`slug`, `name`, `text`, `component`) VALUES
 ('contact_tell', 'شماره تلفن', '+90 212 3151400', ''),
+('sms_state', 'وضعیت پیامک', '0', ''),
 ('contact_fax', 'شماره فکس', '+90 212 2254245', ''),
 ('contact_address', 'آدرس دفتر', 'Technopark D2, 2nd Floor Esenler/ Istanbul - Turkey', ''),
 ('contact_email_address_0', '', 'support@karisma.co.tr', ''),
@@ -670,7 +696,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `password`, `permission`, `name`, `cell`, `wallet_credit`, `uio_date`, `flag_admin`, `flag_user`, `management_title`, `register_ip`, `register_date`, `login_ip`, `login_date`, `tell`, `address`, `profile_pic`, `im_a`, `work_at`, `gender`) VALUES
-(1, 'ogun@karisma.co.tr', 'ogun@karisma.co.tr', 2, 'Ogün Özbir', '+902123820942', 0, 1479407657, 0, 0, '', '', 0, '', 0, '', '', '', '', '', '');
+(1, 'ogun@karisma.co.tr', 'ogun@karisma.co.tr', 2, 'Ogün Özbir', '+902123820942', 0, 1479501080, 0, 0, '', '', 0, '', 0, '', '', '', '', '', '');
 
 --
 -- Indexes for dumped tables
@@ -750,6 +776,21 @@ ALTER TABLE `facebookcomment`
 --
 ALTER TABLE `faq`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `kword`
+--
+ALTER TABLE `kword`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `kword` (`kword`);
+ALTER TABLE `kword` ADD FULLTEXT KEY `kword_2` (`kword`);
+
+--
+-- Indexes for table `kwordusage`
+--
+ALTER TABLE `kwordusage`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `table_name` (`table_name`,`table_id`,`kword_id`);
 
 --
 -- Indexes for table `linkify`
@@ -910,6 +951,16 @@ ALTER TABLE `facebookcomment`
 ALTER TABLE `faq`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
+-- AUTO_INCREMENT for table `kword`
+--
+ALTER TABLE `kword`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `kwordusage`
+--
+ALTER TABLE `kwordusage`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+--
 -- AUTO_INCREMENT for table `linkify`
 --
 ALTER TABLE `linkify`
@@ -933,7 +984,7 @@ ALTER TABLE `newsletter`
 -- AUTO_INCREMENT for table `page`
 --
 ALTER TABLE `page`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=101;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=102;
 --
 -- AUTO_INCREMENT for table `page_layer`
 --
