@@ -139,7 +139,7 @@ c63ad281 page :
 a82abea9 minimum
 1f2f69c2 maximum
 924b0f70 character
-bc90656a word
+bc90656a keyword
 f8f57a27 select
 8a7894f1 display
 955d9b64 remove file
