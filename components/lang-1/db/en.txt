@@ -98,6 +98,14 @@ f107aa4d Last comments
 f270a358 in reply to
 78cfaa37 List of questions
 704858ca Submit a new question
+fbe80dcb List of keywords
+3933cdc2 Submit new keyword
+58822fec Keyword submit 
+16e84f36 You can upload the some ".csv" excel file to insert new keywords.<br>also you can use ".txt" files for this purpose.
+9f706a2a Excel or txt file
+0acdc02f %% new keywords submitted.
+4fbe08c7 no new keyword submitted.
+dbe61c8b Remove all selected keywords.
 21fa506e New page ..
 b1fb046e Change the layer title
 52a56572 Submit a new layer
@@ -256,6 +264,7 @@ ddc659a4 Accounting
 5653d5d8 Tickets
 baa04439 Comments
 4fbe1747 FAQ
+a3b9cda1 Keywords
 33d10611 Layout
 74fe9d9c Link Boxes
 1520520e News
@@ -303,7 +312,6 @@ e734b748 Payment method
 4008e46b Submit Date
 799edfb1 Title
 d3abe129 Description
-a3b9cda1 Keywords
 aefb3531 Icon
 34a07293 Category
 0d43d94b Type
@@ -330,6 +338,7 @@ ad7fd17a page
 d89e9841 referance comment ID
 abce1a9b question
 bb25700d answer
+9f08492e usage
 d6ec4a46 link
 e66721ce links
 4cac8029 link title
