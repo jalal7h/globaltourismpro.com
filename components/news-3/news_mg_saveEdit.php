@@ -7,14 +7,15 @@
 function news_mg_saveEdit(){
 	
 	#
-	# insert
-	$id = dbs( 'news', [ 'name','cat','text','tag' ], ['id'] );
-	#
-
-	#
 	# upload photo
-	listmaker_fileupload( 'news',$id, "*");
-	#
+	$f = fileupload_upload( array("input"=>"news") );
+	if( $f[0] ){
+		dbs( 'news', [ 'pic'=>$f[0] ], ['id'] );
+	}
+
+	# 
+	# update db
+	dbs( 'news', [ 'name','cat','text','tag' ], ['id'] );
 
 }
 
