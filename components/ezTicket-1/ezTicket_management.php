@@ -1,6 +1,7 @@
 <?
 
 $GLOBALS['cmp']['ezTicket_management'] = 'تیکت های پشتیبانی';
+$GLOBALS['cmp-icon']['ezTicket_management'] = '0e6';
 
 function ezTicket_management(){
 	

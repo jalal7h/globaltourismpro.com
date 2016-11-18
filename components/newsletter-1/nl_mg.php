@@ -1,5 +1,7 @@
 <?
+
 $GLOBALS['cmp']['nl_mg'] = 'خبرنامه';
+$GLOBALS['cmp-icon']['nl_mg'] = '298';
 
 function nl_mg(){
 

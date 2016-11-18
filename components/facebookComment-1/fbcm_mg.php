@@ -1,5 +1,7 @@
 <?
+
 $GLOBALS['cmp']['fbcm_mg'] = 'مدیریت نظرات';
+$GLOBALS['cmp-icon']['fbcm_mg'] = '27a';
 
 function fbcm_mg(){
 

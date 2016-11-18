@@ -1,17 +1,22 @@
 <?
 
 # jalal7h@gmail.com
-# 2016/07/11
-# 2.1
+# 2016/11/18
+# 2.2
 
 function do_admin_sidebar(){
 
-	echo "\n\n<div class=\"sidebar-wrapper\">\n";
-	echo "\t<div class=\"sidebar\">\n";
+	?>
+	<div class="sidebar-wrapper">
+	<div class="sidebar">
+	<?
 
 	$rand = "dasi".rand(10000000,99999999);
-	echo "\n\t\t<a href=\""._URL."/?page=admin\"><icon id=\"".$rand."\"></icon>".__("پیشخوان")."</a>\n";
-	echo "\t\t<style> #".$rand.":before { content: \"\\f0e4\" }</style>\n\n";
+	
+	?>
+	<a href="<?=_URL?>/?page=admin"><icon id="<?=$rand?>" ></icon><?=__("پیشخوان")?></a>
+	<style> #<?=$rand?>:before { content: "\f0e4" }</style>
+	<?
 
 	foreach ($GLOBALS['cmp'] as $func => $name ) {
 		if( (! is_component('useraccess')) or useraccess( admin_logged(), $func) ){
@@ -19,8 +24,10 @@ function do_admin_sidebar(){
 		}
 	}
 
-	echo "\t</div>\n";
-	echo "</div>\n\n";
+	?>
+	</div>
+	</div>
+	<?
 	
 }
 
