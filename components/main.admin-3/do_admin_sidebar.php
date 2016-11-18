@@ -38,11 +38,11 @@ function do_admin_sidebar_this( $func, $name ){
 		$icon_code = '1b2';
 	}
 
-	if( substr($func, 0, 15)=='cat_mg&' ){
-		$cat_name = substr($func, 17);
-		if( cat_detail($cat_name)['icon'] ){
-			if( cat_detail($cat_name)['icon'] !== true ){
-				$icon_code = cat_detail($cat_name)['icon'];
+	if( substr($func, 0, 7) == 'cat_mg&' ){
+		$cat_name = substr($func, 9);
+		if( cat_detail($cat_name)['dashboard'] ){
+			if( cat_detail($cat_name)['dashboard'] !== true ){
+				$icon_code = cat_detail($cat_name)['dashboard'];
 			}
 		}
 	
