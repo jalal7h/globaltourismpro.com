@@ -5,3 +5,7 @@
 # 1.0
 
 
+function transferType_option()
+{
+	return cat_display('transferType');
+}
