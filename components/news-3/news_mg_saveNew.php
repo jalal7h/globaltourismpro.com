@@ -7,12 +7,15 @@
 function news_mg_saveNew(){
 	
 	#
-	# file upload
-	$f = fileupload_upload( array("input"=>"news") );
-	
-	#
 	# insert
-	dbs( 'news', ['name','cat','text','pic'=>$f[0],'tag'] );
+	$id = dbs( 'news', ['name','cat','text','pic','tag'] );
+	#
+
+	#
+	# upload photo
+	listmaker_fileupload( 'news', $id, "*" );
+	#
+
 	
 }
 

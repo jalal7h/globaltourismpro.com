@@ -1,5 +1,5 @@
 <?
-
+ 
 # jalal7h@gmail.com
 # 2016/11/17
 # 1.0
@@ -19,7 +19,7 @@ function news_mg_form(){
 			[!"text:name*"!]
 			[!"select:cat*","option"=>cat_display("news",$is_array=false)!]
 			[!"textarea:text*.tinymce"!]
-			[!"keyword:tag"!]
+			[!"text:tag"!]
 			[!"file:pic"!]
 	
 			<hr>

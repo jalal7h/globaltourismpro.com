@@ -9,6 +9,7 @@ $GLOBALS['block_layers']['news_list'] = 'لیست خبر‌ها';
 function news_list( $table_name=null , $page_id=null ){
 	
 	// code here
+	echo "news_list";
 
 }
 

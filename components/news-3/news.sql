@@ -2,6 +2,7 @@
 CREATE TABLE `news` (
   `id` int(11) NOT NULL,
   `name` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL COMMENT 'عنوان خبر',
+  `cat` text int(11) NOT NULL COMMENT 'گروه خبر',
   `text` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL COMMENT 'شرح خبر',
   `visit` int(11) NOT NULL,
   `pic` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL COMMENT 'عکس',
