@@ -25,6 +25,10 @@ function __( $text, $vars=null ){
 	
 	$text = trim($text);
 
+	if( !strstr($text, " ") and lang_dir == 'ltr' ){
+		$text = ucfirst($text);
+	}
+
 	return $text;
 	
 }

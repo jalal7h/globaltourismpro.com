@@ -283,6 +283,8 @@ bb1f5f23 HTML Content
 94815be8 Default Prompts
 239d33f5 Ticket Departments
 e5b547e0 News category
+f7ee8d28 Service Basis
+4b191326 Transfer Type
 f615075e Small Textbox
 e933ca5e Select Box
 c13f2291 Radio Button
@@ -370,6 +372,7 @@ fba026ab Phone
 5aa3ad7e Workplace
 86bc8155 Gender
 029efcd6 Phone
+efb2da8a SMS Send
 72436317 Fax
 90a534d0 Office Address
 23a46749 Website

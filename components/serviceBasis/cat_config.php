@@ -5,7 +5,7 @@
 # 1.0
 
 $GLOBALS['cat_items']['serviceBasis'] = [
-	'name'		=> 'service Basis' ,
+	'name'		=> 'Service Basis' ,
 	'dashboard'	=> '05a' ,
 	'sub'		=> false ,
 	'icon'		=> true ,
