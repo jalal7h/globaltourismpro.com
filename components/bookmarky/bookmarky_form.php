@@ -1,6 +1,4 @@
 <?
-$GLOBALS['block_layers']['bookmarky'] = 'bookmarky';
-
 function bookmarky_form($table_name,$table_id){
 	// تعداد مورد علاقه قرار گرفته
 	$cont=bookmarky_result($table_name,$table_id);
