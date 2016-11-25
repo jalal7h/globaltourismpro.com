@@ -5,6 +5,7 @@
 
 }
 
+.social2 .sharing .socials .news_share_link,
 .social3 .sharing .socials .news_share_link {
 	position: relative;
 	margin-right: 5px;
@@ -12,7 +13,7 @@
 }
 .social-disply .sharing .socials .news_share_link {
 	position: relative;
-	margin-right: -5px;
+	margin-right: -10px;
 	
 }
 .sharing .socials .news_share_link > a {
