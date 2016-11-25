@@ -5,7 +5,7 @@
 
 }
 
-.socials .sharing .socials .seo_share_link {
+.socials .sharing .socials .news_share_link {
 	position: relative;
 	padding-right: 5px;
 	
@@ -25,10 +25,6 @@
 }
 .sharing .socials .seo_share_link .twitter icon:before {
 	content: "\f081";
-	font-size: 20px;
-}
-.sharing .socials .seo_share_link .google icon:before {
-	content: "\f0d4";
 	font-size: 20px;
 }
 .sharing .socials .seo_share_link .pinterest icon:before {
@@ -87,8 +83,5 @@
 
 .sharing .socials .seo_share_link > a icon:hover:before {
 	opacity: 1;
-	/* box-shadow: 0 0 10px rgba(0, 0, 0, 0.5) inset; */
-    /*-ms-transform: rotate(-3deg);
-    -webkit-transform: rotate(-3deg); 
-    transform: rotate(-3deg);*/
+	 
 }
