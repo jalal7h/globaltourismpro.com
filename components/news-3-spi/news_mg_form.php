@@ -19,7 +19,7 @@ function news_mg_form(){
 			[!"text:name*"!]
 			[!"select:cat*","option"=>cat_display("news",$is_array=false)!]
 			[!"textarea:text*.tinymce"!]
-			[!"text:tag"!]
+			[!"keyword:tag"!]
 			[!"file:pic"!]
 	
 			<hr>

@@ -8,8 +8,14 @@ function news_mg_saveEdit(){
 	
 	#
 	# insert
-	$id = dbs( 'news', [ 'name','cat','text','tag' ], ['id'] );
+	$id = dbs( 'news', [ 'name','cat','text'], ['id'] );
 	#
+
+	# 
+	# set kword
+	if( trim($_REQUEST['tag']) ){
+		kwordusage_set( $_REQUEST['tag'], "news", $id );
+	}
 
 	#
 	# upload photo

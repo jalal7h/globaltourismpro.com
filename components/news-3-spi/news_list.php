@@ -63,6 +63,7 @@ function news_list( $table_name=null , $page_id=null ){
 		// بررسی تصویر
 		if (!$image) {
 			$i=2;
+			$j=0;
 			noimg($rw1);
 		}elseif ($i==1) {
 			$i=2;
