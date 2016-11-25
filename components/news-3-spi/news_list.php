@@ -11,10 +11,10 @@ function news_list( $table_name=null , $page_id=null ){
 	if ($cat_id = $_REQUEST['cat_id']) {
 		
 		$q_cat="AND `cat`='$cat_id'";
-		$link = _URL."/news&cat_id=".$cat_id."&p=".$_REQUEST['p'];
+		$link = _URL."/?page=51&cat_id=".$cat_id."&p=".$_REQUEST['p'];
 		
 	}else{
-		$link = _URL."/news&p=".$_REQUEST['p'];
+		$link = _URL."/?page=51&p=".$_REQUEST['p'];
 	}
 	
 ?>
@@ -49,7 +49,7 @@ function news_list( $table_name=null , $page_id=null ){
 	} else if(! dbn($rs1) ){
 	
 	?>
-		<div class="errors"><h1><?=__('موردی برای درخواست شما یافت نشد.')?></h1></div>
+		<div class="convbox"><h1><?=__('there are no results.')?></h1></div>
 	<?
 	
 	} else while( $rw1 = dbf($rs1) ){

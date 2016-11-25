@@ -23,7 +23,7 @@ function news_display(){
 	} else if(! dbn($rs1) ){
 	
 	?>
-		<div class="errors"><h1><?= __('there are no results.')?></h1></div>
+		<div class="convbox"><h1><?= __('there are no results.')?></h1></div>
 	<?
 	
 	} else if( $rw1 = dbf($rs1) ){
