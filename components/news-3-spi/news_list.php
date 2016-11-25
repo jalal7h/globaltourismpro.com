@@ -16,6 +16,11 @@ function news_list( $table_name=null , $page_id=null ){
 	}else{
 		$link = _URL."/?page=51&p=".$_REQUEST['p'];
 	}
+	//دسته خبری را از دیتابیس گرفته و در optionقرار میدهیم
+    $rw = cat_display('news');
+    foreach ($rw as $id => $name) {
+		$list_of_options_for_news.= "<option ".( $cat_id==$id? "selected" : "" )." value=\"".$id."\">".$name."</option>\n";
+	}	
 	
 ?>
 <div class="news">
@@ -26,13 +31,14 @@ function news_list( $table_name=null , $page_id=null ){
 	<span><?=__('Category')?></span>
 	<select id="mySelect" onchange="myFunction()">
 		<option>-Any-</option>
-		<? echo cat_display('news', $array=false );?>
+		<?=$list_of_options_for_news?>
 	</select>
 	<script>
 		function myFunction() {
 		    var x = document.getElementById("mySelect").value;		 
 		    location.href='./?page=51&cat_id='+x;
 		}
+
 	</script>
 
 	
