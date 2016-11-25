@@ -23,7 +23,7 @@ function news_display(){
 	} else if(! dbn($rs1) ){
 	
 	?>
-		<div class="errors"><h1>موردی برای درخواست شما یافت نشد.</h1></div>
+		<div class="errors"><h1><?= __('there are no results.')?></h1></div>
 	<?
 	
 	} else if( $rw1 = dbf($rs1) ){
@@ -46,7 +46,7 @@ function news_display(){
 
 		?>
 		<div class="Newsroom">
-			<a href="<?=_URL.'/page-51.html';?>">Newsroom</a>
+			<a href="<?=_URL.'/news';?>">Newsroom</a>
 		</div>
 		<section>
 			<div class="section-news">

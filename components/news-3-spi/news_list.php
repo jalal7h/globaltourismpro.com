@@ -11,16 +11,16 @@ function news_list( $table_name=null , $page_id=null ){
 	if ($cat_id = $_REQUEST['cat_id']) {
 		
 		$q_cat="AND `cat`='$cat_id'";
-		$link = _URL."/?page=51&cat_id=".$cat_id."&p=".$_REQUEST['p'];
+		$link = _URL."/news&cat_id=".$cat_id."&p=".$_REQUEST['p'];
 		
 	}else{
-		$link = _URL."/?page=51&p=".$_REQUEST['p'];
+		$link = _URL."/news&p=".$_REQUEST['p'];
 	}
 	
 ?>
 <div class="news">
 	<div class="Newsroom">
-		<a href="<?=_URL.'/page-51.html';?>">Newsroom</a>
+		<a href="<?=_URL.'/news';?>">Newsroom</a>
 	</div>
 
 	<span><?=__('Category')?></span>

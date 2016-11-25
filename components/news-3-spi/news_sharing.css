@@ -5,8 +5,14 @@
 
 }
 
-.sharing .socials .seo_share_link {
+.socials .sharing .socials .seo_share_link {
 	position: relative;
+	padding-right: 5px;
+	
+}
+.social-disply .sharing .socials .seo_share_link {
+	position: relative;
+	margin-right: -10px;
 	
 }
 .sharing .socials.seo_share_link > a {
