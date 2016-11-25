@@ -11,12 +11,6 @@ function news_mg_saveEdit(){
 	$id = dbs( 'news', [ 'name','cat','text'], ['id'] );
 	#
 
-	# 
-	# set kword
-	if( trim($_REQUEST['tag']) ){
-		kwordusage_set( $_REQUEST['tag'], "news", $id );
-	}
-
 	#
 	# upload photo
 	listmaker_fileupload( 'news',$id, "*");
