@@ -9,7 +9,7 @@
  background-color: #333;
  color: #fff;
  direction:rtl;
- margin-top: 20px;
+ margin-top: 10px;
  height: 390px;
  position: relative;
  -webkit-transition: all ease-in-out 0.4s;
@@ -30,12 +30,14 @@
 }
 .component-content p{
     color: #fff;
-    font-size: 24px;
+    font-size: 22px;
     line-height: 1.16667;
     font-weight: 300;
     letter-spacing: 0em;
     margin: 29px 0 0;
     word-wrap: break-word;
+    max-height: 220px;
+    overflow: hidden;
 
 }
 .tile-content-text {
@@ -61,6 +63,8 @@
 .tile-content-img{
     display: inline-block;
     vertical-align: top;
+    text-align: right;
+    direction: ltr;
 }
 
 .tile-content-img img{
@@ -79,7 +83,9 @@
     padding-right: 30px;
     transition: all 1s;
 }
-/* noimg */
+
+/*---------------------- noimg  ---------------------------*/
+
 .noimg{
     width: 100%; 
     background-color: #222;
@@ -89,26 +95,26 @@
     transition: all ease-in-out 0.6s;
 
 }
-.noimg:hover{
-  
-  box-shadow: 0px 16px 22px 0px rgba(90, 91, 95, 0.3);
-  top: -5px;
+.noimg:hover{  
+   box-shadow: 0px 16px 22px 0px rgba(90, 91, 95, 0.3);
+   top: -5px;
 }
 .noimg .right{
     display:inline-block;
     vertical-align: top;
-    width: 65%;
+    width: 70%;
     box-sizing: border-box;
     padding: 40px 40px;
     color: #fff;
-    font-size: 24px;
+    font-size: 22px;
 }
 .noimg .left{
     display: inline-block;
     vertical-align: top;
-    width: 30%;
+    width: 28%;
     box-sizing: border-box;
     padding:30px 40px 70px 40px;
+    overflow: hidden;
 
 }
 .noimg .category-eyebrow__date{
@@ -125,7 +131,9 @@
 .social3 a{
     color: #fff;
 }
-/* twonews */
+
+/*                    twonews                 */
+
 .twonews{
     width: 49.7%; 
     display: inline-block;
@@ -156,16 +164,19 @@
     height: 390px;
     box-sizing: border-box;
     padding:30px 40px 60px 40px;
+    overflow: hidden;
 
 }
 .twonews p{
     color: #fff;
-    font-size: 24px;
+    font-size: 22px;
     line-height: 1.16667;
     font-weight: 300;
     letter-spacing: 0em;
     margin: 29px 0 0;
     word-wrap: break-word;
+    max-height: 220px;
+    overflow: hidden;
 
 }
 .twonews .category-eyebrow__date{
@@ -173,4 +184,52 @@
 }
 .social2 a{
     color: #fff;
+
+}
+
+/*                             twonews-noimg                    */
+
+.twonews-noimg{
+    width: 49.7%; 
+    display: inline-block;
+    vertical-align: top;
+    box-sizing: border-box;
+    background-color: #999;
+    margin-top: 10px;
+    position: relative;
+    -webkit-transition: all ease-in-out 0.6s;
+    transition: all ease-in-out 0.6s;
+}
+.twonews-noimg:hover{
+  
+  box-shadow: 0px 16px 22px 0px rgba(90, 91, 95, 0.3);
+  top: -5px;
+}
+
+.twonews-noimg .left{
+    display: inline-block;
+    vertical-align: top;
+    width: 90%;
+    height: 390px;
+    box-sizing: border-box;
+    padding:30px 40px 60px 40px;
+
+}
+.twonews-noimg p{
+    color: #fff;
+    font-size: 24px;
+    line-height: 1.16667;
+    font-weight: 300;
+    letter-spacing: 0em;
+    margin: 29px 0 0;
+    word-wrap: break-word;
+    max-height: 220px;
+    overflow: hidden;
+
+}
+.twonews-noimg .category-eyebrow__date{
+    color: #fff;
+}
+.twonews-noimg .category-eyebrow__cat{
+    color: #FFA955;
 }

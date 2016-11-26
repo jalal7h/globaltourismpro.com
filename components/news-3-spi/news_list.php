@@ -9,10 +9,15 @@ $GLOBALS['block_layers']['news_list'] = 'لیست خبر‌ها';
 function news_list( $table_name=null , $page_id=null ){
 	// در صورت انتخواب گروه خبری در سلکت استفاده میشه
 	if ($cat_id = $_REQUEST['cat_id']) {
-		
-		$q_cat="AND `cat`='$cat_id'";
-		$link = _URL."/?page=51&cat_id=".$cat_id."&p=".$_REQUEST['p'];
-		
+
+		if ($cat_id=="Any") {// اگر Any انتخواب شده بود
+			$q_cat="";
+			$link = _URL."/?page=51&p=".$_REQUEST['p'];
+
+		}else{
+			$q_cat="AND `cat`='$cat_id'";
+			$link = _URL."/?page=51&cat_id=".$cat_id."&p=".$_REQUEST['p'];
+		}
 	}else{
 		$link = _URL."/?page=51&p=".$_REQUEST['p'];
 	}
@@ -25,12 +30,12 @@ function news_list( $table_name=null , $page_id=null ){
 ?>
 <div class="news">
 	<div class="Newsroom">
-		<a href="<?=_URL.'/news';?>">Newsroom</a>
+		<a href="<?=_URL.'/news';?>"><?=__('Newsroom')?></a>
 	</div>
 
 	<span><?=__('Category')?></span>
 	<select id="mySelect" onchange="myFunction()">
-		<option>-Any-</option>
+		<option value="Any"><?=__('-Any-')?></option>
 		<?=$list_of_options_for_news?>
 	</select>
 	<script>
@@ -68,9 +73,18 @@ function news_list( $table_name=null , $page_id=null ){
 
 		// بررسی تصویر
 		if (!$image) {
-			$i=2;
-			$j=0;
-			noimg($rw1);
+			if ($i==1) {
+				$i=2;
+				$j=0;
+				noimg1($rw1);//نمایش خبر بدون تصویر در یک ستون
+			}else{
+				$j++;
+				if($j==2){
+					$i=1;
+					$j=0;
+				}
+				noimg2($rw1);//نمایش خبر بدون تصویر در ستون دوم
+			}
 		}elseif ($i==1) {
 			$i=2;
 		?>
@@ -120,7 +134,7 @@ function news_list( $table_name=null , $page_id=null ){
 
 
 //  در صورت نداشتن تصویر این اجرا میشه
-function noimg($rw1){
+function noimg1($rw1){
 
     $cat = cat_translate($rw1['cat']) ;				
 	$image = $rw1['pic']; 
@@ -151,6 +165,43 @@ function noimg($rw1){
 			<?=news_sharing($rw1);?>
 	</div>
 	</div>
+	<?
+}
+
+//  در صورت نداشتن تصویر و نمایش خبر در ستون دوم
+function noimg2($rw1){
+
+    $cat = cat_translate($rw1['cat']) ;				
+	$image = $rw1['pic']; 
+	$name = $rw1['name'];
+	$id=$rw1['id'];
+	$Year=date("d , Y", $rw1['date_created']);
+	$month= getdate($rw1['date_created']);
+	?>
+	
+     <div class="twonews-noimg">
+		<a href="<?=news_link($rw1);?>" class="tile-link">
+			<div class="left">
+				<span class="category-eyebrow__cat">
+					<?=$cat;?>
+				</span>
+				<span class="category-eyebrow__date">
+					<?
+					echo $month['month']." ".$Year;
+					?>
+				</span>
+				<p>
+					<?=$name ;?>							
+				</p>
+			</div>
+			
+			<div class="social2">
+				<?=news_sharing($rw1);?>
+			</div>
+		</a>			
+	</div>
+
+
 	<?
 
 

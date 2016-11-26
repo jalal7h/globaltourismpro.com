@@ -16,7 +16,8 @@
 	margin-right: -10px;
 	
 }
-.sharing .socials .news_share_link > a {
+.social2 .sharing .socials .news_share_link > a,
+.social3 .sharing .socials .news_share_link > a {
 	display: inline-block;
 	margin-right: 5px;
 }

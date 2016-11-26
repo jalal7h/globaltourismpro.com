@@ -46,7 +46,7 @@ function news_display(){
 
 		?>
 		<div class="Newsroom">
-			<a href="<?=_URL.'/news';?>">Newsroom</a>
+			<a href="<?=_URL.'/news';?>"><?=__('Newsroom')?></a>
 		</div>
 		<section>
 			<div class="section-news">
@@ -61,7 +61,8 @@ function news_display(){
 						?>
 					</span>
 					<span class="category-eyebrow__visit">
-						Views:<?=$visit;?>
+						<?=__('Views:')?>
+						<?=$visit;?>
 					</span>
 				</div>
 				<div class="section-news-h1">	
