@@ -8,9 +8,11 @@ function bookmarky_ajax(){
 	$table_id=$_POST['table_id'];
 	$user_id=$_POST['user_id'];
 	$flag=$_POST['flag'];
-	if ($flag==0) {//یعنی کاربر قبلا کلیک نکرده
+	if ($flag==0) {
+	    # یعنی کاربر قبلا کلیک نکرده
 		bookmarky_insert($table_name,$table_id,$user_id);
-	} else {//یعنی کاربر کلیک مجدد داشته
+	} else {
+		# یعنی کاربر کلیک مجدد داشته
 		bookmarky_delete($table_name,$table_id,$user_id);
 	}
 	
@@ -39,7 +41,8 @@ function bookmarky_delete($table_name,$table_id,$user_id){
 	#
 
 }
-//تعداد مورد علاقه قرار گرفتن این آیتم
+    #
+	# تعداد مورد علاقه قرار گرفتن این آیتم
 function bookmarky_result($table_name,$table_id){
 	$query1 = " SELECT COUNT(*) FROM bookmarky WHERE `table_name`='".$table_name."' AND `table_id`='".$table_id."'";
     if(! $rs1 = dbq($query1) ){

@@ -32,18 +32,19 @@ function bookmarky_form( $table_name, $table_id ){
 
     }
 
-    ?>
+  $bookmarky='
     <span class="favorite-button">
-	    <button class="simplefavorite-button <?=$active?>" table_name="<?=$table_name?>" table_id="<?=$table_id?>" flag="<?=$flag?>" user_id="<?=$user_id?>" id="<?=$table_name."-".$table_id?>">
+	    <button class="simplefavorite-button '.$active.'" table_name="'.$table_name.'" table_id="'.$table_id.'" flag="'.$flag.'" user_id="'.$user_id.'" id="'.$table_name.'-'.$table_id.'">
 	        <div class="loader">
 	        	<i class="fa fa-star-o" aria-hidden="true"></i>
 	        </div>
 		    <span class="baleen">Please first login to be</span>
-		    <span class="simplefavorite-button-count"><?=$cont?></span>
+		    <span class="simplefavorite-button-count">'.$cont.'</span>
 		    <i class="fa fa-star-o" aria-hidden="true"></i>
 	    </button>
-    </span>
-    <?
+    </span>';
+
+    return $bookmarky;
 
 }
 
