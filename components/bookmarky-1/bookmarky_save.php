@@ -13,6 +13,7 @@ function bookmarky_ajax(){
 	$table_id=$_POST['table_id'];
 	$user_id=$_POST['user_id'];
 	$flag=$_POST['flag'];
+	
 	if ($flag==0) {
 	    # یعنی کاربر قبلا کلیک نکرده
 		bookmarky_insert($table_name,$table_id,$user_id);
