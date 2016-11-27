@@ -55,7 +55,7 @@ function news_list( $table_name=null , $page_id=null ){
 	$stt = $tdd * intval($_REQUEST['p']); 
 	$query1 = " SELECT * FROM `news` WHERE 1 $q_cat ORDER BY `id` DESC LIMIT $stt , $tdd ";
     if(! $rs1 = dbq($query1) ){
-		e(__FUNCTION__,__LINE__);
+		e();
 	
 	} else if(! dbn($rs1) ){
 	
@@ -71,19 +71,24 @@ function news_list( $table_name=null , $page_id=null ){
 		$Year=date("d , Y", $rw1['date_created']);
 		$month= getdate($rw1['date_created']);
 
-		// بررسی تصویر
+		# بررسی تصویر
 		if (!$image) {
 			if ($i==1) {
 				$i=2;
 				$j=0;
-				noimg1($rw1);//نمایش خبر بدون تصویر در یک ستون
+				# نمایش خبر بدون تصویر در یک ستون
+				noimg1($rw1);
+
 			}else{
 				$j++;
+				$margin="0";
 				if($j==2){
 					$i=1;
 					$j=0;
+					$margin="9px";
 				}
-				noimg2($rw1);//نمایش خبر بدون تصویر در ستون دوم
+				# نمایش خبر بدون تصویر در ستون دوم
+				noimg2($rw1,$margin);
 			}
 		}elseif ($i==1) {
 			$i=2;
@@ -106,7 +111,7 @@ function news_list( $table_name=null , $page_id=null ){
 						</p>
 					</div>
 				</div>
-				<div class="tile-content-img" style="width: 70%">
+				<div class="tile-content-img">
 					<img class="isss" src="<?=_URL.'/'.$image;?>">
 				</div>
 				<div class="social2">
@@ -117,11 +122,13 @@ function news_list( $table_name=null , $page_id=null ){
 <?	
 		}elseif ($i==2) { // نمایش خبر ها در دو ستون
 			$j++;
+			$margin="0";
 			if($j==2){
 				$i=1;
 				$j=0;
+				$margin="9px";
 			}
-			twonews($rw1);
+			twonews($rw1,$margin);
 		}
 		
 	}	 
@@ -133,7 +140,7 @@ function news_list( $table_name=null , $page_id=null ){
 }
 
 
-//  در صورت نداشتن تصویر این اجرا میشه
+# در صورت نداشتن تصویر این اجرا میشه
 function noimg1($rw1){
 
     $cat = cat_translate($rw1['cat']) ;				
@@ -168,8 +175,8 @@ function noimg1($rw1){
 	<?
 }
 
-//  در صورت نداشتن تصویر و نمایش خبر در ستون دوم
-function noimg2($rw1){
+# در صورت نداشتن تصویر و نمایش خبر در ستون دوم
+function noimg2($rw1,$margin){
 
     $cat = cat_translate($rw1['cat']) ;				
 	$image = $rw1['pic']; 
@@ -179,7 +186,7 @@ function noimg2($rw1){
 	$month= getdate($rw1['date_created']);
 	?>
 	
-     <div class="twonews-noimg">
+     <div class="twonews-noimg" style="margin-left:<?=$margin?>">
 		<a href="<?=news_link($rw1);?>" class="tile-link">
 			<div class="left">
 				<span class="category-eyebrow__cat">
@@ -207,8 +214,8 @@ function noimg2($rw1){
 
 }
 
-//  خبرها در دو ستون نشان داده میشه
-function twonews($rw1){
+# خبرها در دو ستون نشان داده میشه
+function twonews($rw1,$margin){
 
     $cat = cat_translate($rw1['cat']) ;				
 	$image = $rw1['pic']; 
@@ -217,7 +224,7 @@ function twonews($rw1){
 	$Year=date("d , Y", $rw1['date_created']);
 	$month= getdate($rw1['date_created']);
 	?>
-	<div class="twonews">
+	<div class="twonews" style="margin-left:<?=$margin?>">
 		<a href="<?=news_link($rw1);?>" class="tile-link">
 			<div class="left">
 				<span class="category-eyebrow__cat">
@@ -232,8 +239,8 @@ function twonews($rw1){
 					<?=$name ;?>							
 				</p>
 			</div>
-			<div class="tile-content-img" style="width: 50%">
-					<img class="isss" src="<?=_URL.'/'.$image;?>">
+			<div class="tile-content-2img">
+					<img class="isss" src="<?=_URL.'/resize/250x390/'.$image;?>">
 			</div>
 			<div class="social2">
 				<?=news_sharing($rw1);?>
@@ -242,8 +249,4 @@ function twonews($rw1){
 	</div>
 	<?
 }
-
-
-
-
 
