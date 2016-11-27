@@ -1,7 +1,7 @@
 <?
 
-# jalal7h@gmail.com
-# 2016/11/17
+# taghipoor.meysam@gmail.com
+# 2016/11/27
 # 1.0
 
 function news_mg_saveNew(){

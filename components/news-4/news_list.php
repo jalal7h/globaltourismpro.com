@@ -1,16 +1,16 @@
 <?
 
-# jalal7h@gmail.com
-# 2016/11/17
+# taghipoor.meysam@gmail.com
+# 2016/11/27
 # 1.0
 
 $GLOBALS['block_layers']['news_list'] = 'لیست خبر‌ها';
 
 function news_list( $table_name=null , $page_id=null ){
-	// در صورت انتخواب گروه خبری در سلکت استفاده میشه
+	# در صورت انتخواب گروه خبری در سلکت استفاده میشه
 	if ($cat_id = $_REQUEST['cat_id']) {
-
-		if ($cat_id=="Any") {// اگر Any انتخواب شده بود
+		# اگر Any انتخواب شده بود
+		if ($cat_id=="Any") {
 			$q_cat="";
 			$link = _URL."/?page=51&p=".$_REQUEST['p'];
 
@@ -21,7 +21,7 @@ function news_list( $table_name=null , $page_id=null ){
 	}else{
 		$link = _URL."/?page=51&p=".$_REQUEST['p'];
 	}
-	//دسته خبری را از دیتابیس گرفته و در optionقرار میدهیم
+	# دسته خبری را از دیتابیس گرفته و در optionقرار میدهیم
     $rw = cat_display('news');
     foreach ($rw as $id => $name) {
 		$list_of_options_for_news.= "<option ".( $cat_id==$id? "selected" : "" )." value=\"".$id."\">".$name."</option>\n";
@@ -47,9 +47,10 @@ function news_list( $table_name=null , $page_id=null ){
 	</script>
 
 	
-<?	
-	$i=1;  //برای کنترل تعداد ستون ها استفاده میشه
-	$j=0;  // برای تنظیم دو ستونی شدن به کار میره
+<?	# برای کنترل تعداد ستون ها استفاده میشه
+	$i=1; 
+	 # برای تنظیم دو ستونی شدن به کار میره
+	$j=0;  
 
 	$tdd = 10;
 	$stt = $tdd * intval($_REQUEST['p']); 

@@ -1,8 +1,8 @@
 <?php
 
-# jalal7h@gmail.com
-# 2016/11/17
-# 1.2
+# taghipoor.meysam@gmail.com
+# 2016/11/27
+# 1.0
 
 $GLOBALS['block_layers']['news_display'] = 'نمایش خبر';
 
@@ -27,12 +27,12 @@ function news_display(){
 	<?
 	
 	} else if( $rw1 = dbf($rs1) ){
-		// آبدیت تعداد  بازدید
+		# آبدیت تعداد  بازدید
 		$visit=$rw1['visit'];
 		$visit=$visit+1;
 		$query1 = " UPDATE `news` SET `visit`='".$visit."' WHERE `id`= '".$_REQUEST['id']."' ";
 	    if(! $rs1 = dbq($query1) ){
-			e(__FUNCTION__,__LINE__);
+			e();
 		
 		}
 
@@ -82,10 +82,9 @@ function news_display(){
 			</div>
 			<?}?>
 			<div class="section-news">
-			<div class="text">
-				<?=$text;?>
-			</div>
-
+				<div class="text">
+					<?=$text;?>
+				</div>
 			</div>
 		</section>   
 		    
