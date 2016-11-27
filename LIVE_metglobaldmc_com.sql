@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Nov 18, 2016 at 12:01 PM
+-- Generation Time: Nov 27, 2016 at 10:22 AM
 -- Server version: 5.6.27
 -- PHP Version: 5.6.14
 
@@ -67,6 +67,19 @@ CREATE TABLE `billing_method` (
 INSERT INTO `billing_method` (`id`, `method`, `unit`, `terminal_id`, `terminal_user`, `terminal_pass`, `c1`, `c2`, `c3`, `c4`, `c5`, `hide`) VALUES
 (4, 'manual1', '', '', '', '', 'بانک ملت', '1234567890', '6104666655554444', '', 'offline', 0),
 (5, 'manual2', '', '', '', '', 'بانک صادرات', '8123212345', '6037691044443333', '', 'offline', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `bookmarky`
+--
+
+CREATE TABLE `bookmarky` (
+  `id` int(11) NOT NULL,
+  `table_name` varchar(255) COLLATE utf8_persian_ci NOT NULL,
+  `table_id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
 
 -- --------------------------------------------------------
 
@@ -357,15 +370,15 @@ INSERT INTO `linkify_config` (`id`, `name`, `haveSub`, `haveIcon`, `pinned`, `fl
 
 CREATE TABLE `news` (
   `id` int(11) NOT NULL,
-  `name` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL COMMENT 'عنوان',
-  `cat` int(11) NOT NULL COMMENT 'دسته بندی',
-  `text` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL COMMENT 'شرح خبر',
+  `name` text COLLATE utf8_unicode_ci NOT NULL COMMENT 'عنوان خبر',
+  `cat` int(11) NOT NULL COMMENT 'گروه خبر',
+  `text` text COLLATE utf8_unicode_ci NOT NULL COMMENT 'شرح خبر',
   `visit` int(11) NOT NULL,
-  `pic` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL COMMENT 'عکس',
-  `tag` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL COMMENT 'کلمات کلیدی',
+  `pic` text COLLATE utf8_unicode_ci NOT NULL COMMENT 'عکس',
+  `tag` text COLLATE utf8_unicode_ci NOT NULL COMMENT 'کلمات کلیدی',
   `date_created` int(11) NOT NULL COMMENT 'تاریخ',
   `date_updated` int(11) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci COMMENT='خبر/اخبار';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='خبر/اخبار';
 
 -- --------------------------------------------------------
 
@@ -696,7 +709,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `password`, `permission`, `name`, `cell`, `wallet_credit`, `uio_date`, `flag_admin`, `flag_user`, `management_title`, `register_ip`, `register_date`, `login_ip`, `login_date`, `tell`, `address`, `profile_pic`, `im_a`, `work_at`, `gender`) VALUES
-(1, 'ogun@karisma.co.tr', 'ogun@karisma.co.tr', 2, 'Ogün Özbir', '+902123820942', 0, 1479501080, 0, 0, '', '', 0, '', 0, '', '', '', '', '', '');
+(1, 'ogun@karisma.co.tr', 'ogun@karisma.co.tr', 2, 'Ogün Özbir', '+902123820942', 0, 1479501140, 0, 0, '', '', 0, '', 0, '', '', '', '', '', '');
 
 --
 -- Indexes for dumped tables
@@ -712,6 +725,12 @@ ALTER TABLE `billing_invoice`
 -- Indexes for table `billing_method`
 --
 ALTER TABLE `billing_method`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `bookmarky`
+--
+ALTER TABLE `bookmarky`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -900,6 +919,11 @@ ALTER TABLE `billing_invoice`
 --
 ALTER TABLE `billing_method`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+--
+-- AUTO_INCREMENT for table `bookmarky`
+--
+ALTER TABLE `bookmarky`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `cat`
 --
