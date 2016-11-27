@@ -1,4 +1,9 @@
 <?
+
+# taghipoor.meysam@gmail.com
+# 2016/11/27
+# 1.0
+
 $GLOBALS['do_action'][] = 'bookmarky_ajax';
 
 function bookmarky_ajax(){

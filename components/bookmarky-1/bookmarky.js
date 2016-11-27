@@ -1,4 +1,8 @@
 
+// taghipoor.meysam@gmail.com
+// 2016/11/27
+// 1.0
+
 jQuery(document).ready(function($) {
 
 	login=$('.simplefavorite-button').attr('user_id');
