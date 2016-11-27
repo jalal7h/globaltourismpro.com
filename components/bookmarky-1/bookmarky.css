@@ -3,7 +3,7 @@
 /* 2016/11/27 */
 /* 1.0 */
 
-.simplefavorite-button {
+.favorite-button .simplefavorite-button {
     position: relative;
     font-size: 15px;
     height: 40px;
@@ -16,7 +16,7 @@
     font-weight: 400;
     direction: rtl;
 }
-.baleen {
+.favorite-button .baleen {
     position: absolute;
     top: 0;
     right: 50%;
@@ -33,7 +33,7 @@
     -o-transition: all 200ms ease;
     transition: all 200ms ease;
 }
-.text2 .baleen{
+.favorite-button .text2 .baleen{
 	position: absolute;
     top: -40px;
     right: 10%;
@@ -51,7 +51,7 @@
     transition: all 200ms ease;
     padding-top: 3px;
 }
-.simplefavorite-button i {
+.favorite-button .simplefavorite-button i {
     font-size: 20px;
     display: inline-block;
     vertical-align: top;
@@ -72,7 +72,7 @@
     background-color: #c0db2d;
     color: #3b1e3a;
 }
-.loader{
+.simplefavorite-button .loader{
  height: 100%;
  width: 100%;
  background-color: #000;

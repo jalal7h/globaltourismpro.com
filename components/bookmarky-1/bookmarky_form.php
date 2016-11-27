@@ -38,7 +38,7 @@ function bookmarky_form( $table_name, $table_id ){
 	        <div class="loader">
 	        	<i class="fa fa-star-o" aria-hidden="true"></i>
 	        </div>
-		    <span class="baleen">'._('Please first login to be').'</span>
+		    <span class="baleen">'.__('Please first login to be').'</span>
 		    <span class="simplefavorite-button-count">'.$cont.'</span>
 		    <i class="fa fa-star-o" aria-hidden="true"></i>
 	    </button>
