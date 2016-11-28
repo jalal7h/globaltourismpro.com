@@ -9,7 +9,7 @@ $GLOBALS['block_layers']['news_display'] = 'نمایش خبر';
 function news_display( $rw_pagelayer ){
 	
 	$title = $rw_pagelayer['name'];
-	
+
 	# 
 	# news display section
 	// code here
@@ -68,29 +68,30 @@ $content.= '<section>
 					</div>	
 				</div>';	
 			
-			if ($image) { //اگه تصویر داشت ،نمایش بده
-				
-$content.= '<div class="news-img">
-				<img class="isss" src="'._URL.'/'.$image.'">
-			</div>';
-			}
-$content.= '<div class="section-news">
-				<div class="text">
-					'.$text.'
-				</div>
-			</div>
-		</section>';   
-	
+				if ($image) { //اگه تصویر داشت ،نمایش بده
+					
+				$content.= '<div class="news-img">
+								<img class="isss" src="'._URL.'/'.$image.'">
+							</div>';
+				}
+				$content.= '<div class="section-news">
+								<div class="text">
+									'.$text.'
+								</div>
+							</div>
+			</section>'; 
+
+		#
+		# comment section
+		$table_name = 'news';
+		$table_id = $_REQUEST['id'];
+		$content.= fbcm( $table_name , $table_id );
 	}	 
 
 $content.= '</div>';
 
 
-	#
-	# comment section
-	$table_name = 'news';
-	$table_id = $_REQUEST['id'];
-	$content.= fbcm( $table_name , $table_id );
+	
     
     
     layout_post_box( $title , $content, $allow_eval=false, $framed=true, $position="center");
