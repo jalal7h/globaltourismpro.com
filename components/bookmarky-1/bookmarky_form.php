@@ -6,7 +6,7 @@
 $GLOBALS['block_layers']['bookmarky'] = 'bookmarky';
 function bookmarky(){
 	$_SESSION['uid']="1";
-	session_unset();
+	//session_unset();
 	echo bookmarky_form( "news", "3" );
 	echo "<br><br>".bookmarky_form( "news", "8" );
 }
@@ -45,7 +45,7 @@ function bookmarky_form( $table_name, $table_id ){
 
   $bookmarky='
     <span class="favorite-button">
-	    <button class="simplefavorite-button '.$active.' '.$cursor.' '.$text2.'" table_name="'.$table_name.'" table_id="'.$table_id.'" user_id="'.$user_id.'" id="'.$table_name.'-'.$table_id.'">
+	    <button class="simplefavorite-button '.$active.' '.$cursor.' '.$text2.'" table_name="'.$table_name.'" table_id="'.$table_id.'" id="'.$table_name.'-'.$table_id.'">
 	        <div class="loader">
 	        	<i class="fa fa-star-o" aria-hidden="true"></i>
 	        </div>

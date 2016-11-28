@@ -8,7 +8,7 @@ jQuery(document).ready(function($) {
     //عملیات کلیک 
 	$('.simplefavorite-button').on('click', function(e){
 
-		// $(this).toggleClass('active');
+		
 		id=$(this).attr('id');//آیدی آیتمی که روش کلیک شده ، تا نتیجه در اون دیو قرار بگیره
 						
 		// متغییر های مورد تیاز
@@ -32,6 +32,7 @@ function call_ajax(table_name,table_id,id){
 			data:{table_name:table_name,table_id:table_id},
 			type:'post',
 			success:function(data){
+				$(div).toggleClass('active');
 				$(div).fadeOut(1000);
 	            $(loader).fadeIn(1000);
 	            $(loader).fadeOut(1000).delay(1000);
