@@ -29,13 +29,13 @@ function news_mg_list(){
 	$list['list_array'] = array(
 		// picture
 		array(	"picture" => '$rw["pic"]'),
-		
+
+		// cat
+		array(  "content" => 'cat_translate($rw["cat"])'),
+
 		// name
 		array(	"content" => '$rw["name"]'),
-		
-		// text
-		array(	"content" => 'substr(strip_tags($rw["text"]),0,300)." .."'),
-		
+				
 	);
 	
 	echo listmaker_list($list);

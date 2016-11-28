@@ -7,6 +7,8 @@
 $GLOBALS['block_layers']['news_list'] = 'لیست خبر‌ها';
 
 function news_list( $table_name=null , $page_id=null ){
+
+	$title = $rw_pagelayer['name'];
 	
 	# در صورت انتخواب گروه خبری در سلکت استفاده میشه
 	if ($cat_id = $_REQUEST['cat_id']) {
@@ -31,28 +33,14 @@ function news_list( $table_name=null , $page_id=null ){
 		$list_of_options_for_news.= "<option ".( $cat_id==$id? "selected" : "" )." value=\"".$id."\">".$name."</option>\n";
 	}	
 	
-	?>
-	<div class="news">
-		<div class="Newsroom">
-			<a href="<?=_URL.'/news';?>"><?=__('Newsroom')?></a>
-		</div>
+	$content = '<div class="news">
 
-		<span><?=__('Category')?></span>
-		<select id="mySelect" onchange="myFunction()">
-			<option value="Any"><?=__('-Any-')?></option>
-			<?=$list_of_options_for_news?>
-		</select>
-		<script>
-			function myFunction() {
-			    var x = document.getElementById("mySelect").value;		 
-			    location.href='./?page=51&cat_id='+x;
-			}
-
-		</script>
-
-		
-	<?
-
+			<span>'.__('Category').'</span>
+			<select id = "mySelect" onchange="Categorylist()">
+				<option value = "Any">'.__('-Any-').'</option>
+				'.$list_of_options_for_news.'
+			</select>';
+	
 	# برای کنترل تعداد ستون ها استفاده میشه
 	$i=1; 
 	
@@ -68,7 +56,7 @@ function news_list( $table_name=null , $page_id=null ){
 	
 	} else if(! dbn($rs1) ){
 	
-	?><div class="convbox"><h1><?=__('there are no results.')?></h1></div><?
+	$content.= '<div class="convbox">'.__('there are no results.').'</div>';
 	
 	} else while( $rw1 = dbf($rs1) ){
 		
@@ -85,7 +73,7 @@ function news_list( $table_name=null , $page_id=null ){
 				$i=2;
 				$j=0;
 				# نمایش خبر بدون تصویر در یک ستون
-				noimg1($rw1);
+				$content.= noimg1($rw1);
 
 			} else {
 				$j++;
@@ -96,40 +84,37 @@ function news_list( $table_name=null , $page_id=null ){
 					$margin="9px";
 				}
 				# نمایش خبر بدون تصویر در ستون دوم
-				noimg2($rw1,$margin);
+				$content.= noimg2($rw1,$margin);
 			}
 
 		} elseif ($i==1) {
 			# اگر تصویر باشد و تکی نمایش دهد
 			$i=2;
-		?>
-		<div class="component-content">
-			<a href="<?=news_link($rw1);?>" class="tile-link">
+		
+		$content.= '<div class="component-content">
+			<a href="'.news_link($rw1).'" class="tile-link">
 				<div class="tile-content-text">
 					<div class="top-tile">
 						<span class="category-eyebrow__cat">
-							<?=$cat;?>
+							'.$cat.'
 						</span>
 						<span class="category-eyebrow__date">
-							<?
-							echo $month['month']." ".$Year;
-							?>
+							'.$month['month']." ".$Year.'
 						</span>			
 						<p>
-							<?=$name ;?>							
+							'.$name.'							
 						</p>
 					</div>
 				</div>
 				<div class="tile-content-img">
-					<img class="isss" src="<?=_URL.'/'.$image;?>">
+					<img class="isss" src="'._URL.'/'.$image.'">
 				</div>
 				<div class="social2">
-					<?=news_sharing($rw1);?>
+					'.news_sharing($rw1).'
 				</div>
 			</a>
-		</div>
-		<?	
-		
+		</div>';
+				
 		} elseif ($i==2) { // نمایش خبر ها در دو ستون
 			$j++;
 			$margin="0";
@@ -138,14 +123,16 @@ function news_list( $table_name=null , $page_id=null ){
 				$j=0;
 				$margin="9px";
 			}
-			twonews($rw1,$margin);
+			$content.= twonews($rw1,$margin);
 		}
 		
 	}	 
 
-	echo listmaker_paging($query1, $link, $tdd, $debug=true);
+	$content.= listmaker_paging($query1, $link, $tdd, $debug=true);
 	
-	?></div><?
+    $content.= '</div>';
+
+    layout_post_box( $title , $content, $allow_eval=false, $framed=true, $position="center");
 
 }
 
@@ -159,30 +146,29 @@ function noimg1($rw1){
 	$id=$rw1['id'];
 	$Year=date("d , Y", $rw1['date_created']);
 	$month= getdate($rw1['date_created']);
-	?>
-	<div class="noimg">
-	<a href="<?=news_link($rw1);?>" class="tile-link">
+	
+$noimg1.= '<div class="noimg">
+	<a href="'.news_link($rw1).'" class="tile-link">
 		<div class="left">
 			<span class="category-eyebrow__cat">
-				<?=$cat;?>
+				'.$cat.'
 			</span>
 			<span class="category-eyebrow__date">
-				<?
-				echo $month['month']." ".$Year;
-				?>
+				'.$month['month']." ".$Year.'
 			</span>
 		</div>
 		<div class="right">
 			<p>
-				<?=$name ;?>							
+				'.$name.'							
 			</p>
 		</div>
 	</a>	
 	<div class="social3">
-			<?=news_sharing($rw1);?>
+			'.news_sharing($rw1).'
 	</div>
-	</div>
-	<?
+	</div>';
+	return $noimg1;
+	
 }
 
 # در صورت نداشتن تصویر و نمایش خبر در ستون دوم
@@ -194,31 +180,27 @@ function noimg2($rw1,$margin){
 	$id=$rw1['id'];
 	$Year=date("d , Y", $rw1['date_created']);
 	$month= getdate($rw1['date_created']);
-	?>
-	
-     <div class="twonews-noimg" style="margin-left:<?=$margin?>">
-		<a href="<?=news_link($rw1);?>" class="tile-link">
+		
+$noimg2.= '<div class="twonews-noimg" style="margin-left:'.$margin.'">
+		<a href="'.news_link($rw1).'" class="tile-link">
 			<div class="left">
 				<span class="category-eyebrow__cat">
-					<?=$cat;?>
+					'.$cat.'
 				</span>
 				<span class="category-eyebrow__date">
-					<?
-					echo $month['month']." ".$Year;
-					?>
+					'.$month['month']." ".$Year.'
 				</span>
 				<p>
-					<?=$name ;?>							
+					'.$name.'							
 				</p>
 			</div>
 			
 			<div class="social2">
-				<?=news_sharing($rw1);?>
+				'.news_sharing($rw1).'
 			</div>
 		</a>			
-	</div>
-	<?
-
+	</div>';
+	return $noimg2;
 }
 
 # خبرها در دو ستون نشان داده میشه
@@ -230,37 +212,28 @@ function twonews($rw1,$margin){
 	$id=$rw1['id'];
 	$Year=date("d , Y", $rw1['date_created']);
 	$month= getdate($rw1['date_created']);
-	?>
-	<div class="twonews" style="margin-left:<?=$margin?>">
-		<a href="<?=news_link($rw1);?>" class="tile-link">
+
+$twonews.= '<div class="twonews" style="margin-left:'.$margin.'">
+		<a href="'.news_link($rw1).'" class="tile-link">
 			<div class="left">
 				<span class="category-eyebrow__cat">
-					<?=$cat;?>
+					'.$cat.'
 				</span>
 				<span class="category-eyebrow__date">
-					<?
-					echo $month['month']." ".$Year;
-					?>
+					'.$month['month']." ".$Year.'
 				</span>
 				<p>
-					<?=$name ;?>							
+					'.$name.'							
 				</p>
 			</div>
 			<div class="tile-content-2img">
-					<img class="isss" src="<?=_URL.'/resize/250x390/'.$image;?>">
+					<img class="isss" src="'._URL.'/resize/250x390/'.$image.'">
 			</div>
 			<div class="social2">
-				<?=news_sharing($rw1);?>
+				'.news_sharing($rw1).'
 			</div>
 		</a>			
-	</div>
-	<?
+	</div>';
+	return $twonews;
+	
 }
-
-
-
-
-
-
-
-

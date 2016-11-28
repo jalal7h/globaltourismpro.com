@@ -8,12 +8,12 @@ $GLOBALS['do_action'][] = 'bookmarky_ajax';
 
 function bookmarky_ajax(){
 	
-	$table_name=$_POST['table_name'];
-	$table_id=$_POST['table_id'];
+	$table_name = $_POST['table_name'];
+	$table_id = $_POST['table_id'];
     
     #
     #بررسی لوگین بودن کاربر
-    if ($user_id=user_logged()) {
+    if ( $user_id = user_logged() ) {
      	
 		#		
 		# بررسی اینکه اولین کلیک هستش یا کلیک مجدد
@@ -26,14 +26,14 @@ function bookmarky_ajax(){
 				$flag = dbn($rs);
 		}
 			
-		if ($flag==0) {
+		if ($flag == 0) {
 		    # یعنی کاربر قبلا کلیک نکرده
 			bookmarky_insert($table_name,$table_id);
 		} else {
 			# یعنی کاربر کلیک مجدد داشته
 			bookmarky_delete($table_name,$table_id);
 		}
-    }else{
+    } else {
     	return fulse;
     }
 	
@@ -80,12 +80,3 @@ function bookmarky_result($table_name,$table_id){
     return $count;
 
 }
-
-
-
-
-
-
-
-
-

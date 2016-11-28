@@ -33,7 +33,7 @@
     -o-transition: all 200ms ease;
     transition: all 200ms ease;
 }
-.favorite-button .text2:hover .baleen{
+.favorite-button .logout:hover .baleen{
 	position: absolute;
     top: -40px;
     right: 10%;
@@ -85,6 +85,6 @@
     right:0px;
     z-index: 10000;
 }
-.favorite-button .cursor{
+.favorite-button .logged{
     cursor: pointer;
 }
