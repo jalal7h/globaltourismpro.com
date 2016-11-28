@@ -10,24 +10,35 @@ function bookmarky_ajax(){
 	
 	$table_name=$_POST['table_name'];
 	$table_id=$_POST['table_id'];
-	$user_id=$_POST['user_id'];
-	$flag=$_POST['flag'];
+
+	#		
+	# بررسی اینکه اولین کلیک هستش یا کلیک مجدد
+	$user_id=user_logged();
+	$query = " SELECT * FROM `bookmarky` WHERE `table_name`='".$table_name."' AND `table_id`='".$table_id."'AND `user_id`='".$user_id."' ";
+    
+    if(! $rs = dbq($query) ){
+		e();
 	
+	} else if( dbn($rs) ){
+			$flag = dbn($rs);
+	}
+		
 	if ($flag==0) {
 	    # یعنی کاربر قبلا کلیک نکرده
-		bookmarky_insert($table_name,$table_id,$user_id);
+		bookmarky_insert($table_name,$table_id);
 	} else {
 		# یعنی کاربر کلیک مجدد داشته
-		bookmarky_delete($table_name,$table_id,$user_id);
+		bookmarky_delete($table_name,$table_id);
 	}
 	
 }
 
 
-function bookmarky_insert( $table_name,$table_id,$user_id ){
+function bookmarky_insert( $table_name,$table_id){
 
 	#
 	# insert
+	$user_id=user_logged();
 	dbq("INSERT INTO bookmarky (table_name,table_id,user_id) VALUES('{$table_name}','{$table_id}','{$user_id}')");
 	$result=bookmarky_result($table_name,$table_id);
 	echo "$result";
@@ -35,10 +46,11 @@ function bookmarky_insert( $table_name,$table_id,$user_id ){
 
 }
 
-function bookmarky_delete($table_name,$table_id,$user_id){
+function bookmarky_delete($table_name,$table_id){
 	
 	#
 	# DELETE
+	$user_id=user_logged();
 	dbq(" DELETE FROM `bookmarky` WHERE `table_name`='".$table_name."' AND `table_id`='".$table_id."'AND `user_id`='".$user_id."'");
 	$result=bookmarky_result($table_name,$table_id);
 	echo $result;

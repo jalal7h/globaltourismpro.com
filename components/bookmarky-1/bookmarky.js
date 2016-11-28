@@ -19,18 +19,10 @@ jQuery(document).ready(function($) {
 			// متغییر های مورد تیاز
 			table_name=$(this).attr('table_name');
 			table_id=$(this).attr('table_id');
-			user_id=$(this).attr('user_id');
 			flag=$(this).attr('flag');
 
-			// ارصال به تابه ایجکس
-			call_ajax(flag,table_name,table_id,user_id,id);
-
-			//تغییر مقدار فلگ برای تنظیم عملیات حذف شدن در صورت کلیک مجدد
-			if (flag==0) {
-				$(this).attr({'flag':'1'});
-			}else{
-				$(this).attr({'flag':'0'});
-			}			
+			// ارسال به تابع ایجکس
+			call_ajax(table_name,table_id,id);
 	
 		});			
 		
@@ -51,7 +43,7 @@ jQuery(document).ready(function($) {
 	});	
 });
 
-function call_ajax(flag,table_name,table_id,user_id,id){
+function call_ajax(table_name,table_id,id){
     div='#'+id;
     loader='#'+id+'>.loader';
     $(div).fadeOut(1000);
@@ -59,7 +51,7 @@ function call_ajax(flag,table_name,table_id,user_id,id){
 
 	$.ajax({
 			url:'./?do_action=bookmarky_ajax',
-			data:{flag:flag,table_name:table_name,table_id:table_id,user_id:user_id},
+			data:{table_name:table_name,table_id:table_id},
 			type:'post',
 			success:function(data){
 	            $(loader).fadeOut(1000).delay(1000);

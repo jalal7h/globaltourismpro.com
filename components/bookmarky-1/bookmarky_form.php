@@ -26,15 +26,13 @@ function bookmarky_form( $table_name, $table_id ){
 		} else if( dbn($rs) ){
 			# دادن کلاس اکتیو در صورت کلیک کردن از قبل
 			$active = "active";
-			# فلگش مقدار میگیره تا در صورت کلیک دباره ،عملیات دلیت انجام بشه
-			$flag = dbn($rs);
 		}
 
     }
 
   $bookmarky='
     <span class="favorite-button">
-	    <button class="simplefavorite-button '.$active.'" table_name="'.$table_name.'" table_id="'.$table_id.'" flag="'.$flag.'" user_id="'.$user_id.'" id="'.$table_name.'-'.$table_id.'">
+	    <button class="simplefavorite-button '.$active.'" table_name="'.$table_name.'" table_id="'.$table_id.'" user_id="'.$user_id.'" id="'.$table_name.'-'.$table_id.'">
 	        <div class="loader">
 	        	<i class="fa fa-star-o" aria-hidden="true"></i>
 	        </div>
