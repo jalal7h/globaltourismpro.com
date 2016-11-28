@@ -4,8 +4,8 @@
 # 2016/11/27
 # 1.0
 
-function bookmarky_user_list()
-{	
+function bookmarky_user_list(){	
+	
 	#
 	# action
 	switch ($_REQUEST['do1']) {
@@ -14,7 +14,6 @@ function bookmarky_user_list()
 			bookmarky_user_remove();
 			break;			
 		
-
 		default:
 			# code...
 			break;
@@ -41,8 +40,6 @@ function bookmarky_user_list()
 	$list['addnew_url'] = false;
 	$list['remove_url'] = true; // link dokme hazf
 	
-	
-
 	$list['list_array'] = array (
 		array("content" => 'bookmarky_name($rw)'),
 	);
@@ -52,10 +49,12 @@ function bookmarky_user_list()
 
 	echo listmaker_list($list);
 
+}
 
+function bookmarky_name( $rw ){
+	return table( $rw['table_name'], $rw['table_id'] ,"name");
 }
-function bookmarky_name($rw){
- return	table( $rw['table_name'], $rw['table_id'] ,"name");
-}
+
+
 
 

@@ -8,7 +8,7 @@ function bookmarky_form( $table_name, $table_id ){
 	
 	#
 	# تعداد مورد علاقه قرار گرفته
-	$cont = bookmarky_result($table_name,$table_id);
+	$count = bookmarky_result($table_name,$table_id);
    	
    	#
    	# تا اگه برای اولین بار میخواد کلیک کنه عملیات ثبت انجام بشه
@@ -39,7 +39,7 @@ function bookmarky_form( $table_name, $table_id ){
 	        	<i class="fa fa-star-o" aria-hidden="true"></i>
 	        </div>
 		    <span class="baleen">'.__('Please first login to be').'</span>
-		    <span class="simplefavorite-button-count">'.$cont.'</span>
+		    <span class="simplefavorite-button-count">'.$count.'</span>
 		    <i class="fa fa-star-o" aria-hidden="true"></i>
 	    </button>
     </span>';

@@ -73,15 +73,15 @@
     color: #3b1e3a;
 }
 .simplefavorite-button .loader{
- height: 100%;
- width: 100%;
- background-color: #000;
- color:#FFFFFF;
- text-align: center;
- font-weight: bold;
- display: none;
- position: absolute;
- top:0px;
- right:0px;
- z-index: 10000;
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    color:#FFFFFF;
+    text-align: center;
+    font-weight: bold;
+    display: none;
+    position: absolute;
+    top:0px;
+    right:0px;
+    z-index: 10000;
 }
