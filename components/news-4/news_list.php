@@ -92,9 +92,9 @@ function news_list( $table_name=null , $page_id=null ){
 				noimg2($rw1,$margin);
 			}
 		}elseif ($i==1) {
+			# اگر تصویر باشد و تکی نمایش دهد
 			$i=2;
 		?>
-			<!-- اگر تصویر باشد و تکی نمایش دهد -->
 		<div class="component-content">
 			<a href="<?=news_link($rw1);?>" class="tile-link">
 				<div class="tile-content-text">
