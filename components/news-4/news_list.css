@@ -140,7 +140,7 @@
 /*--------------------------- twonews----------------------*/
 
 .twonews{
-    width: 49.4%; 
+    width: 49.5%; 
     display: inline-block;
     vertical-align: top;
     box-sizing: border-box;
@@ -152,16 +152,16 @@
     transition: all ease-in-out 0.2s;
 }
 .twonews:hover{
-  
-  box-shadow: 0px 16px 22px 0px rgba(90, 91, 95, 0.3);
-  top: -5px;
+
+    box-shadow: 0px 16px 22px 0px rgba(90, 91, 95, 0.3);
+    top: -5px;
 }
 .twonews .right{
     display:inline-block;
     vertical-align: top;
     width: 50%;
     box-sizing: border-box;
-   overflow: hidden;
+    overflow: hidden;
 }
 .twonews .left{
     display: inline-block;
@@ -198,18 +198,18 @@
     vertical-align: top;
     text-align: right;
     direction: ltr;
-    width: 48%;
+    width: 48.55%;
 }
 
 .tile-content-2img img{
     height: 390px;
-    width: 252px;
+    width: 238px;
 }
 
 /*-----------------------twonews-noimg--------------------*/
 
 .twonews-noimg{
-    width: 49.4%; 
+    width: 49.5%; 
     display: inline-block;
     vertical-align: top;
     box-sizing: border-box;

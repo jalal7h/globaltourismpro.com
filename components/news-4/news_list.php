@@ -83,7 +83,7 @@ $content = '<div class="news">
 					if($j==2){
 						$i=1;
 						$j=0;
-						$margin="9px";
+						$margin="9.6px";
 					}
 					# نمایش خبر بدون تصویر در ستون دوم
 					$content.= noimg2($rw1,$margin);
@@ -123,7 +123,7 @@ $content = '<div class="news">
 				if($j==2){
 					$i=1;
 					$j=0;
-					$margin="9px";
+					$margin="9.6px";
 				}
 				$content.= twonews($rw1,$margin);
 			}
@@ -229,7 +229,7 @@ $twonews.= '<div class="twonews" style="margin-left:'.$margin.'">
 						</p>
 					</div>
 					<div class="tile-content-2img">
-							<img class="isss" src="'._URL.'/resize/250x390/'.$image.'">
+							<img class="isss" src="'._URL.'/resize/237x390/'.$image.'">
 					</div>
 					<div class="social2">
 						'.news_sharing($rw1).'
