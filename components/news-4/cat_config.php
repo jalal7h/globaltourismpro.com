@@ -10,10 +10,10 @@ $GLOBALS['cat_items']['news'] = [
 	'dashboard'	=> false ,
 	'sub'		=> false ,
 	'icon'		=> false ,
-	'desc'		=> true ,
-	'flag'		=> true ,
+	'desc'		=> false ,
+	'flag'		=> false ,
 	'ccf'		=> false ,
-	'kw'		=> true ,
+	'kw'		=> false ,
 	'color'		=> false ,
 ];
 /*********************************************/
