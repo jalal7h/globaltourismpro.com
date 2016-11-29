@@ -24,7 +24,7 @@ function bookmarky_user_list(){
 
 	$list['name'] = __FUNCTION__;
 	$list['query'] = " SELECT * FROM `bookmarky` WHERE `user_id`='".$_SESSION['uid']."' ORDER BY  `id` ASC";
-	$list['tdd'] = 12;
+	$list['tdd'] = 10;
 
 	#
 	# base url is needed in version upper 1.2 
@@ -41,20 +41,57 @@ function bookmarky_user_list(){
 	$list['remove_url'] = true; // link dokme hazf
 	
 	$list['list_array'] = array (
+		array("content" => 'table_name($rw)'),
 		array("content" => 'bookmarky_name($rw)'),
 	);
 	
-	
-	$list['search'] = array("name");
+	#
+	# paging select
+	$list['paging_select'] = [
+				
+		'table_name' => "<option value='' >.. ".lmtc('bookmarky:table_name')." ..</option>".listmaker_option( "cat", $condition=" AND `cat`='adsCat' AND `parent`='0' AND `flag`='1' ", $returnArray=false ) ,
+	];
 
-	echo listmaker_list($list);
+	if( dbn( dbq($list['query']) ) > 0 ){
+		$i=0;
+		if(! $rs = dbq(" SELECT DISTINCT `table_name` FROM `bookmarky` WHERE 1") ){
+			e();
+
+		} else if(! dbn($rs) ){
+			e();
+
+		} else while( $rw = dbf($rs) ){
+			if(! $table_title = lmtc($rw['table_name'])[0] ){
+				$table_title = $rw['table_name'];
+			}
+			$option_list.= "<option value=\"".$rw['table_name']."\">".$table_title."</option>";
+			#
+			# meghdar dadan be araye search
+			$search[$i]= $rw['table_name']."(table_id)[name]";
+			$i++;
+
+		}
+		$list['paging_select']['table_name'] = "<option value=''>".__('بخش')."</option>".$option_list;
+	}
+	$list['search'] = $search;
+ 
+	$content= listmaker_list($list);
+
+    layout_post_box( __('FAVORITES'), $content, $allow_eval=false, $framed=1 );
+
 
 }
 
+#
+#name item
 function bookmarky_name( $rw ){
+
 	return table( $rw['table_name'], $rw['table_id'] ,"name");
 }
 
-
-
+#
+#name farsi table
+function table_name($rw){
+return lmtc($rw['table_name'])[0];
+}
 
