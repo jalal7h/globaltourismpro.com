@@ -11,8 +11,7 @@
 	border-radius: 0px;
 }
 .bookmarky_user_list td:nth-child(1) {
-	padding-left: 30px;
-	
+	width: 150px;	
 }
 .bookmarky_user_list tr:hover {
 	background-color: #f8f8f8;

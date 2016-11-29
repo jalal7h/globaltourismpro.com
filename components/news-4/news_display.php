@@ -11,11 +11,8 @@ function news_display( $rw_pagelayer ){
 	$title = $rw_pagelayer['name'];
 
 	# 
-	# news display section
-	// code here
-	
+	# news display section	
     $content = '<div class="news">';
-
 	$query1 = " SELECT * FROM `news` WHERE `id`= '".$_REQUEST['id']."' ";
     if(! $rs1 = dbq($query1) ){
 		e(__FUNCTION__,__LINE__);
@@ -30,8 +27,7 @@ function news_display( $rw_pagelayer ){
 		$visit = $visit+1;
 		$query1 = " UPDATE `news` SET `visit`='".$visit."' WHERE `id`= '".$_REQUEST['id']."' ";
 	    if(! $rs1 = dbq($query1) ){
-			e();
-		
+			e();		
 		}
 
 		$cat = cat_translate($rw1['cat']) ;				
@@ -42,44 +38,44 @@ function news_display( $rw_pagelayer ){
 		$month = getdate($rw1['date_created']);
 		$text = $rw1['text'];
 
-$content.= '<section>
-				<div class="section-news">
-					<div class="component-hed">
-						<span class="category-eyebrow__cat">
-							'.$cat.'
-						</span>
-						<span class="category-eyebrow__date">
-							
-							'.$month['month']." ".$Year.'
-							
-						</span>
-						<span class="category-eyebrow__visit">
-							'.__('Views:').'
-							  '.$visit.'
-						</span>
-					</div>
-					<div class="section-news-h1">	
-						<h1>
-							'.$name.'							
-						</h1>
-					</div>
-					<div class="social-disply">
-						'.news_sharing($rw1).'
-					</div>	
-				</div>';	
-			
-				if ($image) { //اگه تصویر داشت ،نمایش بده
-					
-				$content.= '<div class="news-img">
-								<img class="isss" src="'._URL.'/'.$image.'">
-							</div>';
-				}
-				$content.= '<div class="section-news">
-								<div class="text">
-									'.$text.'
-								</div>
-							</div>
-			</section>'; 
+		$content.= '<section>
+			<div class="section-news">
+				<div class="component-hed">
+					<span class="category-eyebrow__cat">
+						'.$cat.'
+					</span>
+					<span class="category-eyebrow__date">
+						
+						'.$month['month']." ".$Year.'
+						
+					</span>
+					<span class="category-eyebrow__visit">
+						'.__('Views:').'
+						  '.$visit.'
+					</span>
+				</div>
+				<div class="section-news-h1">	
+					<h1>
+						'.$name.'							
+					</h1>
+				</div>
+				<div class="social-disply">
+					'.news_sharing($rw1).'
+				</div>	
+			</div>';	
+		
+			if ($image) { //اگه تصویر داشت ،نمایش بده
+				
+					$content.= '<div class="news-img">
+						<img class="isss" src="'._URL.'/'.$image.'">
+					</div>';
+			}
+			$content.= '<div class="section-news">
+				<div class="text">
+					'.$text.'
+				</div>
+			</div>
+		</section>'; 
 
 		#
 		# comment section
@@ -88,14 +84,7 @@ $content.= '<section>
 		$content.= fbcm( $table_name , $table_id );
 	}	 
 
-$content.= '</div>';
+	$content.= '</div>';
 
-
-	
-    
-    
-    layout_post_box( $title , $content, $allow_eval=false, $framed=true, $position="center");
+	layout_post_box( $title , $content, $allow_eval = false, $framed = true, $position = "center");
 }
-
-
-

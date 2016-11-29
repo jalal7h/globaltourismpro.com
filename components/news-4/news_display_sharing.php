@@ -16,8 +16,7 @@ function news_display_sharing( $rw ){
 			'.$socials.'
 		</div>';
 	}
-
-	
+		
 	$c.= '
 	<div class="sharing2">
 		

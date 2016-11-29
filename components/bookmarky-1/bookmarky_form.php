@@ -5,9 +5,10 @@
 # 1.0
 
 $GLOBALS['block_layers']['bookmarky'] = 'bookmarky';
+
 function bookmarky(){
 	$_SESSION['uid']="19";
-	// session_unset();
+	//session_unset();
 	echo bookmarky_form( "news", "3" );
 	echo "<br><br>".bookmarky_form( "news", "8" );
 }
@@ -23,10 +24,7 @@ function bookmarky_form( $table_name, $table_id ){
     $flag = 0;
 	
 	if( $user_id = user_logged() ){ 
-		#
-		#تغییر روش نمایش موس
-		$cursor="cursor";
-
+		
 		#		
 		# اگر این آیتم توسط این کاربر انتخواب شده بود کلاس active میگیره
 		$query = " SELECT * FROM `bookmarky` WHERE `table_name`='".$table_name."' AND `table_id`='".$table_id."'AND `user_id`='".$user_id."' ";
@@ -41,15 +39,14 @@ function bookmarky_form( $table_name, $table_id ){
 
     }
 
-  $bookmarky='
+  $bookmarky = '
     <span class="favorite-button ">
-	    <button class="simplefavorite-button '.( user_logged() ? 'logged' : 'logout' ).' '.$active.'" table_name="'.$table_name.'" table_id="'.$table_id.'" id="'.$table_name.'-'.$table_id.'">
-	        <div class="loader">
-	        	<i class="fa fa-star-o" aria-hidden="true"></i>
-	        </div>
-		    <span class="baleen">'.__('Please first login to be').'</span>
-		    <span class="simplefavorite-button-count">'.$count.'</span>
-		    <i class="fa fa-star-o" aria-hidden="true"></i>
+	    <button class = "simplefavorite-button '.( user_logged() ? 'logged' : 'logout' ).' '.$active.'" table_name = "'.$table_name.'" table_id = "'.$table_id.'" id = "'.$table_name.'-'.$table_id.'">
+
+	        <span class = "baleen">'.__('Please first login to be').'</span>
+		    <span class = "simplefavorite-button-count">'.$count.'</span>
+		    
+
 	    </button>
     </span>';
 

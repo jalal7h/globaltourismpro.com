@@ -47,11 +47,6 @@ function bookmarky_user_list(){
 	
 	#
 	# paging select
-	$list['paging_select'] = [
-				
-		'table_name' => "<option value='' >.. ".lmtc('bookmarky:table_name')." ..</option>".listmaker_option( "cat", $condition=" AND `cat`='adsCat' AND `parent`='0' AND `flag`='1' ", $returnArray=false ) ,
-	];
-
 	if( dbn( dbq($list['query']) ) > 0 ){
 		$i=0;
 		if(! $rs = dbq(" SELECT DISTINCT `table_name` FROM `bookmarky` WHERE 1") ){
@@ -67,7 +62,7 @@ function bookmarky_user_list(){
 			$option_list.= "<option value=\"".$rw['table_name']."\">".$table_title."</option>";
 			#
 			# meghdar dadan be araye search
-			$search[$i]= $rw['table_name']."(table_id)[name]";
+			$search[$i] = $rw['table_name']."(table_id)[name]";
 			$i++;
 
 		}
@@ -75,23 +70,22 @@ function bookmarky_user_list(){
 	}
 	$list['search'] = $search;
  
-	$content= listmaker_list($list);
+	$content = listmaker_list($list);
 
     layout_post_box( __('FAVORITES'), $content, $allow_eval=false, $framed=1 );
-
-
 }
 
 #
 #name item
 function bookmarky_name( $rw ){
 
-	return table( $rw['table_name'], $rw['table_id'] ,"name");
+	return " : &nbsp;&nbsp;&nbsp;&nbsp;".table( $rw['table_name'], $rw['table_id'] ,"name");
 }
 
 #
 #name farsi table
 function table_name($rw){
-return lmtc($rw['table_name'])[0];
+	
+	return lmtc($rw['table_name'])[0];
 }
 
