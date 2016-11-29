@@ -4,6 +4,14 @@
 # 2016/11/27
 # 1.0
 
+$GLOBALS['block_layers']['bookmarky'] = 'bookmarky';
+function bookmarky(){
+	$_SESSION['uid']="19";
+	// session_unset();
+	echo bookmarky_form( "news", "3" );
+	echo "<br><br>".bookmarky_form( "news", "8" );
+}
+
 function bookmarky_form( $table_name, $table_id ){
 	
 	#
