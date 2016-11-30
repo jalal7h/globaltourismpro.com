@@ -12,10 +12,6 @@ function bookmarky_user_list(){
 		
 		case 'remove':
 			bookmarky_user_remove();
-			break;			
-		
-		default:
-			# code...
 			break;
 	}
 
@@ -68,6 +64,7 @@ function bookmarky_user_list(){
 		}
 		$list['paging_select']['table_name'] = "<option value=''>".__('بخش')."</option>".$option_list;
 	}
+	
 	$list['search'] = $search;
  
 	$content = listmaker_list($list);
@@ -79,7 +76,7 @@ function bookmarky_user_list(){
 #name item
 function bookmarky_name( $rw ){
 
-	return " : &nbsp;&nbsp;&nbsp;&nbsp;".table( $rw['table_name'], $rw['table_id'] ,"name");
+	return " : &nbsp;&nbsp;".table( $rw['table_name'], $rw['table_id'] ,"name");
 }
 
 #

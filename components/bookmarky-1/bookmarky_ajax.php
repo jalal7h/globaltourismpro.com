@@ -40,7 +40,6 @@ function bookmarky_ajax(){
 	
 }
 
-
 function bookmarky_insert( $table_name,$table_id){
 
 	#

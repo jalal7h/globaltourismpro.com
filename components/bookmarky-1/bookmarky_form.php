@@ -44,8 +44,7 @@ function bookmarky_form( $table_name, $table_id ){
 	    <button class = "simplefavorite-button '.( user_logged() ? 'logged' : 'logout' ).' '.$active.'" table_name = "'.$table_name.'" table_id = "'.$table_id.'" id = "'.$table_name.'-'.$table_id.'">
 
 	        <span class = "baleen">'.__('Please first login to be').'</span>
-		    <span class = "simplefavorite-button-count">'.$count.'</span>
-		    
+		    <span class = "simplefavorite-button-count">'.$count.'</span>    
 
 	    </button>
     </span>';
