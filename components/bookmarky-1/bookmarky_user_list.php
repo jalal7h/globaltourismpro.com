@@ -36,10 +36,16 @@ function bookmarky_user_list(){
 	$list['addnew_url'] = false;
 	$list['remove_url'] = true; // link dokme hazf
 	
-	$list['list_array'] = array (
-		array("content" => 'table_name($rw)'),
-		array("content" => 'bookmarky_name($rw)'),
-	);
+	$list['list_array'][] = array("content" => '
+
+		lmtc($rw["table_name"])[0]." : ".
+
+		( table($rw["table_name"],$rw["table_id"]) 
+			? table($rw["table_name"],$rw["table_id"])["name"]
+			: "['.__('حذف شده').']"
+		)
+
+	' );
 	
 	#
 	# paging select
@@ -71,18 +77,3 @@ function bookmarky_user_list(){
 
     layout_post_box( __('FAVORITES'), $content, $allow_eval=false, $framed=1 );
 }
-
-#
-#name item
-function bookmarky_name( $rw ){
-
-	return " : &nbsp;&nbsp;".table( $rw['table_name'], $rw['table_id'] ,"name");
-}
-
-#
-#name farsi table
-function table_name($rw){
-	
-	return lmtc($rw['table_name'])[0];
-}
-
