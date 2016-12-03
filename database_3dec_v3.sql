@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Dec 03, 2016 at 02:51 PM
+-- Generation Time: Dec 03, 2016 at 03:12 PM
 -- Server version: 5.6.27
 -- PHP Version: 5.6.14
 
@@ -700,6 +700,7 @@ CREATE TABLE `user` (
   `password` varchar(255) COLLATE utf8_persian_ci NOT NULL DEFAULT '' COMMENT 'کلمه عبور',
   `permission` int(12) NOT NULL DEFAULT '0',
   `name` varchar(255) COLLATE utf8_persian_ci NOT NULL COMMENT 'نام و نام خانوادگی',
+  `wallet_credit` int(11) NOT NULL,
   `cell` varchar(255) COLLATE utf8_persian_ci NOT NULL COMMENT 'تلفن همراه',
   `tell` varchar(255) COLLATE utf8_persian_ci NOT NULL COMMENT 'تلفن ثابت',
   `address` varchar(255) COLLATE utf8_persian_ci NOT NULL COMMENT 'آدرس',
@@ -710,17 +711,21 @@ CREATE TABLE `user` (
   `management_title` varchar(255) COLLATE utf8_persian_ci NOT NULL COMMENT 'سمت مدیریت',
   `useronline_date` int(10) NOT NULL,
   `flag` int(1) NOT NULL COMMENT 'وضعیت',
-  `hide` int(1) NOT NULL
+  `hide` int(1) NOT NULL,
+  `register_ip` varchar(15) COLLATE utf8_persian_ci NOT NULL COMMENT 'آی پی ثبت نام',
+  `register_date` int(11) NOT NULL COMMENT 'زمان ثبت نام',
+  `login_ip` varchar(15) COLLATE utf8_persian_ci NOT NULL COMMENT 'آی پی آخرین ورود',
+  `login_date` int(11) NOT NULL COMMENT '	زمان آخرین ورود'
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
 
 --
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`id`, `username`, `password`, `permission`, `name`, `cell`, `tell`, `address`, `profile_pic`, `im_a`, `work_at`, `gender`, `management_title`, `useronline_date`, `flag`, `hide`) VALUES
-(1, 'ogun@karisma.co.tr', '9bb3da7992db2e95708e77be0a3f8938', 2, 'Ogün Özbir', '+902123820942', '', '1000000', '', '', '', '', '', 1480807309, 0, 0),
-(2, 'jalal7h@gmail.com', '5311457', 0, 'Jalal Hoseini', '', '', '', '', '', '', '', '', 0, 0, 0),
-(3, 'monja@mohta.ba', '1949b7308f936aa179af4cad5238f9ba', 2, 'Konjale Mohtaba', '+90444332954384', '', '', '', '', '', '', 'Billing Management', 1480803837, 1, 0);
+INSERT INTO `user` (`id`, `username`, `password`, `permission`, `name`, `wallet_credit`, `cell`, `tell`, `address`, `profile_pic`, `im_a`, `work_at`, `gender`, `management_title`, `useronline_date`, `flag`, `hide`, `register_ip`, `register_date`, `login_ip`, `login_date`) VALUES
+(1, 'ogun@karisma.co.tr', '9bb3da7992db2e95708e77be0a3f8938', 2, 'Ogün Özbir', 0, '+902123820942', '', '1000000', '', '', '', '', '', 1480807784, 0, 0, '', 0, '', 0),
+(2, 'jalal7h@gmail.com', '9113f7e5886cdb210542c7e9c84ecfeb', 0, 'Jalal Hoseini', 0, '', '', '', '', '', '', '', '', 1480808490, 0, 0, '', 0, '', 0),
+(3, 'monja@mohta.ba', '1949b7308f936aa179af4cad5238f9ba', 2, 'Konjale Mohtaba', 0, '+90444332954384', '', '', '', '', '', '', 'Billing Management', 1480803837, 1, 0, '', 0, '', 0);
 
 -- --------------------------------------------------------
 

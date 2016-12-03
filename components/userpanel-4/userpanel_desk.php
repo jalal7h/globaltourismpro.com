@@ -9,12 +9,8 @@ $GLOBALS['block_layers_center']['userpanel_desk'] = 'میز کاربری';
 function userpanel_desk(){
 
 	if( ! user_logged() ){
-		echo "nis";
-		die();
 		user_logout('./login');
 	}
-	echo "has";
-	die();
 
 	userpanel_fix_do();
 
@@ -36,10 +32,9 @@ function userpanel_desk(){
 	
 	?>
 	<style type="text/css">
-		.userpanel_menu {
-			/*display: inline-block;*/
-			opacity: 1.0;
-		}
+	.userpanel_menu {
+		opacity: 1.0;
+	}
 	</style>
 	<?
 	

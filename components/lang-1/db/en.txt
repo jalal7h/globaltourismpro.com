@@ -29,6 +29,7 @@ ac6a95ac Payment
 86ab5403 Name
 3f4505dc There is no invoice issued for you.
 8adaaa76 Your Credit
+cc81d9ee zero
 e90d8d2b Account Change
 3da08e3b Offline Payment
 824a51f6 Pay From Wallet
@@ -366,6 +367,10 @@ fba026ab Phone
 5aa3ad7e Workplace
 86bc8155 Gender
 1a7c9784 Post
+4aabb424 آی پی ثبت نام
+8054aa7c زمان ثبت نام
+61689855 آی پی آخرین ورود
+f3ecaa12 زمان آخرین ورود
 fb3c84d8 IP
 70371360 Activity
 029efcd6 Phone
