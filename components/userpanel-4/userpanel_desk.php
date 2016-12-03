@@ -1,21 +1,20 @@
 <?
 
 # jalal7h@gmail.com
-# 2016/09/12
-# 2.1
+# 2016/12/03
+# 2.2
 
 $GLOBALS['block_layers_center']['userpanel_desk'] = 'میز کاربری';
 
 function userpanel_desk(){
-	
+
 	if( ! user_logged() ){
-		?>
-		<script type="text/javascript">
-			location.href = './login';
-		</script>
-		<?
+		echo "nis";
 		die();
+		user_logout('./login');
 	}
+	echo "has";
+	die();
 
 	userpanel_fix_do();
 

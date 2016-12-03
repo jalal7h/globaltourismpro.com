@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Dec 03, 2016 at 02:53 AM
+-- Generation Time: Dec 03, 2016 at 02:32 PM
 -- Server version: 5.6.27
 -- PHP Version: 5.6.14
 
@@ -87,16 +87,6 @@ CREATE TABLE `bookmarky` (
   `table_id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
-
---
--- Dumping data for table `bookmarky`
---
-
-INSERT INTO `bookmarky` (`id`, `table_name`, `table_id`, `user_id`) VALUES
-(7, 'news', 3, 1),
-(8, 'news', 8, 1),
-(11, 'news', 8, 15),
-(25, 'news', 3, 19);
 
 -- --------------------------------------------------------
 
@@ -219,32 +209,6 @@ CREATE TABLE `cronjob` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `facebookcomment`
---
-
-CREATE TABLE `facebookcomment` (
-  `id` int(11) NOT NULL COMMENT 'شناسه',
-  `text` text COLLATE utf8_persian_ci NOT NULL COMMENT 'نظر',
-  `user_id` int(11) NOT NULL COMMENT 'شناسه کاربر',
-  `page_id` int(11) NOT NULL COMMENT 'صفحه',
-  `table_name` varchar(255) COLLATE utf8_persian_ci NOT NULL COMMENT 'نام جدول',
-  `table_id` int(11) NOT NULL COMMENT 'شناسه جدول',
-  `comment_id` int(11) NOT NULL COMMENT 'شناسه نظر معرف',
-  `date` int(10) NOT NULL COMMENT 'زمان',
-  `flag` int(1) NOT NULL COMMENT 'وضعیت'
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci COMMENT='نظر/نظرات';
-
---
--- Dumping data for table `facebookcomment`
---
-
-INSERT INTO `facebookcomment` (`id`, `text`, `user_id`, `page_id`, `table_name`, `table_id`, `comment_id`, `date`, `flag`) VALUES
-(1, 'ok', 1, 52, 'news', 14, 0, 1480440961, 0),
-(2, 'nooooooooooo', 1, 52, 'news', 14, 1, 1480440974, 0);
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `faq`
 --
 
@@ -266,6 +230,33 @@ INSERT INTO `faq` (`id`, `name`, `text`) VALUES
 (5, '5. What is twinshare accommodation?', 'Twin Share means “Double Occupancy.”  This term refers to two people traveling together who occupy the same room.'),
 (6, '6. What do I dial in an Emergency?', 'In case of an Emergency whilst in Australia Dial “000″ (not 911).\\r\\nIn case of an Emergency whilst in New Zealand Dial “111″.\\r\\nIn case of an Emergency whilst in Fiji Dial “917″ for Police, or “911″ for Fire or Ambulance.'),
 (7, '7. What are the Flight Baggage Restrictions?', 'Qantas Airlines restrict checked baggage to 2 pieces (50 pounds per piece) per person plus 1 carry-on bag (15 pounds). This allowance is applicable to all your Qantas flights in your booking (including both International and Domestic sectors). However some flights in Australia (e.g. to Heron Island) are restricted to 1 piece per person plus a carry-on. Please check with the Airlines for baggage restrictions associated with your flights before you depart the USA. Penalties may be issued by the Airlines as a result of excess baggage. Excess baggage penalties are your responsibility. If you wish to travel with more than the checked baggage allowance you can pre-purchase an Additional Baggage Allowance before you go, at lower rates than Airport Excess Baggage charges.');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `fbcomment`
+--
+
+CREATE TABLE `fbcomment` (
+  `id` int(11) NOT NULL COMMENT 'شناسه',
+  `text` text COLLATE utf8_persian_ci NOT NULL COMMENT 'نظر',
+  `user_id` int(11) NOT NULL COMMENT 'شناسه کاربر',
+  `page_id` int(11) NOT NULL COMMENT 'صفحه',
+  `table_name` varchar(255) COLLATE utf8_persian_ci NOT NULL COMMENT 'نام جدول',
+  `table_id` int(11) NOT NULL COMMENT 'شناسه جدول',
+  `comment_id` int(11) NOT NULL COMMENT 'شناسه نظر معرف',
+  `date` int(10) NOT NULL COMMENT 'زمان',
+  `flag` int(1) NOT NULL COMMENT 'وضعیت',
+  `hide` int(1) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci COMMENT='نظر/نظرات' ROW_FORMAT=DYNAMIC;
+
+--
+-- Dumping data for table `fbcomment`
+--
+
+INSERT INTO `fbcomment` (`id`, `text`, `user_id`, `page_id`, `table_name`, `table_id`, `comment_id`, `date`, `flag`, `hide`) VALUES
+(1, 'ok', 1, 52, 'news', 14, 0, 1480440961, 1, 0),
+(2, 'nooooooooooo', 1, 52, 'news', 14, 1, 1480440974, 1, 0);
 
 -- --------------------------------------------------------
 
@@ -369,7 +360,7 @@ CREATE TABLE `news` (
 INSERT INTO `news` (`id`, `name`, `cat`, `text`, `visit`, `pic`, `date_created`, `date_updated`) VALUES
 (1, 't', 28, '<p>t</p>', 52, 'data/news_pic/1/0-1479503544-large.jpg', 1479503544, 1479503574),
 (2, 'ff', 28, '<p>ffffffffffffff</p>', 29, 'data/news_pic/2/0-1480281792-large.jpg', 1479503708, 1480281792),
-(3, 'et iusto odio dignissim', 28, '<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>', 36, 'data/news_pic/3/0-1480281775-large2.jpg', 1479503825, 1480281775),
+(3, 'et iusto odio dignissim', 28, '<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>', 104, 'data/news_pic/3/0-1480281775-large2.jpg', 1479503825, 1480281775),
 (4, 'Lorem ipsum', 29, '<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>\\r\\n<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.<br />Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>', 7, '', 1479671362, 0),
 (5, 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit,', 29, '<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>\\r\\n<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.<br />Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>\\r\\n<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>\\r\\n<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.<br />Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>\\r\\n<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>\\r\\n<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.<br />Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>', 3, 'data/news_pic/5/0-1480283731-large4.jpg', 1479678244, 1480283731),
 (6, 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit,', 29, '<p>rem ipsum dolor sit amet, consectetuer adipiscing elit,Lorem ipsum dolor sit amet, consectetuer adipiscing elit,Lorem ipsum dolor sit amet, consectetuer adipiscing elit,Lorem ipsum dolor sit amet, consectetuer adipiscing elit,Lorem ipsum dolor sit amet, consectetuer adipiscing elit,</p>\\r\\n<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit,Lorem ipsum dolor sit amet, consectetuer adipiscing elit,Lorem ipsum dolor sit amet, consectetuer adipiscing elit,Lorem ipsum dolor sit amet, consectetuer adipiscing elit,Lorem ipsum dolor sit amet, consectetuer adipiscing elit,</p>\\r\\n<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit,Lorem ipsum dolor sit amet, consectetuer adipiscing elit,Lorem ipsum dolor sit amet, consectetuer adipiscing elit,Lorem ipsum dolor sit amet, consectetuer adipiscing elit,<br /><br /></p>\\r\\n<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit,Lorem ipsum dolor sit amet, consectetuer adipiscing elit,Lorem ipsum dolor sit amet, consectetuer adipiscing elit,Lorem ipsum dolor sit amet, consectetuer adipiscing elit,Lorem ipsum dolor sit amet, consectetuer adipiscing elit,Lorem ipsum dolor sit amet, consectetuer adipiscing elit,</p>\\r\\n<p>&nbsp;</p>\\r\\n<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit,</p>', 2, 'data/news_pic/6/0-1479678308-large.jpg', 1479678308, 1479678308),
@@ -469,10 +460,10 @@ INSERT INTO `page_layer` (`id`, `page_id`, `prio`, `func`, `type`, `name`, `data
 (14, 14, 2, 'userpanel_desk', '', 'Client Desk', '', 1, '', 1),
 (15, 14, 1, 'userpanel_menu', '', 'Client Menu', '', 1, 'right', 1),
 (19, 19, 1, 'userprofile_vw', 'PHP5', 'Profile', '', 1, '', 1),
-(58, 58, 1, 'users_register_form', 'PHP5', 'Register', '', 1, '', 1),
+(58, 58, 1, 'user_register_form', 'PHP5', 'Register', '', 1, '', 1),
 (59, 59, 1, 'layout_post', 'PHP5', 'Register Confirm', '<?php users_register_do(); ?>', 1, '', 1),
-(60, 60, 1, 'users_login_form', 'PHP5', 'Login', '', 1, '', 1),
-(63, 63, 1, 'users_forgot_form', 'PHP5', 'Forgot password', '', 1, '', 1),
+(60, 60, 1, 'user_login_form', 'PHP5', 'Login', '', 1, '', 1),
+(63, 63, 1, 'user_forgot_form', 'PHP5', 'Forgot password', '', 1, '', 1),
 (52, 52, 1, 'news_display', '', 'News display', '', 1, '', 1),
 (51, 51, 1, 'news_list', '', 'News', '', 1, '', 1),
 (102, 1, 4, 'bookmarky', 'HTML', 'Bookmark', '', 1, '', 1);
@@ -715,15 +706,21 @@ CREATE TABLE `user` (
   `profile_pic` varchar(255) COLLATE utf8_persian_ci NOT NULL COMMENT 'عکس',
   `im_a` varchar(1024) COLLATE utf8_persian_ci NOT NULL COMMENT 'حرفه/شغل',
   `work_at` varchar(1024) COLLATE utf8_persian_ci NOT NULL COMMENT 'محل کار',
-  `gender` varchar(1) COLLATE utf8_persian_ci NOT NULL COMMENT 'جنسیت'
+  `gender` varchar(1) COLLATE utf8_persian_ci NOT NULL COMMENT 'جنسیت',
+  `management_title` varchar(255) COLLATE utf8_persian_ci NOT NULL COMMENT 'سمت مدیریت',
+  `useronline_date` int(10) NOT NULL,
+  `flag` int(1) NOT NULL COMMENT 'وضعیت',
+  `hide` int(1) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
 
 --
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`id`, `username`, `password`, `permission`, `name`, `cell`, `tell`, `address`, `profile_pic`, `im_a`, `work_at`, `gender`) VALUES
-(1, 'ogun@karisma.co.tr', 'ogun@karisma.co.tr', 2, 'Ogün Özbir', '+902123820942', '', '1000000', '', '', '', '');
+INSERT INTO `user` (`id`, `username`, `password`, `permission`, `name`, `cell`, `tell`, `address`, `profile_pic`, `im_a`, `work_at`, `gender`, `management_title`, `useronline_date`, `flag`, `hide`) VALUES
+(1, 'ogun@karisma.co.tr', '9bb3da7992db2e95708e77be0a3f8938', 2, 'Ogün Özbir', '+902123820942', '', '1000000', '', '', '', '', '', 1480806001, 0, 0),
+(2, 'jalal7h@gmail.com', '5311457', 0, 'Jalal Hoseini', '', '', '', '', '', '', '', '', 0, 0, 0),
+(3, 'monja@mohta.ba', '1949b7308f936aa179af4cad5238f9ba', 2, 'Konjale Mohtaba', '+90444332954384', '', '', '', '', '', '', 'Billing Management', 1480803837, 1, 0);
 
 -- --------------------------------------------------------
 
@@ -733,9 +730,16 @@ INSERT INTO `user` (`id`, `username`, `password`, `permission`, `name`, `cell`, 
 
 CREATE TABLE `useraccess` (
   `id` int(11) NOT NULL COMMENT 'شناسه',
-  `users_id` int(11) NOT NULL COMMENT 'شناسه کاربر',
+  `user_id` int(11) NOT NULL COMMENT 'شناسه کاربر',
   `component` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'بخش'
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `useraccess`
+--
+
+INSERT INTO `useraccess` (`id`, `user_id`, `component`) VALUES
+(10, 3, 'fbcomment_mg');
 
 -- --------------------------------------------------------
 
@@ -813,15 +817,15 @@ ALTER TABLE `cronjob`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `facebookcomment`
---
-ALTER TABLE `facebookcomment`
-  ADD PRIMARY KEY (`id`);
-
---
 -- Indexes for table `faq`
 --
 ALTER TABLE `faq`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `fbcomment`
+--
+ALTER TABLE `fbcomment`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -969,7 +973,7 @@ ALTER TABLE `billing_method`
 -- AUTO_INCREMENT for table `bookmarky`
 --
 ALTER TABLE `bookmarky`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `cat`
 --
@@ -1001,15 +1005,15 @@ ALTER TABLE `catcustomfield_value_text`
 ALTER TABLE `cronjob`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT for table `facebookcomment`
---
-ALTER TABLE `facebookcomment`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'شناسه', AUTO_INCREMENT=3;
---
 -- AUTO_INCREMENT for table `faq`
 --
 ALTER TABLE `faq`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+--
+-- AUTO_INCREMENT for table `fbcomment`
+--
+ALTER TABLE `fbcomment`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'شناسه', AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `kword`
 --
@@ -1094,12 +1098,12 @@ ALTER TABLE `upvote`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `useraccess`
 --
 ALTER TABLE `useraccess`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'شناسه';
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'شناسه', AUTO_INCREMENT=11;
 --
 -- AUTO_INCREMENT for table `userlog`
 --

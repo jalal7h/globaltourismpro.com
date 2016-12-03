@@ -67,6 +67,9 @@ eaba9a48 Reply ...
 29614831 Send
 ed1d432c Response to your ticket on %%
 fab9b08f Your message have been sent to %%.
+78cfaa37 List of questions
+704858ca Submit a new question
+39cd89e0 Are you sure to remove?
 22b18fdc No Comment
 81c4638e Comment
 d90b80a2 Problem on saving the comment
@@ -74,12 +77,12 @@ bacfc496 Reply
 c01ee110 Tweet
 be7f4d51 Your comment ...
 af85fe78 Only members can submit comments. please %%register now%%.
+f6e88fe7 Abuse report
+3d475b15 about the
 f107aa4d Last comments
 489d9389 About
 f270a358 in reply to
-78cfaa37 List of questions
-704858ca Submit a new question
-39cd89e0 Are you sure to remove?
+42b0450b said
 fbe80dcb List of keywords
 3933cdc2 Submit new keyword
 58822fec Keyword submit
@@ -88,6 +91,7 @@ fbe80dcb List of keywords
 0acdc02f %% new keywords submitted.
 4fbe08c7 no new keyword submitted.
 dbe61c8b Remove all selected keywords.
+21debabb function %% does not exists
 21fa506e New page ..
 b1fb046e Change the layer title
 52a56572 Submit a new layer
@@ -101,6 +105,7 @@ d1e47ecd Edit name
 f2ca9f85 Move to down
 200e67ee Enable
 25da8e18 Disable
+6cf9b4a6 Remove
 fe40b196 Wrap in frame
 256a8343 there is no way to disable this linkbox.
 fec43a50 there is no way to remove this linkbox.
@@ -113,7 +118,6 @@ fb41eded Sublink
 19902d73 %% not found.
 afc1d8a9 New %%
 2ebf1a24 Search ...
-6cf9b4a6 Remove
 acf4d808 enable / disable
 c2c3b78f There is no linkbox defined.
 c63ad281 Page :
@@ -241,6 +245,7 @@ da5f9de9 if you already have an account please %%login%%
 3be75adb Submit a new manager
 82991df9 date of registration
 47823995 status
+95e2e00d Your email address is already in use.
 b32beaac Clientarea
 06f7aa3e Home
 eb54bfb2 Client Profile
@@ -253,8 +258,8 @@ a0c3c90f Please insert your email address!
 9f3bcd9c The mentioned email address is already used by someone else!
 ddc659a4 Accounting
 1ccc4798 Contact
-baa04439 Comments
 4fbe1747 FAQ
+baa04439 Comments
 a3b9cda1 Keywords
 33d10611 Layout
 74fe9d9c Link Boxes
@@ -266,7 +271,6 @@ b0cb73f9 Setting
 24f99ef6 Tickets
 d6d94244 Clients
 c04b9a14 Managers
-85b381ef bookmarky
 0572f566 Contact Form
 dceeda60 Header
 b6a8a860 Footer
@@ -319,13 +323,13 @@ fd6a9cb7 Option
 0c05af2c Destination
 05d8c03c Message title
 8ab5301d Date
+abce1a9b question
+bb25700d answer
 b49ff84d comments
 ad7fd17a page
 456ad385 table name
 8d243f35 table ID
 d89e9841 referance comment ID
-abce1a9b question
-bb25700d answer
 9f08492e usage
 d6ec4a46 link
 e66721ce links
@@ -361,6 +365,7 @@ fba026ab Phone
 53dc9ae1 Job
 5aa3ad7e Workplace
 86bc8155 Gender
+1a7c9784 Post
 fb3c84d8 IP
 70371360 Activity
 029efcd6 Phone
