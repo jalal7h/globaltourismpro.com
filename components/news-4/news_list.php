@@ -55,16 +55,13 @@ function news_list($rw_pagelayer){
 	
 	} else if(! dbn($rs1) ){
 	
-		$content.= '<div class="convbox">'.__('there are no results.').'</div>';
+		$content.= convbox( __('there are no results.') );
 	
 	} else {
 
 	    while( $rw1 = dbf($rs1) ){
-		
-			$cat = cat_translate($rw1['cat']) ;				
-			$image = $rw1['pic']; 
-			$name = $rw1['name'];
-			$id = $rw1['id'];
+					
+			$image = $rw1['pic'];
 			$Year = date("d , Y", $rw1['date_created']);
 			$month = getdate($rw1['date_created']);
 
@@ -96,23 +93,15 @@ function news_list($rw_pagelayer){
 				<a href="'.news_link($rw1).'" class="tile-link">
 					<div class="tile-content-text">
 						<div class="top-tile">
-							<span class="category-eyebrow__cat">
-								'.$cat.'
-							</span>
-							<span class="category-eyebrow__date">
-								'.$month['month']." ".$Year.'
-							</span>			
-							<p>
-								'.$name.'							
-							</p>
+							<span class="category-eyebrow__cat">'.cat_translate($rw1['cat']).'</span>
+							<span class="category-eyebrow__date">'.$month['month']." ".$Year.'</span>			
+							<p>'.$rw1['name'].'</p>
 						</div>
 					</div>
 					<div class="tile-content-img">
 						<img class="isss" src="'._URL.'/'.$image.'">
 					</div>
-					<div class="social2">
-						'.news_list_sharing( $rw1 ).'
-					</div>
+					<div class="social2">'.news_list_sharing( $rw1 ).'</div>
 				</a>
 			</div>';
 					
@@ -138,33 +127,22 @@ function news_list($rw_pagelayer){
 
 # در صورت نداشتن تصویر این اجرا میشه
 function noimg1($rw1){
-
-    $cat = cat_translate($rw1['cat']) ;				
-	$image = $rw1['pic']; 
-	$name = $rw1['name'];
-	$id = $rw1['id'];
+				
+	$image = $rw1['pic'];
 	$Year = date("d , Y", $rw1['date_created']);
 	$month = getdate($rw1['date_created']);
 	
 	$noimg1.= '<div class="noimg">
 		<a href="'.news_link($rw1).'" class="tile-link">
 			<div class="left">
-				<span class="category-eyebrow__cat">
-					'.$cat.'
-				</span>
-				<span class="category-eyebrow__date">
-					'.$month['month']." ".$Year.'
-				</span>
+				<span class="category-eyebrow__cat">'.cat_translate($rw1['cat']).'</span>
+				<span class="category-eyebrow__date">'.$month['month']." ".$Year.'</span>
 			</div>
 			<div class="right">
-				<p>
-					'.$name.'							
-				</p>
+				<p>'.$rw1['name'].'</p>
 			</div>
 		</a>	
-		<div class="social3">
-				'.news_list_sharing( $rw1 ).'
-		</div>
+		<div class="social3">'.news_list_sharing( $rw1 ).'</div>
 	</div>';
 
 	return $noimg1;
@@ -173,35 +151,21 @@ function noimg1($rw1){
 
 # در صورت نداشتن تصویر و نمایش خبر در ستون دوم
 function noimg2($rw1,$margin){
-
-    $cat = cat_translate($rw1['cat']) ;				
-	$image = $rw1['pic']; 
-	$name = $rw1['name'];
-
-	$id = $rw1['id'];
+				
+	$image = $rw1['pic'];
 	$Year = date("d , Y", $rw1['date_created']);
 	$month = getdate($rw1['date_created']);
 		
 	$noimg2.= '<div class="twonews-noimg" style="margin-left:'.$margin.'">
 		<a href="'.news_link($rw1).'" class="tile-link">
 			<div class="left">
-				<span class="category-eyebrow__cat">
-					'.$cat.'
-				</span>
-				<span class="category-eyebrow__date">
-					'.$month['month']." ".$Year.'
-				</span>
-				<p>
-					'.$name.'							
-				</p>
-			</div>
-			
-			<div class="social2">
-				'.news_list_sharing( $rw1 ).'
-			</div>
+				<span class="category-eyebrow__cat">'.cat_translate($rw1['cat']).'</span>
+				<span class="category-eyebrow__date">'.$month['month']." ".$Year.'</span>
+				<p>'.$rw1['name'].'</p>
+			</div>			
+			<div class="social2">'.news_list_sharing( $rw1 ).'</div>
 		</a>			
 	</div>';
-
 
 	return $noimg2;
 
@@ -209,33 +173,22 @@ function noimg2($rw1,$margin){
 
 # خبرها در دو ستون نشان داده میشه
 function twonews($rw1,$margin){
-
-    $cat = cat_translate($rw1['cat']) ;				
-	$image = $rw1['pic']; 
-	$name = $rw1['name'];
-	$id = $rw1['id'];
+			
+	$image = $rw1['pic'];
 	$Year =date("d , Y", $rw1['date_created']);
 	$month = getdate($rw1['date_created']);
 
 	$twonews.= '<div class="twonews" style="margin-left:'.$margin.'">
 		<a href="'.news_link($rw1).'" class="tile-link">
 			<div class="left">
-				<span class="category-eyebrow__cat">
-					'.$cat.'
-				</span>
-				<span class="category-eyebrow__date">
-					'.$month['month']." ".$Year.'
-				</span>
-				<p>
-					'.$name.'							
-				</p>
+				<span class="category-eyebrow__cat">'.cat_translate($rw1['cat']).'</span>
+				<span class="category-eyebrow__date">'.$month['month']." ".$Year.'</span>
+				<p>'.$rw1['name'].'</p>
 			</div>
 			<div class="tile-content-2img">
-					<img class="isss" src="'._URL.'/resize/237x390/'.$image.'">
+				<img class="isss" src="'._URL.'/resize/237x390/'.$image.'">
 			</div>
-			<div class="social2">
-				'.news_list_sharing( $rw1 ).'
-			</div>
+			<div class="social2">'.news_list_sharing( $rw1 ).'</div>
 		</a>			
 	</div>';
 

@@ -80,7 +80,7 @@
     position: absolute;
     bottom: 0px;
     width: 200px;
-    padding-right: 30px;
+    padding-right: 35px;
     transition: all 1s;
 }
 
@@ -128,9 +128,9 @@
 .social3 {
     height: 20%;
     position: absolute;
-    bottom: 40px;
+    bottom: 30px;
     width: 200px;
-    padding-right: 30px;
+    padding-right: 35px;
     transition: all 1s;
 }
 .social3 a{
