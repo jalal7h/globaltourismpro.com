@@ -42,3 +42,7 @@ function news_share_link( $link , $title="" ){
 	
 	return $c;
 }
+
+
+
+

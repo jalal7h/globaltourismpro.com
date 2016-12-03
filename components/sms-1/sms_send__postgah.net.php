@@ -6,6 +6,10 @@
 
 function sms_send( $to , $text ){
 	
+	if( its_local() ){
+		return true;
+	}
+
 	if( setting('sms_state') != '1' ){
 		//
 	

@@ -29,12 +29,12 @@ function news_mg_list(){
 	$list['list_array'] = array(
 		// picture
 		array(	"picture" => '$rw["pic"]'),
+		
+		// name
+		array(	"content" => '$rw["name"]'),
 
 		// cat
 		array(  "content" => 'cat_translate($rw["cat"])'),
-
-		// name
-		array(	"content" => '$rw["name"]'),
 				
 	);
 	

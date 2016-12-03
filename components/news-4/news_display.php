@@ -86,5 +86,11 @@ function news_display( $rw_pagelayer ){
 
 	$content.= '</div>';
 
-	layout_post_box( $title , $content, $allow_eval = false, $framed = true, $position = "center");
+    echo $content;
+    // layout_post_box( $title , $content, $allow_eval=false, $framed=true, $position="center");
+
 }
+
+
+
+

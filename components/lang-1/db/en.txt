@@ -47,8 +47,19 @@ e651942c You will be redirected to payment gateway by clicking on the "Payment".
 ba460428 There is no invoice with ID %%.
 bf7338d8 The invoice #%% already paid!
 1583d8a9 Please first login to be
-76392aa3 Email Address
+66d8d034 Removed
+315f6f05 Section
+aade9284 FAVORITES
+a694e68c No record submitted
+aae81639 Are you sure to remove?
+7b592f31 Edit
+63f03ac8 Subcat
 85506645 Save
+a4623c15 Features of %%
+b2755b58 Features of
+c10aa7a5 Last Messages
+dbbccdfb Contact Setting
+76392aa3 Email Address
 24161c8e From :
 b7395dd9 To :
 f9da6984 Date :‌
@@ -56,18 +67,13 @@ eaba9a48 Reply ...
 29614831 Send
 ed1d432c Response to your ticket on %%
 fab9b08f Your message have been sent to %%.
-6d5b4adb Pending Tickets
-f274f621 Ticket Archive
-62acda80 Are you sure to remove the ticket "%%"?
-5eb4829f Admin
-165441cb User
-595c9dda Submit a new ticket
-e5cacd9e There is no ticket submitted.
 22b18fdc No Comment
 81c4638e Comment
-af85fe78 Only members can submit comments. please %%register now%%.
-be7f4d51 Your comment ...
+d90b80a2 Problem on saving the comment
 bacfc496 Reply
+c01ee110 Tweet
+be7f4d51 Your comment ...
+af85fe78 Only members can submit comments. please %%register now%%.
 f107aa4d Last comments
 489d9389 About
 f270a358 in reply to
@@ -90,7 +96,11 @@ eee89ca9 Layer type
 d235199b Back
 604608d5 Save Changes
 d1e47ecd Edit name
-aae81639 Are you sure to remove?
+184512f5 New layer
+0827c947 Move to up
+f2ca9f85 Move to down
+200e67ee Enable
+25da8e18 Disable
 fe40b196 Wrap in frame
 256a8343 there is no way to disable this linkbox.
 fec43a50 there is no way to remove this linkbox.
@@ -99,10 +109,24 @@ dbd46aba Linkbox details
 fb41eded Sublink
 943136df Submit a new link
 9f23a4a1 Linkbox
+92948258 record
+19902d73 %% not found.
+afc1d8a9 New %%
+2ebf1a24 Search ...
+6cf9b4a6 Remove
+acf4d808 enable / disable
+c2c3b78f There is no linkbox defined.
+c63ad281 Page :
+13d984b3 no record found.
+a82abea9 minumun
+1f2f69c2 maximum
+924b0f70 character
+bc90656a keyword
 f8f57a27 select
+8a7894f1 Display
+11c134b6 Loading ...
 955d9b64 remove file
 abc02e7a full display
-6cf9b4a6 Remove
 53bee6bc Admin Profile
 c49bfd0b Administrator
 f16beea8 FC2
@@ -112,11 +136,11 @@ f4c425d6 Back to home page
 b022caaf wrong 3-digit code
 c5b9a047 wrong captcha code
 ed213d9a wrong password
+5eb4829f Admin
 897c9fa2 Dashboard
 b2253bbc Invalid Access!
 1335703e Logout
 07f0f466 there are no results.
-4c48b3ca Newsroom
 879aad34 Views:
 310bdc09 Category
 3a94c405 -Any-
@@ -142,6 +166,9 @@ b77bbf2a Continent
 d80b00c9 City
 0e19e858 Region
 69a6529c Street
+ce8e19ff Unknown
+2f9d8192 No record submitted
+33967c4f Submit new %% ..
 9e4b52ba General Setting
 8a71af6f Subscription
 561db577 Links
@@ -149,7 +176,10 @@ d80b00c9 City
 e7412c0f Delimiter
 0d20443f HTML Content
 9354af56 Social Network
-ce8e19ff Unknown
+b3c0d659 %% list
+9c3dd9ce Ticket destination
+51b2ffd9 Message
+da5862d7 Date
 25944152 months later
 9681eb70 days later
 b5d547af hours later
@@ -164,20 +194,6 @@ d9c05ef0 minutes ago
 a99b7dca To submit a new %% you need to register at first.
 f3acc083 The last upvotes
 8e3c05d4 %% upvoted to %%.
-65d21c61 List of Managers
-3be75adb Submit a new manager
-82991df9 date of registration
-47823995 status
-b32beaac Clientarea
-06f7aa3e Home
-eb54bfb2 Client Profile
-3506048c Male
-c8f5608d Female
-5551ccf3 Please insert your name!
-2af4878c Please insert your name correctly!
-a0c3c90f Please insert your email address!
-3afa9389 Please insert your email address correctly!
-9f3bcd9c The mentioned email address is already used by someone else!
 5f428342 Change %%
 1f8326a3 Current password
 847fe3e8 New password
@@ -210,6 +226,7 @@ f5b8cc05 Wrong %% or password
 86c0e83f password
 f54b8fb7 Submitting the login form you are agreeing the %%website terms%%.
 2a7368a4 Forgot my password
+46e750fe Are you sure to remove this client?
 e458c88b Are you sure to remove all related data this client?
 7fb6f3f1 Please insert your email address.
 503c4596 The mentioned email address is already in use.
@@ -220,11 +237,22 @@ e0f83817 Please insert your name correctly.
 d7172900 Something wrong in registration.
 da5f9de9 if you already have an account please %%login%%
 1d28ef78 Submitting the registration form you are agreeing the %%website terms%%.
-1ccc4798 Contact
-9bf69a29 Position
-d6d94244 Clients
+65d21c61 List of Managers
+3be75adb Submit a new manager
+82991df9 date of registration
+47823995 status
+b32beaac Clientarea
+06f7aa3e Home
+eb54bfb2 Client Profile
+3506048c Male
+c8f5608d Female
+5551ccf3 Please insert your name!
+2af4878c Please insert your name correctly!
+a0c3c90f Please insert your email address!
+3afa9389 Please insert your email address correctly!
+9f3bcd9c The mentioned email address is already used by someone else!
 ddc659a4 Accounting
-5653d5d8 Tickets
+1ccc4798 Contact
 baa04439 Comments
 4fbe1747 FAQ
 a3b9cda1 Keywords
@@ -232,8 +260,11 @@ a3b9cda1 Keywords
 74fe9d9c Link Boxes
 1520520e News
 e5df36b5 Newsletter
+9bf69a29 Position
 b0cb73f9 Setting
 799cb1be Footer
+24f99ef6 Tickets
+d6d94244 Clients
 c04b9a14 Managers
 85b381ef bookmarky
 0572f566 Contact Form
@@ -248,14 +279,13 @@ bb3d7c0e Registration Form
 fa41e21c Filters
 ff2fc9e3 Client Menu
 03544778 Client Desk
-aade9284 FAVORITES
 d8cf8c26 Change password
 bb1f5f23 HTML Content
 0625d738 Reply to Contact messages
 94815be8 Default Prompts
-239d33f5 Ticket Departments
 e5b547e0 News category
 f7ee8d28 Service Basis
+f1baf12f Ticket categories
 4b191326 Transfer Type
 f615075e Small Textbox
 e933ca5e Select Box
@@ -288,12 +318,7 @@ fd6a9cb7 Option
 60787b8e Cell number
 0c05af2c Destination
 05d8c03c Message title
-51b2ffd9 Message
 8ab5301d Date
-996c9a16 Ticket Message
-da5862d7 Date
-6213e94e Department
-4ceeeaa2 Ticket title
 b49ff84d comments
 ad7fd17a page
 456ad385 table name
@@ -301,7 +326,6 @@ ad7fd17a page
 d89e9841 referance comment ID
 abce1a9b question
 bb25700d answer
-bc90656a keyword
 9f08492e usage
 d6ec4a46 link
 e66721ce links
@@ -328,22 +352,17 @@ d0aaf81e Admin Email Title
 b3489827 Admin Email Message
 fc3248f4 Client SMS Message
 eff3be72 Admin SMS Message
+0921ab1a Ticket
+ce9bc533 Tickets
+996c9a16 Ticket Message
 3e6f86eb Table
-315f6f05 Section
-fb3c84d8 IP
-70371360 Activity
-d04105fc Administration State
-66486655 Client State
-1a7c9784 Post
-4aabb424 Registration IP
-8054aa7c Registration date
-61689855 Last login IP
-f3ecaa12 Last login date
 fba026ab Phone
 6c392887 Address
 53dc9ae1 Job
 5aa3ad7e Workplace
 86bc8155 Gender
+fb3c84d8 IP
+70371360 Activity
 029efcd6 Phone
 efb2da8a SMS Send
 72436317 Fax

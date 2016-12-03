@@ -132,7 +132,6 @@ function news_list($rw_pagelayer){
     }# end else
 	
 	$content.= '</div>';
-
     layout_post_box( $title , $content, $allow_eval = false, $framed = true, $position = "center");
 
 }
@@ -178,6 +177,7 @@ function noimg2($rw1,$margin){
     $cat = cat_translate($rw1['cat']) ;				
 	$image = $rw1['pic']; 
 	$name = $rw1['name'];
+
 	$id = $rw1['id'];
 	$Year = date("d , Y", $rw1['date_created']);
 	$month = getdate($rw1['date_created']);
@@ -202,7 +202,9 @@ function noimg2($rw1,$margin){
 		</a>			
 	</div>';
 
+
 	return $noimg2;
+
 }
 
 # خبرها در دو ستون نشان داده میشه
