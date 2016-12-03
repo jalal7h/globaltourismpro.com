@@ -37,7 +37,7 @@
     letter-spacing: 0em;
     margin: 29px 0 0;
     word-wrap: break-word;
-    max-height: 220px;
+    max-height: 190px;
     overflow: hidden;
 }
 .tile-content-text {
@@ -76,7 +76,7 @@
     height: 80%;
 }
 .social2 {
-    height: 18%;
+    height: 15%;
     position: absolute;
     bottom: 0px;
     width: 200px;

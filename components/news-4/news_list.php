@@ -111,7 +111,7 @@ function news_list($rw_pagelayer){
 						<img class="isss" src="'._URL.'/'.$image.'">
 					</div>
 					<div class="social2">
-						'.news_sharing($rw1).'
+						'.news_list_sharing( $rw1 ).'
 					</div>
 				</a>
 			</div>';
@@ -163,7 +163,7 @@ function noimg1($rw1){
 			</div>
 		</a>	
 		<div class="social3">
-				'.news_sharing($rw1).'
+				'.news_list_sharing( $rw1 ).'
 		</div>
 	</div>';
 
@@ -197,7 +197,7 @@ function noimg2($rw1,$margin){
 			</div>
 			
 			<div class="social2">
-				'.news_sharing($rw1).'
+				'.news_list_sharing( $rw1 ).'
 			</div>
 		</a>			
 	</div>';
@@ -234,7 +234,7 @@ function twonews($rw1,$margin){
 					<img class="isss" src="'._URL.'/resize/237x390/'.$image.'">
 			</div>
 			<div class="social2">
-				'.news_sharing($rw1).'
+				'.news_list_sharing( $rw1 ).'
 			</div>
 		</a>			
 	</div>';
