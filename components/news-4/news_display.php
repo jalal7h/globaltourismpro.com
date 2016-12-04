@@ -23,19 +23,19 @@ function news_display( $rw_pagelayer ){
 		$month = getdate($rw1['date_created']);
 
 		$content = '<section>
-			<div class="news">
-				<div class="news-head">
-					<span class="news__cat">'.cat_translate($rw1['cat']).'</span>
-					<span class="news__date">'.$month['month']." ".$Year.'</span>
-					<span class="news__visit">'.__('Views:').$visit.'</span>
+			<div class="news_display">
+				<div class="news_display_head">
+					<span class="news_display__cat">'.cat_translate($rw1['cat']).'</span>
+					<span class="news_display__date">'.$month['month']." ".$Year.'</span>
+					<span class="news_display__visit">'.__('Views:').$visit.'</span>
 				</div>
-				<div class="news-h1"><h1>'.$rw1['name'].'</h1></div>
-				<div class="news-social">'.seo_share('24').'</div> 	
+				<div class="news_display_h1"><h1>'.$rw1['name'].'</h1></div>
+				<div class="news_display_social">'.seo_share('24').'</div> 	
 			</div>
 			
-			'.( $image ? '<div class="news-img"><img class="isss" src="'._URL.'/'.$image.'"></div>' : '').'
+			'.( $image ? '<div class="news_display_img"><img class="isss" src="'._URL.'/'.$image.'"></div>' : '').'
 
-			<div class="news">
+			<div class="news_display">
 				<div class="text">'.$rw1['text'].'</div>
 			</div>
 		</section>'; 
