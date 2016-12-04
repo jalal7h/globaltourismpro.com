@@ -30,14 +30,14 @@ function news_list($rw_pagelayer){
 	# دسته خبری را از دیتابیس گرفته و در optionقرار میدهیم
     $rw = cat_display('news');
     foreach ($rw as $id => $name) {
-		$list_of_options_for_news.= "<option ".( $cat_id==$id? "selected" : "" )." value=\"".$id."\">".$name."</option>\n";
+		$list_of_options_for_news_list.= "<option ".( $cat_id==$id? "selected" : "" )." value=\"".$id."\">".$name."</option>\n";
 	}	
 	
-	$content = '<div class="news">
+	$content = '<div class="news_list">
 	<span>'.__('Category').'</span>
 	<select id = "mySelect" onchange="Categorylist()">
 		<option value = "Any">'.__('-Any-').'</option>
-		'.$list_of_options_for_news.'
+		'.$list_of_options_for_news_list.'
 	</select>';
 	
 	# برای کنترل تعداد ستون ها استفاده میشه
@@ -89,16 +89,16 @@ function news_list($rw_pagelayer){
 				# اگر تصویر باشد و تکی نمایش دهد
 				$i = 2;
 			
-			$content.= '<div class="component-content">
-				<a href="'.news_link($rw1).'" class="tile-link">
-					<div class="tile-content-text">
-						<div class="top-tile">
-							<span class="category-eyebrow__cat">'.cat_translate($rw1['cat']).'</span>
-							<span class="category-eyebrow__date">'.$month['month']." ".$Year.'</span>			
+			$content.= '<div class="news_list_content">
+				<a href="'.news_link($rw1).'">
+					<div class="news_list_text">
+						<div class="news_list_tile">
+							<span class="news_list__cat">'.cat_translate($rw1['cat']).'</span>
+							<span class="news_list__date">'.$month['month']." ".$Year.'</span>			
 							<p>'.$rw1['name'].'</p>
 						</div>
 					</div>
-					<div class="tile-content-img">
+					<div class="news_list_img">
 						<img class="isss" src="'._URL.'/'.$image.'">
 					</div>
 					<div class="social2">'.news_list_sharing( $rw1 ).'</div>
@@ -113,7 +113,7 @@ function news_list($rw_pagelayer){
 					$j = 0;
 					$margin = "9.6px";
 				}
-				$content.= twonews($rw1,$margin);
+				$content.= two_news_list($rw1,$margin);
 			}
 
 		}# end while	
@@ -133,10 +133,10 @@ function noimg1($rw1){
 	$month = getdate($rw1['date_created']);
 	
 	$noimg1.= '<div class="noimg">
-		<a href="'.news_link($rw1).'" class="tile-link">
+		<a href="'.news_link($rw1).'">
 			<div class="left">
-				<span class="category-eyebrow__cat">'.cat_translate($rw1['cat']).'</span>
-				<span class="category-eyebrow__date">'.$month['month']." ".$Year.'</span>
+				<span class="news_list__cat">'.cat_translate($rw1['cat']).'</span>
+				<span class="news_list__date">'.$month['month']." ".$Year.'</span>
 			</div>
 			<div class="right">
 				<p>'.$rw1['name'].'</p>
@@ -156,11 +156,11 @@ function noimg2($rw1,$margin){
 	$Year = date("d , Y", $rw1['date_created']);
 	$month = getdate($rw1['date_created']);
 		
-	$noimg2.= '<div class="twonews-noimg" style="margin-left:'.$margin.'">
-		<a href="'.news_link($rw1).'" class="tile-link">
+	$noimg2.= '<div class="two_news_list_noimg" style="margin-left:'.$margin.'">
+		<a href="'.news_link($rw1).'">
 			<div class="left">
-				<span class="category-eyebrow__cat">'.cat_translate($rw1['cat']).'</span>
-				<span class="category-eyebrow__date">'.$month['month']." ".$Year.'</span>
+				<span class="news_list__cat">'.cat_translate($rw1['cat']).'</span>
+				<span class="news_list__date">'.$month['month']." ".$Year.'</span>
 				<p>'.$rw1['name'].'</p>
 			</div>			
 			<div class="social2">'.news_list_sharing( $rw1 ).'</div>
@@ -172,26 +172,26 @@ function noimg2($rw1,$margin){
 }
 
 # خبرها در دو ستون نشان داده میشه
-function twonews($rw1,$margin){
+function two_news_list($rw1,$margin){
 			
 	$image = $rw1['pic'];
 	$Year =date("d , Y", $rw1['date_created']);
 	$month = getdate($rw1['date_created']);
 
-	$twonews.= '<div class="twonews" style="margin-left:'.$margin.'">
-		<a href="'.news_link($rw1).'" class="tile-link">
+	$two_news_list.= '<div class="two_news_list" style="margin-left:'.$margin.'">
+		<a href="'.news_link($rw1).'">
 			<div class="left">
-				<span class="category-eyebrow__cat">'.cat_translate($rw1['cat']).'</span>
-				<span class="category-eyebrow__date">'.$month['month']." ".$Year.'</span>
+				<span class="news_list__cat">'.cat_translate($rw1['cat']).'</span>
+				<span class="news_list__date">'.$month['month']." ".$Year.'</span>
 				<p>'.$rw1['name'].'</p>
 			</div>
-			<div class="tile-content-2img">
+			<div class="news_list_2img">
 				<img class="isss" src="'._URL.'/resize/237x390/'.$image.'">
 			</div>
 			<div class="social2">'.news_list_sharing( $rw1 ).'</div>
 		</a>			
 	</div>';
 
-	return $twonews;
+	return $two_news_list;
 	
 }
