@@ -18,16 +18,16 @@ function news_display( $rw_pagelayer ){
 		
 		# آبدیت تعداد  بازدید
 		$visit = dbinc( 'news', $_REQUEST['id'], 'visit' );
-		$image = $rw1['pic']; 
-		$Year = date("d , Y", $rw1['date_created']);
-		$month = getdate($rw1['date_created']);
+		$image = $rw1['image']; 
+		
+		
 
 		$content = '<section>
 			<div class="news_display">
 				<div class="news_display_head">
-					<span class="news_display__cat">'.cat_translate($rw1['cat']).'</span>
-					<span class="news_display__date">'.$month['month']." ".$Year.'</span>
-					<span class="news_display__visit">'.__('Views:').$visit.'</span>
+					<span class="news_display__cat"><a target="_blank" href="'._URL.'/?page='._PAGE.'&cat_id='.$rw1['cat'].'">'.cat_translate($rw1['cat']).'</a></span>
+					<span class="news_display__date">'.UDate( $rw1['date_created'], 'text' ).'</span>
+					<span class="news_display__visit">'.$visit." ".__('بازدید').'</span>
 				</div>
 				<div class="news_display_h1"><h1>'.$rw1['name'].'</h1></div>
 				<div class="news_display_social">'.seo_share('24').'</div> 	

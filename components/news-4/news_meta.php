@@ -1,8 +1,8 @@
 <?
 
 # jalal7h@gmail.com
-# 2016/11/17
-# 1.0
+# 2016/12/11
+# 1.1
 
 # title / kw / desc
 # echo news_meta('kw');
@@ -27,6 +27,7 @@ function news_meta( $type ){
 			
 			case 'desc':
 				$desc = $rw['text'];
+				$desc = str_replace( "\n", "", $desc );
 				$desc = strip_tags( $desc );
 				$desc = sub_string( $desc, 0, 1000 );
 				$desc = trim( $desc );

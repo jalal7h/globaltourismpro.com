@@ -7,5 +7,5 @@
 function ticketbox_isNew( $ticketbox_id ){
 
 	return !ticketbox_user( $ticketbox_id )['view'];
-
+	
 }

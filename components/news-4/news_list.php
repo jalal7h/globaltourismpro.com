@@ -34,9 +34,9 @@ function news_list($rw_pagelayer){
 	}	
 	
 	$content = '<div class="news_list">
-	<span>'.__('Category').'</span>
+	<span>'.__('دسته بندی').'</span>
 	<select id = "mySelect" onchange="Categorylist()">
-		<option value = "Any">'.__('-Any-').'</option>
+		<option value = "Any"></option>
 		'.$list_of_options_for_news_list.'
 	</select>';
 	
@@ -48,22 +48,19 @@ function news_list($rw_pagelayer){
 
 	$tdd = 10;
 	$stt = $tdd * intval($_REQUEST['p']); 
-	$query1 = " SELECT * FROM `news` WHERE 1 $q_cat ORDER BY `id` DESC LIMIT $stt , $tdd ";
+    $query1 = " SELECT * FROM `news` WHERE 1 $q_cat ORDER BY `id` DESC LIMIT $stt , $tdd ";
     
     if(! $rs1 = dbq($query1) ){
 		e();
 	
 	} else if(! dbn($rs1) ){
-	
-		$content.= convbox( __('there are no results.') );
+		$content.= convbox( __('موردی یافت نشد') );
 	
 	} else {
 
 	    while( $rw1 = dbf($rs1) ){
-					
-			$image = $rw1['pic'];
-			$Year = date("d , Y", $rw1['date_created']);
-			$month = getdate($rw1['date_created']);
+
+			$image = $rw1['image'];
 
 			# بررسی تصویر
 			if (! $image ) {
@@ -75,17 +72,15 @@ function news_list($rw_pagelayer){
 
 				} else {
 					$j++;
-					$margin="0";
 					if($j == 2){
 						$i = 1;
 						$j = 0;
-						$margin = "9.6px";
 					}
 					# نمایش خبر بدون تصویر در ستون دوم
-					$content.= noimg2($rw1,$margin);
+					$content.= noimg2($rw1);
 				}
 
-			} elseif ($i == 1) {
+			} else if( $i == 1 ){
 				# اگر تصویر باشد و تکی نمایش دهد
 				$i = 2;
 			
@@ -94,26 +89,23 @@ function news_list($rw_pagelayer){
 					<div class="news_list_text">
 						<div class="news_list_tile">
 							<span class="news_list__cat">'.cat_translate($rw1['cat']).'</span>
-							<span class="news_list__date">'.$month['month']." ".$Year.'</span>			
+							<span class="news_list__date">'.UDate( $rw1['date_created'],'text').'</span>
 							<p>'.$rw1['name'].'</p>
 						</div>
-					</div>
-					<div class="news_list_img">
+					</div><div class="news_list_img">
 						<img class="isss" src="'._URL.'/'.$image.'">
 					</div>
-					<div class="social2">'.news_list_sharing( $rw1 ).'</div>
+					<div class="social2">'.seo_share( '24' , news_link($rw1) ).'</div>
 				</a>
 			</div>';
 					
 			} elseif ($i == 2) { // نمایش خبر ها در دو ستون
 				$j++;
-				$margin = "0";
 				if($j == 2){
 					$i = 1;
 					$j = 0;
-					$margin = "9.6px";
 				}
-				$content.= two_news_list($rw1,$margin);
+				$content.= two_news_list($rw1);
 			}
 
 		}# end while	
@@ -127,22 +119,18 @@ function news_list($rw_pagelayer){
 
 # در صورت نداشتن تصویر این اجرا میشه
 function noimg1($rw1){
-				
-	$image = $rw1['pic'];
-	$Year = date("d , Y", $rw1['date_created']);
-	$month = getdate($rw1['date_created']);
 	
 	$noimg1.= '<div class="noimg">
 		<a href="'.news_link($rw1).'">
 			<div class="left">
 				<span class="news_list__cat">'.cat_translate($rw1['cat']).'</span>
-				<span class="news_list__date">'.$month['month']." ".$Year.'</span>
+				<span class="news_list__date">'.UDate($rw1['date_created'], 'text').'</span>
 			</div>
 			<div class="right">
 				<p>'.$rw1['name'].'</p>
 			</div>
 		</a>	
-		<div class="social3">'.news_list_sharing( $rw1 ).'</div>
+		<div class="social3">'.seo_share( '24' , news_link($rw1) ).'</div>
 	</div>';
 
 	return $noimg1;
@@ -150,20 +138,19 @@ function noimg1($rw1){
 }
 
 # در صورت نداشتن تصویر و نمایش خبر در ستون دوم
-function noimg2($rw1,$margin){
-				
-	$image = $rw1['pic'];
-	$Year = date("d , Y", $rw1['date_created']);
-	$month = getdate($rw1['date_created']);
+$GLOBALS['news-counter'];
+function noimg2( $rw1 ){
+	
+	$GLOBALS['news-counter']++;
 		
-	$noimg2.= '<div class="two_news_list_noimg" style="margin-left:'.$margin.'">
+	$noimg2.= '<div class="two_news_list_noimg '.( $GLOBALS['news-counter'] %2 ? "first" : "second" ).'" >
 		<a href="'.news_link($rw1).'">
 			<div class="left">
 				<span class="news_list__cat">'.cat_translate($rw1['cat']).'</span>
-				<span class="news_list__date">'.$month['month']." ".$Year.'</span>
+				<span class="news_list__date">'.UDate($rw1['date_created'], 'text').'</span>
 				<p>'.$rw1['name'].'</p>
-			</div>			
-			<div class="social2">'.news_list_sharing( $rw1 ).'</div>
+			</div>
+			<div class="social2">'.seo_share( '24' , news_link($rw1) ).'</div>
 		</a>			
 	</div>';
 
@@ -172,23 +159,20 @@ function noimg2($rw1,$margin){
 }
 
 # خبرها در دو ستون نشان داده میشه
-function two_news_list($rw1,$margin){
-			
-	$image = $rw1['pic'];
-	$Year =date("d , Y", $rw1['date_created']);
-	$month = getdate($rw1['date_created']);
+function two_news_list($rw1){
+	
+	$GLOBALS['news-counter']++;
 
-	$two_news_list.= '<div class="two_news_list" style="margin-left:'.$margin.'">
+	$two_news_list.= '<div class="two_news_list '.( $GLOBALS['news-counter'] %2 ? "first" : "second" ).'" >
 		<a href="'.news_link($rw1).'">
 			<div class="left">
 				<span class="news_list__cat">'.cat_translate($rw1['cat']).'</span>
-				<span class="news_list__date">'.$month['month']." ".$Year.'</span>
+				<span class="news_list__date">'.UDate($rw1['date_created'], 'text').'</span>
 				<p>'.$rw1['name'].'</p>
+			</div><div class="news_list_2img">
+				<img class="isss" src="'._URL.'/resize/1800x780/'.$rw1['image'].'">
 			</div>
-			<div class="news_list_2img">
-				<img class="isss" src="'._URL.'/resize/237x390/'.$image.'">
-			</div>
-			<div class="social2">'.news_list_sharing( $rw1 ).'</div>
+			<div class="social2">'.seo_share( '24' , news_link($rw1) ).'</div>
 		</a>			
 	</div>';
 

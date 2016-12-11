@@ -17,9 +17,10 @@ function news_mg_form(){
 		!]
 			
 			[!"text:name*"!]
-			[!"select:cat*","option"=>cat_display("news",$is_array=false)!]
+			[!"select:cat*","option"=>"<option value=\'\'></option>".cat_display("news",$is_array=false)!]
 			[!"textarea:text*.tinymce"!]
-			[!"file:pic"!]
+			[!"keyword:tag"!]
+			[!"file:image"!]
 	
 			<hr>
 
@@ -28,5 +29,8 @@ function news_mg_form(){
 	# -------------------------------------------------
 
 }
+
+
+
 
 
