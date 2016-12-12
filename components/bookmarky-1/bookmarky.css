@@ -1,81 +1,34 @@
 
-/* taghipoor.meysam@gmail.com */
-/* 2016/11/27 */
-/* 1.0 */
+.bookmarky {
+	transition: all 0.2s;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
 
-.favorite-button .simplefavorite-button {
-    position: relative;
-    font-size: 15px;
-    height: 40px;
-    width: 100px;
-    color: #c0db2d;
-    background: #3b1e3a;
-    border: 0;
-    font-family: raleway,sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    direction: rtl;
-    opacity: 0.8;
+.bookmarky.logged {
+	cursor: pointer;
 }
-.favorite-button .simplefavorite-button:hover{
-    opacity: 1;
+.bookmarky.logout {
+	cursor: default;
 }
-.favorite-button .baleen {
-    position: absolute;
-    top: 0;
-    right: 50%;
-    opacity: 0;
-    visibility: hidden;
-    margin-right: -50px;
-    background-color: rgba(0,0,0,.8);
-    color: #fff;
-    width: 100px;
-    height: 30px;
-    font-size: 14px;
-    line-height: 30px;
-    -webkit-transition: all 200ms ease;
-    -o-transition: all 200ms ease;
-    transition: all 200ms ease;
-}
-.favorite-button .logout:hover .baleen{
-	position: absolute;
-    top: -40px;
-    right: 10%;
-    opacity: 1;
-    visibility: visible;
-    margin-right: -50px;
-    background-color: rgba(0,0,0,.8);
-    color: #fff;
-    width: 180px;
-    height: 30px;
-    font-size: 14px;
-    line-height: 30px;
-    -webkit-transition: all 200ms ease;
-    -o-transition: all 200ms ease;
-    transition: all 200ms ease;
-    padding-top: 3px;
-}
-.simplefavorite-button:after {
-    font-family: FontAwesome;
-    content: "\f006";
-    font-size: 20px;
-    display: inline-block;
-    vertical-align: top;
-    width: 45%;
-    height: 40px;
-    line-height: 40px;
-    background-color: rgba(0,0,0,.2);
-}
-.simplefavorite-button-count{
+.bookmarky:before {
+	font-family: FontAwesome;
+	content: "\f08a";
+	margin-left: 5px;
 	display: inline-block;
-	width: 50%;
-	vertical-align: top;
-	padding-top: 10px;
+	transform: scale( 1.0 );
+	transition: 0.2s all;
 }
-.favorite-button .active {
-    background-color: #c0db2d;
-    color: #3b1e3a;
+.bookmarky.logged:before {
+	opacity: 0.8;
 }
-.favorite-button .logged{
-    cursor: pointer;
+.bookmarky.active:before {
+	content: "\f004";
+	color: #ff6c86;
+	transform: scale( 1.2 );
 }
+

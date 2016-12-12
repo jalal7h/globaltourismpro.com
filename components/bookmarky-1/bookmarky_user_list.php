@@ -19,7 +19,7 @@ function bookmarky_user_list(){
 	# list
 
 	$list['name'] = __FUNCTION__;
-	$list['query'] = " SELECT * FROM `bookmarky` WHERE `user_id`='".$_SESSION['uid']."' ORDER BY  `id` ASC";
+	$list['query'] = " SELECT * FROM `bookmarky` WHERE `user_id`='".user_logged()."' ORDER BY `id` ASC ";
 	$list['tdd'] = 10;
 
 	#
@@ -36,16 +36,7 @@ function bookmarky_user_list(){
 	$list['addnew_url'] = false;
 	$list['remove_url'] = true; // link dokme hazf
 	
-	$list['list_array'][] = array("content" => '
-
-		lmtc($rw["table_name"])[0]." : ".
-
-		( table($rw["table_name"],$rw["table_id"]) 
-			? table($rw["table_name"],$rw["table_id"])["name"]
-			: "['.__('حذف شده').']"
-		)
-
-	' );
+	$list['list_array'][] = array("content" => 'bookmarky_user_list_recordLink($rw)' );
 	
 	#
 	# paging select
@@ -75,5 +66,32 @@ function bookmarky_user_list(){
  
 	$content = listmaker_list($list);
 
-    layout_post_box( __('FAVORITES'), $content, $allow_eval=false, $framed=1 );
+    layout_post_box( __('علاقه مندی ها'), $content, $allow_eval=false, $framed=1 );
+    
 }
+
+
+function bookmarky_user_list_recordLink( $rw_bm ){
+	
+	$c = lmtc($rw_bm["table_name"])[0]." : ";
+
+	if( $rw_table = table( $rw_bm["table_name"], $rw_bm["table_id"] ) ){
+		
+		$func = $rw_bm["table_name"]."_link";
+		if( function_exists($func) ){
+			$href = "href=\"".$func($rw_table)."\"";
+		}
+		$c.= "<a $href target=\"_blank\">".$rw_table["name"]."</a>";
+	
+	} else {
+		$c.= __('حذف شده');
+	}
+
+	return $c;
+
+}
+
+
+
+
+
