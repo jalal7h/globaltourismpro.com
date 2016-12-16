@@ -24,8 +24,8 @@ jQuery(document).ready(function($) {
 				data:{table_name:table_name,table_id:table_id},
 				type:'post',
 				success:function(data){
-					span = '#'+id+">.simplefavorite-button-count";			
-					$(span).text(data);	
+					span = '#'+id;	
+					$(span).attr({'tooltip-title':data});
 			    },
 			});
 		
