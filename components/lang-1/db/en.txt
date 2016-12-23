@@ -1,11 +1,12 @@
 9cb0f80d Daily Report
-8bab43e8 Client Invoices
+160e2d58 Client invoices
 9ef9604e Payment Gateways
 421666d7 Offline Payment
 4dd63a18 There is no gateway defined.
 36b79fa1 Install
 7bf14a2e Setup
 b46f9841 Cancel
+d4ecd766 Received
 fc03cf50 Currency rate
 25ec13b2 Terminal ID
 23bfd573 Username
@@ -47,10 +48,10 @@ f4ae9f2f Amount
 e651942c You will be redirected to payment gateway by clicking on the "Payment".
 ba460428 There is no invoice with ID %%.
 bf7338d8 The invoice #%% already paid!
-1583d8a9 Please first login to be
-66d8d034 Removed
+f09bc22b Please first login
 315f6f05 Section
-aade9284 FAVORITES
+810a480e Favorites
+66d8d034 Removed
 a694e68c No record submitted
 aae81639 Are you sure to remove?
 7b592f31 Edit
@@ -73,6 +74,9 @@ fab9b08f Your message have been sent to %%.
 39cd89e0 Are you sure to remove?
 22b18fdc No Comment
 81c4638e Comment
+4f912bb2 You are not allowed to submit more than two consecutive messages.
+b5820172 You have reached the maximum comment submission within one hour.
+0075d1a8 You have reached the maximum comment submission within one day.
 d90b80a2 Problem on saving the comment
 bacfc496 Reply
 c01ee110 Tweet
@@ -104,8 +108,7 @@ d1e47ecd Edit name
 184512f5 New layer
 0827c947 Move to up
 f2ca9f85 Move to down
-200e67ee Enable
-25da8e18 Disable
+f879902b enable/disable
 6cf9b4a6 Remove
 fe40b196 Wrap in frame
 256a8343 there is no way to disable this linkbox.
@@ -115,11 +118,13 @@ dbd46aba Linkbox details
 fb41eded Sublink
 943136df Submit a new link
 9f23a4a1 Linkbox
+2d8bcc26 Submit new ticket
 92948258 record
-19902d73 %% not found.
-afc1d8a9 New %%
 2ebf1a24 Search ...
-acf4d808 enable / disable
+afc1d8a9 New %%
+19902d73 %% not found.
+6eaebca4 Enable
+c26ac248 Disable
 c2c3b78f There is no linkbox defined.
 c63ad281 Page :
 13d984b3 no record found.
@@ -145,10 +150,11 @@ ed213d9a wrong password
 897c9fa2 Dashboard
 b2253bbc Invalid Access!
 1335703e Logout
+eb92ddfe No widget defined
 07f0f466 there are no results.
-879aad34 Views:
-310bdc09 Category
-3a94c405 -Any-
+4e919b57 view
+cacac8e8 Category
+2f35c8b5 no record found.
 34ea9d92 List of news
 3b6c7f7e Submit news
 44ee9f11 Please insert your email address to receive the latest updates in your mail inbox.
@@ -171,6 +177,7 @@ b77bbf2a Continent
 d80b00c9 City
 0e19e858 Region
 69a6529c Street
+8835357c Are you sure to remove %% ?
 ce8e19ff Unknown
 2f9d8192 No record submitted
 33967c4f Submit new %% ..
@@ -181,10 +188,40 @@ ce8e19ff Unknown
 e7412c0f Delimiter
 0d20443f HTML Content
 9354af56 Social Network
+94549dce no record found matching this ID.
+165441cb Client
+9aadbaa5 Active client
+a08923b5 Absent client
+1736d080 %%'s email subject
+98f8766a %%'s email body
+07e83fa9 %%'s SMS
+8cb85f2c Variables used in messages
+22506e07 All changes about the messages of <b>%%</b> have been saved.
 b3c0d659 %% list
+2e8512de Select
 9c3dd9ce Ticket destination
 51b2ffd9 Message
+47823995 status
 da5862d7 Date
+e51640bb Move to archive
+8c17399e Are you sure to archive this message?
+d31a0360 Active messages
+d72208cd Message archive
+82331ebe Closed
+c888f43c New
+1089eac3 Awaiting reply
+6aedaf47 Replied
+cba555d3 Ask seller
+587b7bed Buyer's quiestion
+d37f2d4c my question from %%
+5b27dfe9 %%'s quiestion from me
+5a753c17 Support Ticket
+7b6302cd System
+0d43d94b Type
+bbf6a4af item
+712aec15 There is no %% with ID of #%%.
+664f9e09 You are not allowed to see this page.
+e213f2a2 Some noice on submission.
 25944152 months later
 9681eb70 days later
 b5d547af hours later
@@ -226,12 +263,12 @@ bd302eb3 Your credit
 0ebf4679 Register
 fbe9d68e Forgot password
 f5b8cc05 Wrong %% or password
+368ba10c Your account have been suspended.
 8ba34bf5 Login
 11d68fbc %%Register Now%%
 86c0e83f password
 f54b8fb7 Submitting the login form you are agreeing the %%website terms%%.
 2a7368a4 Forgot my password
-46e750fe Are you sure to remove this client?
 e458c88b Are you sure to remove all related data this client?
 7fb6f3f1 Please insert your email address.
 503c4596 The mentioned email address is already in use.
@@ -245,7 +282,6 @@ da5f9de9 if you already have an account please %%login%%
 65d21c61 List of Managers
 3be75adb Submit a new manager
 82991df9 date of registration
-47823995 status
 95e2e00d Your email address is already in use.
 b32beaac Clientarea
 06f7aa3e Home
@@ -284,10 +320,13 @@ bb3d7c0e Registration Form
 fa41e21c Filters
 ff2fc9e3 Client Menu
 03544778 Client Desk
+dc77044f Messages
 d8cf8c26 Change password
 bb1f5f23 HTML Content
 0625d738 Reply to Contact messages
 94815be8 Default Prompts
+b49ff84d comments
+1f2a2bac SMS
 e5b547e0 News category
 f7ee8d28 Service Basis
 f1baf12f Ticket categories
@@ -312,7 +351,6 @@ e734b748 Payment method
 d3abe129 Description
 aefb3531 Icon
 34a07293 Category
-0d43d94b Type
 c8fd656e Priority
 15796db2 Property
 fd6a9cb7 Option
@@ -326,7 +364,6 @@ fd6a9cb7 Option
 8ab5301d Date
 abce1a9b question
 bb25700d answer
-b49ff84d comments
 ad7fd17a page
 456ad385 table name
 8d243f35 table ID
@@ -344,19 +381,18 @@ fb07bb29 icon
 42672d7c non-removable
 cc28d0ba news
 e5468b3a news
-cacac8e8 Category
 3d06b85b News text
 353036b9 Email
 67d02fee Emails
 f2378a36 Page title
 caf6157b Position
 e1942777 grid
-2c6b138f Client Email Title
-e42913b9 Client Email Message
-d0aaf81e Admin Email Title
-b3489827 Admin Email Message
-fc3248f4 Client SMS Message
-eff3be72 Admin SMS Message
+55dc850f Prompt
+c07dd5bd Email subject
+5706fea5 Email body
+d0aaf81e Admin's email subject
+b3489827 Admin's email body
+eff3be72 Admin's SMS
 0921ab1a Ticket
 ce9bc533 Tickets
 996c9a16 Ticket Message
@@ -367,10 +403,10 @@ fba026ab Phone
 5aa3ad7e Workplace
 86bc8155 Gender
 1a7c9784 Post
-4aabb424 آی پی ثبت نام
-8054aa7c زمان ثبت نام
-61689855 آی پی آخرین ورود
-f3ecaa12 زمان آخرین ورود
+4aabb424 Registration IP
+8054aa7c Registration date
+61689855 Last login IP
+f3ecaa12 Last login date
 fb3c84d8 IP
 70371360 Activity
 029efcd6 Phone
@@ -385,6 +421,34 @@ edc1cbb1 Money Unit
 94c8e514 Website status
 0789f004 Downtime Message
 13905ff7 Extra tags
+772c7543 Share on twitter's button
+17d2a0bc Daily message submission limit
+7c7fbbf3 Hourly message submission limit
+8c22209e Cell number
+619f376a SMS server connection string
+b137c19e Client register - completion
+6ada1da3 Reset password - completion
+0c170ce2 Reset password - send link
+3e9399a2 Invoice payment confirm
+c9dbc01c New invoice creation
+def0817d Order payment confirm
+78573730 Order by
+36264dfc Payment by wallet credit
+76d4895f Contact us form
+dbfff9df Support ticket - send reply
+5c49b154 Message sender
+7c470f39 Message receiver
+0c00ea5b Ask from seller - send reply
+e4f1eb0c Buyer
+8aaa1d8e Seller
+23718416 Support ticket - new ticket by admin
+7b1a7613 Message receiver client
+e6eebf4c Support ticket - new ticket by user
+6d72db8b Message sender client
+fa08bb2b Client to client - new message
+e5887d3e Ask from seller - new message
+e8a77cf8 Client to cilent - send reply
+0e6ede08 Edit client profile
 530f1290 Looks that you are using an old browser that can not handle alot of new features in our website. so we do suggest you to use some brand new browsers like Chrome or Firefox.
 c5a076d5 send to
 6ac74e4f Client details

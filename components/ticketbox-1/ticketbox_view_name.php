@@ -11,13 +11,13 @@ function ticketbox_view_name(){
 	} else {
 		$c.= "
 		<div class=\"name\">
-			<div class=\"the_name\">".$rw['name']."
+			<div class=\"the_name\">#".$rw['id']." ".$rw['name']."
 			<div class=\"etc\">
 				".( $rw['cat'] ? "
 				<div class=\"category\">".cat_translate($rw['cat'])."</div>
 				<span></span>
 				" : '' )."
-				<div class=\"the_date\">".time_inword($rw['date_created'])."</div>
+				<div class=\"the_date\" title=\"".UDate($rw['date_created'],'text')." ".UClock($rw['date_created'])."\">".time_inword($rw['date_created'])."</div>
 			</div>
 		</div>";
 	}

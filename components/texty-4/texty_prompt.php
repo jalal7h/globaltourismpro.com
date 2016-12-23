@@ -1,8 +1,8 @@
 <?
 
 # jalal7h@gmail.com
-# 2016/10/23
-# 2.2
+# 2016/12/21
+# 2.3
 
 
 # texty_prompt( $slug , $vars=null, $convbox=true )
@@ -16,13 +16,12 @@ function texty_prompt( $slug , $vars=null, $convbox=true ){
 	#
 	# get the prompt
 	if(! $texty = texty_fetch( $slug ) ){
-		e( __FUNCTION__, __LINE__, 'cant find the slug named as '.$slug );
-		return false;
+		return e( 'cant find the slug named as '.$slug );
 
 	#
 	# if its set
 	} else if(! $prompt = trim($texty['prompt']) ){
-		e(__FUNCTION__,__LINE__);
+		// e();
 
 	} else {
 		

@@ -1,15 +1,37 @@
 <?
 
+# jalal7h@gmail.com
+# 2016/12/17
+# 1.1
+
 function ticketbox_view(){
 	
+	if( !user_logged() and !admin_logged() ){
+		ed();
 
-	if(! $id = intval($_REQUEST['id']) ){
+	} else if(! $id = intval($_REQUEST['id']) ){
 		e();
 
 	} else if(! table('ticketbox', $id) ){
 		echo convbox( __('%% با شناسه #%% ثبت نشده است.',[ lmtc('ticketbox')[0], $id ] ), 'transparent' );
 
 	} else {
+
+		echo js_print('ticketbox', 'ticketbox_view_post');
+		if( is_admin() ){
+			echo js_print('ticketbox', 'ticketbox_mg_post_remove');
+		}
+
+		# 
+		# auth
+		if( is_admin() ){
+			//
+
+		} else if(! $rw_tu = ticketbox_user($id) ){
+			echo convbox( __('شما دسترسی لازم برای مشاهده این صفحه را ندارید.'), 'transparent' );
+			return false;
+		}
+
 
 		$c.= "<div class=\"".__FUNCTION__."\">";
 

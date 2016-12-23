@@ -1,15 +1,18 @@
 <?
 
 # jalal7h@gmail.com
-# 2016/12/02
-# 3.2
+# 2016/12/19
+# 3.4
 
 function xmail( $to, $subject, $text, $from='', $html=0, $mssp_id=0 ){
 
-	if( its_local() ){
-		echo "xmail local [$to] , [$subject]<br>";
-		return true;
+	if( its_local() or debug ){
+		xmail_memo( $to, $subject, $text );
+		if( its_local() ){
+			return true;
+		}
 	}
+	dg();
 	
 	#
 	# fix from
@@ -31,11 +34,13 @@ function xmail( $to, $subject, $text, $from='', $html=0, $mssp_id=0 ){
 	#
 	# maybe local or remote
 	if( is_component('mailserverselector') ){
+		dg();
 		return mss( $to, $subject, $text, $from, $html, $mssp_id, debug_backtrace()[1]['function'] );
 
 	#
 	# only local
 	} else {
+		dg();
 		return xmail_local( $to, $subject, $text, $from, $html );
 	}
 	

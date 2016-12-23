@@ -1,17 +1,16 @@
 
 
 # jalal7h@gmail.com
-# 2016/12/07
-# 1.33
+# 2016/12/21
+# 1.35
 
 /*
 	
 	###################################################################################
-	# the new version 1.30
-
-	# 
 	# the list
-	$table = 'item'; / ??
+	#
+	
+	$table = 'item'; // ??
 	$list['name'] = __FUNCTION__;
 	$list['query'] = " SELECT * FROM `$table` WHERE 1 AND `parent`='$parent' ORDER BY `prio` ASC ";
 	$list['tdd'] = 10; // tedad dar safhe
@@ -40,6 +39,9 @@
 	$list['paging_url'] = true; // not needed when we have 'tdd'
 	
 	#
+	$list['addnew_prompt'] = __('ارسال پیام پشتیبانی جدید');
+
+	#
 	# list array // list e sotun haye list
 	$list['list_array'][] = array( "head"=>lmtc($table.":pic") , "tag"=>"th", "picture" => '$rw[\'pic\']');
 	$list['list_array'][] = array("head"=>lmtc($table.":name"), "content" => '$rw[\'name\']');
@@ -63,11 +65,12 @@
 	);
 	
 	$list['linkTo']['some_name_for_a_tag'] = [
-		'url' => '_URL."/?page=".$_REQUEST["page"]."&cp=".$_REQUEST["cp"]."&func=tour_management_list&p=".$_REQUEST["p"]."&do=setHotel&id=".$rw["id"]',
-		'icon' => '021',
-		'name' => 'بروزرسانی',
-		'color' => '#f00',
-		'width' => 65,
+		'url'	=> '_URL."/?page=".$_REQUEST["page"]."&cp=".$_REQUEST["cp"]."&func=tour_management_list&p=".$_REQUEST["p"]."&do=setHotel&id=".$rw["id"]',
+		'icon'	=> '021',
+		'name'	=> 'بروزرسانی',
+		'color'	=> '#f00',
+		'width'	=> 65,
+		'yechi'	=> 'yechi dge'.
 	];
 
 	#
