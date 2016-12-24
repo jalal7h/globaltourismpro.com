@@ -20,7 +20,6 @@ function bookmarky( $table_name, $table_id ){
 		
 		'" text_notLoggedIn="'.__('لطفا ابتدا وارد سایت شوید.').
 		'" table_name="'.$table_name.
-		'"id= "'.$table_name.'-'.$table_id.
 		'" table_id="'.$table_id.'" ';
 		
     return $bookmarky;

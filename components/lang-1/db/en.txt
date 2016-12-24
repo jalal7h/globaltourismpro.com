@@ -57,8 +57,6 @@ aae81639 Are you sure to remove?
 7b592f31 Edit
 63f03ac8 Subcat
 85506645 Save
-a4623c15 Features of %%
-b2755b58 Features of
 c10aa7a5 Last Messages
 dbbccdfb Contact Setting
 76392aa3 Email Address
@@ -232,10 +230,6 @@ b5d547af hours later
 76a00a28 hours ago
 d9c05ef0 minutes ago
 0a3e6f22 seconds ago
-3c6b47fe Plus
-a99b7dca To submit a new %% you need to register at first.
-f3acc083 The last upvotes
-8e3c05d4 %% upvoted to %%.
 5f428342 Change %%
 1f8326a3 Current password
 847fe3e8 New password
@@ -300,6 +294,8 @@ baa04439 Comments
 a3b9cda1 Keywords
 33d10611 Layout
 74fe9d9c Link Boxes
+23b3205c Daily Tours
+4f74e2d4 Transfers
 1520520e News
 e5df36b5 Newsletter
 9bf69a29 Position
@@ -317,7 +313,6 @@ a5eb7f16 News list
 965804ac Forgot password form
 1875752a Clientarea login form
 bb3d7c0e Registration Form
-fa41e21c Filters
 ff2fc9e3 Client Menu
 03544778 Client Desk
 dc77044f Messages
@@ -327,17 +322,14 @@ bb1f5f23 HTML Content
 94815be8 Default Prompts
 b49ff84d comments
 1f2a2bac SMS
-e5b547e0 News category
+2e61b40b Price Per
 f7ee8d28 Service Basis
+ef7a7585 Departs
+41eebe87 Guiding Languages
+04acca70 Transfer Types
+178d97ea Transfer Basis
+e5b547e0 News category
 f1baf12f Ticket categories
-4b191326 Transfer Type
-f615075e Small Textbox
-e933ca5e Select Box
-c13f2291 Radio Button
-6db72517 Checkbox
-4981f2b8 Large Textbox
-b757da9f Label
-17aa67d3 Delimiter
 440ec58e ID
 6bc110d6 Client ID
 f11051b2 Order Table
@@ -350,13 +342,6 @@ e734b748 Payment method
 799edfb1 Title
 d3abe129 Description
 aefb3531 Icon
-34a07293 Category
-c8fd656e Priority
-15796db2 Property
-fd6a9cb7 Option
-01623060 Content Table
-9a73dbde Content ID
-3258527f Content
 203ee481 Client name
 60787b8e Cell number
 0c05af2c Destination
@@ -386,7 +371,9 @@ e5468b3a news
 67d02fee Emails
 f2378a36 Page title
 caf6157b Position
+3258527f Content
 e1942777 grid
+c8fd656e Priority
 55dc850f Prompt
 c07dd5bd Email subject
 5706fea5 Email body
@@ -396,7 +383,6 @@ eff3be72 Admin's SMS
 0921ab1a Ticket
 ce9bc533 Tickets
 996c9a16 Ticket Message
-3e6f86eb Table
 fba026ab Phone
 6c392887 Address
 53dc9ae1 Job

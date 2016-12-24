@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Dec 23, 2016 at 11:40 PM
+-- Generation Time: Dec 24, 2016 at 06:16 PM
 -- Server version: 5.6.27
 -- PHP Version: 5.6.14
 
@@ -39,13 +39,6 @@ CREATE TABLE `billing_invoice` (
   `hide` int(1) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
 
---
--- Dumping data for table `billing_invoice`
---
-
-INSERT INTO `billing_invoice` (`id`, `user_id`, `order_table`, `order_id`, `cost`, `method`, `transaction`, `date`, `date_created`, `hide`) VALUES
-(1, 1, '', 0, 4000, 'manual2', '', 0, 1480032566, 0);
-
 -- --------------------------------------------------------
 
 --
@@ -66,14 +59,6 @@ CREATE TABLE `billing_method` (
   `c5` text COLLATE utf8_persian_ci NOT NULL,
   `hide` int(1) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
-
---
--- Dumping data for table `billing_method`
---
-
-INSERT INTO `billing_method` (`id`, `method`, `unit`, `terminal_id`, `terminal_user`, `terminal_pass`, `c1`, `c2`, `c3`, `c4`, `c5`, `hide`) VALUES
-(4, 'manual1', '', '', '', '', 'بانک ملت', '1234567890', '6104666655554444', '', 'offline', 0),
-(5, 'manual2', '', '', '', '', 'بانک صادرات', '8123212345', '6037691044443333', '', 'offline', 0);
 
 -- --------------------------------------------------------
 
@@ -113,66 +98,26 @@ CREATE TABLE `cat` (
 --
 
 INSERT INTO `cat` (`id`, `name`, `desc`, `kw`, `parent`, `cat`, `prio`, `logo`, `family_tree`, `flag`, `hide`) VALUES
+(46, 'German', '', '', 0, 'guidingLanguages', 0, '', '', 1, 0),
+(45, 'French', '', '', 0, 'guidingLanguages', 0, '', '', 1, 0),
+(44, 'English', '', '', 0, 'guidingLanguages', 0, '', '', 1, 0),
+(43, 'Shared', '', '', 0, 'transferBasis', 0, '', '', 1, 0),
+(42, 'Vehicle', '', '', 0, 'priceper', 0, '', '', 1, 0),
+(41, 'Every Sundays', '', '', 0, 'depart', 0, '', '', 1, 0),
+(40, 'Every Day', '', '', 0, 'depart', 0, '', '', 1, 0),
+(39, 'EVERY DAY', '', '', 0, 'transferType', 0, '', '', 1, 1),
+(38, 'Shared', '', '', 0, 'serviceBasis', 2, '', '', 1, 0),
+(37, 'Private', '', '', 0, 'serviceBasis', 1, '', '', 1, 0),
+(36, 'Ifant ( 0 - 2 )', '', '', 0, 'priceper', 4, '', '', 1, 0),
+(35, 'Child ( 7-12 )', '', '', 0, 'priceper', 2, '', '', 1, 0),
+(34, 'Child ( 3-6 )', '', '', 0, 'priceper', 3, '', '', 1, 0),
+(33, 'Adult', '', '', 0, 'priceper', 1, '', '', 1, 0),
 (28, 'Politic', '', '', 0, 'news', 0, '', '', 1, 0),
 (29, 'sport', '', '', 0, 'news', 0, '', '', 1, 0),
 (30, 'Billing', '', '', 0, 'ticketbox', 0, '', '', 1, 0),
 (31, 'Transfer issues', '', '', 0, 'ticketbox', 0, '', '', 1, 0),
-(32, 'Tour issues', '', '', 0, 'ticketbox', 0, '', '', 1, 0);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `catcustomfield`
---
-
-CREATE TABLE `catcustomfield` (
-  `id` int(11) NOT NULL COMMENT 'شناسه',
-  `cat_id` int(11) NOT NULL COMMENT 'دسته',
-  `name` varchar(1024) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'عنوان',
-  `type` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'نوع',
-  `prio` int(11) NOT NULL COMMENT 'اولویت',
-  `flag` int(1) NOT NULL COMMENT 'وضعیت',
-  `hide` int(1) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `catcustomfield_option`
---
-
-CREATE TABLE `catcustomfield_option` (
-  `id` int(11) NOT NULL COMMENT 'شناسه',
-  `catcustomfield_id` int(11) NOT NULL COMMENT 'ویژگی',
-  `option` varchar(1024) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'گزینه',
-  `flag` int(1) NOT NULL COMMENT 'وضعیت',
-  `hide` int(1) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `catcustomfield_value`
---
-
-CREATE TABLE `catcustomfield_value` (
-  `id` int(11) NOT NULL COMMENT 'شناسه',
-  `item_table` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'جدول محتوا',
-  `item_id` int(11) NOT NULL COMMENT 'شناسه محتوا',
-  `option_id` int(11) NOT NULL COMMENT 'گزینه'
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `catcustomfield_value_text`
---
-
-CREATE TABLE `catcustomfield_value_text` (
-  `id` int(11) NOT NULL COMMENT 'شناسه',
-  `catcustomfield_value_id` int(11) NOT NULL COMMENT 'شناسه محتوا',
-  `text` text COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'محتوا'
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+(32, 'Tour issues', '', '', 0, 'ticketbox', 0, '', '', 1, 0),
+(47, 'Italian', '', '', 0, 'guidingLanguages', 0, '', '', 1, 0);
 
 -- --------------------------------------------------------
 
@@ -249,14 +194,6 @@ CREATE TABLE `fbcomment` (
   `flag` int(1) NOT NULL COMMENT 'وضعیت',
   `hide` int(1) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci COMMENT='نظر/نظرات' ROW_FORMAT=DYNAMIC;
-
---
--- Dumping data for table `fbcomment`
---
-
-INSERT INTO `fbcomment` (`id`, `text`, `user_id`, `page_id`, `table_name`, `table_id`, `comment_id`, `date`, `flag`, `hide`) VALUES
-(1, 'ok', 1, 52, 'news', 14, 0, 1480440961, 1, 0),
-(2, 'nooooooooooo', 1, 52, 'news', 14, 1, 1480440974, 1, 0);
 
 -- --------------------------------------------------------
 
@@ -339,6 +276,179 @@ INSERT INTO `linkify_config` (`id`, `name`, `haveSub`, `haveIcon`, `pinned`, `fl
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `mg_dailytour`
+--
+
+CREATE TABLE `mg_dailytour` (
+  `id` int(11) NOT NULL,
+  `name` varchar(1024) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'Title',
+  `position_id` int(11) NOT NULL COMMENT 'Position',
+  `serviceBasis_id` int(11) NOT NULL COMMENT 'Service Basis ID',
+  `departs_id` int(11) NOT NULL COMMENT 'Departs ID',
+  `duration` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'Duration',
+  `itinerary` text COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'Itinerary',
+  `inclusions` text COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'Inclusions',
+  `conditions` text COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'Conditions',
+  `notes` text COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'Notes',
+  `date` int(11) NOT NULL COMMENT 'Date',
+  `flag` int(1) NOT NULL COMMENT 'Status',
+  `hide` int(1) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='Daily Tour/Daily Tours';
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `mg_dailytour_image`
+--
+
+CREATE TABLE `mg_dailytour_image` (
+  `id` int(11) NOT NULL,
+  `mg_dailytour_id` int(11) NOT NULL COMMENT 'Daily Tour ID',
+  `image` varchar(1024) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'Image'
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `mg_dailytour_order`
+--
+
+CREATE TABLE `mg_dailytour_order` (
+  `id` int(11) NOT NULL,
+  `mg_dailytour_id` int(11) NOT NULL COMMENT 'Daily Tour ID',
+  `user_id` int(11) NOT NULL COMMENT 'User ID',
+  `service_date` int(11) NOT NULL COMMENT 'Service Date',
+  `leader_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'Tour Leader''s Name',
+  `requested_service_time` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'Requested Service Time ***',
+  `departure_point_flag` int(1) NOT NULL COMMENT 'A centrally located meeting point.',
+  `departure_point` varchar(1024) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'Departure Point of the Service',
+  `departure_time` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'Departure Time',
+  `guiding_language` int(11) NOT NULL COMMENT 'Guiding Language',
+  `additional_requests` varchar(1024) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'Additional Requests',
+  `passenger_cell` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'Passenger''s Cell Number',
+  `date_created` int(11) NOT NULL COMMENT 'Order Date',
+  `hide` int(1) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='Daily Tour Order/Daily Tour Orders';
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `mg_dailytour_order_item`
+--
+
+CREATE TABLE `mg_dailytour_order_item` (
+  `id` int(11) NOT NULL,
+  `mg_dailytour_order_id` int(11) NOT NULL COMMENT 'Order ID',
+  `priceper_id` int(11) NOT NULL,
+  `count` int(11) NOT NULL COMMENT 'Count',
+  `unitcost` int(11) NOT NULL COMMENT 'Unit Cost',
+  `hide` int(1) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `mg_price`
+--
+
+CREATE TABLE `mg_price` (
+  `id` int(11) NOT NULL,
+  `table_name` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `table_id` int(11) NOT NULL,
+  `priceper_id` int(11) NOT NULL,
+  `price` int(11) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `mg_transfer`
+--
+
+CREATE TABLE `mg_transfer` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'Name',
+  `position_id` int(11) NOT NULL COMMENT 'Position',
+  `basis` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'Basis',
+  `tariff` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'Tariff',
+  `itinerary` text COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'Itinerary',
+  `conditions` text COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'Conditions',
+  `notes` text COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'Notes',
+  `vehicle_id` int(11) NOT NULL COMMENT 'Vehicle',
+  `price` int(11) NOT NULL COMMENT 'Price',
+  `date_start` int(11) NOT NULL COMMENT 'From',
+  `date_end` int(11) NOT NULL COMMENT 'To'
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='Transfer/Transfers';
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `mg_transfer_image`
+--
+
+CREATE TABLE `mg_transfer_image` (
+  `id` int(11) NOT NULL,
+  `mg_transfer_id` int(11) NOT NULL COMMENT 'Transfer ID',
+  `image` varchar(1024) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'Image'
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='Transfer Image/Transfer Images';
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `mg_transfer_order`
+--
+
+CREATE TABLE `mg_transfer_order` (
+  `id` int(11) NOT NULL,
+  `mg_transfer_id` int(11) NOT NULL COMMENT 'Transfer ID',
+  `user_id` int(11) NOT NULL COMMENT 'User ID',
+  `direction` varchar(2) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '	* Direction [ Ro:Round Trip, Ar:Arrival, De:Departure ]',
+  `arrival_date` int(11) NOT NULL COMMENT 'Arrival Date',
+  `departure_date` int(11) NOT NULL COMMENT 'Departure Date',
+  `leader_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'Tour Leader''s Name',
+  `ACBT` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'Airline / Cruise / Boat / Train Name',
+  `code` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'Code',
+  `arrival_time` varchar(5) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'Arrival Time',
+  `drop_off_location` varchar(1024) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'Drop Off Location/Hotel Name',
+  `additional_requests` varchar(1024) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'Additional Requests',
+  `passenger_cell` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'Passenger''s Cell Number',
+  `date_created` int(11) NOT NULL COMMENT 'Order Date',
+  `hide` int(1) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='Daily Tour Order/Daily Tour Orders';
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `mg_transfer_order_item`
+--
+
+CREATE TABLE `mg_transfer_order_item` (
+  `id` int(11) NOT NULL,
+  `mg_transfer_order_id` int(11) NOT NULL COMMENT 'Order ID',
+  `priceper_id` int(11) NOT NULL,
+  `count` int(11) NOT NULL COMMENT 'Count',
+  `unitcost` int(11) NOT NULL COMMENT 'Unit Cost',
+  `hide` int(1) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `mg_vehicle`
+--
+
+CREATE TABLE `mg_vehicle` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'Title',
+  `pax` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'Pax',
+  `prio` int(11) NOT NULL COMMENT 'Priority',
+  `flag` int(1) NOT NULL,
+  `hide` int(1) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='Vehicle';
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `news`
 --
 
@@ -381,13 +491,6 @@ CREATE TABLE `newsletter` (
   `id` int(11) NOT NULL COMMENT 'شناسه',
   `email` varchar(255) COLLATE utf8_persian_ci NOT NULL COMMENT 'ایمیل'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci COMMENT='ایمیل/ایمیل‌ها';
-
---
--- Dumping data for table `newsletter`
---
-
-INSERT INTO `newsletter` (`id`, `email`) VALUES
-(3, 'yeki@yeja.com');
 
 -- --------------------------------------------------------
 
@@ -690,21 +793,6 @@ CREATE TABLE `ticketbox_user` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `upvote`
---
-
-CREATE TABLE `upvote` (
-  `id` int(11) NOT NULL COMMENT 'شناسه',
-  `table_name` varchar(255) COLLATE utf8_persian_ci NOT NULL COMMENT 'جدول',
-  `table_id` int(11) NOT NULL COMMENT 'شناسه جدول',
-  `page_url` varchar(1024) COLLATE utf8_persian_ci NOT NULL COMMENT 'صفحه',
-  `user_id` int(11) NOT NULL COMMENT 'شناسه کاربر',
-  `date` int(11) NOT NULL COMMENT 'زمان'
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `user`
 --
 
@@ -737,7 +825,7 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `username`, `password`, `permission`, `name`, `wallet_credit`, `cell`, `tell`, `address`, `profile_pic`, `im_a`, `work_at`, `gender`, `management_title`, `useronline_date`, `flag`, `hide`, `register_ip`, `register_date`, `login_ip`, `login_date`) VALUES
-(1, 'ogun@karisma.co.tr', '9bb3da7992db2e95708e77be0a3f8938', 2, 'Ogün Özbir', 0, '+902123820942', '', '1000000', '', '', '', '', '', 1482536408, 0, 0, '', 0, '', 0),
+(1, 'ogun@karisma.co.tr', '9bb3da7992db2e95708e77be0a3f8938', 2, 'Ogün Özbir', 0, '+902123820942', '', '1000000', '', '', '', '', '', 1482603377, 0, 0, '', 0, '', 0),
 (2, 'jalal7h@gmail.com', '9113f7e5886cdb210542c7e9c84ecfeb', 0, 'Jalal Hoseini', 0, '', '', '', '', '', '', '', '', 1480808490, 0, 0, '', 0, '', 0),
 (3, 'monja@mohta.ba', '1949b7308f936aa179af4cad5238f9ba', 2, 'Konjale Mohtaba', 0, '+90444332954384', '', '', '', '', '', '', 'Billing Management', 1480803837, 1, 0, '', 0, '', 0);
 
@@ -752,13 +840,6 @@ CREATE TABLE `useraccess` (
   `user_id` int(11) NOT NULL COMMENT 'شناسه کاربر',
   `component` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'بخش'
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `useraccess`
---
-
-INSERT INTO `useraccess` (`id`, `user_id`, `component`) VALUES
-(10, 3, 'fbcomment_mg');
 
 -- --------------------------------------------------------
 
@@ -804,32 +885,6 @@ ALTER TABLE `cat`
 ALTER TABLE `cat` ADD FULLTEXT KEY `name` (`name`);
 
 --
--- Indexes for table `catcustomfield`
---
-ALTER TABLE `catcustomfield`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `catcustomfield_option`
---
-ALTER TABLE `catcustomfield_option`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `catcustomfield_value`
---
-ALTER TABLE `catcustomfield_value`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `catcustomfield_value_text`
---
-ALTER TABLE `catcustomfield_value_text`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `catcustomfield_value_id` (`catcustomfield_value_id`);
-ALTER TABLE `catcustomfield_value_text` ADD FULLTEXT KEY `text` (`text`);
-
---
 -- Indexes for table `cronjob`
 --
 ALTER TABLE `cronjob`
@@ -872,6 +927,55 @@ ALTER TABLE `linkify`
 -- Indexes for table `linkify_config`
 --
 ALTER TABLE `linkify_config`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `mg_dailytour`
+--
+ALTER TABLE `mg_dailytour`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `mg_dailytour_image`
+--
+ALTER TABLE `mg_dailytour_image`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `mg_dailytour_order`
+--
+ALTER TABLE `mg_dailytour_order`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `mg_price`
+--
+ALTER TABLE `mg_price`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `table_name` (`table_name`,`table_id`,`priceper_id`);
+
+--
+-- Indexes for table `mg_transfer`
+--
+ALTER TABLE `mg_transfer`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `mg_transfer_image`
+--
+ALTER TABLE `mg_transfer_image`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `mg_transfer_order`
+--
+ALTER TABLE `mg_transfer_order`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `mg_vehicle`
+--
+ALTER TABLE `mg_vehicle`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -949,13 +1053,6 @@ ALTER TABLE `ticketbox_user`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `upvote`
---
-ALTER TABLE `upvote`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `table_name` (`table_name`,`table_id`,`user_id`);
-
---
 -- Indexes for table `user`
 --
 ALTER TABLE `user`
@@ -997,27 +1094,7 @@ ALTER TABLE `bookmarky`
 -- AUTO_INCREMENT for table `cat`
 --
 ALTER TABLE `cat`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
---
--- AUTO_INCREMENT for table `catcustomfield`
---
-ALTER TABLE `catcustomfield`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'شناسه';
---
--- AUTO_INCREMENT for table `catcustomfield_option`
---
-ALTER TABLE `catcustomfield_option`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'شناسه';
---
--- AUTO_INCREMENT for table `catcustomfield_value`
---
-ALTER TABLE `catcustomfield_value`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'شناسه';
---
--- AUTO_INCREMENT for table `catcustomfield_value_text`
---
-ALTER TABLE `catcustomfield_value_text`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'شناسه';
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
 --
 -- AUTO_INCREMENT for table `cronjob`
 --
@@ -1053,6 +1130,46 @@ ALTER TABLE `linkify`
 --
 ALTER TABLE `linkify_config`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+--
+-- AUTO_INCREMENT for table `mg_dailytour`
+--
+ALTER TABLE `mg_dailytour`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `mg_dailytour_image`
+--
+ALTER TABLE `mg_dailytour_image`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `mg_dailytour_order`
+--
+ALTER TABLE `mg_dailytour_order`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `mg_price`
+--
+ALTER TABLE `mg_price`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `mg_transfer`
+--
+ALTER TABLE `mg_transfer`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `mg_transfer_image`
+--
+ALTER TABLE `mg_transfer_image`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `mg_transfer_order`
+--
+ALTER TABLE `mg_transfer_order`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `mg_vehicle`
+--
+ALTER TABLE `mg_vehicle`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `news`
 --
@@ -1108,11 +1225,6 @@ ALTER TABLE `ticketbox_post`
 --
 ALTER TABLE `ticketbox_user`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `upvote`
---
-ALTER TABLE `upvote`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'شناسه';
 --
 -- AUTO_INCREMENT for table `user`
 --
