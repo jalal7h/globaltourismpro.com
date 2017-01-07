@@ -1,5 +1,14 @@
 ﻿
-<header>
-	<a class="home" href="{_URL}">{main_title}</a>
+<header class="page_{_PAGE}">
+	
+	<a class="home" href="{_URL}">
+		<img class="logo" src="{site_logo}" title="{main_title}" />
+	</a>
+
+	{linkify("Header","simple")}
+
 </header>
+
+{mg_slideshow}
+{mg_flapper}
 

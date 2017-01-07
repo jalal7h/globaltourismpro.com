@@ -1,0 +1,25 @@
+
+.slideshow_mg_form .head {
+	font-size: 18px;
+}
+
+.slideshow_mg_form .lmfe_tnit {
+	vertical-align: top;
+	padding-top: 10px;
+	width: 130px;
+}
+
+.slideshow_mg_form input[name="name"] {
+	width: calc( 90% - 160px );
+}
+.slideshow_mg_form textarea {
+	width: calc( 90% - 160px );	
+	height: 120px;
+}
+.slideshow_mg_form input[name="image"] {
+
+}
+.slideshow_mg_form input[name="url"] {
+	width: calc( 90% - 160px );
+}
+

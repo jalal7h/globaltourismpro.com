@@ -1,16 +1,16 @@
 <?
 
 # jalal7h@gmail.com
-# 2016/11/01
-# 1.2
+# 2017/01/07
+# 1.3
 
-$GLOBALS['block_layers']['user_register_form'] = 'فرم ثبت نام';
-$GLOBALS['do_action'][] = 'user_register_form';
+add_layer( 'user_register_form', 'فرم ثبت نام', 'center' );
+add_action( 'user_register_form' );
 
 function user_register_form(){
 	
 	if( user_logged() ){
-		jsgo( _URL.'/userpanel' );
+		jsgo( layout_link(14) );
 		
 	} else if( is_component('user_emailverifybeforesignup') and !user_emailverifybeforesignup_check() ){
 		return user_emailverifybeforesignup();
@@ -22,7 +22,7 @@ function user_register_form(){
 			
 			[!
 				"table" => "user@" ,
-				"action" => "./register_do",
+				"action" => "'.layout_link(59).'",
 				"name" => "'.__FUNCTION__.'" ,
 				"class" => "'.__FUNCTION__.($_REQUEST['popup'] ?" popup" :'').'" ,
 				"target" => "_top" ,
@@ -35,7 +35,7 @@ function user_register_form(){
 				<div class="container">
 					<div class="d02">'.__('ثبت نام').'</div>
 					<div class="d05">'.
-						__('اگر قبلآ ثبت نام کرده اید %%وارد شوید%%', ['<a target="_top" href="./login">','</a>'] ).'
+						__('اگر قبلآ ثبت نام کرده اید %%وارد شوید%%', ['<a target="_top" href="'.layout_link(60).'">','</a>'] ).'
 					</div>
 					
 					[!"name:name*"!]
@@ -47,7 +47,7 @@ function user_register_form(){
 
 					[!"password:password*"!]
 
-					<div class="d04">'.__('شما با کلیک کردن روی دکمه ثبت نام موافقت می کنید که تمامی %%قوانین سایت%% پذیرفته اید.',[ '<a target="_top" href="<?=_URL?>/terms">','</a>' ] ).'</div>
+					<div class="d04">'.__('شما با کلیک کردن روی دکمه ثبت نام موافقت می کنید که تمامی %%قوانین سایت%% پذیرفته اید.',[ '<a target="_top" href="'.layout_link(6).'">','</a>' ] ).'</div>
 					
 					[!"submit:'.__('ثبت نام').'.bgSameAsBG"!]
 	

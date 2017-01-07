@@ -1,8 +1,8 @@
 <?
 
 # jalal7h@gmail.com
-# 2016/12/11
-# 1.1
+# 2017/01/03
+# 1.2
 
 # title / kw / desc
 # echo news_meta('kw');
@@ -10,10 +10,10 @@
 function news_meta( $type ){
 
 	if(! $id = $_REQUEST['id'] ){
-		e();
+		// e();
 
 	} else if(! $rw = table("news", $id) ){
-		e();
+		// e();
 
 	} else {
 

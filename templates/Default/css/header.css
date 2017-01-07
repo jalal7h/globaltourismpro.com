@@ -1,11 +1,36 @@
 
 header {
 	background-color: #eee;
-	height: 80px;
 	display: block;
 	padding: 25px;
+	position: relative;
+	z-index: 11;
 }
-header a.home {
-	font: normal 18px DefaultFont;
-	color: #636363;
+header .logo {
+	max-height: 48px;
+	max-width: 50%;
 }
+
+header .linkify_simple {
+	background-color: #beb2a9;
+	margin-top: 25px;
+}
+
+header .linkify_simple .sub_w {
+	background-color: #beb2a9;	
+}
+header .linkify_simple a {
+	padding: 7px 15px;
+	color: white;
+	background-color: #beb2a9;
+	font-size: 14px;
+	transition: 0.2s all;
+}
+
+header .linkify_simple a:hover {
+    background-color: #9e8c7f;
+}
+
+
+
+

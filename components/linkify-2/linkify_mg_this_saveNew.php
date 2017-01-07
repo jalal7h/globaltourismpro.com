@@ -1,14 +1,16 @@
 <?
 
 # jalal7h@gmail.com
-# 2016/10/28
-# 2.0
+# 2017/01/06
+# 2.1
 
 function linkify_mg_this_saveNew(){
 
 	if(! $_REQUEST['url'] ){
 		$_REQUEST['url'] = _URL;
 	}
+
+	$_REQUEST['url'] = linkify_URL_add( $_REQUEST['url'] );
 
 	$parent = intval($_REQUEST['parent']);
 

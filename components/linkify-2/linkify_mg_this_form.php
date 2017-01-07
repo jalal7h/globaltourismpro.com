@@ -1,8 +1,8 @@
 <?
 
 # jalal7h@gmail.com
-# 2016/10/28
-# 2.0
+# 2017/01/06
+# 2.1
 
 function linkify_mg_this_form(){
 
@@ -25,7 +25,7 @@ function linkify_mg_this_form(){
 		dg();
 
 	} else while( $rw_page = dbf($rs_page) ){
-		$list_of_pages_in_select.= "<option value='".layout_page_link($rw_page)."::".$rw_page['name']."' >".$rw_page['name']."</option>";
+		$list_of_pages_in_select.= "<option value='".layout_link($rw_page)."::".$rw_page['name']."' >".$rw_page['name']."</option>";
 	}
 	
 
@@ -34,8 +34,6 @@ function linkify_mg_this_form(){
 		[!
 			"table" => "linkify" ,
 			"action" => _URL."/?page=admin&cp=".$_REQUEST["cp"]."&do=".$_REQUEST["do"]."&cat='.$cat.'&parent='.$parent.'",
-			"name" => "'.__FUNCTION__.'" ,
-			"class" => "'.__FUNCTION__.'" ,
 			"switch" => "do1",
 		!]
 			
@@ -44,7 +42,7 @@ function linkify_mg_this_form(){
 			<hr>
 
 			[!"text:name*"!]
-			[!"text:url*"!]
+			[!"text:url*"=>linkify_URL_remove($rw["url"])!]
 			
 			<hr>
 			

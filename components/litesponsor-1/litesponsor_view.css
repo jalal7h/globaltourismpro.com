@@ -1,0 +1,12 @@
+
+.litesponsor_view {
+	margin: auto;
+	text-align: center;
+}
+.litesponsor_view img {
+	opacity: 0.7;
+}
+.litesponsor_view img:hover {
+	opacity: 1.0;
+}
+

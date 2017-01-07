@@ -1,14 +1,16 @@
 
 main {
-	width: 1030px;
+	width: 1140px;
 	max-width: 100%;
 	margin: 25px auto;
+	position: relative;
+	z-index: 5;
 }
 main section.right ,
 main section.left {
 	vertical-align: top;
 	display: inline-block;
-	width: 230px;
+	width: 300px;
 	overflow: hidden;
 	position: relative; z-index: 3;
 }
@@ -26,12 +28,12 @@ main section.center {
 	width: 100%;
 }
 main section.center.have_right_sidebar {
-	margin-right: -250px;
-	padding-right: 250px;
+	margin-right: -320px;
+	padding-right: 320px;
 }
 main section.center.have_left_sidebar {
-	margin-left: -250px;
-	padding-left: 250px;
+	margin-left: -320px;
+	padding-left: 320px;
 }
 main section > * {
 	margin-bottom: 18px;
