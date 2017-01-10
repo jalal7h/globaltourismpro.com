@@ -1,0 +1,79 @@
+/*20170109*/
+
+.clWhite {
+	color: #444;
+	background-color: white;
+}
+
+.clNeu {
+	color: #444;
+	background-color: #f7f7f7;
+}
+
+/* range dagh e asli */
+.cl_l1 ,
+.cl_l1_hover:hover ,
+.cl_l1_hover_before:hover:before {
+	color: #a90000;
+}
+.cl_l1_hover_i:hover {
+	color: #a90000 !important;
+}
+.cl_l1_hover_before_i:hover:before {
+	color: #a90000 !important;
+}
+.cl_l1r ,
+.cl_l1r_hover:hover {
+	background-color: #a90000;
+	border-color: #a90000;
+	color: white;
+}
+.cl_l1r_i ,
+.cl_l1r_hover_i:hover {
+	background-color: #a90000 !important;
+	border-color: #a90000 !important;
+	color: white !important;
+}
+.cl_l1r_BG ,
+.cl_l1r_BG_hover:hover {
+	background-color: #a90000;
+}
+.cl_l1r_BG_i ,
+.cl_l1r_BG_hover_i:hover {
+	background-color: #a90000 !important;
+}
+.cl_l1r_border ,
+.cl_l1r_border_hover:hover {
+	border-color: #a90000;
+}
+
+/* rang e aram e asli */
+.cl_l2 ,
+.cl_l2_hover:hover {
+	color: #715947;
+}
+.cl_l2_i ,
+.cl_l2_hover_i:hover {
+	color: #715947 !important;
+}
+.cl_l2r ,
+.cl_l2r_hover:hover {
+	background-color: #beb2a9;
+	border-color: #beb2a9;
+	color: #715947;
+}
+.cl_l2r_i ,
+.cl_l2r_hover_i:hover {
+	background-color: #beb2a9 !important;
+	border-color: #beb2a9 !important;
+	color: #715947 !important;
+}
+.cl_l2r_BG ,
+.cl_l2r_BG_hover:hover {
+	background-color: #beb2a9;
+}
+.cl_l2r_border ,
+.cl_l2r_border_hover:hover {
+	border-color: #beb2a9;
+}
+

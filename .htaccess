@@ -6,10 +6,6 @@
 RewriteEngine On
 # AddType application/x-httpd-php54 .php
 
-# 
-# userpanel-4
-RewriteRule ^userpanel$ ./?page=14 [L]
-
 
 
 #

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jan 07, 2017 at 10:39 PM
+-- Generation Time: Jan 11, 2017 at 02:04 AM
 -- Server version: 5.6.27
 -- PHP Version: 5.6.14
 
@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `LIVE_metglobaldmc.com`
+-- Database: `LIVE_globaltourismpro.com`
 --
 
 -- --------------------------------------------------------
@@ -647,7 +647,6 @@ INSERT INTO `page` (`id`, `name`, `meta_title`, `meta_kw`, `meta_desc`, `ignore_
 (14, 'Clientarea', '', '', '', 0, 0),
 (19, 'Client Profile', '', '', '', 0, 0),
 (58, 'Register', '', '', '', 0, 0),
-(59, 'Register Confirm', '', '', '', 0, 0),
 (60, 'Login', '', '', '', 0, 0),
 (63, 'Forgot Password', '', '', '', 0, 0),
 (51, 'News', '', '', '', 0, 0),
@@ -687,15 +686,13 @@ INSERT INTO `page_layer` (`id`, `page_id`, `prio`, `func`, `type`, `name`, `hide
 (6, 6, 1, 'layout_post', 'HTML', 'Terms', 0, '<p><span style=\"font-family: DefaultFont;\">Under Contstruction ...</span></p>', 1, '', 1),
 (7, 7, 1, 'layout_post', 'HTML', 'Privacy Policy', 0, '<p><span style=\"font-family: DefaultFont;\">Under Construction ...</span></p>', 1, '', 1),
 (14, 14, 2, 'userpanel_desk', '', 'Client Desk', 0, '', 1, '', 1),
-(15, 14, 1, 'userpanel_menu', '', 'Client Menu', 0, '', 1, 'right', 1),
 (19, 19, 1, 'userprofile_vw', 'PHP5', 'Profile', 0, '', 1, '', 1),
 (58, 58, 1, 'user_register_form', 'PHP5', 'Register', 0, '', 1, '', 1),
-(59, 59, 1, 'layout_post', 'PHP5', 'Register Confirm', 0, '<?php users_register_do(); ?>', 1, '', 1),
 (60, 60, 1, 'user_login_form', 'PHP5', 'Login', 0, '', 1, '', 1),
 (63, 63, 1, 'user_forgot_form', 'PHP5', 'Forgot password', 0, '', 1, '', 1),
 (52, 52, 1, 'news_display', '', 'News display', 0, '', 1, '', 1),
 (51, 51, 1, 'news_list', '', 'News', 0, '', 1, '', 1),
-(107, 1, 1, 'user_login_form_side', 'HTML', 'Login form', 0, '', 1, 'left', 1);
+(61, 1, 1, 'user_login_form_side', 'HTML', 'Login form', 0, '', 1, 'left', 1);
 
 -- --------------------------------------------------------
 
@@ -741,17 +738,12 @@ INSERT INTO `position` (`id`, `name`, `parent`, `type`, `hide`) VALUES
 (23, 'Italy', 0, 'country', 1),
 (24, 'China', 0, 'country', 0),
 (25, 'South Korea', 0, 'country', 0),
-(26, 'KKK', 0, 'country', 1),
 (27, 'www', 0, 'country', 1),
 (28, 'Italy', 0, 'country', 0),
 (29, 'London', 22, 'city', 0),
 (30, 'Birmingham', 22, 'city', 0),
 (31, 'Manchester', 22, 'city', 0),
-(32, 'Manchester', 22, 'city', 1),
-(33, 'Manchester', 22, 'city', 1),
-(34, 'Manchester', 22, 'city', 1),
-(35, 'Pekan', 24, 'city', 0),
-(36, 'Manchester', 22, 'city', 1);
+(35, 'Pekan', 24, 'city', 0);
 
 -- --------------------------------------------------------
 
@@ -1043,8 +1035,8 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `username`, `password`, `permission`, `name`, `wallet_credit`, `cell`, `tell`, `address`, `profile_pic`, `im_a`, `work_at`, `gender`, `management_title`, `useronline_date`, `flag`, `hide`, `register_ip`, `register_date`, `login_ip`, `login_date`) VALUES
-(1, 'ogun@karisma.co.tr', '9bb3da7992db2e95708e77be0a3f8938', 2, 'Ogün Özbir', 0, '+902123820942', '', '1000000', '', '', '', '', '', 1483816195, 0, 0, '', 0, '', 0),
-(2, 'jalal7h@gmail.com', '9113f7e5886cdb210542c7e9c84ecfeb', 0, 'Jalal Hoseini', 0, '', '', '', '', '', '', '', '', 1480808490, 0, 0, '', 0, '', 0),
+(1, 'ogun@karisma.co.tr', '9bb3da7992db2e95708e77be0a3f8938', 2, 'Ogün Özbir', 0, '+902123820942', '', '1000000', '', '', '', '', '', 1484080191, 0, 0, '', 0, '', 0),
+(2, 'jalal7h@gmail.com', '9113f7e5886cdb210542c7e9c84ecfeb', 0, 'Jalal Hoseini', 0, '', '', '', 'data/user/data-profile_pic-44202-0-1480553293-me-on-niak.jpg', '', '', '', '', 1484087624, 1, 0, '', 0, '', 0),
 (3, 'monja@mohta.ba', '1949b7308f936aa179af4cad5238f9ba', 2, 'Konjale Mohtaba', 0, '+90444332954384', '', '', '', '', '', '', 'Billing Management', 1480803837, 1, 0, '', 0, '', 0);
 
 -- --------------------------------------------------------
@@ -1433,7 +1425,7 @@ ALTER TABLE `page`
 -- AUTO_INCREMENT for table `page_layer`
 --
 ALTER TABLE `page_layer`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=108;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=109;
 --
 -- AUTO_INCREMENT for table `position`
 --

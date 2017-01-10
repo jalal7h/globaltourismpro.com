@@ -1,0 +1,52 @@
+
+.richbox_w {
+
+}
+
+input[type="richbox"] {
+	display: none;
+	color: #999;
+	padding: 6px;
+	padding-left: 31px;
+	background-color: #fff;
+	border: 1px solid #cccccc;
+	border-radius: 4px;
+	min-width: 160px;
+}
+input[type="richbox"].completed {
+	font-weight: bold !important;
+    color: black;
+}
+
+.richbox_w icon:before {
+	content: "\f103";
+	color: #666666;
+	margin-right: -25px;
+	position: relative;
+	z-index: 12;
+	font-size: 23px;
+	top: 5px;
+	margin-top: -10px;
+	margin-bottom: -10px;
+}
+
+.richbox_list {
+	width: 100%;
+	display: none;
+ 	position: absolute; z-index: 121;
+	background-color: white;
+	box-shadow: 0 14px 30px rgba(0, 0, 0, 0.3);
+	border-radius: 0px 0px 5px 5px;
+}
+.richbox_list div {
+	cursor: default;
+	padding: 0 5px;
+}
+.richbox_list div.hover ,
+.richbox_list div:hover {
+	color: black;
+	background-color: rgba(0,0,0,0.09);
+}
+
+
+

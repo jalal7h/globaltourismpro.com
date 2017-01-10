@@ -1,0 +1,29 @@
+
+.mg_searchbox {
+	border-radius: 5px;
+	padding: 20px 25px;
+	width: 100%;
+	display: block;
+}
+.mg_searchbox div.date {
+
+}
+.mg_searchbox div.type {
+	margin: 20px 0;
+}
+.mg_searchbox div.type label {
+	margin: 0 5px 0 15px;
+	color: white;
+}
+.mg_searchbox div.type label input {
+	margin-left: 5px;
+}
+.mg_searchbox div.position {
+
+}
+.mg_searchbox div.position input {
+	width: 100%;
+	font-size: 14px;
+    text-transform: uppercase;
+	padding: 10px;
+}

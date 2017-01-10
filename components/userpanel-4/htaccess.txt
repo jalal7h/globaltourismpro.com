@@ -1,5 +1,0 @@
-
-# /*-spi-*/
-
-RewriteRule ^userpanel$ ./?page=14 [L]
-

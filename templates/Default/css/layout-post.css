@@ -12,12 +12,10 @@
 	
 }
 .layout-post > .header {
-	color: #000;
+	color: #444;
 	padding: 20px 20px 20px 20px;
-	font-size: 13px;
-	font-weight: bold;
+	font-size: 14px;
 	cursor: default;
-	/* border-bottom: 1px dashed #ddd; */
 }
 .layout-post > .header:after {
 	content: " ";

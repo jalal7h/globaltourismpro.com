@@ -31,7 +31,7 @@ ac6a95ac Payment
 3f4505dc There is no invoice issued for you.
 8adaaa76 Your Credit
 cc81d9ee zero
-e90d8d2b Account Change
+e90d8d2b Account Charge
 3da08e3b Offline Payment
 824a51f6 Pay From Wallet
 0cf0ecae Online Payment
@@ -100,6 +100,7 @@ b1fb046e Change the layer title
 52a56572 Submit a new layer
 eee89ca9 Layer type
 15ea1998 Layer title
+af791b1c %%'s details
 082be236 Page address
 d235199b Back
 fb6a6fe2 The page address should contain the site's domain.
@@ -189,6 +190,7 @@ d80b00c9 City
 ce8e19ff Unknown
 2f9d8192 No record submitted
 33967c4f Submit new %% ..
+46d20c77 Loading ...
 462f71f6 List of RSS :‌
 9e4b52ba General Setting
 02ddb613 Slide insertion form
@@ -215,8 +217,8 @@ b3c0d659 %% list
 da5862d7 Date
 e51640bb Move to archive
 8c17399e Are you sure to archive this message?
-d31a0360 Active messages
-d72208cd Message archive
+d31a0360 Active Messages
+d72208cd Closed Messages
 82331ebe Closed
 c888f43c New
 1089eac3 Awaiting reply
@@ -246,7 +248,7 @@ d9c05ef0 minutes ago
 1f8326a3 Current password
 847fe3e8 New password
 97f8a5e9 Repeat password
-5ed99c68 Change password
+5ed99c68 Change Password
 b91bd69b Please insert the old password.
 0aa0ec76 Please insert the new password.
 e286d18c Password does not match!
@@ -264,10 +266,6 @@ aafdf0ae Please insert a proper password.
 d65162db Password does not match
 554bb2f3 Login to clientarea
 1d60f355 There is no account related to your mentioned email address.<br>You can try to %%register%% a new account with your email address.
-bd302eb3 Your credit
-9ad051c8 Login to site
-0ebf4679 Register
-fbe9d68e Forgot password
 f5b8cc05 Wrong %% or password
 368ba10c Your account have been suspended.
 8ba34bf5 Login
@@ -285,6 +283,7 @@ e458c88b Are you sure to remove all related data this client?
 a725e8a4 Please insert your name.
 e0f83817 Please insert your name correctly.
 d7172900 Something wrong in registration.
+0ebf4679 Register
 da5f9de9 if you already have an account please %%login%%
 1d28ef78 Submitting the registration form you are agreeing the %%website terms%%.
 65d21c61 List of Managers
@@ -292,6 +291,9 @@ da5f9de9 if you already have an account please %%login%%
 82991df9 date of registration
 95e2e00d Your email address is already in use.
 b32beaac Clientarea
+bd302eb3 Your credit
+9ad051c8 Login to site
+fbe9d68e Forgot password
 06f7aa3e Home
 eb54bfb2 Client Profile
 3506048c Male
@@ -309,6 +311,7 @@ a3b9cda1 Keywords
 33d10611 Layout
 74fe9d9c Link Boxes
 5cc4b7bf Sponsors
+fbfe8923 Vehicles
 23b3205c Daily Tours
 4f74e2d4 Transfers
 1520520e News
@@ -320,19 +323,17 @@ b0cb73f9 Setting
 24f99ef6 Tickets
 d6d94244 Clients
 c04b9a14 Managers
-0572f566 Contact Form
-dceeda60 Header
-b6a8a860 Footer
 8d41f861 Custom Post
-212ae4fa Slideshow
 dcab0ca1 Display news
 a5eb7f16 News list
 1875752a Clientarea login form
-ff2fc9e3 Client Menu
+0572f566 Contact Form
+212ae4fa Slideshow
 965804ac Forgot password form
 bb3d7c0e Registration Form
 03544778 Client Desk
-dc77044f Messages
+e290249c Dashboard
+dc77044f Tickets
 d8cf8c26 Change password
 bb1f5f23 HTML Content
 0625d738 Reply to Contact messages

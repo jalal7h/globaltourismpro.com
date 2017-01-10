@@ -12,7 +12,6 @@
 	display: none;
 }
 #user_login_form input {
-	direction: ltr;
 	display: block;
 	font: normal 16px monospace,tahoma;
 	padding: 10px;
