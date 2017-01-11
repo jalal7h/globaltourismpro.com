@@ -4,7 +4,7 @@
 # 2017/01/06
 # 1.1
 
-$GLOBALS['cmp']['slideshow_mg'] = 'اسلایدشو';
+add_component( 'slideshow_mg', 'اسلایدشو', '2a8' );
 
 function slideshow_mg(){
 

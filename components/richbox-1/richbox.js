@@ -121,7 +121,9 @@ jQuery(document).ready(function($) {
 			fix_tL_pos( t );    
 
 			tL.show();
+			// tL.find('div').css({'padding': t.css('padding'), 'font': t.css('font') });
 			tL.html( '<div>' + text_loading + '</div>' );
+			tL.find('div').css({'padding':t.css('padding'), 'font': t.css('font')});
 
 			$.ajax({
 				url: _URL+"/?do_action=richbox_feed",
@@ -131,6 +133,7 @@ jQuery(document).ready(function($) {
 			
 			}).done(function( html ){
 				tL.html(html);
+				tL.find('div').css({'padding': t.css('padding'), 'font': t.css('font') });
 			}); 
 
 		}

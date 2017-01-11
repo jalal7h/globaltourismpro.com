@@ -48,6 +48,9 @@
 }
 
 /* rang e aram e asli */
+.cl_l2_t {
+	color: #beb2a9;
+}
 .cl_l2 ,
 .cl_l2_hover:hover {
 	color: #715947;

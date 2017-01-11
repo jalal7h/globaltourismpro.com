@@ -4,7 +4,7 @@
 # 2017/01/07
 # 1.1
 
-add_component( 'litesponsor_mg', 'اسپانسرها' );
+add_component( 'litesponsor_mg', 'اسپانسرها', '2b5' );
 
 function litesponsor_mg(){
 	

@@ -1,10 +1,14 @@
 <?php
 
 # jalal7h@gmail.com
-# 2017/01/10
-# 1.0
+# 2017/01/11
+# 1.1
 
 // <input type="richbox" name="city" feed="<?=str_enc('position(name)[id]/type:city')>" list_limit="20" char_limit="2" action="alert" value="15" >
+
+// position(name)[id]/type:city
+// str_enc('position(name)[id]/type:city')
+// str_enc('some_func_name()')
 
 add_action( 'richbox_feed' );
 
@@ -16,7 +20,7 @@ function richbox_feed(){
 
 	#
 	$text = $_REQUEST['text'];
-	$text = mb_ereg_replace('[^A-Za-z0-9آ-ی\.\-\_ ]+','',$text);
+	$text = mb_ereg_replace('[^A-Za-z0-9آ-ی\.\-\_, ]+','',$text);
 	$text = trim($text);
 
 	if( !$id and !$text ){
@@ -29,6 +33,16 @@ function richbox_feed(){
 		
 		if(! strstr( $feed, '(' ) ){
 			$feed = str_dec($feed);
+		}
+
+		if( substr($feed,-2) == '()' ){
+			$func = substr($feed,0,-2);
+			if(! function_exists($func) ){
+				ed();	
+			} else {
+				return $func( ( $id ? $id : $text ) );				
+			}
+
 		}
 
 		$feed_arr = explode( '/', $feed );

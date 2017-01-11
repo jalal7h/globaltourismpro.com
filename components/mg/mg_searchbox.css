@@ -1,19 +1,56 @@
 
 .mg_searchbox {
+	margin: 30px 0;
 	border-radius: 5px;
 	padding: 20px 25px;
 	width: 100%;
 	display: block;
+	position: relative;
 }
+
+.mg_searchbox input[type="text"] ,
+.mg_searchbox input[type="richbox"] {
+	box-shadow: 0 0 20px rgba(0,0,0,0.15);
+    border: 0px;
+}
+
 .mg_searchbox div.date {
 
 }
+.mg_searchbox div.date label {
+	margin-left: 40px;
+}
+.mg_searchbox div.date label span {
+	padding-left: 10px;
+	color: white;
+	text-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+	/* font-weight: bold; */
+	font-size: 14px;
+}
+.mg_searchbox div.date label input {
+	text-align: center;
+	font-size: 16px;
+	font-family: monospace,sans-serif;
+	padding-right: 29px;
+	width: 200px;
+	color: #777;
+}
+.mg_searchbox div.date label icon:before {
+	position: relative;
+    z-index: 11;
+    font-size: 24px;
+    margin-left: -23px;
+    left: -12px;
+    top: 3px;
+}
+
 .mg_searchbox div.type {
 	margin: 20px 0;
 }
 .mg_searchbox div.type label {
-	margin: 0 5px 0 15px;
+	margin: 0 5px 0 25px;
 	color: white;
+	text-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
 }
 .mg_searchbox div.type label input {
 	margin-left: 5px;
@@ -25,5 +62,32 @@
 	width: 100%;
 	font-size: 14px;
     text-transform: uppercase;
-	padding: 10px;
+	padding: 10px 40px 10px 10px;
 }
+.mg_searchbox div.position input:before {
+	font-family: FontAwesome;
+	content: "\f041";
+}
+.mg_searchbox .richbox_w {
+	position: relative;
+}
+.mg_searchbox .richbox_w icon:before {
+    position: absolute;
+    right: 39px;
+    left: auto;
+    top: 13px;
+    content: "\f041";
+    color: #beb2a9;
+}
+.mg_searchbox input[type="submit"] {
+	position: absolute;
+    left: 35px;
+    bottom: 27px;
+    color: white;
+    border-radius: 3px;
+    padding: 3px 16px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+

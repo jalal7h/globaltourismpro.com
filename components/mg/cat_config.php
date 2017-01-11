@@ -7,7 +7,7 @@
 /*********************************************/
 $GLOBALS['cat_items']['priceper'] = [
 	'name'		=> 'Price Ranges' ,
-	'dashboard'	=> true ,
+	'dashboard'	=> '153' ,
 	'sub'		=> false ,
 	'icon'		=> false ,
 	'desc'		=> false ,
