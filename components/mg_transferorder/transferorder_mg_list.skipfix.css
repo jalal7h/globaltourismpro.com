@@ -1,0 +1,7 @@
+
+.transferorder_mg_list td {
+	text-align: center;
+}
+.transferorder_mg_list td:first-child {
+	text-align: left;
+}

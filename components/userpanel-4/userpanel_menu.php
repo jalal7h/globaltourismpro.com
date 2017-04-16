@@ -23,7 +23,7 @@ function userpanel_menu(){
 	}
 
 	echo template_engine( 'userpanel_menu', [
-		'items' => userpanel_menu_items_prepare(),
+		// 'items' => userpanel_menu_items_prepare(),
 		'rw' => $rw ,
 		'userpanel_slug' => $userpanel_slug,
 	]);

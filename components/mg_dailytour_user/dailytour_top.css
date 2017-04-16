@@ -1,0 +1,62 @@
+
+.dailytour_top {
+	text-align: center;
+	padding: 20px 0 30px 0;
+}
+
+.dailytour_top .quarter {
+	display: inline-block;
+	width: 250px;
+	text-align: center;
+	margin: 0 10px;
+}
+.dailytour_top .re {
+	border-radius: 2px;
+	background-color: #fff;
+	box-shadow: 0 5px 30px rgba(0,0,0,.2);
+	display: inline-block;
+	width: 250px;
+	vertical-align: top;
+	text-align: right;
+	transition: 0.2s all;
+}
+.dailytour_top .re:hover {
+	box-shadow: 0 5px 30px rgba(0,0,0,.4);
+	background-color: #eee;
+}
+.dailytour_top .re > * {
+	width: 250px;
+}
+.dailytour_top .re img {
+	height: 170px;
+	width: 250px;
+	border-radius: 2px 2px 0 0;
+}
+.dailytour_top .re .name {
+	text-align: right;
+    padding: 10px 15px;
+    font-weight: bold;
+    font-size: 16px;
+    color: #444;
+    overflow: hidden;
+    width: 100%;
+    height: 64px;
+}
+.dailytour_top .re .text {
+	text-align: right;
+    padding: 10px 15px;
+    font-size: 13px;
+    color: #666;
+    overflow: hidden;
+    width: 100%;
+    height: 97px;
+}
+.dailytour_top .re .explore_now {
+    display: inline-block;
+    width: auto;
+    margin: 15px auto 25px;
+    border-radius: 4px;
+    padding: 5px 20px 6px;
+    font-size: 14px;
+}
+

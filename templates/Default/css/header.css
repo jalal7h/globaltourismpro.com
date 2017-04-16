@@ -12,23 +12,26 @@ header .logo {
 }
 
 header .linkify_simple {
-	background-color: #beb2a9;
+	background-color: #c3c3c3;
 	margin-top: 25px;
+	position: relative;
+	z-index: 11;
 }
 
 header .linkify_simple .sub_w {
-	background-color: #beb2a9;	
+	background-color: #c3c3c3;	
 }
 header .linkify_simple a {
 	padding: 7px 15px;
 	color: white;
-	background-color: #beb2a9;
+	background-color: #c3c3c3;
 	font-size: 14px;
 	transition: 0.2s all;
+	text-shadow: 0 0 3px rgba(0,0,0,.3);
 }
 
 header .linkify_simple a:hover {
-    background-color: #9e8c7f;
+	background-color: rgba(0, 0, 0, .3);
 }
 
 

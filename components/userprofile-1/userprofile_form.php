@@ -1,10 +1,10 @@
 <?
 
 # jalal7h@gmail.com
-# 2016/12/31
-# 1.2
+# 2017/04/05
+# 1.4
 
-$GLOBALS['userpanel_item'][ 94 ] = [ 'userprofile_form', 'پروفایل کاربر', '007' ];
+add_userpanel_item( 'userprofile_form', 'profile', 'پروفایل کاربر', '007', 94 );
 
 function userprofile_form(){
 
@@ -30,32 +30,37 @@ function userprofile_form(){
 		echo listmaker_form('
 			[!
 				"table" => "user" ,
-				"action" => "'._URL.'/?page='.$_REQUEST['page'].'&do='.$_REQUEST['do'].'",
+				"action" => "'.layout_link(14).'/profile",
 				"name" => "'.__FUNCTION__.'" ,
 				"class" => "'.__FUNCTION__.'" ,
 				"switch" => "do2",
 			!]
 				
-				[!"text:name*","inDiv"!]
-				[!"text:username*","inDiv"!]
-				[!"text:cell","inDiv"!]
-				[!"text:tell","inDiv"!]
+				'.( !is_column('user','email_verified') ? 
+					'[!"text:email*/readonly=1"!]' : 
+					'[!"memo:email"!]' ).'
 
-				[!"text:address","inDiv"!]
+				'.( (!is_column('user','cell_verified') or !userlogin_username_mobile) ? 
+					'[!"text:cell"!]' : 
+					'[!"memo:cell"!]' ).'
 
-				[!"file:profile_pic","inDiv"!]
-				[!"select:gender","option"=>["M"=>"'.__('مذکر').'", "F"=>"'.__('مونث').'"],"inDiv"!]
+				[!"text:name*"!]
+				[!"text:tell"!]
 
-				[!"text:im_a","inDiv"!]
-				[!"text:work_at","inDiv"!]
+				[!"text:address"!]
+
+				[!"file:profile_pic"!]
+				[!"select:gender","option"=>["M"=>"'.__('مذکر').'", "F"=>"'.__('مونث').'"]!]
+
+				[!"text:im_a"!]
+				[!"text:work_at"!]
 
 				<br>
 				<hr>
 				<br>
 
-				[!"submit:'.__('ثبت').'","inDiv"!]
+				[!submit!]
 
-			[!close!]
 		');
 		## -------------------------------------------------
 

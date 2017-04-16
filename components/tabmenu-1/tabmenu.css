@@ -1,0 +1,71 @@
+
+.tabmenu {
+
+}
+.tabmenu div.name {
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	margin-bottom: 30px;
+}
+.tabmenu div.name > a {
+	display: inline-block;
+	border-radius: 3px 3px 0 0;
+	margin: 10px 0 0 6px;
+	border-width: 1px;
+	border-top-width: 3px;
+	border-style: solid;
+	border-bottom: 0px;
+	transition: 0.2s all;
+	vertical-align: bottom;
+	outline: none;
+	padding: 3px 20px 5px;
+	font-size: 16px;
+	font-weight: bold;
+	color: white;
+}
+.tabmenu div.name > a:hover {
+	margin-top: 0px;
+}
+.tabmenu div.name > a:hover {
+	padding: 8px 20px 10px;
+}
+.tabmenu div.name > a.current {
+	background-color: white;
+	position: relative; top: 1px;
+	color: #555;
+}
+.tabmenu div.name > a.current {
+	color: #a90000;
+}
+
+.tabmenu div.text {
+
+}
+.tabmenu div.name > div {
+
+}
+
+
+/***********
+** THEME
+********/
+.tabmenu.default {
+
+}
+.tabmenu.default div.name {
+
+}
+.tabmenu.default div.name > a {
+
+}
+
+.tabmenu.default div.text {
+
+}
+.tabmenu.default div.name > div {
+
+}
+
+
+
+

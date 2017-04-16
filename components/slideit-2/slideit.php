@@ -1,59 +1,33 @@
 <?
 
 # jalal7h@gmail.com
-# 2017/01/06
-# 2.0
+# 2017/01/23
+# 2.1
 
-function slideit( $array , $time=1000, $display_name=false, $display_desc=false ){
-	
-	$c.= "<div class=\"".__FUNCTION__."\" the_time=\"$time\" >\n";
-	$c.= "\t<div class=\"list\">\n";
+function slideit( $slides , $the_time=1000, $thumb=false, $display_name=false, $display_desc=false ){
 
-	if(! isset($array[0]) ){
-		$array = [$array];
+	if(! is_array($slides) ){
+		return e();
+	} else if(! sizeof($slides) ){
+		return e();
 	}
-
-	if(! sizeof($array) ){
-		e();
-	
-	} else foreach( $array as $i => $slide ){
-
-		#
-		# if its linked
-		$c.= "\t\t<a".( $slide['url'] ? " href=\"".$slide['url']."\"" : '' )."><img src=\"".$slide['image']."\" class=\"isss\">";
-
-		#
-		# if it have some text
-		if( $display_name or $display_desc ){
-			
-			$c.= "<div class=\"info\">\n";
-
-			# 
-			# if the name
-			if( $display_name ){
-				$c.= "<span class=\"name\">".$slide['name']."</span>\n";
-			}
-
-			# 
-			# if description
-			if( $display_desc ){
-				$c.= "<span class=\"desc\">".$slide['desc']."</span>\n";
-			}
-
-			$c.= "</div>\n";
-
-		}
-
-		$c.= "</a>\n";
-
-	}
-
-	$c.= "\t</div>\n";
-	$c.= "</div>\n";
 
 	#
-	# return tue result
-	return $c;
+	# fix if its an array of images
+	if( is_string($slides[0]) ){
+		foreach ($slides as $i => $slide) {
+			$slides[$i] = [ 'image'=>$slide ];
+		}
+	}
+
+	return template_engine( 'slideit', [
+		
+		'slides'		=> $slides,
+		'the_time'		=> $the_time,
+		'display_name'	=> $display_name,
+		'display_desc'	=> $display_desc,
+
+	]);
 	
 }
 

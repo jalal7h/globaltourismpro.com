@@ -1,14 +1,14 @@
 <?php
 
 # jalal7h@gmail.com
-# 2017/01/07
+# 2017/01/23
 # 1.0
 
 // add_layer( 'mg_flapper', 'Flapp Counter' );
 
 function mg_flapper(){
 
-	if( _PAGE != 1 ){
+	if(  _PAGE != 1  or  d404_flag === true  ){
 		return '';
 	}
 

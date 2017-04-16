@@ -1,0 +1,57 @@
+
+.dailytourorder_user_list table {
+	border-spacing: 0px;
+}
+
+.dailytourorder_user_list td {
+	text-align: center;
+}
+.dailytourorder_user_list td:nth-child(1) {
+	text-align: left;
+}
+/* .dailytourorder_user_list .listmaker_list_record.pointer:hover {
+	background-color: #fff3f3 !important;
+} */
+.dailytourorder_user_list .listmaker_list_record:nth-child(2n) {
+	background-color: #f1f1f1;
+}
+.dailytourorder_user_list .listmaker_list_record:nth-child(2n+1) {
+	background-color: #f8f8f8;
+}
+.dailytourorder_user_list .listmaker_list_head th ,
+.dailytourorder_user_list .listmaker_list_record td {
+	border-radius: 0;
+	box-shadow: 0 0 0 #000;
+	padding: 8px 5px;
+}
+.dailytourorder_user_list .listmaker_list_head th {
+	background-color: #eee;
+}
+.dailytourorder_user_list .listmaker_list_head_footer {
+	display: none;
+}
+
+.dailytourorder_user_list td .text .code  {
+	color: #a75555;
+}
+.dailytourorder_user_list td .text a.name {
+	color: #337ab7;
+}
+.dailytourorder_user_list td .text a.name:hover {
+	color: #900;
+}
+.dailytourorder_user_list td .text .position {
+	color: #999;
+}
+.dailytourorder_user_list td .text .position .location {
+	color: #555;
+}
+.dailytourorder_user_list td .text .position .leader {
+	color: #555;
+
+}
+
+
+
+
+

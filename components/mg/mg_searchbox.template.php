@@ -1,6 +1,4 @@
 
-<script src="http://code.jquery.com/ui/1.12.1/jquery-ui.min.js" type="text/javascript"></script>
-<link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.12.1/themes/humanity/jquery-ui.css">
 <form name="mg_searchbox" class="mg_searchbox cl_l2r" method="POST" action="{_FULL_URL}">
 	
 	<div class="date">
@@ -24,7 +22,7 @@
 	</div>
 
 	<div class="position">
-		<input autocomplete="off" type="richbox" name="city" feed="{feed}" list_limit="20" char_limit="2" value="{city}" >
+		<input autocomplete="off" type="richbox" name="position_id" feed="{feed}" list_limit="20" char_limit="2" value="{position_id}" >
 	</div>
 	<input type="submit" value="GO!" class="cl_l2r">
 

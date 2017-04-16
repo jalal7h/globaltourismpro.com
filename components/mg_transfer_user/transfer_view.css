@@ -1,0 +1,186 @@
+
+.transfer_view {
+
+}
+.transfer_view > div {
+	display: inline-block;
+	vertical-align: top;
+}
+.transfer_view .breadcrumb {
+	width: 100%;
+	background-color: #f8f8f8;
+}
+
+
+
+/* * * * * *
+ * PDF
+ * * * */
+.transfer_view .pdf {
+	display: block;
+    text-align: left;
+    margin: -50px 0 35px 15px;
+}
+
+
+/* * * * * *
+ * slider
+ * * * */
+.transfer_view .slider {
+	width: 50%;
+	/* background-color: #fcc; */
+}
+.transfer_view .slider .slideit ,
+.transfer_view .slider .slideit .list > a > img {
+	width: 100%;
+	height: 350px;
+}
+
+
+/* * * * * *
+ * detail
+ * * * */
+.transfer_view .detail {
+	width: 50%;
+	background-color: #f8f8f8;
+	padding: 20px 30px;
+	height: 350px;
+	position: relative;
+}
+.transfer_view .detail .name {
+	font-size: 18px;
+	font-weight: bold;
+}
+.transfer_view .detail .city {
+	margin-bottom: 20px;
+	opacity: 0.6;
+}
+.transfer_view .detail > * {
+	font-size: 14px;
+	padding: 0px 0;
+}
+.transfer_view .detail memo {
+	opacity: 0.6;
+	display: inline-block;
+	width: 130px;
+	margin-right: 10px;
+}
+.transfer_view .detail .cost {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	padding: 10px 40px;
+	width: 100%;
+	font-size: 36px;
+	color: white;
+	text-shadow: 0 2px 3px rgba(0, 0, 0, 0.5);
+}
+
+
+/* * * * * *
+ * tabmenu
+ * * * */
+.transfer_view .tabmenu {
+	margin-top: 20px;
+	width: 50%;
+}
+.transfer_view .tabmenu .text > div {
+	padding-left: 20px;
+}
+
+
+/* * * * * *
+ * orderbox
+ * * * */
+.transfer_view .orderbox {
+	width: 50%;
+	display: inline-block;
+	padding: 30px;
+	background-color: #f8f8f8;
+}
+.transfer_view .orderbox .the_list {
+
+}
+.transfer_view .orderbox .the_list .head {
+	font-size: 18px;
+	font-weight: bold;
+	opacity: 0.7;
+	margin-bottom: 30px;
+}
+.transfer_view .orderbox .the_list label {
+	display: block;
+	margin: 5px 20px 5px 0;
+}
+.transfer_view .orderbox .the_list select {
+	width: 60px;
+	text-align: center;
+	font-size: 15px;
+	margin-left: 10px;
+}
+.transfer_view .orderbox .the_list label span {
+	font-size: 15px;
+}
+.transfer_view .orderbox .notice {
+	margin: 30px 20px 30px 0;
+	font-size: 13px;
+}
+
+.transfer_view .orderbox .time_n_submit {
+	padding-right: 15px;
+}
+.transfer_view .orderbox .time_n_submit .direction {
+	padding: 10px 5px 25px 0;
+}
+.transfer_view .orderbox .time_n_submit .direction label {
+	margin-left: 25px;
+	font-size: 14px;
+}
+.transfer_view .orderbox .time_n_submit .direction label input {
+	margin-left: 5px;
+}
+.transfer_view .orderbox .time_n_submit .direction {
+
+}
+
+.transfer_view .orderbox .time_n_submit icon:before {
+	position: relative;
+	z-index: 11;
+	font-size: 24px;
+	margin-left: -23px;
+	left: -12px;
+	top: 3px;
+}
+.transfer_view .orderbox .date_arrival ,
+.transfer_view .orderbox .date_departure {
+	display: inline-block;
+	padding: 10px;
+	padding-right: 40px;
+    text-align: center;
+    font-size: 16px;
+    width: 160px;
+}
+
+.transfer_view .orderbox input[type="submit"] {
+	margin: 0 20px 0 20px;
+	padding: 10px 25px;
+	transition: 0.2s all;
+	float: left;
+	outline: none;
+}
+.transfer_view .orderbox input[type="submit"]:hover ,
+.transfer_view .orderbox input[type="submit"]:active {
+	margin: 5px 15px 5px 15px;
+	padding: 5px 30px;
+	color: white;
+	opacity: 0.7;
+}
+.transfer_view .orderbox input[type="submit"]:active {
+	position: relative; top: 2px;
+}
+.transfer_view .orderbox input[type="submit"]:focus {
+	color: white;
+}
+
+
+
+

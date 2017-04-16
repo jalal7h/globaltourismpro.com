@@ -261,10 +261,7 @@
                     _this.timing_timer = null;
                     _this.$ele.trigger("digitAnimEnd");
                 } else {
-                    var duration = Math.floor(
-                            (_this.options.timing - _this.options.min_timing)
-                            / distance + _this.options.min_timing
-                    );
+                    var duration = Math.floor( (_this.options.timing - _this.options.min_timing) / distance + _this.options.min_timing );
                     _this.increment(duration);
                     _this.timing_timer = setTimeout(frameFunc, duration);
                 }
@@ -285,6 +282,17 @@
             this.goToPosition(pos);
         }
     };
+
+
+
+
+
+
+
+
+
+
+
 
     $.fn.flapper = function(arg) {
         this.each(function(){

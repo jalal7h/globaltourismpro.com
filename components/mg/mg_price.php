@@ -1,7 +1,7 @@
 <?php
 
 # jalal7h@gmail.com
-# 2016/12/27
+# 2017/01/24
 # 1.1
 
 function mg_price( $table_name, $table_id, $set_price_array=null ){
@@ -46,7 +46,7 @@ function mg_price( $table_name, $table_id, $set_price_array=null ){
 					'table_name' => $table_name, 
 					'table_id'	 => $table_id, 
 					'priceper_id'=> $priceper_id, 
-					'price'		 => $price
+					'price'		 => (float)$price
 				
 				], [ 'id'=>$rw0['id'] ] );
 
@@ -58,7 +58,7 @@ function mg_price( $table_name, $table_id, $set_price_array=null ){
 					'table_name' =>$table_name,
 					'table_id'	 =>$table_id,
 					'priceper_id'=>$priceper_id,
-					'price'		 =>$price
+					'price'		 =>(float)$price
 				]);
 			}
 
@@ -72,7 +72,7 @@ function mg_price( $table_name, $table_id, $set_price_array=null ){
 	##################################################################
 	# get price list
 	#
-	if(! $rs = dbq(" SELECT * FROM `mg_price` WHERE `table_name`='$table_name' AND `table_id`='$table_id' ORDER BY `id` ASC ") ){
+	if(! $rs = dbq(" SELECT * FROM `mg_price` WHERE `table_name`='$table_name' AND `table_id`='$table_id' ORDER BY `price` ASC ") ){
 		e( dbe() );
 	
 	} else if(! dbn($rs) ){

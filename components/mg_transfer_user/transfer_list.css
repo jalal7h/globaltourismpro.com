@@ -1,0 +1,99 @@
+
+.transfer_list {
+
+}
+.transfer_list .re {
+	background-color: #f3f3f3;
+	margin: 20px 0;
+	border-radius: 4px;
+	display: block;
+	transition: 0.2s all;
+}
+.transfer_list .re:hover {
+	background-color: #f8f8f8;
+	box-shadow: 0 0 40px #eee inset;
+}
+
+.transfer_list .re > * {
+	vertical-align: top;
+}
+.transfer_list .re > img {
+	height: 200px;
+	width: 300px;
+	border-radius: 1px 4px 4px 1px;
+}
+
+.transfer_list .re > .detail {
+	padding: 20px;
+	display: inline-block;
+	width: 100%;
+	padding-right: 320px;
+	margin-right: -300px;
+
+	padding-left: 220px;
+	margin-left: -200px;
+
+    color: #666;
+}
+.transfer_list .re > .detail * {
+	font-size: 14px;
+}
+.transfer_list .re > .detail memo {
+	display: inline-block;
+	color: #999;
+}
+.transfer_list .re > .detail .name {
+	font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.transfer_list .re > .detail .half {
+	width: 45%;
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.transfer_list .re > .price {
+	display: inline-block;
+	width: 200px;
+	text-align: center;
+	padding: 20px 30px;
+}
+.transfer_list .re > .price > * {
+	display: block;
+	text-align: center;
+}
+.transfer_list .re > .price .memo {
+	font-size: 14px;
+    color: #666;
+}
+.transfer_list .re > .price .cost {
+	font-weight: bold;
+	font-size: 32px;
+	padding: 18px 0;
+	color: #666;
+}
+.transfer_list .re > .price .see_details {
+    border-radius: 15px;
+    padding: 4px 9px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    opacity: 0.7	;
+    transition: 0.2s all;
+}
+.transfer_list .re > .price .see_details:hover {
+	opacity: 1;
+}
+
+.transfer_list .listmaker_list_paging {
+	width: 100%;
+	border-top: 1px dashed #ddd;
+	padding: 18px 10px 40px 0;
+}
+
+
+
+
+

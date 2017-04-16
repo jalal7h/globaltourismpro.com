@@ -26,6 +26,12 @@ function litesponsor_mg(){
 		case 'remove' : 
 			listmaker_remove('litesponsor');
 			break;
+
+		case 'flag':
+		echo "00";
+			listmaker_flag('litesponsor');
+			break;
+			
 	}
 
 	#

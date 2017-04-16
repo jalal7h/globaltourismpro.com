@@ -1,8 +1,8 @@
 <?php
 
 # jalal7h@gmail.com
-# 2017/01/04
-# 1.1
+# 2017/01/18
+# 1.2
 
 function layout_open(){
 
@@ -18,7 +18,6 @@ function layout_open(){
 
 
 		$vars['meta_title'] = setting('main_title');
-
 
 		#
 		# rw of the page
@@ -44,14 +43,18 @@ function layout_open(){
 			ob_end_clean();
 
 		// meta func
-		} else if(  $rw_meta ){
+		} else if( $rw_meta ){
 			$vars['meta_title'] = $rw_meta['title'];
 
 		// its a normal page with no special title
 		} else {
 			$vars['meta_title'] = setting('main_title');
 			if( $rw['id']!=1 and $rw['name'] ){
-				$vars['meta_title'].="، ".$rw['name'];
+				if( lang_dir === "rtl" ){
+					$vars['meta_title'].= "، ".$rw['name'];
+				} else {
+					$vars['meta_title'].= ", ".$rw['name'];					
+				}
 			}
 		}
 		
@@ -72,7 +75,7 @@ function layout_open(){
 		
 		// normal page
 		} else {
-			$vars['meta_kw'] = str_replace("،",",",tab__temp("keywords"));
+			$vars['meta_kw'] = str_replace("،",",",setting("keywords"));
 		}
 		
 
@@ -92,11 +95,19 @@ function layout_open(){
 		
 		// normal page
 		} else {
-			$vars['meta_desc'] = str_replace("،",",",tab__temp("websitedescription"));
+			$vars['meta_desc'] = str_replace("،",",",setting("websitedescription"));
 		}
 
 	}
 
+	#
+	# clean up the vars
+	$vars['meta_title'] = var_control( $vars['meta_title'], 'a-zA-Z0-9,\.\-\_آ-ی ');
+	$vars['meta_kw'] = var_control( $vars['meta_kw'], 'a-zA-Z0-9,\.\-\_آ-ی ');
+	$vars['meta_desc'] = var_control( $vars['meta_desc'], 'a-zA-Z0-9,\.\-\_آ-ی ');
+
+	#
+	# return it.
 	return template_engine('html-tag-open',$vars);
 
 }

@@ -1,0 +1,155 @@
+
+/* * * *
+ * ORDER
+ * */
+.dailytour_order {
+	
+}
+.dailytour_order > div {
+	display: inline-block;
+	vertical-align: top;
+}
+.dailytour_order .head {
+	padding: 30px 40px;
+	font-size: 32px;
+	font-weight: bold;
+}
+
+/* * * *
+ * left
+ * */
+.dailytour_order .left {
+	width: 400px;
+}
+.dailytour_order .left .head {
+	
+}
+.dailytour_order .left .slideit ,
+.dailytour_order .left .slideit img {
+	width: 400px;
+	height: 220px;
+}
+.dailytour_order .left .dailytour_name {
+	font-size: 16px;
+	padding: 10px 10px 8px 10px;
+	margin: 0 0 10px 0;
+	color: #f4f4f4;
+	text-shadow: 0 0 5px rgba(0, 0, 0, .6);
+	border-radius: 0 0 4px 4px;
+}
+.dailytour_order .left .service_date {
+}
+.dailytour_order .left .memo {
+	color: #888;
+	font-size: 14px;
+	margin-right: 10px;
+}
+.dailytour_order .left .data {
+	color: black;
+	font-size: 14px;
+}
+.dailytour_order .left .table {
+	display: inline-block;
+	width: 80%;
+	border: 1px solid #f4f4f4;
+	margin: 20px auto 0 auto;
+	text-align: right;
+}
+.dailytour_order .left .table .re {
+	padding: 5px 10px;
+}
+.dailytour_order .left .table .re:nth-child(2n+1) {
+	background-color: #f8f8f8;
+}
+.dailytour_order .left .table .priceper {
+	color: #888;
+	font-size: 14px;
+}
+.dailytour_order .left .table .priceper .numb{
+	font-weight: bold;
+	color: black;
+	font-size: 16px;
+	padding-left: 5px;
+}
+.dailytour_order .left .table .cost {
+	width: 100px;
+	text-align: left;
+	float: left;
+	font-size: 14px;
+	color: #555;
+	font-weight: normal;
+}
+.dailytour_order .left .table .re.total .cost {
+	font-weight: bold;
+	color: #333;
+}
+
+/* * * *
+ * right
+ * */
+.dailytour_order .right {
+	width: calc( 100% - 400px );
+	margin-bottom: 100px;
+}
+.dailytour_order .right .head {
+	margin-bottom: 40px;
+}
+.dailytour_order .right > div.re {
+	padding: 10px 40px;
+}
+.dailytour_order .right > div.re:nth-child(2n+1) {
+	background-color: #f9f9f9;
+}
+.dailytour_order .right > div.re > span ,
+.dailytour_order .right > div.re select ,
+.dailytour_order .right > div.re input[type="text"].text {
+	font-size: 14px;	
+}
+.dailytour_order .right > div.re select ,
+.dailytour_order .right > div.re input[type="text"].text {
+	width: 400px;
+}
+.dailytour_order .right > div.re > span:first-child {
+	width: 220px;
+	display: inline-block;
+}
+.dailytour_order .right > div.re.submit {
+	padding-top: 30px;
+	background-color: white;
+}
+.dailytour_order .right > div.re.submit label {
+	padding-top: 15px;
+}
+.dailytour_order .right > div.re label ,
+.dailytour_order .right > div.re label span {
+	font-size: 14px;
+}
+
+.dailytour_order .right > div.re input[type="submit"] {
+	float: left;
+}
+
+.dailytour_order input[type="submit"] {
+	margin: 0 20px 0 20px;
+	padding: 10px 25px;
+	transition: 0.2s all;
+	float: left;
+	outline: none;
+}
+.dailytour_order input[type="submit"]:hover ,
+.dailytour_order input[type="submit"]:active {
+	margin: 5px 15px 5px 15px;
+	padding: 5px 30px;
+	color: white;
+	opacity: 0.7;
+}
+.dailytour_order input[type="submit"]:active {
+	position: relative; top: 2px;
+}
+.dailytour_order input[type="submit"]:focus {
+	color: white;
+}
+
+
+
+

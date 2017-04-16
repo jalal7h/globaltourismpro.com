@@ -1,8 +1,8 @@
 <?php
 
 # jalal7h@gmail.com
-# 2017/01/11
-# 1.0
+# 2017/01/22
+# 1.1
 
 function mg_searchbox_feed( $text ){
 
@@ -22,7 +22,7 @@ function mg_searchbox_feed( $text ){
 
 	} else if( dbn($rs) ){
 		while( $rw = dbf($rs) ){
-			echo "<div the_id=\"".$rw['id']."\">".$rw['name'].", ".table('position', ['id'=>$rw['parent'] ] )['name']."</div>";
+			echo "<div the_id=\"".$rw['id']."\">".$rw['name'].", ".table('position', ['id'=>$rw['parent'] ] )[0]['name']."</div>";
 		}
 	
 	} else if(! $rs = dbq(" SELECT * FROM `position` WHERE `name` LIKE '$text%' AND `type`='country' ") ){

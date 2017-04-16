@@ -1,8 +1,8 @@
 <?
 
 # jalal7h@gmail.com
-# 2016/12/24
-# 1.1
+# 2017/04/14
+# 1.4
 
 function listmaker_form_element_this_date( $info ){
 
@@ -10,9 +10,9 @@ function listmaker_form_element_this_date( $info ){
 
 	$info['class'].= " lmfe_isDate calendar-".( lang_dir == 'ltr' ? 'en' : lang_code );
 	$info['class'] = trim($info['class']);
-	
-	if( function_exists('date_zero') ){
-		$info['value'] = date_zero('remove', $info['value']);
+
+	if( $info['value'] and function_exists('date_zero') ){
+		// $info['value'] = date_zero('remove', $info['value']);
 	}
 
 	if( lang_dir == 'ltr' ){
@@ -21,7 +21,7 @@ function listmaker_form_element_this_date( $info ){
 		$input_type = 'text';
 	}
 
-	$c.= $info['PreTab']."<input type=\"$input_type\" ".
+	$c.= $info['PreTab']."<icon class=\"fa fa-calendar lmfe_isDate_icon\"></icon><input type=\"text\" ".
 		"name=\"".$info['name'].( $info['ArrayInput'] ? '[]' : '' )."\" ".
 		"id=\"".( $info['id'] ? $info['id'] : "lmfe_".$info['formName']."_".$info['name'] )."\" ".
 		( $info['class'] ? "class=\"".$info['class']."\" " : '' ).

@@ -1,3 +1,17 @@
+53bee6bc Admin Profile
+85506645 Save
+304a2581 The 3-digit code is not inserted
+b022caaf Wrong 3-digit code.
+c5b9a047 Wrong captcha code.
+ed213d9a Wrong password.
+5eb4829f Admin
+7b592f31 Edit
+c888f43c New
+399de52b The page is not defined!
+b2253bbc Invalid Access!
+897c9fa2 Dashboard
+eb92ddfe No widget defined
+a4a80c7a Invoice Payment Form
 9cb0f80d Daily Report
 160e2d58 Client invoices
 9ef9604e Payment Gateways
@@ -16,9 +30,9 @@ a1c6c306 Extra Code - 2
 dfa4569b Extra Code - 3
 9937b616 Extra Code - 4
 70d7dbf8 Save Changes
-988f2d25 Daily Payments (x1000)
-1d7bc315 Monthly Payments (x1000)
-473e5f01 Annually Payments (x1000)
+988f2d25 Daily Payments
+1d7bc315 Monthly Payments
+473e5f01 Annually Payments
 3b578b16 Today
 3344e33d Yesterday
 da7e1b55 Week
@@ -29,14 +43,10 @@ ac6a95ac Payment
 2b426822 Credit
 86ab5403 Name
 3f4505dc There is no invoice issued for you.
-8adaaa76 Your Credit
-cc81d9ee zero
-e90d8d2b Account Charge
 3da08e3b Offline Payment
 824a51f6 Pay From Wallet
 0cf0ecae Online Payment
-97044d58 Paid
-35f12569 Not Paid
+cc81d9ee zero
 9636700d Invoices
 c311e3d4 Wallet
 003633e2 Offine
@@ -46,6 +56,7 @@ c97188c3 Card
 b5475089 Online
 f4ae9f2f Amount
 e651942c You will be redirected to payment gateway by clicking on the "Payment".
+e90d8d2b Account Charge
 ba460428 There is no invoice with ID %%.
 bf7338d8 The invoice #%% already paid!
 f09bc22b Please first login
@@ -54,21 +65,17 @@ f09bc22b Please first login
 66d8d034 Removed
 a694e68c No record submitted
 aae81639 Are you sure to remove?
-7b592f31 Edit
 63f03ac8 Subcat
-85506645 Save
-c10aa7a5 Last Messages
-dbbccdfb Contact Setting
-76392aa3 Email Address
-24161c8e From :
-b7395dd9 To :
-f9da6984 Date :‌
-eaba9a48 Reply ...
-29614831 Send
+477eb6e6 Fields
 ed1d432c Response to your ticket on %%
 fab9b08f Your message have been sent to %%.
-78cfaa37 List of questions
-704858ca Submit a new question
+76392aa3 Email Address
+a921a02b Destination is not defined.
+5d8a49d4 Please insert your name correctly.
+d8bb46b5 Please insert your email address correctly.
+c2bbdfc0 Forgot to write the message!
+41feb385 Something wrong!
+d235199b Back
 39cd89e0 Are you sure to remove?
 22b18fdc No Comment
 81c4638e Comment
@@ -79,6 +86,7 @@ d90b80a2 Problem on saving the comment
 bacfc496 Reply
 c01ee110 Tweet
 be7f4d51 Your comment ...
+29614831 Send
 af85fe78 Only members can submit comments. please %%register now%%.
 f6e88fe7 Abuse report
 3d475b15 about the
@@ -102,7 +110,6 @@ eee89ca9 Layer type
 15ea1998 Layer title
 af791b1c %%'s details
 082be236 Page address
-d235199b Back
 fb6a6fe2 The page address should contain the site's domain.
 1f132928 Please select a proper title for the page.
 cb9cb1f7 The page address is already in use. %%
@@ -110,8 +117,6 @@ cb9cb1f7 The page address is already in use. %%
 440f1f71 You are not allowed to remove this page.
 d1e47ecd Edit name
 184512f5 New layer
-0827c947 Move to up
-f2ca9f85 Move to down
 f879902b enable/disable
 6cf9b4a6 Remove
 42829e9d Error in authentication.
@@ -133,6 +138,7 @@ afc1d8a9 New %%
 19902d73 %% not found.
 6eaebca4 Enable
 c26ac248 Disable
+1434799f Are you sure?
 c2c3b78f There is no linkbox defined.
 c63ad281 Page :
 13d984b3 no record found.
@@ -141,31 +147,28 @@ a82abea9 minumun
 924b0f70 character
 bc90656a keyword
 f8f57a27 select
+6d495fa5 number
 8a7894f1 Display
+ca4979c3 modify %%
+08ec5a88 register new %%
 11c134b6 Loading ...
+e4966c5f All changes saved.
 955d9b64 remove file
 abc02e7a full display
-53bee6bc Admin Profile
-c49bfd0b Administrator
-f16beea8 FC2
-09644b6e Brute force attack protection.
-f4c425d6 Back to home page
-304a2581 the 3-digit code is not inserted
-b022caaf wrong 3-digit code
-c5b9a047 wrong captcha code
-ed213d9a wrong password
-5eb4829f Admin
-897c9fa2 Dashboard
-b2253bbc Invalid Access!
-1335703e Logout
-eb92ddfe No widget defined
+c7eb22b5 Please fill the form correctly
+cb6dca29 Back
+698d8496 No record found.
+8020c2e1 This option is not refundable
+6a93facb This option is refundable and amendable, please see Cancellation Policy: This service can be cancelled without any penalties %% day(s) prior to first service date.
+82cee7fd Please fill the form correctly.
+d1b3b25f Arrival
+c40031ef Departure
+24b3d7f0 Round Trip
 7f5b5876 Site news
-07f0f466 there are no results.
 4e919b57 view
 cacac8e8 Category
 2f35c8b5 no record found.
 34ea9d92 List of news
-3b6c7f7e Submit news
 44ee9f11 Please insert your email address to receive the latest updates in your mail inbox.
 dc89ca2f Your mentioned email is already used by someone else.
 31f58360 Something wrong.
@@ -186,7 +189,7 @@ b77bbf2a Continent
 d80b00c9 City
 0e19e858 Region
 69a6529c Street
-8835357c Are you sure to remove %% ?
+8835357c Are you sure to remove %%?
 ce8e19ff Unknown
 2f9d8192 No record submitted
 33967c4f Submit new %% ..
@@ -196,6 +199,8 @@ ce8e19ff Unknown
 02ddb613 Slide insertion form
 8a71af6f Subscription
 561db577 Links
+230d8204 Something wrong with sorting.
+c62fc104 Today Visits
 4f50810a New layer type ..
 e7412c0f Delimiter
 0d20443f HTML Content
@@ -219,8 +224,8 @@ e51640bb Move to archive
 8c17399e Are you sure to archive this message?
 d31a0360 Active Messages
 d72208cd Closed Messages
+56f95c41 Waiting tickets
 82331ebe Closed
-c888f43c New
 1089eac3 Awaiting reply
 6aedaf47 Replied
 cba555d3 Ask seller
@@ -244,6 +249,11 @@ b5d547af hours later
 76a00a28 hours ago
 d9c05ef0 minutes ago
 0a3e6f22 seconds ago
+e458c88b Are you sure to remove all related data this client?
+65d21c61 List of Managers
+3be75adb Submit a new manager
+82991df9 date of registration
+95e2e00d Your email address is already in use.
 5f428342 Change %%
 1f8326a3 Current password
 847fe3e8 New password
@@ -255,44 +265,20 @@ e286d18c Password does not match!
 110ea316 Invalid password
 34d0afc0 Please insert your password.
 97a6a06f Please insert your password correctly.
-0029e44e Forgot password!
-a2af3001 Please insert your email address to receive the password setup link.
-76fd5677 Email address
-95e8f6a5 Submit ticket
-2bd298e2 Something wrong!
-312a9eae New password
-aafdf0ae Please insert a proper password.
-55c82b09 Your password at least should have 8 characters.
-d65162db Password does not match
+965804ac Forgot password form
+44de4c96 Please insert your %% for reset password.
+628269ce Please select a secure and powerfull password. (mixed of numbers and letters, more than 8 characters)
 554bb2f3 Login to clientarea
-1d60f355 There is no account related to your mentioned email address.<br>You can try to %%register%% a new account with your email address.
-f5b8cc05 Wrong %% or password
+7403181d There is no account registered with mentioned %%.
+bd3dcce4 email address
+1e82b60e Wrong username or password.
 368ba10c Your account have been suspended.
-8ba34bf5 Login
-11d68fbc %%Register Now%%
-86c0e83f password
 f54b8fb7 Submitting the login form you are agreeing the %%website terms%%.
-2a7368a4 Forgot my password
-17c9f3be Client Login
-a9749a9b Remember
-e458c88b Are you sure to remove all related data this client?
-7fb6f3f1 Please insert your email address.
-503c4596 The mentioned email address is already in use.
-89716346 Please insert your email address correctly.
-9ca0def6 Please insert your password.
-a725e8a4 Please insert your name.
-e0f83817 Please insert your name correctly.
-d7172900 Something wrong in registration.
-0ebf4679 Register
-da5f9de9 if you already have an account please %%login%%
-1d28ef78 Submitting the registration form you are agreeing the %%website terms%%.
-65d21c61 List of Managers
-3be75adb Submit a new manager
-82991df9 date of registration
-95e2e00d Your email address is already in use.
+4be422e4 You are not joined to %%?
 b32beaac Clientarea
 bd302eb3 Your credit
 9ad051c8 Login to site
+0ebf4679 Register
 fbe9d68e Forgot password
 06f7aa3e Home
 eb54bfb2 Client Profile
@@ -300,9 +286,28 @@ eb54bfb2 Client Profile
 c8f5608d Female
 5551ccf3 Please insert your name!
 2af4878c Please insert your name correctly!
-a0c3c90f Please insert your email address!
 3afa9389 Please insert your email address correctly!
 9f3bcd9c The mentioned email address is already used by someone else!
+e44732cf Something wrong on saving changes !
+97d153a6 Please insert your cell phone correctly.
+fcdd46d6 Your cell phone number is already in use.
+9ca0def6 Please insert your password.
+a725e8a4 Please insert your name.
+e0f83817 Please insert your name correctly.
+3d0c4c21 Please insert your cell number correctly.
+faf3c317 The mentioned cell number is already in use.
+89716346 Please insert your email address correctly.
+97d7335d The mentioned email address is already in use.
+d7172900 Something wrong in registration.
+da5f9de9 if you already have an account please %%login%%
+1d28ef78 Submitting the registration form you are agreeing the %%website terms%%.
+70f83dbe Please insert your email address to receive the actication link.
+da029589 The mentioned %% is already in use.
+7148fe26 We just sent a text message containing the verification code to your cell number %%. Please insert the mentioned code.
+0c138e0e The deathline of activation key is passed.<br>please try again.
+19eb570e The code is wrong.
+decc1681 We just sent the verification code into your email inbox %%. Please insert the code.
+cc117ae1 Please insert the activation code correctly.
 ddc659a4 Accounting
 1ccc4798 Contact
 4fbe1747 FAQ
@@ -311,10 +316,11 @@ a3b9cda1 Keywords
 33d10611 Layout
 74fe9d9c Link Boxes
 5cc4b7bf Sponsors
-fbfe8923 Vehicles
 23b3205c Daily Tours
+1c55e92a DailyTour Bookings
 4f74e2d4 Transfers
-1520520e News
+4fe9ced9 Transfer Bookings
+0d8f8656 Transfer Vehicles
 e5df36b5 Newsletter
 9bf69a29 Position
 b0cb73f9 Setting
@@ -329,11 +335,12 @@ a5eb7f16 News list
 1875752a Clientarea login form
 0572f566 Contact Form
 212ae4fa Slideshow
-965804ac Forgot password form
-bb3d7c0e Registration Form
 03544778 Client Desk
+bb3d7c0e Registration Form
+7a56609b Client ID Verification
 e290249c Dashboard
 dc77044f Tickets
+1335703e Logout
 d8cf8c26 Change password
 bb1f5f23 HTML Content
 0625d738 Reply to Contact messages
@@ -405,6 +412,7 @@ eff3be72 Admin's SMS
 0921ab1a Ticket
 ce9bc533 Tickets
 996c9a16 Ticket Message
+86c0e83f password
 fba026ab Phone
 6c392887 Address
 53dc9ae1 Job
@@ -448,17 +456,80 @@ def0817d Order payment confirm
 dbfff9df Support ticket - send reply
 5c49b154 Message sender
 7c470f39 Message receiver
-0c00ea5b Ask from seller - send reply
-e4f1eb0c Buyer
-8aaa1d8e Seller
 23718416 Support ticket - new ticket by admin
 7b1a7613 Message receiver client
 e6eebf4c Support ticket - new ticket by user
 6d72db8b Message sender client
-fa08bb2b Client to client - new message
-e5887d3e Ask from seller - new message
 e8a77cf8 Client to cilent - send reply
 0e6ede08 Edit client profile
+78c2e5d6 New Transfer Order
+d6fc31f4 New Daily Tour Order
+b27d6333 User Verification
+c49bfd0b Administrator
+4fce6e13 3-digit code
+f4c425d6 Back to home page
+97044d58 Paid
+35f12569 Not Paid
+8adaaa76 Your Credit
 530f1290 Looks that you are using an old browser that can not handle alot of new features in our website. so we do suggest you to use some brand new browsers like Chrome or Firefox.
+24161c8e From :
+b7395dd9 To :
+f9da6984 Date :‌
+d34a1f8f Send reply
 c5a076d5 send to
+06a19b35 Page not found!
+cfe93a08 So sorry, but you are not allowed to view this page.
+9592af8c Home page
+070fd73f Booking Info
+d53fd7f5 Service Date
+f5212458 Traveller(s)
+0cc4b6d4 Total Purchase
+7f8b03cf Daily Tour's Info
+17c078b6 Tour Leader's Name
+bc3b3f5a Departure Time
+be071232 Departure Point
+8f47e1dd A centrally located meeting point.
+64e8d6c4 (!Detailed address information will be provided on your confirmation voucher)
+2c0943df Guiding Language
+0f424628 Select Language
+37d35104 Additional Requests
+400c1588 Passenger's Cell Number
+dc1fc012 I have read and accept the
+4143f76a terms and conditions
+ed014df8 Book Now
+4bf1bef3 Download
+6626f447 Total Number of Travelers
+ac5fd28c Book now
+840eb2da Depart
+1b40c52f Arrival Date
+df4346d8 Departure Date
+e02d9685 Adult(s)
+78200b65 Traveller's Info
+246c4f05 Arrival Detail
+951a7576 Airline / Cruise / Boat / Train Name
+308dea5e Code
+fc836f61 Arrival Time
+b6e2b8cc Drop Off Location/Hotel Name
+ba9d0d5d Departure Detail
+912bc8a6 Pick Up Location/Hotel Name
+ce38a19e What time do you wish to be picked up from your address/hotel ?
+aabd1f27 Price
+86f03225 Per Vehicle
+0029e44e Forgot password!
+fa4c9fab Reset password
+312a9eae New password
+aafdf0ae Please insert a proper password.
+55c82b09 Your password at least should have 8 characters.
+d65162db Password does not match
+8ba34bf5 Login
+2a7368a4 Forgot my password
+9e38bc50 Register now.
+2be55dd7 register
+17c9f3be Client Login
+a9749a9b Remember
 6ac74e4f Client details
+628ea8a9 cell number verification
+7124eebb resend
+60963a3c modify cell number
+cbcdae12 confirm email address
+5968fa30 modify email address

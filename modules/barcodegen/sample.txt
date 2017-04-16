@@ -1,0 +1,3 @@
+
+_URL.'/modules/barcodegen/html/image.php?filetype=PNG&dpi=72&scale=4&rotation=0&font_family=0&font_size=10&text='.$rw_dto['code'].'&thickness=30&checksum=&code=BCGcode39'
+

@@ -1,5 +1,10 @@
 <?
-$GLOBALS['do_action'][] = 'captcha_build';
+
+# jalal7h@gmail.com
+# 2017/01/18
+# 1.1
+
+add_action( 'captcha_build' );
 
 function captcha_build( $numb=4 ){
 	
@@ -15,17 +20,15 @@ function captcha_build( $numb=4 ){
 
 		#
 		# the code
-		$rand = rand(1000,9999);
-		error_log("session before write : ".$_SESSION['captcha-'.$captcha_name] );
+		$rand = rand( pow(10,$numb-1), pow(10,$numb)-1 );
 		$_SESSION['captcha-'.$captcha_name] = $rand;
-		error_log("session after write : ".$_SESSION['captcha-'.$captcha_name] );
 
 		#
 		# select the color
-		$color_R = rand(180,230);
-		$color_G = rand(180,230);
+		$color_R = rand(150,200);
+		$color_G = rand(150,200);
 		// $color_B = 255 + 240 - $color_R - $color_G;
-		$color_B = rand(180,230);
+		$color_B = rand(150,200);
 
 	} else {
 		$rand = "OVER";		
@@ -46,6 +49,7 @@ function captcha_build( $numb=4 ){
 	echo imagepng($im);
 	imagedestroy($im);
 	die();
+
 }
 
 

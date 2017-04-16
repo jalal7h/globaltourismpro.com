@@ -13,7 +13,7 @@ function litesponsor_view(){
 
 	$c = "<div class=\"".__FUNCTION__."\">\n";
 	
-	if(! $rs = dbq(" SELECT * FROM `litesponsor` ORDER BY rand() LIMIT $limit ") ){
+	if(! $rs = dbq(" SELECT * FROM `litesponsor` WHERE `flag`='1' ORDER BY rand() LIMIT $limit ") ){
 		e();
 
 	} else if(! dbn($rs) ){

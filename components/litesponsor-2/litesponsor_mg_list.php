@@ -26,9 +26,11 @@ function litesponsor_mg_list(){
 	
 	$list['addnew_url'] = '_URL."/admin/litesponsor/new"';
 	$list['remove_url'] = true; // link dokme hazf
-	$list['setflag_url'] = true; // link active / inactive
+	$list['setflag_url'] = '_URL."/?page=admin&cp=".$_REQUEST["cp"]."&do=flag&id=".$rw["id"]';
 	$list['paging_url'] = true; // not needed when we have 'tdd'
-		
+	
+	$list['tr_color_identifier'] = '$rw["flag"]';
+
 	#
 	# list array // list e sotun haye list
 	$list['list_array'][] = ["head"=>lmtc($table.":image") , "tag"=>"th", "picture" => '$rw["image"]'];

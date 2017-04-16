@@ -1,12 +1,14 @@
+// 2017/01/20
 
-// 2016/12/21
+var lmfe_isNeeded_flag = false;
 
 $(document).ready(function($) {
-		
+
 	// lmfe_isNeeded
 	$('.lmfe_isNeeded').closest("form").on('submit', function(e){
 
 		$(this).find('.lmfe_isNeeded').each(function( index ) {
+  			
   			if( $(this).val()=='' || $(this).val()==0 ){
   				
   				if( $(this).prop('tagName') == 'INPUT' && $(this).prop('type') == 'hidden' ){
@@ -16,9 +18,15 @@ $(document).ready(function($) {
   					$(this).focus();
   				}
 
+  				lmfe_isNeeded_flag = true;
+
   				e.preventDefault();
   				return false;
+  			
+  			} else {
+  				lmfe_isNeeded_flag = false;
   			}
+
 		});
 
 	});
@@ -28,7 +36,7 @@ $(document).ready(function($) {
 
 	// lmfe_more
 	var lmfe_c = 0;
-	$('.lmfe_more icon').on('click', function(){
+	$("body").delegate('.lmfe_more icon', "click", function() {	
 
 		// more_c
 		lmfe_more_c_handle = $(this).closest('.lmfe_more_c');
@@ -53,6 +61,9 @@ $(document).ready(function($) {
 		// clean
 		$('#'+lmfe_more_new_item_id+' .lmfe_tnit').html('');
 		$('#'+lmfe_more_new_item_id+' input').val('');
+		$('#'+lmfe_more_new_item_id+' input').attr('value','');
+		$('#'+lmfe_more_new_item_id+' input').addClass('removeButton');
+		$('#'+lmfe_more_new_item_id+' input').after('<remove></remove>');
 		$('#'+lmfe_more_new_item_id+' icon').hide();
 		$('#'+lmfe_more_new_item_id+' .lmfetfp').hide();
 		$('#'+lmfe_more_new_item_id+' .lmfetc .lmfetc .lmfetc').html('');

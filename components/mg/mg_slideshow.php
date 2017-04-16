@@ -1,14 +1,16 @@
 <?php
 
 # jalal7h@gmail.com
-# 2017/01/11
-# 1.0
+# 2017/01/23
+# 1.1
 
 add_layer( 'mg_slideshow', 'Slideshow', 'center' );
 
 function mg_slideshow(){
-	
-	if( !in_array(_PAGE, [1,14]) or $_REQUEST['service'] ){
+
+	if(  _PAGE == 1  and  d404_flag !== true  ){
+	} else if( _PAGE==14 and $_REQUEST['do_slug']=='dashboard' and !$_REQUEST['do2'] and !$_REQUEST['service'] ){
+	} else {
 		return '';
 	}
 
@@ -16,7 +18,7 @@ function mg_slideshow(){
 		'random' => true,
 		// 'limit' => 5
 	]);
-		
+	
 	$the_slideshow = slideit( $slide_array , 8000 );
 	$the_slideshow = str_replace( '<div class="list">' , "<img src=\""._URL."/image_list/slideit_gradiant.png\" class=\"gradiant\">\n\t".'<div class="list">', $the_slideshow );
 

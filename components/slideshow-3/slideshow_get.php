@@ -19,7 +19,19 @@ function slideshow_get( $list ){
 		$limit = $list['limit'];
 	}
 
-	return table( 'slideshow', $where, $order, $limit );
+	#
+	# get from database
+	$slides = table( 'slideshow', $where, $order, $limit );
+
+	#
+	# fix
+	foreach ($slides as $i => $slide) {
+		$slides[$i]['image'] = _URL."/".$slides[$i]['image'];
+	}
+
+	#
+	# return it
+	return $slides;
 
 }
 

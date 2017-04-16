@@ -28,6 +28,7 @@ jQuery(document).ready(function($) {
         minDate: '0',
         // maxDate: '+1Y+6M',
         maxDate:'+30D',
+        numberOfMonths: 2,
         onSelect: function (dateStr) {
             var max = $(this).datepicker('getDate'); // Get selected date
             $('#datepicker').datepicker('option', 'maxDate', max || '+1Y+6M'); // Set other max, default to +18 months

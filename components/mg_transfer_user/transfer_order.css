@@ -1,0 +1,159 @@
+
+/* * * *
+ * ORDER
+ * */
+.transfer_order {
+	
+}
+.transfer_order > div {
+	display: inline-block;
+	vertical-align: top;
+}
+.transfer_order > div > .head {
+	padding: 30px 40px;
+	font-size: 32px;
+	font-weight: bold;
+}
+
+/* * * *
+ * left
+ * */
+.transfer_order .left {
+	width: 400px;
+}
+.transfer_order .left > .head {
+	
+}
+.transfer_order .left .slideit ,
+.transfer_order .left .slideit img {
+	width: 400px;
+	height: 220px;
+}
+.transfer_order .left .transfer_name {
+	font-size: 16px;
+	padding: 10px 10px 8px 10px;
+	margin: 0 0 10px 0;
+	color: #f4f4f4;
+	text-shadow: 0 0 5px rgba(0, 0, 0, .6);
+	border-radius: 0 0 4px 4px;
+}
+.transfer_order .left .memo {
+	color: #888;
+	font-size: 14px;
+	margin-right: 10px;
+}
+.transfer_order .left .data {
+	color: black;
+	font-size: 14px;
+}
+.transfer_order .left .table {
+	display: inline-block;
+	width: 80%;
+	border: 1px solid #f4f4f4;
+	margin: 20px auto 0 auto;
+	text-align: right;
+}
+.transfer_order .left .table .re {
+	padding: 5px 10px;
+}
+.transfer_order .left .table .re:nth-child(2n+1) {
+	background-color: #f8f8f8;
+}
+.transfer_order .left .table .priceper {
+	color: #888;
+	font-size: 14px;
+}
+.transfer_order .left .table .priceper .numb{
+	font-weight: bold;
+	color: black;
+	font-size: 16px;
+	padding-left: 5px;
+}
+.transfer_order .left .table .cost {
+	width: 100px;
+	text-align: left;
+	float: left;
+	font-size: 14px;
+	color: #555;
+	font-weight: normal;
+}
+.transfer_order .left .table .re.total .cost {
+	font-weight: bold;
+	color: #333;
+}
+
+/* * * *
+ * right
+ * */
+.transfer_order .right {
+	width: calc( 100% - 400px );
+	margin-bottom: 100px;
+}
+.transfer_order .right > .head {
+	margin-bottom: 40px;
+}
+.transfer_order .right > div.re {
+	padding: 10px 40px;
+}
+.transfer_order .right > div.sub-head {
+	/* padding: 40px 5px 0px 5px; */
+    /* margin: 0 35px 0 0; */
+    padding: 40px 40px 0 40px;
+    margin: 0px;
+    font-size: 16px;
+    border-bottom: 1px dotted #ddd;
+    color: #a90000;
+}
+.transfer_order .right > div.re:nth-child(2n+1) {
+	background-color: #f9f9f9;
+}
+.transfer_order .right > div.re > span ,
+.transfer_order .right > div.re select ,
+.transfer_order .right > div.re input[type="text"].text {
+	font-size: 14px;	
+}
+.transfer_order .right > div.re select ,
+.transfer_order .right > div.re input[type="text"].text {
+	width: 400px;
+}
+.transfer_order .right > div.re > span:first-child {
+	width: 220px;
+	display: inline-block;
+}
+.transfer_order .right > div.re.submit {
+	padding-top: 30px;
+	background-color: white;
+}
+.transfer_order .right > div.re.submit label {
+	padding-top: 15px;
+}
+.transfer_order .right > div.re label ,
+.transfer_order .right > div.re label span {
+	font-size: 14px;
+}
+.transfer_order .right > div.re input[type="submit"] {
+	float: left;
+}
+
+.transfer_order input[type="submit"] {
+	margin: 0 20px 0 20px;
+	padding: 10px 25px;
+	transition: 0.2s all;
+	float: left;
+	outline: none;
+}
+.transfer_order input[type="submit"]:hover ,
+.transfer_order input[type="submit"]:active {
+	margin: 5px 15px 5px 15px;
+	padding: 5px 30px;
+	color: white;
+	opacity: 0.7;
+}
+.transfer_order input[type="submit"]:active {
+	position: relative; top: 2px;
+}
+.transfer_order input[type="submit"]:focus {
+	color: white;
+}
+
+

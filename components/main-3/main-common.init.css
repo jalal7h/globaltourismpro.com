@@ -1,0 +1,258 @@
+
+* {
+	margin:0;
+	padding:0;
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;
+	outline: none;
+}
+*:focus {
+	outline: none;
+}
+*::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+}
+::selection {
+	color: white;
+	background: orange;
+}
+::-moz-selection {
+	color: white;
+	background: orange;
+}
+
+.placeholder_fix:-moz-placeholder {
+    text-align: right;
+    font-family: DefaultFont;
+    direction: rtl;
+}
+.placeholder_fix:-ms-input-placeholder {
+    text-align: right;
+    font-family: DefaultFont;
+    direction: rtl;
+}
+.placeholder_fix::-webkit-input-placeholder {
+    text-align: right;
+    font-family: DefaultFont;
+    direction: rtl;
+}
+
+.noselect {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+body {
+
+}
+
+img {
+	border: none;
+}
+
+
+fieldset {
+	border-radius: 5px;
+	padding: 10px;
+    box-sizing: border-box;
+    direction: rtl;
+}
+
+legend {
+	margin: 4px;
+	padding: 4px 12px;
+}
+
+label {
+	cursor:pointer;
+}
+
+hr {
+	display: block;
+	size: 0px;
+	border: 0px;
+	border-top: 1px dashed #ccc;
+	height: 0px;
+	padding: 0px;
+	margin: 20px 0;
+}
+
+select,
+input[type=text],
+
+input[type=name],
+input[type=clock],
+
+input[type=tag],
+input[type=number],
+input[type=date],
+input[type=email],
+input[type=url],
+input[type=password],
+textarea {
+	background-color:#ffffff;
+	border:1px solid #cccccc;
+	padding:10px;
+/*	margin-left:8px;*/
+/*	margin-top:2px;*/
+/*	margin-bottom:2px;*/
+	color:#666;
+	/* width:260px; */
+	font-family:DefaultFont,Tahoma;
+	font-size:11px;
+	outline: 0;
+	border-radius: 4px;
+}
+
+input[type=password] {
+	font-family: monospace;
+}
+input[type=number] {
+	text-align: center;
+	font-family: monospace;
+	font-size: 14px;
+	padding: 7px;
+	width: 80px;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none;
+}
+
+input[type=text],
+input[type=email],
+input[type=url] {
+	width:160px;	
+}
+input[type=email],
+input[type=url] {
+	font-family: monospace,'sans-serif';
+}
+
+input[type=submit],
+input[type=reset],
+input[type=button] {
+	cursor: pointer;
+	margin: 1px;
+	border: 0px;
+
+}
+input[type=checkbox] {
+	/* position:relative; */
+	/* top:3px; */
+	/* left:5px; */
+}
+select:hover,
+input[type=text]:hover,
+
+input[type=name],
+input[type=clock],
+
+input[type=tag]:hover,
+input[type=number]:hover,
+input[type=calendar]:hover,
+input[type=email]:hover,
+input[type=url]:hover,
+input[type=password]:hover,
+textarea:hover {
+	border:1px solid #f0f0f0;
+	background-color:white;
+	color:#000;
+}
+select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	background: url('./image_list/select-tag-drop-icon.png') no-repeat left 7px center;
+	padding-left: 28px !important;
+	background-color: white;
+}
+.clear {
+	clear:both;
+	height:1px;
+	width: 80%;
+}
+
+.boxborder {
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;
+}
+
+.submit_button {
+	display: inline-block !important;
+	background-color: rgb(117, 172, 0);
+	padding: 9px 15px;
+	font: normal 13px DefaultFont !important;
+	color: white !important;
+	border-radius: 3px;
+	margin: 3px auto;
+	text-decoration: none !important;
+	box-shadow: 0 0 10px #ccc !important;
+	outline: none !important;
+	width: auto;
+	text-align: center;
+	cursor: pointer;
+	text-shadow: 0 0 3px rgba(0,0,0,0.3);
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	-webkit-touch-callout: none;
+}
+.submit_button:hover {
+	opacity: 0.8;
+}
+.submit_button.red {
+	background-color: rgb(255, 71, 0);
+}
+.submit_button.gray {
+	background-color: #777;
+	cursor: default;
+}
+
+.divider {
+	clear:both;
+	width:95%;
+	margin:auto;
+	border-bottom:1px dashed #ccc;
+	margin-bottom:20px;
+	height:20px;
+}
+.delimiter {
+	width:99%;
+	height:20px;
+	border-bottom:1px dotted #ccc;
+	margin:auto;
+	margin-bottom:20px !important;
+	clear:both;
+}
+
+icon:before {
+	display: inline-block;
+	font-family: FontAwesome;
+}
+
+flag {
+	background-image: url('http://parsunix.com/cdn/img/icon/flags.png');
+	width: 18px;
+	height: 13px;
+	overflow: hidden;
+	display: inline-block;
+}
+
+.notfound {
+	text-align: center;
+	margin: 30px 0;
+	color: #666;
+}
+
+
+
+

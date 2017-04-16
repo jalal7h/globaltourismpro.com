@@ -6,7 +6,7 @@
 
 function mg_litesponsor(){
 	
-	if( _PAGE != 1 ){
+	if(  _PAGE != 1  or  d404_flag === true  ){
 		return '';
 	}
 
