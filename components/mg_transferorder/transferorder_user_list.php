@@ -35,7 +35,7 @@ function transferorder_user_list(){
 				'func'	=> 'transferorder_user_list_button_booking_invoice_func',
 			],
 			'booking_voucher' => [
-				'url'	=> '$rw["id"]',
+				'url'	=> '$rw["code"]',
 				'icon'	=> '0f6',
 				'name'	=> 'Booking Voucher',
 				'color'	=> 'orangered',
@@ -63,7 +63,7 @@ function transferorder_user_list(){
 
 
 function transferorder_user_list_button_booking_message_url( $rw ){
-	return _URL.'/'.Slug::get('page',14).'/ticket/new';
+	return _URL.'/'.Slug::getSlugByName('userpanel').'/ticket/new';
 }
 
 function transferorder_user_list_button_booking_voucher_func( $rw ){

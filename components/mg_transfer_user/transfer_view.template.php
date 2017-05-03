@@ -8,7 +8,7 @@
 		<a href="<?=transfer_link($rw)?>"><?=$rw['name']?></a>
 	</div>
 
-	<a class="pdf cl_l1" href="//pdfcrowd.com/url_to_pdf" download ><lang>Download</lang></a>
+	<a class="pdf cl_l1" href="{_URL}/html2pdf{_URI}" download ><lang>Download</lang></a>
 
 	<div class="slider">
 		{the_slider}

@@ -36,7 +36,7 @@
 	 --><div class="price">
 			<span class="memo">Price from in USD</span>
 			<span class="cost">$<?=$rw['cost']?></span>
-			<span class="see_details cl_l2r">See Details</span>
+			<span class="see_details cl_l2r cl_l1_i">See Details</span>
 		</div>
 
 	</a>

@@ -62,6 +62,7 @@ function dailytour_mg_form(){
 			[!"date:date_to"!]
 
 			[!"number:deathline"!]
+			[!"number:reservation"!]
 
 			<hr>
 			

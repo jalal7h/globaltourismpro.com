@@ -1,0 +1,118 @@
+/*20170109*/
+
+.clWhite {
+	color: #444;
+	background-color: white;
+}
+
+.clNeu {
+	color: #444;
+	background-color: #f7f7f7;
+}
+
+/* range dagh e asli */
+.cl_l1 ,
+.cl_l1_hover:hover ,
+.cl_l1_hover_before:hover:before {
+	color: #0034a9;
+}
+.cl_l1_i ,
+.cl_l1_hover_i:hover ,
+.cl_l1_hover_before_i:hover:before {
+	color: #0034a9 !important;
+}
+.cl_l1r ,
+.cl_l1r:disabled ,
+.cl_l1r_hover:hover ,
+.cl_l1r_hover:disabled:hover {
+	background-color: #0034a9;
+	border-color: #0034a9;
+	color: white;
+}
+.cl_l1r_i ,
+.cl_l1r_hover_i:hover {
+	background-color: #0034a9 !important;
+	border-color: #0034a9 !important;
+	color: white !important;
+}
+.cl_l1r_BG ,
+.cl_l1r_BG_hover:hover {
+	background-color: #0034a9;
+}
+.cl_l1r_BG_i ,
+.cl_l1r_BG_hover_i:hover {
+	background-color: #0034a9 !important;
+}
+.cl_l1r_border ,
+.cl_l1r_border_hover:hover {
+	border-color: #0034a9;
+}
+
+/* rang e aram e asli */
+.cl_l2_t {
+	color: #d0deff;
+}
+.cl_l2 ,
+.cl_l2_hover:hover {
+	color: #696969;
+}
+.cl_l2_i ,
+.cl_l2_hover_i:hover {
+	color: #696969 !important;
+}
+.cl_l2r ,
+.cl_l2r_hover:hover {
+	background-color: #d0deff;
+	border-color: #d0deff;
+	color: #696969;
+}
+.cl_l2r_i ,
+.cl_l2r_hover_i:hover {
+	background-color: #d0deff !important;
+	border-color: #d0deff !important;
+	color: #696969 !important;
+}
+.cl_l2r_BG ,
+.cl_l2r_BG_hover:hover {
+	background-color: #d0deff;
+}
+.cl_l2r_border ,
+.cl_l2r_border_hover:hover {
+	border-color: #d0deff;
+}
+
+.cl_l3 ,
+.cl_l3_hover:hover ,
+.cl_l3_hover_before:hover:before {
+	color: #337ab7;
+}
+.cl_l3_i ,
+.cl_l3_hover_i:hover ,
+.cl_l3_hover_before_i:hover:before {
+	color: #337ab7 !important;
+}
+.cl_l3r ,
+.cl_l3r_hover:hover {
+	background-color: #337ab7;
+	border-color: #337ab7;
+	color: white;
+}
+.cl_l3r_i ,
+.cl_l3r_hover_i:hover {
+	background-color: #337ab7 !important;
+	border-color: #337ab7 !important;
+	color: white !important;
+}
+.cl_l3r_BG ,
+.cl_l3r_BG_hover:hover {
+	background-color: #337ab7;
+}
+.cl_l3r_BG_i ,
+.cl_l3r_BG_hover_i:hover {
+	background-color: #337ab7 !important;
+}
+.cl_l3r_border ,
+.cl_l3r_border_hover:hover {
+	border-color: #337ab7;
+}
+

@@ -36,6 +36,7 @@ function transfer_view(){
 		$price_list = mg_price('mg_transfer', $id);
 		$price_per = array_keys($price_list)[0];
 		$cost = $price_list[ $price_per ];
+		$cost = mg_cost_after_offrate( $cost );
 		$v['cost'] = billing_format($cost);
 		
 		#

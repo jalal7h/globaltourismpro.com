@@ -63,6 +63,7 @@ function transfer_confirm(){
 	$price_list = mg_price('mg_transfer', $transfer_id);
 	$priceper_id = array_keys($price_list)[0];
 	$unitcost = $price_list[ $priceper_id ];
+	$unitcost = mg_cost_after_offrate( $unitcost );
 	if( $_REQUEST['direction'] == 'roundtrip' ){
 		$unitcost*= 2;
 	}

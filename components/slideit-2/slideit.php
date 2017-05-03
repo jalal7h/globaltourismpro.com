@@ -1,10 +1,10 @@
 <?
 
 # jalal7h@gmail.com
-# 2017/01/23
-# 2.1
+# 2017/04/18
+# 2.2
 
-function slideit( $slides , $the_time=1000, $thumb=false, $display_name=false, $display_desc=false ){
+function slideit( $slides , $the_time=1000, $thumb=false, $display_name=0, $display_desc=0 ){
 
 	if(! is_array($slides) ){
 		return e();
@@ -26,6 +26,8 @@ function slideit( $slides , $the_time=1000, $thumb=false, $display_name=false, $
 		'the_time'		=> $the_time,
 		'display_name'	=> $display_name,
 		'display_desc'	=> $display_desc,
+
+		'effect_count'	=> 4,
 
 	]);
 	

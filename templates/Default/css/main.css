@@ -27,14 +27,7 @@ main section.center {
 	display: inline-block;
 	width: 100%;
 }
-main section.center.have_right_sidebar {
-	margin-right: -320px;
-	padding-right: 320px;
-}
-main section.center.have_left_sidebar {
-	margin-left: -320px;
-	padding-left: 320px;
-}
+
 main section > * {
 	margin-bottom: 18px;
 }

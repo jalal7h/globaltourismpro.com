@@ -21,7 +21,7 @@ function dailytour_mg_saveEdit(){
 
 	#
 	# update the database
-	$id = dbs( 'mg_dailytour', ['name','position_id','serviceBasis_id','departs_id','duration','highlights','language','itinerary','inclusions','conditions','notes','date_from','date_to','departure_central_flag','departure_central_point','departure_central_time','deathline'], ['id'] );
+	$id = dbs( 'mg_dailytour', ['name','position_id','serviceBasis_id','departs_id','duration','highlights','language','itinerary','inclusions','conditions','notes','date_from','date_to','departure_central_flag','departure_central_point','departure_central_time','deathline','reservation'], ['id'] );
 
 	# 
 	# set kword

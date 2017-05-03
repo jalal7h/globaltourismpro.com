@@ -8,10 +8,10 @@ add_action('dailytourorder_voucher');
 
 function dailytourorder_voucher(){
 
-	if(! $order_id = $_REQUEST['id'] ){
+	if(! $voucher_id = $_REQUEST['voucher_id'] ){
 		e();
 
-	} else if(! $rw_dto = table('mg_dailytour_order', $order_id) ){
+	} else if(! $rw_dto = table('mg_dailytour_order', [ 'code'=>$voucher_id ] )[0] ){
 		e();
 
 	} else if(! $rw_user = user_detail($rw_dto['user_id']) ){
@@ -35,7 +35,7 @@ function dailytourorder_voucher(){
 			'website_fax'		=> setting('contact_fax') ,
 			'website_email'		=> setting('contact_email_address_1') ,
 			'website_address'	=> setting('contact_address') ,
-			'website_logo'		=> setting('site_logo') ,
+			'website_logo'		=> _URL.'/'.setting('site_logo') ,
 
 			'inclusions'		=> trim($rw_dt['inclusions']) ,
 			'itinerary'			=> trim($rw_dt['itinerary']) ,
@@ -59,7 +59,9 @@ function dailytourorder_voucher(){
 			'leader_name'		=> ucwords($rw_dto['leader_name']) ,
 			'additional_requests'=> $rw_dto['additional_requests'] ,
 
-			'voucher_url'		=> _URL.'/?do_action='.$_REQUEST['do_action'].'&id='.$_REQUEST['id'] ,
+			'voucher_url'		=> _URL.'/voucher/dailytour/'.$voucher_id ,
+			'voucher_pdf'		=> _URL.'/html2pdf/voucher/dailytour/'.$voucher_id ,
+
 			'barcode'			=> _URL.'/modules/barcodegen/html/image.php?filetype=PNG&dpi=72&scale=4&rotation=0&font_family=0&font_size=10&text='.$rw_dto['code'].'&thickness=30&checksum=&code=BCGcode39' ,
 
 

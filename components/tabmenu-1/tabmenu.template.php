@@ -3,7 +3,7 @@
 	
 	<div class="name {class_prefix}r_border">
 	<?foreach( $names as $slug => $name ):?>
-		<a class="{class_prefix}r {class_prefix}_hover" href="#<?=$slug?>"><?=$name?></a>
+		<a class="{class_prefix} {class_prefix}r {class_prefix}_hover" href="#<?=$slug?>"><?=$name?></a>
 	<?endforeach?>
 	</div>
 	

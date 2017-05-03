@@ -96,13 +96,11 @@
 	padding: 10px 40px;
 }
 .transfer_order .right > div.sub-head {
-	/* padding: 40px 5px 0px 5px; */
-    /* margin: 0 35px 0 0; */
     padding: 40px 40px 0 40px;
     margin: 0px;
     font-size: 16px;
     border-bottom: 1px dotted #ddd;
-    color: #a90000;
+    /* color: #a90000; */
 }
 .transfer_order .right > div.re:nth-child(2n+1) {
 	background-color: #f9f9f9;

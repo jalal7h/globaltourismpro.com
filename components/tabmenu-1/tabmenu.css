@@ -35,9 +35,8 @@
 	color: #555;
 }
 .tabmenu div.name > a.current {
-	color: #a90000;
+	/* color: #a90000; */
 }
-
 .tabmenu div.text {
 
 }

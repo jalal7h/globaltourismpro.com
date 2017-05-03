@@ -1,7 +1,7 @@
 <?php
 
 # jalal7h@gmail.com
-# 2017/01/30
+# 2017/04/30
 # 1.0
 
 add_slug([
@@ -48,6 +48,8 @@ add_slug([
 	# confirm dailytour request
 	'dailytour_confirm' => _URL.'/?page=14&do=mg_dashboard&do2=dailytour_confirm',
 
+
+	'voucher/$/$' => _URL.'/?do_action=$1order_voucher&voucher_id=$2',
 
 
 ]);

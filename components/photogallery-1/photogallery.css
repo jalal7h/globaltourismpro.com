@@ -1,0 +1,10 @@
+
+.photogallery {
+
+}
+.photogallery img {
+	width: 364px;
+	height: 250px;
+	cursor: pointer;
+}
+

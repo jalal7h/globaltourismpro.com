@@ -1,0 +1,35 @@
+
+.postlist_extra {
+	padding: 40px 20px;
+}
+.postlist_extra select {
+    font-size: 16px !important;
+    border-radius: 4px !important;
+    line-height: 32px;
+    padding: 10px 20px;
+}
+
+.postlist_extra .type ,
+.postlist_extra .cats {
+	margin: 20px 0;
+}
+.postlist_extra .tnit {
+	width: 120px;
+	text-align: left;
+	display: inline-block;
+	padding-left: 10px;
+	vertical-align: top;
+	padding-top: 15px;
+}
+.postlist_extra .element {
+	display: inline-block;
+	max-width: calc( 100% - 130px );
+}
+.postlist_extra label {
+	padding: 15px 15px;
+}
+.postlist_extra input[type="checkbox"] {
+	top: 0;
+}
+
+

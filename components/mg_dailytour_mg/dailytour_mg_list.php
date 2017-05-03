@@ -36,6 +36,7 @@ function dailytour_mg_list(){
 	# the list
 	# --------------------------------------------
 	echo listmaker_list([
+		'head' => 'List of Daily Tours',
 		'table' => 'mg_dailytour',
 		'order' => [ 'id' => 'desc' ],
 		'limit' => 5,

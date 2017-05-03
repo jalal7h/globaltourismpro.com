@@ -27,7 +27,7 @@ function transfer_image( $id=null, $size=null ){
 	}
 
 	if(! sizeof($images) ){
-		$images[] = _URL.'/image_list/no-image-found.jpg';
+		$images[] = _URL.'/image_list/mg_transfer_nophoto-'.substr($id,-1).'.jpg';
 	}
 
 	return $images;

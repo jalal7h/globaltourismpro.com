@@ -36,12 +36,15 @@ function dailytour_view(){
 		$price_list = mg_price('mg_dailytour', $id);
 		$price_per = array_keys($price_list)[0];
 		$cost = $price_list[ $price_per ];
-		$v['cost'] = billing_format($cost);
+		$cost = mg_cost_after_offrate( $cost );
+		$cost = billing_format( $cost );
+		$v['cost'] = $cost;
 		
 		#
 		# price list
 		foreach ($price_list as $price_per_id => $price_cost) {
 			$price_per = cat_translate($price_per_id);
+			$price_cost = mg_cost_after_offrate( $price_cost );
 			$price_cost = billing_format($price_cost);
 			$price_array[] = [ 'per' => $price_per, 'per_id' => $price_per_id, 'cost' => $price_cost ];
 		}

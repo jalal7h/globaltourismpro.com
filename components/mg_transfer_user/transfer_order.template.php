@@ -81,7 +81,7 @@
 
 
 		<?if( in_array( $_REQUEST['direction'], ['roundtrip','arrival'] ) ):?>
-		<div class="sub-head"><lang>Arrival Detail</lang></div>
+		<div class="sub-head cl_l1"><lang>Arrival Detail</lang></div>
 		
 		<div class="re">
 			<span><lang>Airline / Cruise / Boat / Train Name</lang>:</span>

@@ -30,7 +30,7 @@ function dailytourorder_mg_list(){
 				'func'	=> 'dailytourorder_user_list_button_finilize_func',
 			],
 			'booking_voucher' => [
-				'url'	=> '$rw["id"]',
+				'url'	=> '$rw["code"]',
 				'icon'	=> '0f6',
 				'name'	=> 'Booking Voucher',
 				'color'	=> 'orangered',

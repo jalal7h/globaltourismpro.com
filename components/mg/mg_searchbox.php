@@ -4,6 +4,8 @@
 # 2017/01/11
 # 1.0
 
+add_layer( 'mg_searchbox', 'Search box', 'center', $repeat='N' );
+
 function mg_searchbox(){
 	
 	echo template_engine('mg_searchbox', [

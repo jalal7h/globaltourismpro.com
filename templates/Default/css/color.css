@@ -1,4 +1,4 @@
-/*20170109*/
+/*20170502*/
 
 .clWhite {
 	color: #444;
@@ -13,72 +13,88 @@
 /* range dagh e asli */
 .cl_l1 ,
 .cl_l1_hover:hover ,
+.cl_l1_before,
 .cl_l1_hover_before:hover:before {
-	color: #a90000;
+	color: #ec8227;
 }
 .cl_l1_i ,
 .cl_l1_hover_i:hover ,
+.cl_l1_before_i,
 .cl_l1_hover_before_i:hover:before {
-	color: #a90000 !important;
+	color: #ec8227 !important;
 }
 .cl_l1r ,
+.cl_l1r_before,
+.cl_l1r_hover_before:hover:before,
 .cl_l1r:disabled ,
 .cl_l1r_hover:hover ,
 .cl_l1r_hover:disabled:hover {
-	background-color: #a90000;
-	border-color: #a90000;
+	background-color: #ec8227;
+	border-color: #ec8227;
 	color: white;
 }
 .cl_l1r_i ,
-.cl_l1r_hover_i:hover {
-	background-color: #a90000 !important;
-	border-color: #a90000 !important;
+.cl_l1r_hover_i:hover,
+.cl_l1r_before_i,
+.cl_l1r_hover_before_i:hover:before {
+	background-color: #ec8227 !important;
+	border-color: #ec8227 !important;
 	color: white !important;
 }
 .cl_l1r_BG ,
 .cl_l1r_BG_hover:hover {
-	background-color: #a90000;
+	background-color: #ec8227;
 }
 .cl_l1r_BG_i ,
 .cl_l1r_BG_hover_i:hover {
-	background-color: #a90000 !important;
+	background-color: #ec8227 !important;
 }
 .cl_l1r_border ,
 .cl_l1r_border_hover:hover {
-	border-color: #a90000;
+	border-color: #ec8227;
 }
 
 /* rang e aram e asli */
 .cl_l2_t {
-	color: #c3c3c3;
+	color: #f9dabe;
 }
 .cl_l2 ,
-.cl_l2_hover:hover {
+.cl_l2_hover:hover ,
+.cl_l2_before,
+.cl_l2_hover_before:hover:before {
 	color: #696969;
 }
 .cl_l2_i ,
-.cl_l2_hover_i:hover {
+.cl_l2_hover_i:hover ,
+.cl_l2_before_i,
+.cl_l2_hover_before_i:hover:before {
 	color: #696969 !important;
 }
 .cl_l2r ,
-.cl_l2r_hover:hover {
-	background-color: #c3c3c3;
-	border-color: #c3c3c3;
+.cl_l2r_before,
+.cl_l2r_hover_before:hover:before,
+.cl_l2r:disabled ,
+.cl_l2r_hover:hover ,
+.cl_l2r_hover:disabled:hover {
+	background-color: #f9dabe;
+	border-color: #f9dabe;
 	color: #696969;
 }
 .cl_l2r_i ,
-.cl_l2r_hover_i:hover {
-	background-color: #c3c3c3 !important;
-	border-color: #c3c3c3 !important;
+.cl_l2r_hover_i:hover,
+.cl_l2r_before_i,
+.cl_l2r_hover_before_i:hover:before {
+	background-color: #f9dabe !important;
+	border-color: #f9dabe !important;
 	color: #696969 !important;
 }
 .cl_l2r_BG ,
 .cl_l2r_BG_hover:hover {
-	background-color: #c3c3c3;
+	background-color: #f9dabe;
 }
 .cl_l2r_border ,
 .cl_l2r_border_hover:hover {
-	border-color: #c3c3c3;
+	border-color: #f9dabe;
 }
 
 .cl_l3 ,

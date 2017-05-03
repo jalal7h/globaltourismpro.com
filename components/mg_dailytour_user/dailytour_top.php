@@ -4,6 +4,8 @@
 # 2017/01/00
 # 1.0
 
+add_layer( 'dailytour_top', 'Top Daily Tours', 'center', $repeat='N' );
+
 function dailytour_top(){
 	
 	if(! $list = table('mg_dailytour', ['flag'=>1], ['top_flag'=>'desc','id'=>'desc'], 4 ) ){

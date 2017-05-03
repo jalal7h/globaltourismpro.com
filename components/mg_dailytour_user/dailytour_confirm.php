@@ -27,9 +27,11 @@ function dailytour_confirm(){
 			if(! $unitcost = table('mg_price', ['table_name'=>'mg_dailytour', 'table_id'=>$_REQUEST['dailytour_id'], 'priceper_id'=>$priceper_id ])[0]['price'] ){
 				e();
 			
+			} else if(! $unitcost = mg_cost_after_offrate( $unitcost ) ){
+				e();
+				
 			} else if(! dbs( 'mg_dailytour_order_item', [ 'order_id'=>$order_id, 'priceper_id'=>$priceper_id, 'count'=>$count, 'unitcost'=>$unitcost ] ) ){
 				e();
-			
 			}
 
 			$total_cost+= $unitcost * $count;

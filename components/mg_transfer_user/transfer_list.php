@@ -74,6 +74,7 @@ function transfer_list(){
 				$priceper_id = array_keys($price)[0];
 				$rw['priceper'] = cat_translate($priceper_id);
 				$rw['cost'] = $price[$priceper_id];
+				$rw['cost'] = mg_cost_after_offrate( $rw['cost'] );
 			}
 
 			#

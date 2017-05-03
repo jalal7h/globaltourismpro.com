@@ -6,6 +6,7 @@
 	width: 100%;
 	display: block;
 	position: relative;
+	/* box-shadow: 0 0 150px rgba(0, 0, 0, 1.0) inset; */
 }
 
 .mg_searchbox input[type="text"] ,
@@ -15,24 +16,30 @@
 }
 
 .mg_searchbox div.date {
+	margin: 0 40px 0 0;
+	display: inline-block;
 
+	background-color: rgba(255, 255, 255, 0.20);
+    padding: 0px 0px;
+    border-radius: 4px;
 }
 .mg_searchbox div.date label {
-	margin-left: 40px;
+	margin-left: 0px;
 }
 .mg_searchbox div.date label span {
-	padding-left: 10px;
 	color: white;
-	text-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
-	/* font-weight: bold; */
-	font-size: 14px;
+    text-shadow: 0 0 2px rgba(0,0,0,0.5);
+    font-size: 16px;
+    line-height: 20px !important;
+    padding: 0 4px;
 }
 .mg_searchbox div.date label input {
 	text-align: center;
 	font-size: 16px;
 	font-family: monospace,sans-serif;
-	padding-right: 29px;
-	width: 200px;
+	padding: 8px;
+	padding-right: 39px;
+	width: 160px;
 	color: #777;
 }
 .mg_searchbox div.date label icon:before {
@@ -44,19 +51,38 @@
     top: 3px;
 }
 
-.mg_searchbox div.type {
-	margin: 20px 0;
+.mg_searchbox .type {
+	display: inline-block;
+    width: 125px;
 }
-.mg_searchbox div.type label {
-	margin: 0 5px 0 25px;
-	color: white;
-	text-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+.mg_searchbox .type select {
+	display: inline-block;
+    border-radius: 3px;
+    padding: 10px;
+    font-size: 14px;
+    border: 0;
+    width: 100%;
+    box-shadow: 0 0 20px rgba(0,0,0,0.15);
+    border-radius: 4px;
+    text-align: center;
+    color: #999;
+    font-family: monospace,sans-serif;
 }
-.mg_searchbox div.type label input {
-	margin-left: 5px;
-}
-.mg_searchbox div.position {
 
+.mg_searchbox .cal_w {
+	/* background-color: #444; */
+	border-radius: 4px;
+	padding: 0;
+	margin: 0px;
+}
+.mg_searchbox .cal_w .fa-calendar {
+	line-height: 1!important;
+}
+
+.mg_searchbox div.position {
+	display: inline-block;
+	width: calc( 100% - 545px );
+	float: left;
 }
 .mg_searchbox div.position input {
 	width: 100%;
@@ -82,12 +108,11 @@
 .mg_searchbox input[type="submit"] {
 	position: absolute;
     left: 35px;
-    bottom: 27px;
+    top: 27px;
     color: white;
     border-radius: 3px;
     padding: 3px 16px;
     font-weight: bold;
     font-size: 14px;
 }
-
 

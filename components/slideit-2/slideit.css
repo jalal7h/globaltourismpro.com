@@ -28,11 +28,10 @@
 
 
 .slideit .info {
-
+	position: relative; z-index: 113;
+    top: -400px;
 }
-.slideit .info .name {
 
-}
-.slideit .info .desc {
 
-}
+
+

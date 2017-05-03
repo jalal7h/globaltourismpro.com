@@ -112,7 +112,8 @@ af791b1c %%'s details
 082be236 Page address
 fb6a6fe2 The page address should contain the site's domain.
 1f132928 Please select a proper title for the page.
-cb9cb1f7 The page address is already in use. %%
+01c65dfd This address is already in use.
+dbf7bd8b View page
 6b30a4d6 Modification saved successfuly. %%
 440f1f71 You are not allowed to remove this page.
 d1e47ecd Edit name
@@ -142,6 +143,7 @@ c26ac248 Disable
 c2c3b78f There is no linkbox defined.
 c63ad281 Page :
 13d984b3 no record found.
+b3c0d659 List of %%
 a82abea9 minumun
 1f2f69c2 maximum
 924b0f70 character
@@ -149,8 +151,8 @@ bc90656a keyword
 f8f57a27 select
 6d495fa5 number
 8a7894f1 Display
-ca4979c3 modify %%
-08ec5a88 register new %%
+ca4979c3 Modify %%
+08ec5a88 Submit new %%
 11c134b6 Loading ...
 e4966c5f All changes saved.
 955d9b64 remove file
@@ -169,10 +171,6 @@ c40031ef Departure
 cacac8e8 Category
 2f35c8b5 no record found.
 34ea9d92 List of news
-44ee9f11 Please insert your email address to receive the latest updates in your mail inbox.
-dc89ca2f Your mentioned email is already used by someone else.
-31f58360 Something wrong.
-71e5c146 Registration successful
 e9454d59 Newletter
 53ddd112 List of emails
 bec173d5 Download file of email list
@@ -183,6 +181,8 @@ ee745c7b Message
 2eb13bcf Send to clients email address
 7ca8006c Send to custom email addresses
 006ee0d8 email addresses (separate by comma)
+ae9cca6e List of images
+7f043adf Photogallery
 b77bbf2a Continent
 359a6b61 Country
 5d0228f5 State
@@ -193,8 +193,9 @@ d80b00c9 City
 ce8e19ff Unknown
 2f9d8192 No record submitted
 33967c4f Submit new %% ..
+705ba0d7 Blog View
+267dda72 Gallery View
 46d20c77 Loading ...
-462f71f6 List of RSS :‌
 9e4b52ba General Setting
 02ddb613 Slide insertion form
 8a71af6f Subscription
@@ -205,6 +206,8 @@ c62fc104 Today Visits
 e7412c0f Delimiter
 0d20443f HTML Content
 9354af56 Social Network
+e5df36b5 Newsletter
+5878cf76 sitemap و rss
 94549dce no record found matching this ID.
 165441cb Client
 9aadbaa5 Active client
@@ -214,7 +217,6 @@ a08923b5 Absent client
 07e83fa9 %%'s SMS
 8cb85f2c Variables used in messages
 22506e07 All changes about the messages of <b>%%</b> have been saved.
-b3c0d659 %% list
 2e8512de Select
 9c3dd9ce Ticket destination
 51b2ffd9 Message
@@ -249,7 +251,6 @@ b5d547af hours later
 76a00a28 hours ago
 d9c05ef0 minutes ago
 0a3e6f22 seconds ago
-e458c88b Are you sure to remove all related data this client?
 65d21c61 List of Managers
 3be75adb Submit a new manager
 82991df9 date of registration
@@ -275,6 +276,12 @@ bd3dcce4 email address
 368ba10c Your account have been suspended.
 f54b8fb7 Submitting the login form you are agreeing the %%website terms%%.
 4be422e4 You are not joined to %%?
+b29d0f2f List of clients
+e458c88b Are you sure to remove all related data this client?
+6ac74e4f Client details
+3506048c Male
+c8f5608d Female
+ccd79fee Problem saving the changes.
 b32beaac Clientarea
 bd302eb3 Your credit
 9ad051c8 Login to site
@@ -282,8 +289,6 @@ bd302eb3 Your credit
 fbe9d68e Forgot password
 06f7aa3e Home
 eb54bfb2 Client Profile
-3506048c Male
-c8f5608d Female
 5551ccf3 Please insert your name!
 2af4878c Please insert your name correctly!
 3afa9389 Please insert your email address correctly!
@@ -321,20 +326,24 @@ a3b9cda1 Keywords
 4f74e2d4 Transfers
 4fe9ced9 Transfer Bookings
 0d8f8656 Transfer Vehicles
-e5df36b5 Newsletter
 9bf69a29 Position
+5b976d90 Posts
 b0cb73f9 Setting
 72f2f1b2 Slideshow
 799cb1be Footer
 24f99ef6 Tickets
-d6d94244 Clients
 c04b9a14 Managers
+d6d94244 Clients
 8d41f861 Custom Post
 dcab0ca1 Display news
 a5eb7f16 News list
 1875752a Clientarea login form
 0572f566 Contact Form
+75ce4634 Billboard
+98ae5340 Search box
 212ae4fa Slideshow
+9be8c796 Top Daily Tours
+d10c0899 List of posts
 03544778 Client Desk
 bb3d7c0e Registration Form
 7a56609b Client ID Verification
@@ -342,18 +351,24 @@ e290249c Dashboard
 dc77044f Tickets
 1335703e Logout
 d8cf8c26 Change password
+7539b2b2 Register in newsletter
 bb1f5f23 HTML Content
 0625d738 Reply to Contact messages
 94815be8 Default Prompts
 b49ff84d comments
+8134bdc1 Voucher And Service
 1f2a2bac SMS
 8dae50ff Price Ranges
 f7ee8d28 Service Basis
 ef7a7585 Departs
 41eebe87 Guiding Languages
 178d97ea Transfer Basis
-e5b547e0 News category
+e5b547e0 News Category
+8d342818 Gallery category
+26e1a975 Post Category
 f1baf12f Ticket categories
+46c4fec8 Invoices
+2a8d503d Tickets
 440ec58e ID
 6bc110d6 Client ID
 f11051b2 Order Table
@@ -366,6 +381,8 @@ e734b748 Payment method
 799edfb1 Title
 d3abe129 Description
 aefb3531 Icon
+7c03e801 Color
+863dc2df Slug
 203ee481 Client name
 60787b8e Cell number
 0c05af2c Destination
@@ -397,7 +414,15 @@ e5468b3a news
 67d02fee Emails
 f2378a36 Page title
 c1714245 Hide Layer Title
+9fbef614 Photos
+78df37b3 category
+4c313484 Description
 caf6157b Position
+bb858059 post
+acae7728 posts
+54ecd2b5 text
+cbeecc71 Post image
+bff34bff Post images
 09b157e6 slide
 99dc45e6 slides
 3258527f Content
@@ -444,6 +469,7 @@ edc1cbb1 Money Unit
 619f376a SMS server connection string
 79ff177e Site icon
 60b4c906 Site logo
+53d229f3 Cell number of support in daily tour voucher
 b137c19e Client register - completion
 6ada1da3 Reset password - completion
 0c170ce2 Reset password - send link
@@ -515,6 +541,11 @@ ba9d0d5d Departure Detail
 ce38a19e What time do you wish to be picked up from your address/hotel ?
 aabd1f27 Price
 86f03225 Per Vehicle
+44ee9f11 Please insert your email address to receive the latest updates in your mail inbox.
+3448856f Post type
+d0191765 Categories
+cff044c8 More
+462f71f6 List of RSS :‌
 0029e44e Forgot password!
 fa4c9fab Reset password
 312a9eae New password
@@ -527,7 +558,6 @@ d65162db Password does not match
 2be55dd7 register
 17c9f3be Client Login
 a9749a9b Remember
-6ac74e4f Client details
 628ea8a9 cell number verification
 7124eebb resend
 60963a3c modify cell number

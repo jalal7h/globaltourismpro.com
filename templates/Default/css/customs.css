@@ -1,12 +1,16 @@
 
-body > .slideit .gradiant {
-	position: absolute;
-	bottom: 0px;
-	right: 0px;
-	z-index: 4;
-	width: 100%;
-	height: 200px;
+.tallfooter {
+	/* overflow: hidden;
+	width: 102%;
+	margin-left: -1%;
+	margin-right: -17%;
+	display: block;
+	transform: rotate(3deg); */
+	margin-top: 80px;
 }
-body > .slideit {
-	margin-bottom: -400px;
+.tallfooter .wrapper .inner .this {
+	/* transform: rotate(-3deg); */
+}
+.tallfooter .wrapper .inner {
+	padding: 45px 55px;
 }

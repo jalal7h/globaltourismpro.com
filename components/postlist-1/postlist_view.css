@@ -1,0 +1,27 @@
+
+.postlist_view {
+	margin-bottom: 40px;
+}
+.postlist_view > .name {
+	margin-top: 20px;
+	font-size: 24px;
+	font-weight: bold;
+}
+.postlist_view > img.top {
+	width: 800px;
+	margin: 50px auto;
+	display: block;
+
+}
+.postlist_view > .text {
+	font-size: 14px;
+	border-bottom: 1px dotted #eee;
+    margin-bottom: 10px;
+    padding-bottom: 24px;
+}
+.postlist_view > img.bottom {
+	width: 800px;
+	margin: 40px auto;
+	display: block;
+}
+

@@ -1,0 +1,25 @@
+
+.postadmin_mg_form {
+
+}
+.postadmin_mg_form select {
+
+}
+.postadmin_mg_form input[name="name"] {
+	width: calc( 100% - 200px );
+}
+.postadmin_mg_form input[name="slug"] {
+	width: calc( 100% - 200px );
+}
+.postadmin_mg_form textarea {
+	width: calc( 100% - 200px );
+	height: 120px;
+}
+.postadmin_mg_form #mceu_52 {
+	width: calc( 100% - 200px );
+	display: inline-block;
+}
+.postadmin_mg_form .lmfe_tnit {
+	vertical-align: top;
+	padding-top: 10px;
+}

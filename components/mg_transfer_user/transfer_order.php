@@ -8,7 +8,7 @@ function transfer_order(){
 
 	if(! $id = intval($_REQUEST['transfer_id']) ){
 		dg();
-		jsgo( _URL . '/' . Slug::get('page',14) );
+		jsgo( _URL . '/' . Slug::getSlugByName('userpanel') );
 
 	} else if(! $rw_transfer = table('mg_transfer', $id) ){
 		e();
@@ -31,6 +31,7 @@ function transfer_order(){
 		# adult n total_purchase
 		$total_purchase = mg_price('mg_transfer',$id);
 		$total_purchase = array_pop($total_purchase);
+		$total_purchase = mg_cost_after_offrate( $total_purchase );
 		if( $_REQUEST['direction'] == 'roundtrip' ){
 			$total_purchase*= 2;
 		}

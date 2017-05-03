@@ -4,7 +4,7 @@
 .layout-post {
 	background-color: white;
 	border-radius: 4px;
-	box-shadow: 0 0 10px #ddd;
+	/* box-shadow: 0 0 10px #ddd; */
 	margin-bottom: 18px;
 	overflow: hidden;
 }
@@ -14,8 +14,10 @@
 .layout-post > .header {
 	color: #444;
 	padding: 20px 20px 20px 20px;
-	font-size: 14px;
+	font-size: 20px;
 	cursor: default;
+	/* font-weight: bold; */
+	opacity: 0.5;
 }
 .layout-post > .header:after {
 	content: " ";

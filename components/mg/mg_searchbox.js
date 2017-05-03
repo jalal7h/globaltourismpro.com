@@ -8,9 +8,9 @@ jQuery(document).ready(function($) {
 		rd = $(this).find('input[type="radio"]:checked').val();
 		
 		// service not selected	
-		if( typeof rd === typeof undefined ){
+		if( mg_searchbox.service.value == '' ){
 			alert('Please at first select a service');
-			$(this).find('input[type="radio"]:nth-child(1)').focus();
+			mg_searchbox.service.focus();
 
 		} else if( $(this).find('input[name="position_id"]').val() == '' ){
 			alert('Please find a destionation for your service.');

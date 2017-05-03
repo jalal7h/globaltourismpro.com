@@ -8,7 +8,7 @@ function dailytour_order(){
 
 	if(! $id = intval($_REQUEST['dailytour_id']) ){
 		dg();
-		jsgo( _URL . '/' . Slug::get('page',14) );
+		jsgo( _URL . '/' . Slug::getSlugByName('userpanel') );
 
 	} else if(! $rw_dailytour = table('mg_dailytour', $id) ){
 		e();
@@ -47,6 +47,7 @@ function dailytour_order(){
 				continue;
 			}
 			$dailytour_cost = mg_price('mg_dailytour', $id)[$priceper_id];
+			$dailytour_cost = mg_cost_after_offrate( $dailytour_cost );
 			$dailytour_cost*= $numb;
 			$cost = billing_format($dailytour_cost);
 			$order_items[ $priceper_id ] = [

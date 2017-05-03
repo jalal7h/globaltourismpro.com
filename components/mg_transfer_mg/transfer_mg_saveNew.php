@@ -8,7 +8,7 @@ function transfer_mg_saveNew(){
 
     #
     # update the database
-    $id = dbs( 'mg_transfer', ['name','position_id','transferBasis_id','tariff','vehicle_id','date_start','date_end','deathline','itinerary','conditions','notes','flag'=>1] );
+    $id = dbs( 'mg_transfer', ['name','position_id','transferBasis_id','drivernumber','tariff','vehicle_id','date_from','date_to','deathline','reservation','itinerary','conditions','notes','flag'=>1] );
 
 	# 
 	# set kword

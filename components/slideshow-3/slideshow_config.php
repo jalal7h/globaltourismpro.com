@@ -4,6 +4,8 @@
 # 2017/01/06
 # 1.0
 
-define( 'slideshow_enable_desc' , false );
+# -spi-
+
+define( 'slideshow_enable_desc' , true );
 define( 'slideshow_enable_url' , false );
 

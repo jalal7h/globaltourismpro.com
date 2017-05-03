@@ -143,7 +143,7 @@
 		<a class="html" download href="{voucher_url}">
 			<img src="{_URL}/image_list/voucher_html.png"/>
 		</a>
-		<a class="pdf" download href="http://pdfcrowd.com/{voucher_url}">
+		<a class="pdf" download href="{voucher_pdf}">
 			<img src="{_URL}/image_list/voucher_pdf.png"/>
 		</a>
 		<a class="print" href="javascript:window.print()">
@@ -171,10 +171,13 @@
 		<div class="head">TRANSFER INFO</div>
 		<div class="text">
 			<div><span class="gridspan">TRANSFER NAME:</span> {transfer_name}</div>
+			<div><span class="gridspan">TRANSFER TYPE:</span> {transfer_type}</div>
+			<div><span class="gridspan">BOOKING STATUS:</span> {booking_status}</div>
 			<div><span class="gridspan">DESTINATION:</span> {destination}</div>
-			<div><span class="gridspan">BASIS:</span> {service_basis}</div>
 			<div><span class="gridspan">TARIFF:</span> {tariff}</div>
 			<div><span class="gridspan">VEHICLE:</span> {vehicle}</div>
+			<div><span class="gridspan">BASIS:</span> {service_basis}</div>
+			<div><span class="gridspan">DRIVER NUMBER:</span> {drivernumber}</div>
 		</div>
 	</div>
 
@@ -182,18 +185,17 @@
 	<div class="traveller_info bordered">
 		<div class="head">TRAVELLER INFO</div>
 		<div class="text">
+			<div><span class="gridspan">LEADER NAME:</span> {leader_name}</div>
+			<div><span class="gridspan">PASSENGER CELL:</span> {passenger_cell}</div>
+			<div><span class="gridspan">TRAVELLERS:</span> {travellers} ADULTS</div>
 			<div><span class="gridspan">BOOKING DATE :</span> {booking_date}</div>
-			<div><span class="gridspan">DIRECTION :</span> {direction}</div>			
 			<?if( strlen('{date_arrival}') ):?>
 			<div><span class="gridspan">ARRIVAL DATE / TIME :</span> {date_arrival} - {arrival_time}</div>
 			<?endif?>
 			<?if( strlen('{date_departure}') ):?>
 			<div><span class="gridspan">DEPARTURE DATE / TIME :</span> {date_departure} - {departure_time}</div>
 			<?endif?>
-			<div><span class="gridspan">TRAVELLERS:</span> {travellers} ADULTS</div>
 			
-			<div><span class="gridspan">PASSENGER CELL:</span> {passenger_cell}</div>
-			<div><span class="gridspan">LEADER NAME:</span> {leader_name}</div>
 			<?if( strlen('{additional_requests}') ):?>
 			<div><span class="gridspan">ADDITIONAL REQUESTS :</span> {additional_requests}</div>
 			<?endif?>

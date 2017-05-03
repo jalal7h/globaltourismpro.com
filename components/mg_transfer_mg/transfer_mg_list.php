@@ -37,6 +37,7 @@ function transfer_mg_list(){
 	# the list
 	# --------------------------------------------
 	echo listmaker_list([
+		'head' => 'List of transfers',
 		'table' => 'mg_transfer',
 		'order' => [ 'id' => 'desc' ],
 		'limit' => 5,

@@ -23,9 +23,9 @@
 		</div><!--
 		
 	 --><div class="price">
-			<span class="memo">Price from in USD</span>
-			<span class="cost">$<?=$rw['cost']?></span>
-			<span class="see_details cl_l2r">See Details</span>
+			<span class="memo">Price from in EURO</span>
+			<span class="cost"><?=explode( '%', setting('money_unit') )[0]?><?=$rw['cost']?></span>
+			<span class="see_details cl_l2r cl_l1_i">See Details</span>
 		</div>
 
 	</a>

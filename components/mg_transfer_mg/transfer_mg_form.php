@@ -47,6 +47,7 @@ function transfer_mg_form(){
 			
 			[!"text:tariff*"!]
 			[!"select:vehicle_id*","option"=>vehicle_get()!]
+			[!"text:drivernumber*"!]
 
 			<hr>
 			
@@ -57,10 +58,11 @@ function transfer_mg_form(){
 
 			<hr>
 	
-			[!"date:date_start*"!]
-			[!"date:date_end*"!]
+			[!"date:date_from*"!]
+			[!"date:date_to*"!]
 
 			[!"number:deathline"!]
+			[!"number:reservation"!]
 
 			<hr>
 

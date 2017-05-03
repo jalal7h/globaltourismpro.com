@@ -1,0 +1,112 @@
+
+.mg_billboard_w {
+	width: calc( 100vw - 10px );
+	overflow-y: hidden;
+    margin-top: -130px;
+    transition: all 1.5s;
+    overflow: hidden;
+}
+
+.mg_billboard_w .rotated {
+	position: relative; z-index: 111;
+	transform: rotate(3deg);
+    width: 101%;
+    margin-right: -0.5%;
+}
+.mg_billboard {
+	position: relative; z-index: 111;
+	box-shadow: 0 0 30px rgba(0,0,0,0.8);
+    margin-top: 30px;
+}
+.mg_billboard .inner {
+	position: relative;
+	padding: 40px 0px;
+	height: 117px !important;
+}
+.mg_billboard .inner .main_title {
+	font-size: 22px;
+    font-weight: bold;
+    text-shadow: 0 0 5px rgba(0,0,0,0.9);
+    vertical-align: top;
+    padding: 0 50px;
+    position: relative; right: -600px;
+    transition: 0.5s all;
+}
+.mg_billboard .inner .img_w {
+	text-decoration: none;
+	position: absolute; left: -440px; top: 0px;
+    padding-right: 150px;
+	background-color: black;
+	display: inline-block;
+	background-color: black;
+	transform: rotate(0deg);
+	transition: 1s all;
+	/* transition: 2s transform; */
+}
+.mg_billboard .inner .img_w img {
+	height: 117px;
+	transform: rotate(-0deg);
+	transition: 1.4s all;
+}
+
+.mg_billboard_fleshdown {
+	transform: rotate(45deg);
+	width: 80px;
+	height: 80px;
+	padding: 8px;
+	display: block;
+	position: relative;
+	top: -90px;
+	margin: auto;
+    transition: all 1.5s;
+}
+/* 
+.mg_billboard_fleshdown .c2 {
+	padding: 4px;
+	background-color: white;
+	display: inline-block;
+	box-shadow: 0 0 5px rgba(0,0,0,0.8);
+}
+.mg_billboard_fleshdown .c3 {
+	width: 56px;
+	height: 56px;
+	display: inline-block;
+}
+  */
+
+.mg_billboard_footer {
+	width: 1140px;
+	margin: auto;
+	padding: 20px;
+	opacity: 0.1;
+}
+
+
+.mg_billboard_w.fired {
+	margin-top: -80px;
+}
+
+.mg_billboard_w.fired .mg_billboard_fleshdown {
+	top: -40px;
+}
+.mg_billboard_w.fired .mg_billboard .inner .img_w {
+	top: -20px;
+	left: -10px;
+	transform: rotate(5deg);
+}
+.mg_billboard_w.fired .mg_billboard .inner .img_w img {
+	transform: rotate(-8deg);
+	height: 147px;
+}
+.mg_billboard_w.fired .mg_billboard .inner .main_title {
+	right: 0px;
+}
+
+.mg_billboard_w.fired .mg_billboard .inner .img_w:hover {
+	transform: rotate(4deg);
+}
+.mg_billboard_w.fired .mg_billboard .inner .img_w:hover img {
+	transform: rotate(-7deg);
+}
+
+

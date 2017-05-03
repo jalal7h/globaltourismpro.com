@@ -6,6 +6,6 @@
 
 add_slug([
 
-	Slug::get('page',14).'/dailytour_booking/$' => _URL.'/?page=14&do_slug=dailytour_booking&do=view&id=$1' ,
+	Slug::getSlugByName('userpanel').'/dailytour_booking/$' => _URL.'/?page=14&do_slug=dailytour_booking&do=view&id=$1' ,
 
 ]);

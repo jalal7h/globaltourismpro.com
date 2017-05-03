@@ -82,6 +82,10 @@ function dailytour_list(){
 				$rw['lang'] = $lang;
 			}
 
+			#
+			# offrate
+			$rw['cost'] = mg_cost_after_offrate( $rw['cost'] );
+
 			$list[] = $rw;
 
 		}
