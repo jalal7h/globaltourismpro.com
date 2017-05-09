@@ -6,6 +6,4 @@
 error_log
 *.inc.php
 .htaccess
-/components/installer-1/
-
-
+components/installer-1
