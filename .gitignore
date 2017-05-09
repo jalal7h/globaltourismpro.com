@@ -5,3 +5,4 @@
 /config.php
 error_log
 *.inc.php
+.htaccess
