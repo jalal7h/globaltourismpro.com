@@ -22,7 +22,7 @@
 		<div class="departs"><memo>{lmtc('mg_dailytour:departs_id')}:</memo> <?=cat_translate($rw['departs_id'])?></div>
 		<div class="departure_point"><memo>{lmtc('mg_dailytour:departure_central_point')}:</memo> {city}</div>
 		<div class="duration"><memo>{lmtc('mg_dailytour:duration')}:</memo> <?=$rw['duration']?></div>
-		<div class="cost cl_l1r">{cost}</div>
+		<div class="cost cl_l1r"><span class="from">FROM</span> {cost}</div>
 	</div><!--
 
 
@@ -40,15 +40,15 @@
  	<input type="hidden" name="dailytour_id" value="{id}">
  		<div class="the_list">
  			<div class="head"><lang>Total Number of Travelers</lang></div>
- 			<? foreach( $price_list as $price ): ?>
+ 			<? foreach( $price_list as $pp_id => $pp ): ?>
  				<label>
- 					<select class="order_item" name="order[<?=$price['per_id']?>]" >
- 					<option value="">0</option>
- 					<?for($i=1; $i<=20; $i++):?>
- 						<option value="<?=$i?>"><?=$i?></option>	
+ 					<select class="order_item" name="order[<?=$pp_id?>]" >
+ 					<option value="">0 x <?=$pp['items'][0]?></option>
+ 					<?for($i=1; $i<=40; $i++):?>
+ 						<option value="<?=$i?>"><?=$i?> x <?=$pp['items'][$i]?></option>	
  					<?endfor?>
  					</select>
- 					<span><?=$price['per']?> ( <?=$price['cost']?> )</span>
+ 					<span><?=$pp['name']?></span>
  				</label>
  			<? endforeach ?>
  		</div>

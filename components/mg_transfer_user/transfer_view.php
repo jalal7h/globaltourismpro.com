@@ -33,22 +33,32 @@ function transfer_view(){
 
 		#
 		# price
-		$price_list = mg_price('mg_transfer', $id);
-		$price_per = array_keys($price_list)[0];
-		$cost = $price_list[ $price_per ];
-		$cost = mg_cost_after_offrate( $cost );
-		$v['cost'] = billing_format($cost);
-		
-		#
-		# adult max
-		$pax = table( 'mg_vehicle', $rw['vehicle_id'] )['pax'];
-		$pax = explode('-', $pax);
-		$v['etc']['adult_max'] = $pax[1];
+		foreach( cat_display('transfer_vehicle') as $cat_id => $cat_name ){
+			if( $rw_s_price = mg_pricelist_get( 'mg_transfer:'.$rw['id'], $cat_id ) ){
+				foreach( $rw_s_price as $rw_price ){
+					$cat_id = $rw_price['priceper_id'];
+					$name = cat_translate($rw_price['priceper_id']);
+					$v['list_of_vehicles_in_text'][] = trim( explode( '(', $name )[0] );
+					$price = $rw_price['price'];
+					$price = mg_cost_after_offrate($price);
+					$price = billing_format($price);
+					$adult_max = explode( '-', $name )[1];
+					$adult_max = intval( $adult_max );
+					$v['list_of_vehicles'][ $rw_price['id'] ] = [ 'cat_id'=>$cat_id, 'name'=>$name, 'price'=>$price, 'adult_max'=>$adult_max ];
+				}
+			}
+		}
+		if( sizeof($v['list_of_vehicles_in_text']) ){
+			$v['list_of_vehicles_in_text'] = implode( ', ', $v['list_of_vehicles_in_text'] );
+		}
 
 		#
 		# date from
 		if(! $v['date_from'] = $_REQUEST['date_from'] ){
 			$v['date_from'] = $rw['date_from'];
+		}
+		if( $rw['reservation'] ){
+			$v['date_from'] = substr( UDate( DateU( $v['date_from'] ) + 3600*24*$rw['reservation'] ) , 0 , 10 );
 		}
 		$v['date_from'] = str_replace('/', '-', $v['date_from']);
 		

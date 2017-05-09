@@ -52,4 +52,20 @@
 	width: 100%;
 }
 
+.transfer_mg_form .mce-tinymce.mce-container.mce-panel {
+	width: calc( 100% - 140px ) !important;
+}
+
+.transfer_mg_form .lmfe_inDiv.priceList {
+	vertical-align: top;
+}
+.transfer_mg_form .lmfe_inDiv.priceList .lmfe_tnit {
+	vertical-align: top;
+	padding-top: 10px;
+}
+.transfer_mg_form .list_of_vehicles {
+	width: calc( 100% - 140px ) !important;	
+	display: inline-block;
+}
+
 

@@ -4,6 +4,8 @@
 # 2017/04/05
 # 1.2
 
+# -spi-
+
 function userprofile_save(){
 	
 	if(! $user_id = user_logged() ){
@@ -19,7 +21,7 @@ function userprofile_save(){
 		$text = __("لطفا نام خود را به درستی وارد کنید!");
 
 	
-	} else if(! dbs('user', ['name','tell','address','im_a','work_at','gender'] , ['id'=>$user_id] ) ){
+	} else if(! dbs( 'user', [ 'name', 'tell', 'address', 'im_a', 'work_at', 'gender', 'company_no', 'yata_no' ] , ['id'=>$user_id] ) ){
 		dg( dbe() );
 
 	} else {

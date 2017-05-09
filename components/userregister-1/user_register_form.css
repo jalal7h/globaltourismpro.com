@@ -1,4 +1,6 @@
 
+/*-spi-*/
+
 .user_register_form {
 	margin: auto;
 	display: block;
@@ -11,7 +13,10 @@
 .user_register_form a:hover {
 	color: #d00;
 }
-.user_register_form input {
+.user_register_form input[type="text"],
+.user_register_form input[type="email"],
+.user_register_form input[type="number"],
+.user_register_form input[type="password"] {
 	font: normal 16px DefaultFont;
 	padding: 10px;
 	border: 1px solid #ccc;
@@ -38,8 +43,8 @@
 .user_register_form input[type=submit] {
 	margin: 10px 0px !important;
 	width: auto;
-	border-radius: 6px;
-    padding: 10px 20px;
+	/* border-radius: 6px; */
+    /* padding: 10px 20px; */
 }
 
 .user_register_form .head {
@@ -56,4 +61,23 @@
 .user_register_form .the_key {
 	display: none;
 }
+
+/*-spi-*/
+
+#lmfe_formee11cb_im_a,
+#lmfe_formee11cb_company_no,
+#lmfe_formee11cb_yata_no {
+	width: 300px;
+}
+.user_register_form .lmfe_inDiv {
+	width: 400px !important;
+	display: inline-block;
+	margin: 5px 0;
+}
+
+
+
+
+
+
 

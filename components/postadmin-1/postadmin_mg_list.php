@@ -54,7 +54,7 @@ function postadmin_mg_list(){
 			[ '$rw["name"]', 'head'=>lmtc("post:name") ],
 			[ 'cat_translate($rw["cat"])', 'head'=>lmtc("post:cat") ],
 		],
-		'search' => [ 'name', 'text' ],
+		'search' => [ 'name', 'text', 'kw' ],
 	]);
 	# --------------------------------------------
 

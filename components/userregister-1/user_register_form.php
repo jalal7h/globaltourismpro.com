@@ -4,6 +4,8 @@
 # 2017/03/12
 # 2.0
 
+# -spi-
+
 add_layer( 'user_register_form', 'فرم ثبت نام', 'center' );
 add_action( 'user_register_form' );
 
@@ -77,9 +79,13 @@ function user_register_form(){
 				[!"email:email.placeholder_fix'.( userlogin_username_mobile ? '/required=1' : '' ).'"=>$_REQUEST["email"],"prompt"=>qpop("user_register_form_email")!]
 				[!"password:password.placeholder_fix*","prompt"=>qpop("user_register_form_password")!]
 
+				[!"text:im_a"!]
+				[!"text:company_no"!]
+				[!"text:yata_no"!]
+
 				<div class="terms">'.__('شما با کلیک کردن روی دکمه ثبت نام موافقت می کنید که تمامی %%قوانین سایت%% پذیرفته اید.',[ '<a target="_top" href="'.layout_link(6).'">','</a>' ] ).'</div>
 				
-			[!"submit:'.__('ثبت نام').'"!]
+			[!"submit:'.__('ثبت نام').'.btn-lg"!]
 
 		');
 		# -------------------------------------------------

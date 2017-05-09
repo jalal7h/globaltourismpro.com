@@ -4,6 +4,21 @@
 # 2016/12/24
 # 1.0
 
+
+/*********************************************/
+$GLOBALS['cat_items']['priceper'] = [
+	'name'		=> 'Price Ranges' ,
+	'dashboard'	=> false ,
+	'sub'		=> false ,
+	'icon'		=> false ,
+	'desc'		=> false ,
+	'flag'		=> false ,
+	'ccf'		=> false ,
+	'kw'		=> false ,
+	'color'		=> false ,
+];
+/*********************************************/
+
 /*********************************************/
 $GLOBALS['cat_items']['serviceBasis'] = [
 	'name'		=> 'Service Basis' ,
@@ -18,7 +33,6 @@ $GLOBALS['cat_items']['serviceBasis'] = [
 ];
 /*********************************************/
 
-
 /*********************************************/
 $GLOBALS['cat_items']['departs'] = [
 	'name'		=> 'Departs' ,
@@ -32,7 +46,6 @@ $GLOBALS['cat_items']['departs'] = [
 	'color'		=> false ,
 ];
 /*********************************************/
-
 
 /*********************************************/
 $GLOBALS['cat_items']['guidingLanguages'] = [

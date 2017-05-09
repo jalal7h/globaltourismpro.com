@@ -2,6 +2,7 @@
 <form method="post" action="{_URL}/transfer_confirm" class="transfer_order" >
 <input type="hidden" name="transfer_id" value="{transfer_id}">
 <input type="hidden" name="direction" value="{direction}">
+<input type="hidden" name="mg_price_id" value="{vehicle}">
 
 	<div class="left">
 		

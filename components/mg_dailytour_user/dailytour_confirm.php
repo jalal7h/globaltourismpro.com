@@ -22,15 +22,15 @@ function dailytour_confirm(){
 		
 	} else {
 
-		foreach ($_REQUEST['order'] as $priceper_id => $count) {
+		foreach ($_REQUEST['order'] as $pp_id => $count) {
 
-			if(! $unitcost = table('mg_price', ['table_name'=>'mg_dailytour', 'table_id'=>$_REQUEST['dailytour_id'], 'priceper_id'=>$priceper_id ])[0]['price'] ){
+			if(! $unitcost = mg_price_get( 'mg_dailytour:'.$_REQUEST['dailytour_id'], $pp_id, $count ) ){
 				e();
 			
 			} else if(! $unitcost = mg_cost_after_offrate( $unitcost ) ){
 				e();
 				
-			} else if(! dbs( 'mg_dailytour_order_item', [ 'order_id'=>$order_id, 'priceper_id'=>$priceper_id, 'count'=>$count, 'unitcost'=>$unitcost ] ) ){
+			} else if(! dbs( 'mg_dailytour_order_item', [ 'order_id'=>$order_id, 'priceper_id'=>$pp_id, 'count'=>$count, 'unitcost'=>$unitcost ] ) ){
 				e();
 			}
 

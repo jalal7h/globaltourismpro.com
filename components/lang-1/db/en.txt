@@ -1,5 +1,4 @@
 53bee6bc Admin Profile
-85506645 Save
 304a2581 The 3-digit code is not inserted
 b022caaf Wrong 3-digit code.
 c5b9a047 Wrong captcha code.
@@ -67,6 +66,7 @@ a694e68c No record submitted
 aae81639 Are you sure to remove?
 63f03ac8 Subcat
 477eb6e6 Fields
+85506645 Save
 ed1d432c Response to your ticket on %%
 fab9b08f Your message have been sent to %%.
 76392aa3 Email Address
@@ -129,7 +129,6 @@ fe40b196 Wrap in frame
 fec43a50 there is no way to remove this linkbox.
 19cdf577 number of links
 dbd46aba Linkbox details
-943136df Submit a new link
 fb41eded Sublink
 9f23a4a1 Linkbox
 2d8bcc26 Submit new ticket
@@ -171,6 +170,7 @@ c40031ef Departure
 cacac8e8 Category
 2f35c8b5 no record found.
 34ea9d92 List of news
+220ab0f6 لیست
 e9454d59 Newletter
 53ddd112 List of emails
 bec173d5 Download file of email list
@@ -181,6 +181,11 @@ ee745c7b Message
 2eb13bcf Send to clients email address
 7ca8006c Send to custom email addresses
 006ee0d8 email addresses (separate by comma)
+68bc64f6 No email found!
+77d469b5 Invalid email address!
+87752462 Already Exists!
+d25504fd Something wrong!
+0aed4032 Saved!
 ae9cca6e List of images
 7f043adf Photogallery
 b77bbf2a Continent
@@ -251,7 +256,7 @@ b5d547af hours later
 76a00a28 hours ago
 d9c05ef0 minutes ago
 0a3e6f22 seconds ago
-65d21c61 List of Managers
+65d21c61 List of Administrators
 3be75adb Submit a new manager
 82991df9 date of registration
 95e2e00d Your email address is already in use.
@@ -332,7 +337,7 @@ b0cb73f9 Setting
 72f2f1b2 Slideshow
 799cb1be Footer
 24f99ef6 Tickets
-c04b9a14 Managers
+c04b9a14 Administrators
 d6d94244 Clients
 8d41f861 Custom Post
 dcab0ca1 Display news
@@ -440,7 +445,7 @@ ce9bc533 Tickets
 86c0e83f password
 fba026ab Phone
 6c392887 Address
-53dc9ae1 Job
+53dc9ae1 Job Title
 5aa3ad7e Workplace
 86bc8155 Gender
 1a7c9784 Post
@@ -561,5 +566,5 @@ a9749a9b Remember
 628ea8a9 cell number verification
 7124eebb resend
 60963a3c modify cell number
-cbcdae12 confirm email address
+cbcdae12 Confirm email address
 5968fa30 modify email address

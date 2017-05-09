@@ -1,7 +1,7 @@
 <?php
 
 # jalal7h@gmail.com
-# 2017/04/14
+# 2017/05/09
 # 1.1
 
 function transfer_confirm(){
@@ -14,8 +14,13 @@ function transfer_confirm(){
 	
 	} else if(! $rw_transfer = table('mg_transfer', $transfer_id ) ){
 		ed();
-	}
+	
+	} else if(! $mg_price_id = $_REQUEST['mg_price_id'] ){
+		ed();
 
+	} else if(! $rw_mgPrice = table('mg_price', $mg_price_id) ){
+		ed();
+	}
 
 	#
 	# common columns
@@ -59,10 +64,13 @@ function transfer_confirm(){
 
 
 	#
-	# get 'unitcost' and 'priceper id'
-	$price_list = mg_price('mg_transfer', $transfer_id);
-	$priceper_id = array_keys($price_list)[0];
-	$unitcost = $price_list[ $priceper_id ];
+	# priceper id
+	$priceper_id = $rw_mgPrice['priceper_id'];
+	
+
+	#
+	# unitcost
+	$unitcost = $rw_mgPrice['price'];
 	$unitcost = mg_cost_after_offrate( $unitcost );
 	if( $_REQUEST['direction'] == 'roundtrip' ){
 		$unitcost*= 2;

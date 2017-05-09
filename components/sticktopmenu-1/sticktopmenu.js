@@ -1,3 +1,4 @@
+/*index*/
 
 jQuery(document).ready(function($) {
 	

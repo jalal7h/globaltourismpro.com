@@ -29,7 +29,7 @@ function dailytour_mg_saveNew(){
 
 	#
 	# set price
-    mg_price( 'mg_dailytour', $id, $_REQUEST['price'] );
+	mg_priceform_save( 'mg_dailytour:' . $id );
 
     #
     # take care of files

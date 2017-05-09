@@ -46,7 +46,7 @@ function dailytour_order(){
 			if(! $numb = intval($numb) ){
 				continue;
 			}
-			$dailytour_cost = mg_price('mg_dailytour', $id)[$priceper_id];
+			$dailytour_cost = mg_price_get( 'mg_dailytour:'.$id, $priceper_id, $numb );
 			$dailytour_cost = mg_cost_after_offrate( $dailytour_cost );
 			$dailytour_cost*= $numb;
 			$cost = billing_format($dailytour_cost);
@@ -67,7 +67,6 @@ function dailytour_order(){
 			$traveller_summary[] = $item['numb'].' '.$item['priceper'];
 		}
 		$v['traveller_summary'] = implode( ' | ' , $traveller_summary);
-		// $v['traveller_summary'] = '1 Adult(s) | 4 Children (7-12)';
 
 		#
 		# the template

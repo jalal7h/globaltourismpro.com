@@ -1,8 +1,8 @@
 <?php
 
 # jalal7h@gmail.com
-# 2017/04/29
-# 1.1
+# 2017/05/07
+# 1.3
 
 function postadmin_mg_saveEdit(){
 
@@ -17,7 +17,7 @@ function postadmin_mg_saveEdit(){
 
 	#
 	# insert
-	$id = dbs( 'post', [ 'name' ,'slug', 'text', 'cat' ], ['id'] );
+	$id = dbs( 'post', [ 'name' ,'slug', 'text', 'kw', 'cat' ], ['id'] );
 	#
 
 	#

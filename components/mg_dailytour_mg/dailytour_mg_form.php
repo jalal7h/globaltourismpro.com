@@ -1,38 +1,11 @@
 <?
 
 # jalal7h@gmail.com
-# 2016/12/24
-# 1.0
+# 2017/05/09
+# 1.1
 
 function dailytour_mg_form(){
 
-
-	###################################################
-	# price per inputs
-	#
-	if( $id = $_REQUEST['id'] ){
-		$mg_price = mg_price( 'mg_dailytour', $id );
-	}
-
-	$money_unit = setting('money_unit');
-	if( strstr( $money_unit, '%%') ){
-		$money_unit = trim( explode('%%', $money_unit)[1] );
-	}
-	foreach( cat_display('priceper') as $id => $priceper ) {
-		$priceper_pattern.= '
-		<div class="lmfe_inDiv number">
-			[!"text:price['.$id.'].numeric"'.( $mg_price[$id] ? '=>"'.$mg_price[$id].'"' : '' ).',"'.$priceper.'","notInDiv"!]
-			<span class="money_unit">'.$money_unit.'</span>
-		</div>';
-	}
-	#
-	###################################################
-
-
-
-	###################################################
-	# the form
-	# -------------------------------------------------
 	echo listmaker_form('
 		
 		[!"table" => "mg_dailytour"!]
@@ -51,9 +24,9 @@ function dailytour_mg_form(){
 
 			<hr>
 
-			<div class="priceList">
-				<div class="head">Price Per : </div>
-				'.$priceper_pattern.'
+			<div class="lmfe_inDiv priceList" style="width:100%">
+				<span class="lmfe_tnit head">Price</span>
+				'.dailytour_mg_priceform().'
 			</div>
 
 			<hr>
@@ -92,14 +65,9 @@ function dailytour_mg_form(){
 
 			<hr>
 	
-		[!"submit:Save"!]
+		[!submit!]
 	
 	');
-	# -------------------------------------------------
-	#
-	###################################################
-	
-
 
 }
 

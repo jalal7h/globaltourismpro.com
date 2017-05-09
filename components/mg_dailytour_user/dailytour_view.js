@@ -28,7 +28,7 @@ jQuery(document).ready(function($) {
 
 	date_from = str_replace( '-', '/', date_from );
 	date_to = str_replace( '-', '/', date_to );
-
+	
 	$('.dailytour_view .orderbox .date').datepicker({
         dateFormat: 'yy/mm/dd',
         minDate: date_from,

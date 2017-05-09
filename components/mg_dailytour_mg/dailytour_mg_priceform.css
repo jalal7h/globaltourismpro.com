@@ -1,0 +1,53 @@
+
+.dailytour_mg_priceform {
+	display: inline-block;
+    vertical-align: top;
+    width: calc( 100% - 140px );
+}
+.dailytour_mg_priceform .cat_re {
+	display: inline-block;
+	vertical-align: top;
+	padding: 13px;
+	margin: 0 0 12px 12px;
+	background-color: rgba(255,255,255,0.5);
+    box-shadow: 0 0 10px rgba(0,0,0,0.08);
+}
+.dailytour_mg_priceform .cat_re .head {
+	border-bottom: 1px dashed #ccc;
+	padding-bottom: 7px;
+	margin-bottom: 10px;
+}
+.dailytour_mg_priceform .re {
+	margin-bottom: 6px;
+}
+.dailytour_mg_priceform .re input[type="text"] {
+	width: 80px !important;
+	text-align: center;
+}
+.dailytour_mg_priceform .re input[type="text"].numeric {
+	padding: 10px !important;
+}
+.dailytour_mg_priceform .re span {
+	padding: 10px;
+}
+.dailytour_mg_priceform .re select {
+	
+}
+.dailytour_mg_priceform .re icon {
+	margin-right: 5px;
+	display: inline-block;
+	font-size: 16px;
+	position: relative; top: 2px;
+	cursor: pointer;
+	opacity: 0.4;
+	transition: 0.2s all;
+}
+.dailytour_mg_priceform .re icon:hover {
+	opacity: 1;
+}
+.dailytour_mg_priceform .re icon.fa-remove {
+	color: #a00;
+}
+.dailytour_mg_priceform .re icon.fa-plus {
+	color: green;
+}

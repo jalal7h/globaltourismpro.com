@@ -15,7 +15,7 @@ header .logo {
 header .linkify_simple {
 	margin-top: 25px;
 	position: relative;
-	z-index: 11;
+	z-index: 6;
 }
 
 header .linkify_simple a {

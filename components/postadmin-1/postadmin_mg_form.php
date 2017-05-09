@@ -1,8 +1,8 @@
 <?php
 
 # jalal7h@gmail.com
-# 2017/04/21
-# 1.0
+# 2017/05/07
+# 1.1
 
 function postadmin_mg_form(){
 		
@@ -15,6 +15,7 @@ function postadmin_mg_form(){
 			[!"text:name*"!]
 			[!"text:slug'.( $_REQUEST['id'] ? '*' : '' ).'"!]
 			[!"textarea:text*.tinymce"!]
+			[!"keyword:kw"!]
 
 			<hr>
 

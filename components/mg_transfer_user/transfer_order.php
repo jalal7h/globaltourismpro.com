@@ -29,13 +29,17 @@ function transfer_order(){
 
 		#
 		# adult n total_purchase
-		$total_purchase = mg_price('mg_transfer',$id);
-		$total_purchase = array_pop($total_purchase);
-		$total_purchase = mg_cost_after_offrate( $total_purchase );
-		if( $_REQUEST['direction'] == 'roundtrip' ){
-			$total_purchase*= 2;
+		if(! $rw_mgPrice = table( 'mg_price', $_REQUEST['vehicle'] ) ){
+			e();
+		} else if(! $total_purchase = $rw_mgPrice['price'] ){
+			e();
+		} else {
+			$total_purchase = mg_cost_after_offrate( $total_purchase );
+			if( $_REQUEST['direction'] == 'roundtrip' ){
+				$total_purchase*= 2;
+			}
+			$v['total_purchase'] = billing_format($total_purchase);
 		}
-		$v['total_purchase'] = billing_format($total_purchase);
 
 		#
 		# direction

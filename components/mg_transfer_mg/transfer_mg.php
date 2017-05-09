@@ -13,6 +13,7 @@ function transfer_mg(){
 		'transfer_mg_list' => "List of ".lmtc('mg_transfer')[1],
 		"cat_mg&l=transferType" => cat_detail('transferType')['name'],
 		"cat_mg&l=transferBasis" => cat_detail('transferBasis')['name'],
+		"cat_mg&l=transfer_vehicle" => cat_detail('transfer_vehicle')['name'],
 		
 	], _URL."/?page=admin&cp=".$_REQUEST['cp'] );
 

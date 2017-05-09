@@ -27,7 +27,7 @@ jQuery(document).ready(function($) {
         dateFormat: 'yy/mm/dd',
         minDate: '0',
         // maxDate: '+1Y+6M',
-        maxDate:'+30D',
+        // maxDate:'+30D',
         numberOfMonths: 2,
         onSelect: function (dateStr) {
             var max = $(this).datepicker('getDate'); // Get selected date

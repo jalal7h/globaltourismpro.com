@@ -4,6 +4,8 @@
 # 2017/04/01
 # 2.0
 
+# -spi-
+
 function user_register_do(){
 	
 
@@ -106,6 +108,11 @@ function user_register_do(){
 		'password'=>( is_component('userhashpassword') ? userhashpassword($password) : $password ), 
 		'name'=>$name, 
 		'cell'=>$cell,
+
+		'im_a'=>$_REQUEST['im_a'],
+		'company_no'=>$_REQUEST['company_no'],
+		'yata_no'=>$_REQUEST['yata_no'],
+
 		'flag'=>'1',
 	]) ){
 		echo convbox_back( __("اختلال در ثبت‌نام رخ داده است.") , 'transparent' );

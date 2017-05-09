@@ -1,14 +1,14 @@
 <?
 
 # jalal7h@gmail.com
-# 2016/12/24
-# 1.0
+# 2017/05/09
+# 1.2
 
 function transfer_mg_saveEdit(){
 
 	#
 	# update the database
-	$id = dbs( 'mg_transfer', ['name','position_id','transferBasis_id','drivernumber','tariff','vehicle_id','date_from','date_to','deathline','reservation','itinerary','conditions','notes'], ['id'] );
+	$id = dbs( 'mg_transfer', ['name','position_id','transferBasis_id','drivernumber','tariff','date_from','date_to','deathline','reservation','itinerary','conditions','notes'], ['id'] );
 
 	# 
 	# set kword
@@ -16,7 +16,7 @@ function transfer_mg_saveEdit(){
 
     #
     # set price
-	mg_price( 'mg_transfer', $id, $_REQUEST['price'] );
+    mg_priceform_save( 'mg_transfer:' . $id );
 
 	#
 	# take care of files

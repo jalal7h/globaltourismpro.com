@@ -10,16 +10,6 @@
 			
 			<div class="name"><?=$rw['name']?></div>
 			
-			<div class="half vehicle">
-				<memo>Vehicle:</memo>
-				<?=$rw['vehicle']?>
-			</div>
-			
-			<div class="half priceper">
-				<memo>Price Per:</memo>
-				<?=$rw['priceper']?>
-			</div>
-
 			<div class="half basis">
 				<memo>Basis:</memo>
 				<?=$rw['basis']?>
@@ -30,6 +20,11 @@
 				<?=$rw['tariff']?>
 			</div>
 
+			<div class="half vehicle">
+				<memo>Vehicles:</memo>
+				<?=$rw['list_of_vehicles']?>
+			</div>
+			
 			
 		</div><!--
 		

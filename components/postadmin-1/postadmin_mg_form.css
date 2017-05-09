@@ -23,3 +23,13 @@
 	vertical-align: top;
 	padding-top: 10px;
 }
+
+.postadmin_mg_form .mce-tinymce.mce-container.mce-panel {
+	width: calc( 100% - 200px ) !important;
+}
+
+
+
+
+
+

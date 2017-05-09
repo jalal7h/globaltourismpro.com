@@ -75,7 +75,13 @@
 	color: white;
 	text-shadow: 0 2px 3px rgba(0, 0, 0, 0.5);
 }
-
+.dailytour_view .detail .cost .from {
+	font-size: 16px;
+	vertical-align: top;
+    margin-left: 10px;
+    margin-top: 12px;
+    display: inline-block;
+}
 
 /* * * * * *
  * tabmenu
@@ -112,7 +118,7 @@
 	margin: 5px 20px 5px 0;
 }
 .dailytour_view .orderbox .the_list select {
-	width: 60px;
+	width: 120px;
 	text-align: center;
 	font-size: 15px;
 	margin-left: 10px;

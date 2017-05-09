@@ -18,3 +18,17 @@ $GLOBALS['cat_items']['transferBasis'] = [
 ];
 /*********************************************/
 
+/*********************************************/
+$GLOBALS['cat_items']['transfer_vehicle'] = [
+	'name'		=> 'Transfer Vehicles' ,
+	'dashboard'	=> false ,
+	'sub'		=> false ,
+	'icon'		=> false ,
+	'desc'		=> false ,
+	'flag'		=> false ,
+	'ccf'		=> false ,
+	'kw'		=> false ,
+	'color'		=> false ,
+];
+/*********************************************/
+

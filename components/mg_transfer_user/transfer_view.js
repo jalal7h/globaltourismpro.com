@@ -2,6 +2,29 @@
 
 jQuery(document).ready(function($) {
 	
+	// 
+	// adult_max
+	$('.transfer_view select[name="vehicle"]').on('change', function(){
+		t = $(this);
+		am_w = $('.transfer_view div.adult_w');
+		if( t.val() == '' ){
+			am_w.html('');
+		} else {
+			adult_max = t.find(":selected").attr('adult_max');
+			adult_html = '<select required name=\"adult\">';
+			for( i=1; i<=adult_max; i++ ){
+				adult_html+= '<option value="'+i+'">'+i+' Person(s)</option>';				
+			}
+			adult_html+= '</select>';
+			am_w.html( adult_html );
+		}
+
+	});
+
+
+
+	//
+	// select the direction
 	var tdir = $('.transfer_view .direction input');
 	tdir.on('click', function(){
 		

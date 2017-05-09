@@ -68,3 +68,15 @@
 	display: block;
 	width: 100%;
 }
+
+.dailytour_mg_form .mce-tinymce.mce-container.mce-panel {
+	width: calc( 100% - 140px ) !important;
+}
+
+
+
+
+
+
+
+

@@ -6,21 +6,21 @@
 
 function dailytour_list(){
 	
-	$limit = 2;
+	$limit = 5;
 	$start = $limit * intval($_REQUEST['p']);
 
 	#
 	# date from
 	$_REQUEST['date_from'] = str_replace( '-', '/', $_REQUEST['date_from'] );
 	if( $date_from = var_control($_REQUEST['date_from'], '0-9/') ){
-		// $date_from_q = " AND `date_from`<='$date_from' ";
+		$date_from_q = " AND `date_from`<='$date_from' ";
 	}
 
 	#
 	# date to
 	$_REQUEST['date_to'] = str_replace( '-', '/', $_REQUEST['date_to'] );
 	if( $date_to = var_control($_REQUEST['date_to'], '0-9/') ){
-		// $date_to_q = " AND `date_to`>='$date_to' ";
+		$date_to_q = " AND `date_to`>='$date_to' ";
 	}
 
 	#
@@ -66,14 +66,8 @@ function dailytour_list(){
 			
 			# 
 			# price
-			if(! $price = mg_price('mg_dailytour', $rw['id']) ){
-				continue;
-			} else if(! sizeof($price) ){
-				continue;
-			} else {
-				$price = array_pop(array_reverse($price));
-				$rw['cost'] = $price;
-			}
+			$rw['cost'] = mg_price_get( 'mg_dailytour:'.$rw['id'] );
+			$rw['cost'] = mg_cost_after_offrate( $rw['cost'] );
 
 			#
 			# languages
@@ -81,11 +75,7 @@ function dailytour_list(){
 				$lang = implode( ', ', $lang);
 				$rw['lang'] = $lang;
 			}
-
-			#
-			# offrate
-			$rw['cost'] = mg_cost_after_offrate( $rw['cost'] );
-
+			
 			$list[] = $rw;
 
 		}

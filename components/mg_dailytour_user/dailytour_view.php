@@ -33,20 +33,27 @@ function dailytour_view(){
 
 		#
 		# price
-		$price_list = mg_price('mg_dailytour', $id);
-		$price_per = array_keys($price_list)[0];
-		$cost = $price_list[ $price_per ];
+		$cost = mg_price_get('mg_dailytour:'.$id);
 		$cost = mg_cost_after_offrate( $cost );
 		$cost = billing_format( $cost );
 		$v['cost'] = $cost;
 		
 		#
 		# price list
-		foreach ($price_list as $price_per_id => $price_cost) {
-			$price_per = cat_translate($price_per_id);
-			$price_cost = mg_cost_after_offrate( $price_cost );
-			$price_cost = billing_format($price_cost);
-			$price_array[] = [ 'per' => $price_per, 'per_id' => $price_per_id, 'cost' => $price_cost ];
+		foreach( cat_display('priceper') as $pp_id => $pp_name ){
+			if( $rw0_s = mg_pricelist_get( 'mg_dailytour:'.$id , $pp_id ) ){
+				$price_array[ $pp_id ]['name'] = $pp_name;
+				foreach( $rw0_s as $rw0 ){
+					$rw0['price'] = mg_cost_after_offrate( $rw0['price'] );
+					$price_array[ $pp_id ]['items'][ $rw0['more_than'] ] = $rw0['price'];
+				}
+				for( $i=0; $i<=40; $i++ ){
+					if( $price_array[ $pp_id ]['items'][ $i ] ){
+						$cost_tmp = $price_array[ $pp_id ]['items'][ $i ];
+					}
+					$price_array[ $pp_id ]['items'][ $i ] = $cost_tmp;
+				}
+			}
 		}
 		$v['price_list'] = $price_array;
 
@@ -54,6 +61,9 @@ function dailytour_view(){
 		# date from
 		if(! $v['date_from'] = $_REQUEST['date_from'] ){
 			$v['date_from'] = $rw['date_from'];
+		}
+		if( $rw['reservation'] ){
+			$v['date_from'] = substr( UDate( DateU( $v['date_from'] ) + 3600*24*$rw['reservation'] ) , 0 , 10 );
 		}
 		$v['date_from'] = str_replace('/', '-', $v['date_from']);
 		

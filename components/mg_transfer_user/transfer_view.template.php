@@ -18,11 +18,11 @@
  --><div class="detail cl_l2">
 		<div class="name"><?=$rw['name']?></div>
 		<div class="city cl_l2">{country} / {city}</div>
-		<div class="basis"><memo>{lmtc('mg_transfer:vehicle_id')}:</memo> <?=vehicle_get($rw['vehicle_id'])?></div>
 		<div class="basis"><memo>{lmtc('mg_transfer:transferBasis_id')}:</memo> <?=cat_translate($rw['transferBasis_id'])?></div>
 		<div class="departs"><memo>{lmtc('mg_transfer:tariff')}:</memo> <?=$rw['tariff']?></div>
 		<div class="basis"><memo><lang>Price</lang>:</memo> <lang>Per Vehicle</lang></div>
-		<div class="cost cl_l1r">{cost}</div>
+		<div class="basis"><memo>Vehicles:</memo> <?=$list_of_vehicles_in_text?></div>
+		<div class="cost cl_l1r"><span class="from">FROM</span> {cost}</div>
 	</div><!--
 
 
@@ -38,15 +38,20 @@
  --><form class="orderbox cl_l2" method="post" action="{_URL}/transfer_order">
  	<input type="hidden" name="transfer_id" value="{id}">
  		<div class="the_list">
- 			<div class="head"><lang>Total Number of Travelers</lang></div>
-			<label>
-				<select name="adult" >
-				<?for($i=1; $i<=$etc['adult_max']; $i++):?>
-					<option value="<?=$i?>"><?=$i?></option>
-				<?endfor?>
+
+			<div class="head">Travelers: </div>
+
+ 			<label>
+				<span>Vehicle: </span>
+				<select required name="vehicle" >
+					<option value=""></option>
+				<?foreach( $list_of_vehicles as $vehicle_id => $vehicle ):?>
+					<option value="<?=$vehicle_id?>" adult_max="<?=$vehicle['adult_max']?>" ><?=$vehicle['name']?> / <?=$vehicle['price']?></option>
+				<?endforeach?>
 				</select>
-				<span>Adult(s)</span>
+				<div class="adult_w"></div>
 			</label>
+			
  		</div>
 
 		<div class="notice">
