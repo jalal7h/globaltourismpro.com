@@ -50,6 +50,11 @@
 .dailytour_view .detail .name {
 	font-size: 18px;
 	font-weight: bold;
+	margin-left: 20px;
+}
+.dailytour_view .detail .name .bookmarky {
+	position: absolute; left: 20px; top: 20px;
+	font-size: 20px;
 }
 .dailytour_view .detail .city {
 	margin-bottom: 20px;

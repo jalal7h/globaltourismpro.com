@@ -6,7 +6,7 @@
 
 # --spi--
 
-define( 'recaptcha_public_key' , '6LfrMRMUAAAAAOYBB3xx8tUuUotywQlTOdwVpykN' );
-define( 'recaptcha_secred_key' , '6LfrMRMUAAAAAO0FHbrI4pOVTenGnp1AoW6FLEV1' );
+define( 'recaptcha_public_key' , '6LdcwCAUAAAAAAaM3SY5aOvQi_4asB9aHSbma2eg' );
+define( 'recaptcha_secred_key' , '6LdcwCAUAAAAADRkSESdpGhg89Q__uqc8xHcAm0o' );
 
 

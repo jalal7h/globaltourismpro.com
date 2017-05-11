@@ -16,7 +16,10 @@
 
 
  --><div class="detail cl_l2">
-		<div class="name"><?=$rw['name']?></div>
+		<div class="name">
+			<?=$rw['name']?>
+			<div <?=bookmarky('mg_dailytour', $rw['id'])?> ></div>
+		</div>
 		<div class="city cl_l2">{country} / {city}</div>
 		<div class="basis"><memo>{lmtc('mg_dailytour:serviceBasis_id')}:</memo> <?=cat_translate($rw['serviceBasis_id'])?></div>
 		<div class="departs"><memo>{lmtc('mg_dailytour:departs_id')}:</memo> <?=cat_translate($rw['departs_id'])?></div>

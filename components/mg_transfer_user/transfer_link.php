@@ -27,3 +27,6 @@ function transfer_link( $rw ){
 
 }
 
+function mg_transfer_link( $rw ){
+	return transfer_link($rw);
+}

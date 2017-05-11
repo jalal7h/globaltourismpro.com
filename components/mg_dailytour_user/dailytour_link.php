@@ -27,4 +27,7 @@ function dailytour_link( $rw ){
 
 }
 
+function mg_dailytour_link( $rw ){
+	return dailytour_link($rw);
+}
 

@@ -58,7 +58,9 @@ e651942c You will be redirected to payment gateway by clicking on the "Payment".
 e90d8d2b Account Charge
 ba460428 There is no invoice with ID %%.
 bf7338d8 The invoice #%% already paid!
+0094d1d6 Redirecting to payment gateway ...
 f09bc22b Please first login
+b3c0d659 List of %%
 315f6f05 Section
 810a480e Favorites
 66d8d034 Removed
@@ -142,7 +144,6 @@ c26ac248 Disable
 c2c3b78f There is no linkbox defined.
 c63ad281 Page :
 13d984b3 no record found.
-b3c0d659 List of %%
 a82abea9 minumun
 1f2f69c2 maximum
 924b0f70 character
@@ -170,7 +171,6 @@ c40031ef Departure
 cacac8e8 Category
 2f35c8b5 no record found.
 34ea9d92 List of news
-220ab0f6 لیست
 e9454d59 Newletter
 53ddd112 List of emails
 bec173d5 Download file of email list
@@ -330,7 +330,6 @@ a3b9cda1 Keywords
 1c55e92a DailyTour Bookings
 4f74e2d4 Transfers
 4fe9ced9 Transfer Bookings
-0d8f8656 Transfer Vehicles
 9bf69a29 Position
 5b976d90 Posts
 b0cb73f9 Setting
@@ -368,10 +367,12 @@ f7ee8d28 Service Basis
 ef7a7585 Departs
 41eebe87 Guiding Languages
 178d97ea Transfer Basis
+0d8f8656 Transfer Vehicles
 e5b547e0 News Category
 8d342818 Gallery category
 26e1a975 Post Category
 f1baf12f Ticket categories
+0d6394da Paypal
 46c4fec8 Invoices
 2a8d503d Tickets
 440ec58e ID
@@ -383,6 +384,8 @@ e734b748 Payment method
 396a41ee Transaction
 2b765489 Payment Date
 4008e46b Submit Date
+f0adb17f Favorite
+bda14c50 Favorites
 799edfb1 Title
 d3abe129 Description
 aefb3531 Icon
@@ -450,7 +453,6 @@ fba026ab Phone
 86bc8155 Gender
 1a7c9784 Post
 4aabb424 Registration IP
-8054aa7c Registration date
 61689855 Last login IP
 f3ecaa12 Last login date
 fb3c84d8 IP
