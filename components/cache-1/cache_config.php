@@ -6,7 +6,7 @@
 
 # --spi--
 
-define( 'cache_type', 'redis' ); // file / redis / memcached
+define( 'cache_type', 'file' ); // file / redis / memcached
 
 #
 # redis
