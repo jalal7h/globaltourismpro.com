@@ -1,8 +1,5 @@
 /*index*/
 
-.sticktopmenu {
-
-}
 .sticktopmenu.fixed {
 	position: fixed;
 	top: 0px;
@@ -14,5 +11,7 @@
 	width: 80vw;
 	height: 10px;
 	display: none;
-	background-color: red;
+	background-color: transparent;
 }
+
+
