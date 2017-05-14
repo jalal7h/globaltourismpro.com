@@ -1,5 +1,15 @@
 
 jQuery(document).ready(function($) {
+
+	the_size = $('.slideit').attr('the_size');
+
+	the_size = the_size.split("x");
+	slide_w = the_size[0];
+	slide_h = the_size[1];
+
+	$('.slideit').height( slide_h+'px' );
+	$('.slideit .info').css({'top': '-'+slide_h+'px' });
+
 	
 	the_time = $('.slideit').attr('the_time');
 	fade_time = the_time / 6;

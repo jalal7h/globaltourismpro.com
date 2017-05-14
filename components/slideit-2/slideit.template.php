@@ -1,10 +1,10 @@
 
-<div class="slideit" the_time="{the_time}" >
+<div class="slideit" the_size="{the_size}" the_time="{the_time}" >
 	<div class="list">
 	<?foreach( $slides as $i => $slide ):?>
 
 		<a <?=( $slide['url'] ? 'href="'.$slide['url'].'"' : '' )?> >
-			<img src="<?=$slide['image']?>" class="isss">
+			<img src="<?=$slide['image']?>">
 		
 			<?if( $display_name or $display_desc ):?>
 

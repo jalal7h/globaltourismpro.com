@@ -9,6 +9,7 @@
     text-shadow: 1px 1px 0 rgba(0, 0, 0, 1.0);
     margin: 0 0px 0 0px;
     top: -480px;
+    opacity: 0;
 }
 .slideit .info.ef1 .name {
     padding: 0px;
@@ -29,6 +30,7 @@
 
 .slideit .info.fired.ef1 {
 	top: -400px;
+	opacity: 1;
 }
 .slideit .info.fired.ef1 .name {
 	padding: 30px 40px;

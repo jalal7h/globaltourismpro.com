@@ -12,6 +12,9 @@ function mg_billboard(){
 		return;
 	}
 
+	$rand1 = rand(101,118);
+	$rand2 = rand(101,118);
+
 	$the_billboard = "
 
 	<div class=\"mg_billboard_w\">
@@ -19,7 +22,12 @@ function mg_billboard(){
 			<div class=\"mg_billboard cl_l1r\">
 				<div class=\"inner\">
 					<span class=\"main_title\">".setting('main_title')."</span>
-					<a href=\""._URL."/gallery\" class=\"img_w\"><img src=\""._URL."/image_list/happy-family.jpg\"/></a>
+					<a href=\""._URL."/gallery\" class=\"img_w\">
+						<div class=\"img_div\">
+						<img class=\"r1\" src=\""._URL."/resize_n_cut/672x294/image_list/gallery_thumbs_".$rand1.".jpg\"/>
+						<img class=\"r2\" src=\""._URL."/resize_n_cut/672x294/image_list/gallery_thumbs_".$rand2.".jpg\"/>
+						</div>
+					</a>
 				</div>
 			</div>
 			<div class=\"cl_l1r mg_billboard_fleshdown\">

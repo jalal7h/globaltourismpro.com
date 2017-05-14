@@ -12,7 +12,7 @@ RewriteEngine On
 # End Section
 
 # 
-# main.etc-3
+# main-3
 <FilesMatch "\.(ico|pdf|jpg|jpeg|png|gif|html|htm|xml|txt|xsl)$">
 Header set Cache-Control "max-age=31536050"
 </FilesMatch>
