@@ -1,8 +1,8 @@
 <?php
 
 # jalal7h@gmail.com
-# 2017/04/26
-# 1.2
+# 2017/05/14
+# 1.3
 
 add_layer( 'mg_billboard', 'Billboard', 'center' );
 
@@ -14,6 +14,10 @@ function mg_billboard(){
 
 	$rand1 = rand(101,118);
 	$rand2 = rand(101,118);
+	if( $rand1 == $rand2 ){
+		$rand1 = 113;
+		$rand2 = 111;
+	}
 
 	$the_billboard = "
 
