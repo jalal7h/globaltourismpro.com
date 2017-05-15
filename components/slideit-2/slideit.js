@@ -1,41 +1,45 @@
 
 jQuery(document).ready(function($) {
 
-	the_size = $('.slideit').attr('the_size');
+	if( $('.slideit').length ){
 
-	the_size = the_size.split("x");
-	slide_w = the_size[0];
-	slide_h = the_size[1];
+		the_size = $('.slideit').attr('the_size');
 
-	$('.slideit').height( slide_h+'px' );
-	$('.slideit .info').css({'top': '-'+slide_h+'px' });
+		the_size = the_size.split("x");
+		slide_w = the_size[0];
+		slide_h = the_size[1];
 
-	
-	the_time = $('.slideit').attr('the_time');
-	fade_time = the_time / 6;
+		$('.slideit').height( slide_h+'px' );
+		$('.slideit .info').css({'top': '-'+slide_h+'px' });
 
-	slideit_i = 1;
+		
+		the_time = $('.slideit').attr('the_time');
+		fade_time = the_time / 6;
 
-	slideit_numb = $('.slideit .list > a').length
+		slideit_i = 1;
 
-	if( slideit_numb > 1 ){
-		setInterval( function(){
+		slideit_numb = $('.slideit .list > a').length
 
-			all_node = $('.slideit .list > a');
-			old_node = $('.slideit .list > a:nth-child('+slideit_i+')');
+		if( slideit_numb > 1 ){
+			setInterval( function(){
 
-			slideit_i = (slideit_i % slideit_numb); 
-			slideit_i++;
-			
-			new_node = $('.slideit .list > a:nth-child('+slideit_i+')');
+				all_node = $('.slideit .list > a');
+				old_node = $('.slideit .list > a:nth-child('+slideit_i+')');
 
-			new_node.css({ 'z-index' : 30 });
-			old_node.animate({ 'opacity' : '0' }, fade_time );
-			new_node.animate({ 'opacity' : '1' }, fade_time );
-			all_node.css({ 'z-index' : 1 });
-			new_node.css({ 'z-index' : 2 });
+				slideit_i = (slideit_i % slideit_numb); 
+				slideit_i++;
+				
+				new_node = $('.slideit .list > a:nth-child('+slideit_i+')');
 
-		}, the_time );
+				new_node.css({ 'z-index' : 30 });
+				old_node.animate({ 'opacity' : '0' }, fade_time );
+				new_node.animate({ 'opacity' : '1' }, fade_time );
+				all_node.css({ 'z-index' : 1 });
+				new_node.css({ 'z-index' : 2 });
+
+			}, the_time );
+		}
+
 	}
 
 });
