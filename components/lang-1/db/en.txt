@@ -1,4 +1,5 @@
 53bee6bc Admin Profile
+86ab5403 Name
 304a2581 The 3-digit code is not inserted
 b022caaf Wrong 3-digit code.
 c5b9a047 Wrong captcha code.
@@ -40,7 +41,6 @@ eb83e5b3 Year
 04d94563 Total
 ac6a95ac Payment
 2b426822 Credit
-86ab5403 Name
 3f4505dc There is no invoice issued for you.
 3da08e3b Offline Payment
 824a51f6 Pay From Wallet
@@ -78,6 +78,7 @@ d8bb46b5 Please insert your email address correctly.
 c2bbdfc0 Forgot to write the message!
 41feb385 Something wrong!
 d235199b Back
+8d4cd169 New Question
 39cd89e0 Are you sure to remove?
 22b18fdc No Comment
 81c4638e Comment
