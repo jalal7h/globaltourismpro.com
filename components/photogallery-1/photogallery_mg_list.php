@@ -48,6 +48,7 @@ function photogallery_mg_list(){
 		'item' => [
 			[ 'picture'=>'$rw["image"]' ],
 		],
+		// 'search'=>['name'],
 	];
 	
 	if( photogallery_name === true ){
