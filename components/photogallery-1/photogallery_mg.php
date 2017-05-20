@@ -1,8 +1,8 @@
 <?php
 
 # jalal7h@gmail.com
-# 2017/05/02
-# 1.0
+# 2017/05/19
+# 1.1
 
 add_component( 'photogallery_mg', 'گالری تصاویر', '03e' );
 

@@ -10,7 +10,7 @@
 
 .mg_billboard_w .rotated {
 	position: relative; z-index: 111;
-	transform: rotate(3deg);
+	/* transform: rotate(3deg); */
     width: 101%;
     margin-right: -0.5%;
 }
