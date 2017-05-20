@@ -27,7 +27,7 @@ function dailytour_image( $id = null, $size=null ){
 	}
 
 	if(! sizeof($images) ){
-		$images[] = _URL.'/image_list/no-image-found.jpg';
+		$images[] = _URL.'/image_list/mg_dailytour_nophoto.jpg';
 	}
 
 	return $images;
