@@ -1,8 +1,8 @@
 <?php
 
 # jalal7h@gmail.com
-# 2017/04/15
-# 1.0
+# 2017/05/21
+# 1.1
 
 # id e order e transfer ro migire, deadline ro bar migardune
 
@@ -11,7 +11,7 @@ function transferorder_deadline( $transferorder_id ){
 	if(! $rw = table( 'mg_transfer_order', $transferorder_id ) ){
 		ed();
 
-	} else if(! $rw_transfer = table( 'mg_transfer', $rw['transfer_id'] ) ){
+	} else if(! $rw_transfer = table( 'mg_transfer*', $rw['transfer_id'] ) ){
 		ed();
 	
 	#

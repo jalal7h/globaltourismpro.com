@@ -1,15 +1,13 @@
 <?
 
 # jalal7h@gmail.com
-# 2017/04/16
-# 1.1
+# 2017/05/21
+# 1.2
 
-// add_adminwidget( 'stat_mg_widget_visits' );
-
-$GLOBALS['admin_widget']['stat_mg_widget_visits'] = [
-	'name' => __('بازدید‌ امروز'),
-	'grid' => 3,
-];
+// add_adminwidget([ 
+// 	'func'	=> 'stat_mg_widget_visits',
+// 	'grid'	=> 3,
+// ]);
 
 function stat_mg_widget_visits(){
 	

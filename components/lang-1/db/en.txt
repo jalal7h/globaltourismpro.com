@@ -72,6 +72,7 @@ aae81639 Are you sure to remove?
 ed1d432c Response to your ticket on %%
 fab9b08f Your message have been sent to %%.
 76392aa3 Email Address
+ae309692 There is %%<b>%%</b> new message(s)%% to be replied.
 a921a02b Destination is not defined.
 5d8a49d4 Please insert your name correctly.
 d8bb46b5 Please insert your email address correctly.
@@ -93,6 +94,8 @@ be7f4d51 Your comment ...
 af85fe78 Only members can submit comments. please %%register now%%.
 f6e88fe7 Abuse report
 3d475b15 about the
+6cb8ef4b There is %%<b>%%</b> new comment(s)%% waiting to be confirmed.
+921c28be 0 : Disabled
 f107aa4d Last comments
 489d9389 About
 f270a358 in reply to
@@ -207,7 +210,6 @@ ce8e19ff Unknown
 8a71af6f Subscription
 561db577 Links
 230d8204 Something wrong with sorting.
-c62fc104 Today Visits
 4f50810a New layer type ..
 e7412c0f Delimiter
 0d20443f HTML Content
@@ -232,7 +234,7 @@ e51640bb Move to archive
 8c17399e Are you sure to archive this message?
 d31a0360 Active Messages
 d72208cd Closed Messages
-56f95c41 Waiting tickets
+10d22eb5 No ticket submitted.
 82331ebe Closed
 1089eac3 Awaiting reply
 6aedaf47 Replied
@@ -322,7 +324,7 @@ cc117ae1 Please insert the activation code correctly.
 ddc659a4 Accounting
 1ccc4798 Contact
 4fbe1747 FAQ
-baa04439 Comments
+b49ff84d comments
 a3b9cda1 Keywords
 33d10611 Layout
 74fe9d9c Link Boxes
@@ -360,7 +362,6 @@ d8cf8c26 Change password
 bb1f5f23 HTML Content
 0625d738 Reply to Contact messages
 94815be8 Default Prompts
-b49ff84d comments
 8134bdc1 Voucher And Service
 1f2a2bac SMS
 8dae50ff Price Ranges
@@ -478,6 +479,7 @@ edc1cbb1 Money Unit
 79ff177e Site icon
 60b4c906 Site logo
 53d229f3 Cell number of support in daily tour voucher
+8df7a32d Display comments without confirm
 b137c19e Client register - completion
 6ada1da3 Reset password - completion
 0c170ce2 Reset password - send link
@@ -502,6 +504,7 @@ b27d6333 User Verification
 c49bfd0b Administrator
 4fce6e13 3-digit code
 f4c425d6 Back to home page
+f0cdeb0b Admin Dashboard
 97044d58 Paid
 35f12569 Not Paid
 8adaaa76 Your Credit
@@ -554,6 +557,7 @@ aabd1f27 Price
 d0191765 Categories
 cff044c8 More
 462f71f6 List of RSS :‌
+ed8b6643 Last tickets
 0029e44e Forgot password!
 fa4c9fab Reset password
 312a9eae New password

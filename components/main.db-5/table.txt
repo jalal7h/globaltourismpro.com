@@ -1,8 +1,8 @@
 
 
 # jalal7h@gmail.com
-# 2017/05/03
-# 1.15
+# 2017/05/21
+# 1.17
 
 /*
 
@@ -36,5 +36,6 @@ table( "esm e table" , "id e record" , "field i ke ma mikhaim azash ( ino age na
  table( 'news' , null, null, "20,10" ); // returns 3th 10 records news
  table( 'news' ); // returns all news
  table( 'news' , ["cat_id"=>11, "flag"=>1] , null, "1" ); // first active on cat 11
+ table( 'product*' , ["cat_id"=>11] ); // vojud * baes mishe, az record haye pak shode ham search kone
 
 

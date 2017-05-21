@@ -6,6 +6,10 @@
 
 function postlist_link( $rw_post ){
 	
+	if( is_numeric($rw_post) ){
+		$rw_post = table( 'post', $rw_post );
+	}
+
 	if(! $rw_cat = cat_getByID($rw_post['cat']) ){
 		e();
 

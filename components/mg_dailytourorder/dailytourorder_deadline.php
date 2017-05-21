@@ -9,10 +9,10 @@
 function dailytourorder_deadline( $dailytourorder_id ){
 
 	if(! $rw = table( 'mg_dailytour_order', $dailytourorder_id ) ){
-		ed();
+		e();
 
-	} else if(! $rw_dailytour = table( 'mg_dailytour', $rw['dailytour_id'] ) ){
-		ed();
+	} else if(! $rw_dailytour = table( 'mg_dailytour*', $rw['dailytour_id'] ) ){
+		e();
 	
 	#
 	# age deathline 0 bud, deadline  == service date
