@@ -20,8 +20,9 @@ function dailytour_view(){
 
 		#
 		# the slider
-		$slides = dailytour_image( $id, "1200x700" );
-		$v['the_slider'] = slideit( $slides , 4000, true );
+		$slides = dailytour_image( $id );
+		$v['the_slider'] = slideit( $slides , $the_time=4000, $thumb=true, $display_name=0, $display_desc=0, $size='570x350' );
+		// slideit( $slides , 4000, true );
 		
 		#
 		# country / city
