@@ -46,9 +46,9 @@
  			<? foreach( $price_list as $pp_id => $pp ): ?>
  				<label>
  					<select class="order_item" name="order[<?=$pp_id?>]" >
- 					<option value="">0 x <?=$pp['items'][0]?></option>
+ 					<option value=""></option>
  					<?for($i=1; $i<=40; $i++):?>
- 						<option value="<?=$i?>"><?=$i?> x <?=$pp['items'][$i]?></option>	
+ 						<option value="<?=$i?>"><?=$i?> <?=( $i == 1 ? 'person' : 'persons')?> (<?=billing_format($pp['items'][$i])?>)</option>	
  					<?endfor?>
  					</select>
  					<span><?=$pp['name']?></span>
