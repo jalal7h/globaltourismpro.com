@@ -1,8 +1,8 @@
 <?
 
 # jalal7h@gmail.com
-# 2017/05/15
-# 3.6
+# 2017/05/22
+# 3.7
 
 function xmail( $to, $subject, $text, $from='', $html=0, $mssp_id=0 ){
 

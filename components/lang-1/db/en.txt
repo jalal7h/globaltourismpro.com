@@ -233,8 +233,8 @@ a08923b5 Absent client
 da5862d7 Date
 e51640bb Move to archive
 8c17399e Are you sure to archive this message?
-d31a0360 Active Messages
-d72208cd Closed Messages
+d31a0360 Active Tickets
+d72208cd Closed Tickets
 10d22eb5 No ticket submitted.
 82331ebe Closed
 1089eac3 Awaiting reply
@@ -397,7 +397,7 @@ aefb3531 Icon
 203ee481 Client name
 60787b8e Cell number
 0c05af2c Destination
-05d8c03c Message title
+05d8c03c Title of the Ticket
 8ab5301d Date
 abce1a9b question
 bb25700d answer
