@@ -25,6 +25,7 @@ function xmail( $to, $subject, $text, $from='', $html=0, $mssp_id=0 ){
 	# 
 	# force html
 	if( xmail_force_html === true ){
+		$text = nl2br($text);
 		$text = '<html><body>
 		<p style="color:#444;font-size:14px;font-family:tahoma;direction:'.land_dir.';">'.$text.'</p>
 		</body></html>';
