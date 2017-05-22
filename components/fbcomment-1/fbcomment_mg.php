@@ -1,7 +1,7 @@
 <?
 
 # jalal7h@gmail.com
-# 2017/05/21
+# 2017/05/22
 # 1.1
 
 add_component( 'fbcomment_mg', 'نظرات', '27a' );
@@ -42,7 +42,7 @@ function fbcomment_mg(){
 			'base' => '_URL."/?page=admin&cp=".$_REQUEST["cp"]', // *
 			'remove' => true, 'flag' => true,
 		],
-		'filter' => ( sizeof($comment_tables) > 0 ? [ 'table_name' => [ __('بخش'), $comment_tables ] ] : [] ) ,
+		'filter' => ( sizeof($comment_tables) > 0 ? [ 'table_name' => [ '.. '.__('بخش').' ..', $comment_tables ] ] : [] ) ,
 		'item' => [ [ 'fbcomment_mg_info($rw)' ], [ 'time_inword($rw["date_created"])' ] ],
 		'search' => [ 'text' ],
 	]);
