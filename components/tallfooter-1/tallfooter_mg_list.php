@@ -39,7 +39,7 @@ function tallfooter_mg_list(){
 	<div class=\"tallfooter_typelist_container\">
 	<div class=\"info\">".__("انتخاب نوع لایه جدید ..")."</div>";
 	foreach( $GLOBALS['tallfooter_element'] as $type => $title ){
-		echo "<a class=\"btn btn-primary\" href=\"./?page=admin&cp=".$_REQUEST['cp']."&do=form&type=".$type."\">".$title."</a>";
+		echo "<a class=\"btn btn-primary\" href=\""._URL."/?page=admin&cp=".$_REQUEST['cp']."&do=form&type=".$type."\">".$title."</a>";
 	}
 	echo "</div></div>";
 
