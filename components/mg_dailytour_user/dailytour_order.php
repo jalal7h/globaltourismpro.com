@@ -37,8 +37,10 @@ function dailytour_order(){
 
 		#
 		# the slider
-		$slides = dailytour_image( $id, "800x440" );
-		$v['the_slider'] = slideit( $slides , 4000, true );
+		// $slides = dailytour_image( $id, "800x440" );
+		// $v['the_slider'] = slideit( $slides , 4000, true );
+		$slides = dailytour_image( $id );
+		$v['the_slider'] = slideit( $slides , $the_time=4000, $thumb=true, $display_name=0, $display_desc=0, $size='800x440' );
 
 		#
 		# order_items n total_purchase
