@@ -1,7 +1,7 @@
 <?
 
 # jalal7h@gmail.com
-# 2017/01/09
+# 2017/05/22
 # 1.1
 
 $GLOBALS['tallfooter_element']['seo'] = 'sitemap & rss';

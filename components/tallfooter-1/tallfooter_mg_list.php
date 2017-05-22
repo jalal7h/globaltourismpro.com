@@ -1,8 +1,8 @@
 <?
 
 # jalal7h@gmail.com
-# 2016/10/28
-# 1.0
+# 2017/05/22
+# 1.1
 
 function tallfooter_mg_list(){
 	
