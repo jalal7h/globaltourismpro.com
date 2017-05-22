@@ -360,6 +360,7 @@ dc77044f Tickets
 1335703e Logout
 d8cf8c26 Change password
 7539b2b2 Register in newsletter
+fa91c22c sitemap & rss
 bb1f5f23 HTML Content
 0625d738 Reply to Contact messages
 94815be8 Default Prompts
