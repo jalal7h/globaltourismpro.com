@@ -78,7 +78,7 @@ function tallfooter_mg_list_theType( $rw ){
 			return __('خبرنامه');
 		
 		case 'seo':
-			return __('sitemap و rss');
+			return __('sitemap & rss');
 		
 		default:
 			return __('نامشخص');
