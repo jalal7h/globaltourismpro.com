@@ -4,7 +4,7 @@
 # 2017/01/09
 # 1.1
 
-$GLOBALS['tallfooter_element']['seo'] = 'sitemap و rss';
+$GLOBALS['tallfooter_element']['seo'] = 'sitemap & rss';
 
 function tallfooter_seo( $rw_tf ){
 
