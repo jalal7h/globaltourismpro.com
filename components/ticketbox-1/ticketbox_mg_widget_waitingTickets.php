@@ -12,7 +12,13 @@ add_adminwidget([
 ]);
 
 function ticketbox_mg_widget_waitingTickets(){
-		
+	
+	#
+	# access control
+	if( is_component('useraccess') and (! useraccess(admin_logged(), 'ticketbox_mg') ) ){
+		return;
+	}
+
 	echo template_engine( 'ticketbox_mg_widget_waitingTickets' );
 
 }

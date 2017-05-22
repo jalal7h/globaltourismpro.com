@@ -1,8 +1,8 @@
 <?
 
 # jalal7h@gmail.com
-# 2017/01/03
-# 1.0
+# 2017/05/21
+# 1.1
 
 function news_link( $rw ){
 	

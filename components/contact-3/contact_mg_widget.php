@@ -12,6 +12,12 @@ add_adminwidget([
 
 function contact_mg_widget(){
 	
+	#
+	# access control
+	if( is_component('useraccess') and (! useraccess(admin_logged(), 'contact_mg') ) ){
+		return;
+	}
+
 	$messages = number_format( dbqc( 'contact' ) );
 
 	if( $messages ){

@@ -5,13 +5,19 @@
 # 1.0
 
 add_adminwidget([ 
-	'func'	=> 'billing_mg_wg_monthlyPayments',
+	'func'	=> 'billing_mg_widget_monthlyPayments',
 	'grid'	=> 12,
 	'cover'	=> true,
 	'prio'	=> 1,
 ]);
 
-function billing_mg_wg_monthlyPayments(){
+function billing_mg_widget_monthlyPayments(){
+
+	#
+	# access control
+	if( is_component('useraccess') and (! useraccess(admin_logged(), 'billing_mg') ) ){
+		return;
+	}
 
 	#
 	# vaqt
@@ -45,7 +51,7 @@ function billing_mg_wg_monthlyPayments(){
 	}
 
 
-	echo template_engine( 'billing_mg_wg_monthlyPayments', [
+	echo template_engine( 'billing_mg_widget_monthlyPayments', [
 		'list_of_days_str' => $list_of_days_str ,
 		'list_of_days_str_cost' => $list_of_days_str_cost ,
 	]);

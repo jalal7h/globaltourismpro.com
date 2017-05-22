@@ -1,8 +1,8 @@
 <?php
 
 # jalal7h@gmail.com
-# 2017/04/29
-# 1.1
+# 2017/05/21
+# 1.0
 
 function post_link( $rw_post ){
 	

@@ -13,6 +13,12 @@ add_adminwidget([
 
 function fbcomment_mg_widget(){
 	
+	#
+	# access control
+	if( is_component('useraccess') and (! useraccess(admin_logged(), 'fbcomment_mg') ) ){
+		return;
+	}
+
 	if( setting('fbcomment_needForConfirm') != 1 ){
 
 		$count_of_comments = number_format( dbqc( 'fbcomment', [ 'flag'=>0 ] ) );
