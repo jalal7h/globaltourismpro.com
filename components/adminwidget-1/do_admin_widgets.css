@@ -1,6 +1,5 @@
 
 #do_admin .admin_widgets {
-	/* margin: -7px; */
 	margin-right: 10px;
 }
 
@@ -13,7 +12,7 @@
 
 #do_admin .admin_widgets > .head {
 	padding: 15px 0px 20px;
-    font-size: 18px;
+    font-size: 26px;
     border-bottom: 1px solid rgba(0,0,0,.1);
     margin-bottom: 25px;
 }

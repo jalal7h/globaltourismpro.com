@@ -210,6 +210,7 @@ ce8e19ff Unknown
 8a71af6f Subscription
 561db577 Links
 230d8204 Something wrong with sorting.
+b95e8c9a Layers of the Footer
 4f50810a New layer type ..
 e7412c0f Delimiter
 0d20443f HTML Content

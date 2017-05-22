@@ -1,15 +1,7 @@
+/*index*/
 
 .tallfooter {
-	/* overflow: hidden;
-	width: 102%;
-	margin-left: -1%;
-	margin-right: -17%;
-	display: block;
-	transform: rotate(3deg); */
 	margin-top: 80px;
-}
-.tallfooter .wrapper .inner .this {
-	/* transform: rotate(-3deg); */
 }
 .tallfooter .wrapper .inner {
 	padding: 45px 55px;

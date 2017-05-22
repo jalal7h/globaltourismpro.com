@@ -9,6 +9,7 @@ function tallfooter_mg_list(){
 
 	#############################################################
 	echo listmaker_list([
+		'head' => __('لایه های فوتر'),
 		'table' => 'tallfooter',
 		'url' => [
 			'base' => '_URL."/?page=admin&cp=tallfooter_mg"', // default _FULL_URL *
