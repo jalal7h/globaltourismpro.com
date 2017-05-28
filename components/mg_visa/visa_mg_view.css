@@ -1,0 +1,64 @@
+
+.visa_mg_view.lmfo {
+	padding: 0px 50px;
+	/* text-align: center; */
+}
+
+.visa_mg_view.lmfo .lmfe_inDiv {
+	margin: 10px 0;
+	text-align: right;
+}
+
+.visa_mg_view.lmfo .lmfe_inDiv.head {
+	display: inline-block;
+    margin-top: 20px;
+    margin-left: 10px;
+    font-size: 26px;
+    color: #777;
+}
+
+.visa_mg_view.lmfo .lmfe_inDiv {
+	display: inline-block;
+	width: 49%;
+}
+.visa_mg_view.lmfo .lmfe_inDiv .lmfe_tnit {
+	display: block;
+	width: 100%;
+	text-align: right;
+}
+.visa_mg_view.lmfo .lmfe_inDiv.head {
+	width: 100%;
+	display: block;
+}
+.lmfe_isDate_icon {
+	margin-left: -17px;
+	left: -10px;
+}
+.visa_mg_view.lmfo .lmfe_inDiv.text input {
+	font-size: 18px;
+	width: 80%;
+}
+.visa_mg_view.lmfo .lmfe_inDiv.select select {
+	font-size: 18px;
+}
+
+.visa_mg_view.lmfo .lmfe_inDiv.textarea textarea {
+	width: 80%;
+    height: 120px;
+}
+
+.visa_mg_view.lmfo .lmfe_inDiv.submit {
+	width: 100%;
+	display: block;
+	text-align: center;
+}
+
+.visa_mg_view.lmfo .cost {
+	font-size: 18px;
+}
+
+.visa_mg_view.lmfo .lmfe_tnit.tnit_Approve {
+	display: none;
+}
+
+

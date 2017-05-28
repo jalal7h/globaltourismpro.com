@@ -1,0 +1,7 @@
+
+#listmaker_list_mg_visa_form td:nth-child(2) ,
+#listmaker_list_mg_visa_form td:nth-child(3) ,
+#listmaker_list_mg_visa_form td:nth-child(4) ,
+#listmaker_list_mg_visa_form td:nth-child(5) {
+	text-align: center;
+}

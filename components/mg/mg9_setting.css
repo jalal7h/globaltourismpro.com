@@ -1,4 +1,16 @@
 
-.lmfe_tnit.tnit_mg9_dailytour_voucher_assistance {
-	width: 320px;
+#lmfe_form7dc22b_mg9_dailytour_voucher_assistance {
+	font-size: 14px;
+	padding: 8px;
 }
+
+.mg9_setting.lmfo .lmfe_tnit {
+	width: 250px;
+	vertical-align: top;
+	padding-top: 10px;
+}
+#lmfe_inDiv_form7dc22b_mg9_visa_agreement .mce-tinymce.mce-container.mce-panel {
+	width: calc( 100% - 300px ) !important;
+	display: inline-block;
+}
+

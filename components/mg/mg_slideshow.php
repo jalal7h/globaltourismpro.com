@@ -4,7 +4,7 @@
 # 2017/04/26
 # 1.2
 
-add_layer( 'mg_slideshow', 'Slideshow', 'center' );
+// add_layer( 'mg_slideshow', 'Slideshow', 'center' );
 
 function mg_slideshow(){
 

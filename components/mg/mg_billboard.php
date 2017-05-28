@@ -4,7 +4,7 @@
 # 2017/05/14
 # 1.3
 
-add_layer( 'mg_billboard', 'Billboard', 'center' );
+// add_layer( 'mg_billboard', 'Billboard', 'center', $repeat='0' );
 
 function mg_billboard(){
 

@@ -8,6 +8,7 @@ header {
 	border-top-style: solid;
 }
 header .logo {
+	height: 48px;
 	max-height: 48px;
 	max-width: 50%;
 }

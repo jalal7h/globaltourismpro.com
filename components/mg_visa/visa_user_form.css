@@ -1,0 +1,60 @@
+
+.visa_user_form.lmfo {
+	padding: 0px 50px;
+	/* text-align: center; */
+}
+
+.visa_user_form.lmfo .lmfe_inDiv {
+	margin: 10px 0;
+	text-align: right;
+}
+
+.visa_user_form.lmfo .lmfe_inDiv.head {
+	font-size: 40px;
+    border-bottom: 1px dashed #ccc;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.visa_user_form.lmfo .lmfe_inDiv {
+	display: inline-block;
+	width: 49%;
+}
+.visa_user_form.lmfo .lmfe_inDiv .lmfe_tnit {
+	display: block;
+	width: 100%;
+	text-align: right;
+}
+.visa_user_form.lmfo .lmfe_inDiv.head {
+	width: 100%;
+	display: block;
+}
+.lmfe_isDate_icon {
+	margin-left: -17px;
+	left: -10px;
+}
+.visa_user_form.lmfo .lmfe_inDiv.text input {
+	font-size: 18px;
+	width: 80%;
+}
+.visa_user_form.lmfo .lmfe_inDiv.select select {
+	font-size: 18px;
+}
+
+.visa_user_form.lmfo .lmfe_inDiv.textarea textarea {
+	width: 80%;
+    height: 120px;
+}
+
+.visa_user_form.lmfo .lmfe_inDiv.submit {
+	width: 100%;
+	display: block;
+	text-align: center;
+}
+
+.visa_user_form.lmfo .cost {
+	font-size: 18px;
+}
+
+
