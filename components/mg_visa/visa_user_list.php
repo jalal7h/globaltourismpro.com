@@ -33,7 +33,7 @@ function visa_user_list(){
 		'url' => [
 			'base' => '_URL."/?page=".$_REQUEST["page"]."&do_slug=".$_REQUEST["do_slug"]',
 			'target' => 'visa_user_link($rw["id"])',
-			'add' => true,
+			'add' => '_URL."/".Slug::getSlugByName("userpanel")."/visa/new"',
 		],
 		'add_prompt' => 'Request for new visa',
 		'item' => [
