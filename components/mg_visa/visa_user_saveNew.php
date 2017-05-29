@@ -24,7 +24,9 @@ function visa_user_saveNew(){
 
 		#
 		# congatulate order submit.
+		
 		echo convbox( 'Your request successfully sent.', 'green' );
+		// echo texty( '', [  ] );
 
 		if(! billing_invoiceMake( $cost, 'mg_visa', $id, $user_id ) ){
 			e();

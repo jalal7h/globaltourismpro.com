@@ -26,8 +26,10 @@ function visa_mg_approve(){
 			e();
 
 		} else {
+
 			// echo texty( 'visa_mg_approve',  );
 			echo convbox( 'The visa approved successfuly.', 'green' );
+			
 		}
 	
 	}
