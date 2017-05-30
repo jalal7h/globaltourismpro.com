@@ -91,7 +91,16 @@ function billing_stat_payment( $list ){
 		e();
 
 	} else {
-		return (int) dbr($rs,0,0);
+
+		$sum_of_cost = dbr( $rs, 0, 0 );
+
+		if( lang_code == 'fa' ){
+			return $sum_of_cost;
+
+		} else {
+			return number_format( $sum_of_cost, 2, '.', '' );
+		}
+
 	}
 	
 }
