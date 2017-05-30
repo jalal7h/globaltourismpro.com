@@ -41,7 +41,7 @@ eb83e5b3 Year
 04d94563 Total
 ac6a95ac Payment
 2b426822 Credit
-3f4505dc There is no invoice issued for you.
+4e53a284 There is no invoice for this user.
 3da08e3b Offline Payment
 824a51f6 Pay From Wallet
 0cf0ecae Online Payment
@@ -507,6 +507,8 @@ c49bfd0b Administrator
 4fce6e13 3-digit code
 f4c425d6 Back to home page
 f0cdeb0b Admin Dashboard
+7519991b Payments
+3f4505dc There is no invoice issued for you.
 97044d58 Paid
 35f12569 Not Paid
 8adaaa76 Your Credit

@@ -17,7 +17,7 @@
 /*README*/
 
 function billing_stat_payment( $list ){
-	
+
 	$q = " SELECT SUM(`cost`) FROM `billing_invoice` WHERE `date`>0 ";
 	
 	if( $user_id = $list['user_id'] ){
@@ -87,7 +87,7 @@ function billing_stat_payment( $list ){
 
 	}
 
-	if(!$rs = dbq( $q )){
+	if(! $rs = dbq( $q ) ){
 		e();
 
 	} else {
@@ -98,10 +98,14 @@ function billing_stat_payment( $list ){
 			return $sum_of_cost;
 
 		} else {
-			return number_format( $sum_of_cost, 2, '.', '' );
+			// return number_format( $sum_of_cost, 2, '.', '' );
+			return round( $sum_of_cost , 2 );
 		}
 
 	}
+
+	// return "kk";
+
 	
 }
 
