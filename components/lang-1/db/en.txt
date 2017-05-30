@@ -216,7 +216,7 @@ e7412c0f Delimiter
 0d20443f HTML Content
 9354af56 Social Network
 e5df36b5 Newsletter
-5878cf76 sitemap و rss
+fa91c22c sitemap & rss
 94549dce no record found matching this ID.
 165441cb Client
 9aadbaa5 Active client
@@ -286,6 +286,7 @@ bd3dcce4 email address
 f54b8fb7 Submitting the login form you are agreeing the %%website terms%%.
 4be422e4 You are not joined to %%?
 b29d0f2f List of clients
+e44ed5a6 Client invoices list
 e458c88b Are you sure to remove all related data this client?
 6ac74e4f Client details
 3506048c Male
@@ -334,6 +335,7 @@ a3b9cda1 Keywords
 1c55e92a DailyTour Bookings
 4f74e2d4 Transfers
 4fe9ced9 Transfer Bookings
+9494b053 Visa Requests
 9bf69a29 Position
 5b976d90 Posts
 b0cb73f9 Setting
@@ -347,9 +349,7 @@ dcab0ca1 Display news
 a5eb7f16 News list
 1875752a Clientarea login form
 0572f566 Contact Form
-75ce4634 Billboard
 98ae5340 Search box
-212ae4fa Slideshow
 9be8c796 Top Daily Tours
 d10c0899 List of posts
 03544778 Client Desk
@@ -360,7 +360,6 @@ dc77044f Tickets
 1335703e Logout
 d8cf8c26 Change password
 7539b2b2 Register in newsletter
-fa91c22c sitemap & rss
 bb1f5f23 HTML Content
 0625d738 Reply to Contact messages
 94815be8 Default Prompts
@@ -377,7 +376,6 @@ e5b547e0 News Category
 26e1a975 Post Category
 f1baf12f Ticket categories
 0d6394da Paypal
-46c4fec8 Invoices
 2a8d503d Tickets
 440ec58e ID
 6bc110d6 Client ID
@@ -482,6 +480,9 @@ edc1cbb1 Money Unit
 60b4c906 Site logo
 53d229f3 Cell number of support in daily tour voucher
 8df7a32d Display comments without confirm
+57178d65 Visa Agreement
+495d86e1 Visa Price
+eb04976a Visa Request
 b137c19e Client register - completion
 6ada1da3 Reset password - completion
 0c170ce2 Reset password - send link
@@ -489,7 +490,6 @@ b137c19e Client register - completion
 c9dbc01c New invoice creation
 def0817d Order payment confirm
 78573730 Order by
-36264dfc Payment by wallet credit
 76d4895f Contact us form
 dbfff9df Support ticket - send reply
 5c49b154 Message sender
