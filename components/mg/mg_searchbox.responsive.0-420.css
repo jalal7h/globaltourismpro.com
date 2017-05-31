@@ -1,0 +1,17 @@
+
+.mg_searchbox div.date label .cal_w > span {
+	display: none;
+}
+.mg_searchbox div.date label {
+	display: block;
+    width: 100%;
+}
+.mg_searchbox div.date label input {
+	width: 100%;
+}
+.mg_searchbox .cal_w {
+	margin-bottom: 10px;
+}
+.mg_searchbox input[type="submit"] {
+	top: 205px !important;
+}

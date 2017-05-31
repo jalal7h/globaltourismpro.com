@@ -19,6 +19,7 @@
 	vertical-align: top;
 	text-align: right;
 	transition: 0.2s all;
+	margin-bottom: 20px;
 }
 .dailytour_top .re:hover {
 	box-shadow: 0 5px 30px rgba(0,0,0,.4);

@@ -22,7 +22,7 @@ function mg_billboard(){
 	$the_billboard = "
 
 	<div class=\"mg_billboard_w\">
-		<div class=\"rotated\">0
+		<div class=\"rotated\">
 			<div class=\"mg_billboard cl_l1r\">
 				<div class=\"inner\">
 					<span class=\"main_title\">".setting('main_title')."</span>

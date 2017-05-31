@@ -144,9 +144,9 @@ jQuery(document).ready(function($) {
 
 
 	// click on an option
-	$('body').delegate('.richbox_list > div', 'click', function() {
+	$('body').delegate('.richbox_list > div', 'click touchstart', function() {
 
-		sl = $(this);		
+		sl = $(this);
 		tL = sl.parent();
 		r = t.attr('r');
 

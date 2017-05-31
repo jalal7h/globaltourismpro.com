@@ -22,8 +22,8 @@
 		<label><!--
 		 --><div class="cal_w" title="Date (To)"><!--
 			 --><span>:</span><!--
-			 --><icon class="fa fa-calendar cl_l2_t"></icon>
-				<input autocomplete="off" value="{date_to}" required type="text" name="date_to">
+			 --><icon class="fa fa-calendar cl_l2_t"></icon><!--
+			 --><input autocomplete="off" value="{date_to}" required type="text" name="date_to">
 			</div>
 		</label>
 		<input type="hidden" name="date_result">

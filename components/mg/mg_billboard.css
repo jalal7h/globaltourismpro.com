@@ -1,17 +1,15 @@
 
 .mg_billboard_w {
-	width: calc( 100vw - 10px );
+	width: 100%
 	overflow-y: hidden;
     margin-top: -130px;
-    transition: all 1.5s;
-    transition-delay: 0.5s;
+    /* transition: all 1.5s; */
+    /* transition-delay: 0.5s; */
     overflow: hidden;
 }
 
 .mg_billboard_w .rotated {
 	position: relative; z-index: 11;
-	/* transform: rotate(3deg); */
-    width: 101%;
     margin-right: -0.5%;
 }
 .mg_billboard {
@@ -37,12 +35,10 @@
 	text-decoration: none;
 	position: absolute; left: -550px; top: 0px;
     padding-right: 150px;
-	/* background-color: black; */
 	display: inline-block;
 	transform: rotate(0deg);
     transition-delay: 0.5s;
 	transition: 1s all;
-	/* transition: 2s transform; */
 }
 .mg_billboard .inner .img_w img {
 	height: 117px;
@@ -73,7 +69,7 @@
 
 
 .mg_billboard_w.fired {
-	margin-top: -90px;
+	margin-top: -40px;
 }
 
 .mg_billboard_w.fired .mg_billboard_fleshdown {

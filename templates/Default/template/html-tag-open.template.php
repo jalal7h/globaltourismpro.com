@@ -8,7 +8,7 @@
 <? } ?>
 <? if( strlen("{meta_desc}") ){ ?>	<meta name="description" content="{meta_desc}" />
 <? } ?>
-<? if(0){ ?>	<meta name="viewport" content="width=device-width, initial-scale=1">
+<? if( 1 ){ ?>	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <? } ?>
 
 	<title>{meta_title}</title>

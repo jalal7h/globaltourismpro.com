@@ -1,0 +1,6 @@
+/*index*/
+
+.mg_billboard .img_div img:first-child {
+	display: none;
+}
+

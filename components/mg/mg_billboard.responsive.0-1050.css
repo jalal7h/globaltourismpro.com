@@ -1,0 +1,9 @@
+/*index*/
+
+.mg_billboard_w.fired .mg_billboard .inner .img_div {
+	display: none;
+}
+.mg_billboard .inner {
+	text-align: center;
+}
+

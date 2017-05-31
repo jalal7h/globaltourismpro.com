@@ -1,0 +1,14 @@
+/*index*/
+
+.sticktopmenu.fixed {
+	position: relative !important;
+	top: 0px !important;
+	right: 0px !important;
+	margin: 25px -25px -25px -25px !important;
+	width: calc( 100% + 50px );
+}
+.sticktopmenu_space {
+	display: none !important;
+}
+
+

@@ -1,0 +1,11 @@
+
+.mg_searchbox div.position {
+	display: block;
+    width: 100%;
+    float: none;
+    margin-top: 20px;
+}
+.mg_searchbox input[type="submit"] {
+	top: 89px;
+}
+
