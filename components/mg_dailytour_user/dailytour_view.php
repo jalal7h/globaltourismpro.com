@@ -76,6 +76,13 @@ function dailytour_view(){
 		$v['date_to'] = str_replace('/', '-', $v['date_to']);
 
 		#
+		# fix for mobile version - add preName
+		$v['rw']['inclusions'] = '<div class="preName">Inclusions</div>' . $v['rw']['inclusions'];
+		$v['rw']['itinerary'] = '<div class="preName">Itinerary</div>' . $v['rw']['itinerary'];
+		$v['rw']['conditions'] = '<div class="preName">Conditions</div>' . $v['rw']['conditions'];
+		$v['rw']['notes'] = '<div class="preName">Notes</div>' . $v['rw']['notes'];
+
+		#
 		# template
 		echo template_engine( 'dailytour_view', $v );
 

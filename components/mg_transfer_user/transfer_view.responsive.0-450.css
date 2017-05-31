@@ -1,0 +1,67 @@
+
+.transfer_view .orderbox {
+	padding: 30px 10px;
+}
+
+.transfer_view .orderbox .the_list label {
+	margin: 0px;
+	margin-bottom: 20px;
+}
+.transfer_view .orderbox .the_list label span {
+	display: block;
+	font-size: 13px;
+    font-weight: normal;
+    color: #777;
+}
+.transfer_view .orderbox .the_list select {
+	display: block;
+	width: 100%;
+}
+.transfer_view .orderbox .time_n_submit {
+	text-align: center;
+	margin: 0;
+	padding: 0;
+}
+.transfer_view .orderbox input[type="submit"] {
+	float: none;
+	width: 100%;
+    margin: 30px 0 0 0 !important;
+    padding: 10px 25px !important;
+    display: block;
+}
+
+.transfer_view .orderbox .time_n_submit .calendar_w {
+	display: block;
+}
+
+.transfer_view .orderbox .time_n_submit .direction { 
+	width: 100px;
+	margin: 0 auto;
+	margin-bottom: 15px;
+}
+.transfer_view .orderbox .time_n_submit .direction label {
+	display: block;
+	text-align: right;
+	margin: 0;
+	margin-bottom: 5px;
+}
+
+.transfer_view .adult_w {
+	margin-top: 10px;
+	display: block;
+}
+
+.transfer_view .detail .cost .from {
+	margin-top: 0;
+}
+.transfer_view .detail .cost {
+	font-size: 24px;
+}
+
+.transfer_view .detail memo {
+	width: 60px;
+	margin-right: 0;
+}
+
+
+

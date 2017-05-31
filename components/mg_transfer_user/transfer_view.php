@@ -32,6 +32,13 @@ function transfer_view(){
 		$v['country'] = $the_parent['name'];
 
 		#
+		# price from
+		$cost = mg_price_get('mg_transfer:'.$id);
+		$cost = mg_cost_after_offrate( $cost );
+		$cost = billing_format( $cost );
+		$v['cost'] = $cost;
+
+		#
 		# price
 		foreach( cat_display('transfer_vehicle') as $cat_id => $cat_name ){
 			if( $rw_s_price = mg_pricelist_get( 'mg_transfer:'.$rw['id'], $cat_id ) ){
@@ -68,6 +75,12 @@ function transfer_view(){
 			$v['date_to'] = $rw['date_to'];
 		}
 		$v['date_to'] = str_replace('/', '-', $v['date_to']);
+
+		#
+		# fix for mobile version - add preName
+		$v['rw']['itinerary'] = '<div class="preName">Itinerary</div>' . $v['rw']['itinerary'];
+		$v['rw']['conditions'] = '<div class="preName">Conditions</div>' . $v['rw']['conditions'];
+		$v['rw']['notes'] = '<div class="preName">Notes</div>' . $v['rw']['notes'];
 
 		#
 		# template

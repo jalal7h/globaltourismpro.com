@@ -8,7 +8,7 @@
 		<a href="<?=dailytour_link($rw)?>"><?=$rw['name']?></a>
 	</div>
 
-	<a class="pdf cl_l1" href="{_URL}/html2pdf{_URI}" download ><lang>Download</lang></a>
+	<a class="pdf cl_l2r" href="{_URL}/html2pdf{_URI}" download ><lang>Download</lang></a>
 
 	<div class="slider">
 		{the_slider}
@@ -29,8 +29,7 @@
 	</div><!--
 
 
- --><?
-		echo tabmenu([
+ --><?= tabmenu([
 			'Inclusions'=> $rw['inclusions'] ,
 			'Itinerary'	=> $rw['itinerary'] ,
 			'Conditions'=> $rw['conditions'] ,

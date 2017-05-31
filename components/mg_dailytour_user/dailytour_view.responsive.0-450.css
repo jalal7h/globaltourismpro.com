@@ -1,0 +1,39 @@
+
+.dailytour_view .orderbox {
+	padding: 30px 10px;
+}
+
+.dailytour_view .orderbox .the_list label {
+	display: flex;
+	flex-direction: column;
+	margin: 0px;
+	margin-bottom: 20px;
+}
+.dailytour_view .orderbox .the_list label span {
+	display: block;
+	order: 1;
+	font-size: 13px;
+    font-weight: normal;
+    color: #777;
+}
+.dailytour_view .orderbox .the_list select {
+	display: block;
+	order: 2;
+	width: 100%;
+}
+.dailytour_view .orderbox .time_n_submit {
+	text-align: center;
+}
+.dailytour_view .orderbox input[type="submit"] {
+	float: none;
+	width: 100%;
+    margin: 30px 0 0 0 !important;
+    padding: 10px 25px !important;
+    display: block;
+}
+.dailytour_view .detail .cost .from {
+	margin-top: 0;
+}
+.dailytour_view .detail .cost {
+	font-size: 24px;
+}

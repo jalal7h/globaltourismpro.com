@@ -19,7 +19,9 @@
 .dailytour_view .pdf {
 	display: block;
     text-align: left;
-    margin: -50px 0 35px 15px;
+    margin: -54px 0 35px 15px;
+    font-size: 13px;
+    font-family: Raleway;
 }
 
 
@@ -129,7 +131,7 @@
 	margin-left: 10px;
 }
 .dailytour_view .orderbox .the_list label span {
-	font-size: 15px;
+	font-size: 13px;
 }
 .dailytour_view .orderbox .notice {
 	margin: 30px 20px 30px 0;

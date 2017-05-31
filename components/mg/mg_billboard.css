@@ -9,7 +9,7 @@
 }
 
 .mg_billboard_w .rotated {
-	position: relative; z-index: 11;
+	position: relative; z-index: 5;
     margin-right: -0.5%;
 }
 .mg_billboard {

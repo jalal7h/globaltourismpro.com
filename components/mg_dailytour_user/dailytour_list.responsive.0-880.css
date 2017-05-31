@@ -1,0 +1,13 @@
+
+.dailytour_list a img ,
+.dailytour_list a .isss_wrapper {
+	display: none !important;
+}
+.dailytour_list .re > .detail {
+	margin: 0px;
+	width: calc( 100% - 200px );
+	padding: 20px;
+}
+.dailytour_list .re > .price {
+
+}

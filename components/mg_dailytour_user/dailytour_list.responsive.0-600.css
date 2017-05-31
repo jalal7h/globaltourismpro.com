@@ -1,0 +1,9 @@
+
+.dailytour_list .re > .detail {
+	display: block;
+	width: 100% !important;
+}
+.dailytour_list .re > .price {
+	display: block;
+	width: 100% !important;
+}

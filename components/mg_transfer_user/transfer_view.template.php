@@ -8,7 +8,7 @@
 		<a href="<?=transfer_link($rw)?>"><?=$rw['name']?></a>
 	</div>
 
-	<a class="pdf cl_l1" href="{_URL}/html2pdf{_URI}" download ><lang>Download</lang></a>
+	<a class="pdf cl_l1 cl_l2r" href="{_URL}/html2pdf{_URI}" download ><lang>Download</lang></a>
 
 	<div class="slider">
 		{the_slider}
@@ -73,11 +73,15 @@
 				<label><input type="radio" name="direction" value="departure"> Departure</label>
 			</div>
 
-			<icon class="fa fa-calendar cl_l2_t"></icon>
-			<input type="text" class="date_arrival cl_l2_t" required name="date_arrival" placeholder="Arrival">
+			<span class="calendar_w">
+				<icon class="fa fa-calendar cl_l2_t"></icon>
+				<input type="text" class="date_arrival cl_l2_t" required name="date_arrival" placeholder="Arrival">
+			</span>
 
-			<icon class="fa fa-calendar cl_l2_t"></icon>
-			<input type="text" class="date_departure cl_l2_t" required name="date_departure" placeholder="Departure">
+			<span class="calendar_w">
+				<icon class="fa fa-calendar cl_l2_t"></icon>
+				<input type="text" class="date_departure cl_l2_t" required name="date_departure" placeholder="Departure">
+			</span>
 
 			<input type="submit" class="cl_l1r btn btn-lg" value="<lang>Book now</lang>">
 		</div>

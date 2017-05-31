@@ -1,0 +1,13 @@
+
+.transfer_list a img ,
+.transfer_list a .isss_wrapper {
+	display: none !important;
+}
+.transfer_list .re > .detail {
+	margin: 0px;
+	width: calc( 100% - 200px );
+	padding: 20px;
+}
+.transfer_list .re > .price {
+
+}
