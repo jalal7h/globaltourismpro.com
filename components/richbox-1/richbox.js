@@ -69,7 +69,10 @@ jQuery(document).ready(function($) {
 		tL = $('#richbox_list_'+r);
 
 		navigator_i = tL.attr('nav');
-
+		cl( navigator_i );
+		if( navigator_i == 0 ){
+			navigator_i = 1;
+		}
 
 		if( e.keyCode == 37 || e.keyCode == 38 || e.keyCode == 39 || e.keyCode == 40 || e.keyCode == 13 || e.keyCode == 27 ){
 
@@ -143,10 +146,15 @@ jQuery(document).ready(function($) {
 
 
 
-	// click on an option
+	// click on an option - click
 	$('body').delegate('.richbox_list > div', 'click touchstart', function() {
 
 		sl = $(this);
+
+		if( sl.html() == text_loading ){
+			return false;
+		}
+
 		tL = sl.parent();
 		r = t.attr('r');
 
@@ -175,6 +183,10 @@ jQuery(document).ready(function($) {
 		if( e.keyCode == 13 ){
 			
 			if( hv.length && tL.css('display') == 'block' ){
+
+				if( hv.html() == text_loading ){
+					return false;
+				}
 
 				t.addClass('completed');
 				

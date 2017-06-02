@@ -1,8 +1,8 @@
 <?php
 
 # jalal7h@gmail.com
-# 2017/05/14
-# 1.3
+# 2017/06/02
+# 1.4
 
 // add_layer( 'mg_billboard', 'Billboard', 'center', $repeat='0' );
 
@@ -28,8 +28,8 @@ function mg_billboard(){
 					<span class=\"main_title\">".setting('main_title')."</span>
 					<a href=\""._URL."/gallery\" class=\"img_w\">
 						<div class=\"img_div\">
-						<img class=\"r1\" src=\""._URL."/resize_n_cut/672x294/image_list/gallery_thumbs_".$rand1.".jpg\"/>
-						<img class=\"r2\" src=\""._URL."/resize_n_cut/672x294/image_list/gallery_thumbs_".$rand2.".jpg\"/>
+						<img class=\"r1\" src=\""._URL."/resize_n_cut/732x294/image_list/gallery_thumbs_".$rand1.".jpg\"/>
+						<img class=\"r2\" src=\""._URL."/resize_n_cut/732x294/image_list/gallery_thumbs_".$rand2.".jpg\"/>
 						</div>
 					</a>
 				</div>

@@ -1,8 +1,8 @@
 <?php
 
 # jalal7h@gmail.com
-# 2017/01/11
-# 1.1
+# 2017/06/02
+# 1.2
 
 // <input type="richbox" name="city" feed="<?=str_enc('position(name)[id]/type:city')>" list_limit="20" char_limit="2" action="alert" value="15" >
 
@@ -95,7 +95,8 @@ function richbox_feed(){
 			echo dbr( $rs, 0, $feed_title_column );
 
 		} else while( $rw = dbf($rs) ){
-			echo "<div the_id=\"".$rw[ $feed_id_column ]."\">".$rw[ $feed_title_column ]."</div>";
+			echo "<div ".( $notfirst ? '' : 'class="hover"' )." the_id=\"".$rw[ $feed_id_column ]."\">".$rw[ $feed_title_column ]."</div>";
+			$notfirst = true;
 		}
 
 	}
