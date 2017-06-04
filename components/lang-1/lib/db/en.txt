@@ -48,9 +48,6 @@ ac6a95ac Payment
 cc81d9ee zero
 9636700d Invoices
 c311e3d4 Wallet
-003633e2 Offine
-fac7c377 Account
-c97188c3 Card
 7e9c1013 Payment Method
 b5475089 Online
 f4ae9f2f Amount
@@ -59,6 +56,7 @@ e90d8d2b Account Charge
 ba460428 There is no invoice with ID %%.
 bf7338d8 The invoice #%% already paid!
 0094d1d6 Redirecting to payment gateway ...
+355d7c8d Charge Balance for
 f09bc22b Please first login
 b3c0d659 List of %%
 315f6f05 Section
@@ -130,7 +128,6 @@ f879902b enable/disable
 d501f5e9 Remove unsuccessful. Something wrong !
 514649c5 You are not allowed to remove this layer.
 a6b33b42 Error in remove.
-fe40b196 Wrap in frame
 256a8343 there is no way to disable this linkbox.
 fec43a50 there is no way to remove this linkbox.
 19cdf577 number of links
@@ -172,8 +169,7 @@ c40031ef Departure
 24b3d7f0 Round Trip
 7f5b5876 Site news
 4e919b57 view
-cacac8e8 Category
-2f35c8b5 no record found.
+c8162bc0 No news found!
 34ea9d92 List of news
 e9454d59 Newletter
 53ddd112 List of emails
@@ -263,6 +259,7 @@ d9c05ef0 minutes ago
 65d21c61 List of Administrators
 3be75adb Submit a new manager
 82991df9 date of registration
+003633e2 Offine
 95e2e00d Your email address is already in use.
 5f428342 Change %%
 1f8326a3 Current password
@@ -346,11 +343,12 @@ c04b9a14 Administrators
 d6d94244 Clients
 8d41f861 Custom Post
 dcab0ca1 Display news
-a5eb7f16 News list
 1875752a Clientarea login form
+ff2fc9e3 Client menu
 0572f566 Contact Form
 98ae5340 Search box
 9be8c796 Top Daily Tours
+a5eb7f16 News list
 d10c0899 List of posts
 03544778 Client Desk
 bb3d7c0e Registration Form
@@ -419,6 +417,7 @@ fb07bb29 icon
 2079d204 image
 cc28d0ba news
 e5468b3a news
+cacac8e8 Category
 3d06b85b News text
 353036b9 Email
 67d02fee Emails
@@ -483,6 +482,7 @@ edc1cbb1 Money Unit
 57178d65 Visa Agreement
 495d86e1 Visa Price
 eb04976a Visa Request
+844d3300 Content of robot.txt
 b137c19e Client register - completion
 6ada1da3 Reset password - completion
 0c170ce2 Reset password - send link
@@ -490,6 +490,7 @@ b137c19e Client register - completion
 c9dbc01c New invoice creation
 def0817d Order payment confirm
 78573730 Order by
+36264dfc Pay via balance credit
 76d4895f Contact us form
 dbfff9df Support ticket - send reply
 5c49b154 Message sender
@@ -521,6 +522,7 @@ c5a076d5 send to
 06a19b35 Page not found!
 cfe93a08 So sorry, but you are not allowed to view this page.
 9592af8c Home page
+fe40b196 Wrap in frame
 070fd73f Booking Info
 d53fd7f5 Service Date
 f5212458 Traveller(s)
@@ -562,6 +564,7 @@ d0191765 Categories
 cff044c8 More
 462f71f6 List of RSS :‌
 ed8b6643 Last tickets
+70af86c1 Are you sure to remove?
 0029e44e Forgot password!
 fa4c9fab Reset password
 312a9eae New password
