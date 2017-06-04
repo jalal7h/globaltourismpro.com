@@ -35,14 +35,12 @@
 #user_login_form .terms > a:hover {
 	color: #d00;
 }
-#user_login_form .prompt {
-
-}
 #user_login_form input[type=submit] {
 	margin: 10px 0;
 }
 #user_login_form .forgot {
 	color: #900;
+	font-size: 12px;
 }
 #user_login_form .forgot:hover {
 	color: #d00;
@@ -55,6 +53,7 @@
 }
 #user_login_form .register_button > div {
 	margin-bottom: 20px;
+	font-size: 12px;
 }
 #user_login_form .register_button > a.btn {
 	
@@ -63,6 +62,7 @@
 #user_login_form .prompt {
 	color: #e00;
 	margin: 15px 10px 15px 0;
+	font-size: 12px;
 }
 #user_login_form .prompt:before {
 	font-family: FontAwesome;

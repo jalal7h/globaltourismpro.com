@@ -6,7 +6,7 @@
 
 function userverification_init( $username, $verify_back, $its=null ){
 	
-	if( cache !== true ){
+	if(! cache_enabled() ){
 		ed( 'Cache is needed for verification.' );
 	}
 

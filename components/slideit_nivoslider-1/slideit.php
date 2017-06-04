@@ -1,8 +1,8 @@
 <?
 
 # jalal7h@gmail.com
-# 2017/05/31
-# 2.3
+# 2017/06/04
+# 2.4
 
 function slideit( $slides , $the_time=4000, $thumb=false, $display_name=0, $display_desc=0, $size='1280x400' ){
 
@@ -41,10 +41,6 @@ function slideit( $slides , $the_time=4000, $thumb=false, $display_name=0, $disp
 		$slides[$i] = (object) $slide;
 	}
 
-	$component = 'slideit_nivoslider';
-	$lib_path = _URL . '/components/' . $component . '-' . component_version($component);
-
-
 	return template_engine( 'slideit', [
 		
 		'slides'		=> $slides,
@@ -52,8 +48,6 @@ function slideit( $slides , $the_time=4000, $thumb=false, $display_name=0, $disp
 		'the_time'		=> $the_time,
 		'display_name'	=> $display_name,
 		'display_desc'	=> $display_desc,
-
-		'lib_path'		=> $lib_path,
 
 	]);
 	

@@ -1,6 +1,6 @@
 
-<link rel="stylesheet" href="{lib_path}/nivo-slider/themes/default/default.css" type="text/css" media="screen" />
-<link rel="stylesheet" href="{lib_path}/nivo-slider/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="{bysideme}/lib/nivo-slider/themes/default/default.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="{bysideme}/lib/nivo-slider/nivo-slider.css" type="text/css" media="screen" />
 
 <div id="wrapper">
 	<div class="slider-wrapper theme-default">
@@ -15,7 +15,7 @@
 </div>
 
 <script type="text/javascript" src="http://hammerjs.github.io/dist/hammer.min.js"></script>
-<script type="text/javascript" src="{lib_path}/nivo-slider/jquery.nivo.slider.js"></script> 
+<script type="text/javascript" src="{bysideme}/lib/nivo-slider/jquery.nivo.slider.js"></script> 
 
 <script type="text/javascript">
 	$(document).ready(function($) {
