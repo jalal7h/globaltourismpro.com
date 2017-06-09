@@ -1,6 +1,10 @@
-<?
+<?php
 
-$GLOBALS['do_action'][] = 'useronline_console';
+# jalal7h@gmail.com
+# 2017/06/09
+# 1.0
+
+add_action('useronline_console');
 
 function useronline_console(){
 

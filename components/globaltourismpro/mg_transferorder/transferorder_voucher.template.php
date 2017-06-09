@@ -96,6 +96,8 @@
 	.website_info .logo {
 		float: left;
 		margin-right: 40px;
+		max-height: 40px;
+		padding: 4px;
 	}
 	.website_info .address {
 
@@ -264,7 +266,7 @@
 		<div class="phone">
 			<span>Office:</span> {website_phone} | 
 			<span>Fax:</span> {website_fax} | 
-			<span>Cell:</span> {website_cell}
+			<span>Cell:</span> <icon class="fa fa-whatsapp"></icon> {website_cell}
 		</div>
 	</div>
 

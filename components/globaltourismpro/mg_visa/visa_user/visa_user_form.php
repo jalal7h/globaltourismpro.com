@@ -91,11 +91,14 @@ function visa_user_form(){
 			[!"textarea:dated_itinerary"!]
 			[!"textarea:emergency_contact"!]
 			
-			<br>
-			<br>
 			<hr>
 
-			'.setting('mg9_visa_agreement').'
+			[!"file:photo_file*"!]
+			[!"file:passport_file*"!]
+			
+			<br>
+
+			'.( trim(strip_tags(setting('mg9_visa_agreement'))) ? '<hr>'.setting('mg9_visa_agreement') : '' ).'
 
 			'.( $_REQUEST['id'] ? '
 

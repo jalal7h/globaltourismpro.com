@@ -22,6 +22,8 @@ function visa_user_saveNew(){
 
 	} else {
 
+		listmaker_fileupload( 'mg_visa' , $id );
+		
 		#
 		# congatulate order submit.
 		

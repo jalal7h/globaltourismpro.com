@@ -1,8 +1,8 @@
 <?
 
 # jalal7h@gmail.com
-# 2017/06/02
-# 1.1
+# 2017/06/08
+# 1.2
 
 $GLOBALS['billing_method']['paypal'] = 'Paypal';
 

@@ -5,8 +5,8 @@ jQuery(document).ready(function($) {
 		$(this).siblings().removeClass('current');
 		$(this).addClass('current');
 		curr = $(this).index();
-		$(this).parent().parent().find('div.text div').hide();
-		$(this).parent().parent().find('div.text div:eq('+curr+')').show();
+		$(this).parent().parent().find('div.text > div').hide();
+		$(this).parent().parent().find('div.text > div:eq('+curr+')').show();
 	});
 
 	if(  hash != ''  &&  $('.tabmenu .name > a[href="#'+hash+'"]').length > 0  ){

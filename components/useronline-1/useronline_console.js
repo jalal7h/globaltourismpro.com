@@ -1,10 +1,12 @@
 
 jQuery(document).ready(function($) {
+	
 	setInterval(function(){
 		$.ajax({
-		  url: "./?do_action=useronline_console",
+		  url: _URL + "/?do_action=useronline_console",
 		  cache: false
 		});
-	},10000);
+	}, 30000 );
+
 });
 

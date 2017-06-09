@@ -57,4 +57,9 @@
 	font-size: 18px;
 }
 
+.visa_user_form .lmfe_tnit.tnit_photo_file ,
+.visa_user_form .lmfe_tnit.tnit_passport_file {
+	display: none !important;
+}
+
 

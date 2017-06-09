@@ -1,11 +1,10 @@
 <?php
 
 # jalal7h@gmail.com
-# 2017/01/18
-# 1.2
+# 2017/06/09
+# 1.3
 
 function layout_open(){
-
 
 	#
 	# its 404 page

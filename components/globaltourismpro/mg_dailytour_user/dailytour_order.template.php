@@ -47,7 +47,7 @@
 
  --><div class="right">
 		
-		<div class="head clNeu"><lang>Daily Tour's Info</lang></div>
+		<div class="head clNeu"><lang>Traveller's Info</lang></div>
 		
 		<div class="re">
 			<span><lang>Tour Leader's Name</lang>:</span>

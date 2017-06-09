@@ -1,5 +1,6 @@
 
 <link href="{_URL}/templates/Default/font/font.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 	* {
 		font-family: DefaultFont;
@@ -96,6 +97,8 @@
 	.website_info .logo {
 		float: left;
 		margin-right: 40px;
+		max-height: 40px;
+		padding: 4px;
 	}
 	.website_info .address {
 
@@ -228,11 +231,11 @@
 
 		<div class="website_info">
 			<img class="logo" src="{website_logo}"/>
-			<div class="address">Head Office: {website_address}</div>
+			<div class="address">{website_address}</div>
 			<div class="phone">
 				<span>Office:</span> {website_phone} | 
 				<span>Fax:</span> {website_fax} | 
-				<span>Cell:</span> {website_cell}
+				<span>Cell:</span> <icon class="fa fa-whatsapp"></icon> {website_cell}
 			</div>
 		</div>
 

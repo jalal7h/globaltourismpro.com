@@ -93,6 +93,11 @@ function visa_mg_view(){
 				[!"textarea:dated_itinerary"!]
 				[!"textarea:emergency_contact"!]
 
+				<hr>
+
+				'.( $rw_visa['photo_file'] ? '<a download href="'.$rw_visa['photo_file'].'"><img class="half" src="'.$rw_visa['photo_file'].'"/></a>' : '' ).'
+				'.( $rw_visa['passport_file'] ? '<a download href="'.$rw_visa['passport_file'].'"><img class="half" src="'.$rw_visa['passport_file'].'"/></a>' : '' ).'
+
 				<br>
 				<br>
 

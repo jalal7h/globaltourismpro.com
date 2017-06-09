@@ -1,12 +1,12 @@
 
-.transfer_view {
+.dailytour_view {
 
 }
-.transfer_view > div {
+.dailytour_view > div {
 	display: inline-block;
 	vertical-align: top;
 }
-.transfer_view .breadcrumb {
+.dailytour_view .breadcrumb {
 	width: 100%;
 	background-color: #f8f8f8;
 }
@@ -16,22 +16,24 @@
 /* * * * * *
  * PDF
  * * * */
-.transfer_view .pdf {
+.dailytour_view .pdf {
 	display: block;
     text-align: left;
-    margin: -50px 0 35px 15px;
+    margin: -54px 0 35px 15px;
+    font-size: 13px;
+    font-family: Raleway;
 }
 
 
 /* * * * * *
  * slider
  * * * */
-.transfer_view .slider {
+.dailytour_view .slider {
 	width: 50%;
 	/* background-color: #fcc; */
 }
-.transfer_view .slider .slideit ,
-.transfer_view .slider .slideit .list > a > img {
+.dailytour_view .slider .slideit ,
+.dailytour_view .slider .slideit .list > a > img {
 	width: 100%;
 	height: 350px;
 }
@@ -40,37 +42,37 @@
 /* * * * * *
  * detail
  * * * */
-.transfer_view .detail {
+.dailytour_view .detail {
 	width: 50%;
 	background-color: #f8f8f8;
 	padding: 20px 30px;
 	height: 350px;
 	position: relative;
 }
-.transfer_view .detail .name {
+.dailytour_view .detail .name {
 	font-size: 18px;
 	font-weight: bold;
 	margin-left: 20px;
 }
-.transfer_view .detail .name .bookmarky {
+.dailytour_view .detail .name .bookmarky {
 	position: absolute; left: 20px; top: 20px;
 	font-size: 20px;
 }
-.transfer_view .detail .city {
+.dailytour_view .detail .city {
 	margin-bottom: 20px;
 	opacity: 0.6;
 }
-.transfer_view .detail > * {
+.dailytour_view .detail > * {
 	font-size: 14px;
 	padding: 0px 0;
 }
-.transfer_view .detail memo {
+.dailytour_view .detail memo {
 	opacity: 0.6;
 	display: inline-block;
 	width: 130px;
 	margin-right: 10px;
 }
-.transfer_view .detail .cost {
+.dailytour_view .detail .cost {
 	position: absolute;
 	bottom: 0;
 	right: 0;
@@ -80,7 +82,7 @@
 	color: white;
 	text-shadow: 0 2px 3px rgba(0, 0, 0, 0.5);
 }
-.transfer_view .detail .cost .from {
+.dailytour_view .detail .cost .from {
 	font-size: 16px;
 	vertical-align: top;
     margin-left: 10px;
@@ -91,11 +93,11 @@
 /* * * * * *
  * tabmenu
  * * * */
-.transfer_view .tabmenu {
+.dailytour_view .tabmenu {
 	margin-top: 20px;
 	width: 50%;
 }
-.transfer_view .tabmenu .text > div {
+.dailytour_view .tabmenu .text > div {
 	padding-left: 20px;
 }
 
@@ -103,57 +105,43 @@
 /* * * * * *
  * orderbox
  * * * */
-.transfer_view .orderbox {
+.dailytour_view .orderbox {
 	width: 50%;
 	display: inline-block;
 	padding: 30px;
 	background-color: #f8f8f8;
 }
-.transfer_view .orderbox .the_list {
+.dailytour_view .orderbox .the_list {
 
 }
-.transfer_view .orderbox .the_list .head {
+.dailytour_view .orderbox .the_list .head {
 	font-size: 18px;
 	font-weight: bold;
 	opacity: 0.7;
 	margin-bottom: 30px;
 }
-.transfer_view .orderbox .the_list label {
+.dailytour_view .orderbox .the_list label {
 	display: block;
 	margin: 5px 20px 5px 0;
 }
-.transfer_view .orderbox .the_list select {
-	width: auto;
+.dailytour_view .orderbox .the_list select {
+	width: 200px;
 	text-align: center;
 	font-size: 15px;
 	margin-left: 10px;
 }
-.transfer_view .orderbox .the_list label span {
-	font-size: 15px;
+.dailytour_view .orderbox .the_list label span {
+	font-size: 13px;
 }
-.transfer_view .orderbox .notice {
+.dailytour_view .orderbox .notice {
 	margin: 30px 20px 30px 0;
 	font-size: 13px;
 }
 
-.transfer_view .orderbox .time_n_submit {
-	padding-right: 15px;
-}
-.transfer_view .orderbox .time_n_submit .direction {
-	padding: 10px 5px 25px 0;
-}
-.transfer_view .orderbox .time_n_submit .direction label {
-	margin-left: 25px;
-	font-size: 14px;
-}
-.transfer_view .orderbox .time_n_submit .direction label input {
-	margin-left: 5px;
-}
-.transfer_view .orderbox .time_n_submit .direction {
+.dailytour_view .orderbox .time_n_submit {
 
 }
-
-.transfer_view .orderbox .time_n_submit icon:before {
+.dailytour_view .orderbox .time_n_submit icon:before {
 	position: relative;
 	z-index: 11;
 	font-size: 24px;
@@ -161,8 +149,7 @@
 	left: -12px;
 	top: 3px;
 }
-.transfer_view .orderbox .date_arrival ,
-.transfer_view .orderbox .date_departure {
+.dailytour_view .orderbox .date {
 	display: inline-block;
 	padding: 10px;
 	padding-right: 40px;
@@ -171,29 +158,29 @@
     width: 160px;
 }
 
-.transfer_view .orderbox input[type="submit"] {
+.dailytour_view .orderbox input[type="submit"] {
 	margin: 0 20px 0 20px;
 	padding: 10px 25px;
 	transition: 0.2s all;
 	float: left;
 	outline: none;
 }
-.transfer_view .orderbox input[type="submit"]:hover ,
-.transfer_view .orderbox input[type="submit"]:active {
+.dailytour_view .orderbox input[type="submit"]:hover ,
+.dailytour_view .orderbox input[type="submit"]:active {
 	margin: 5px 15px 5px 15px;
 	padding: 5px 30px;
 	color: white;
 	opacity: 0.7;
 }
-.transfer_view .orderbox input[type="submit"]:active {
+.dailytour_view .orderbox input[type="submit"]:active {
 	position: relative; top: 2px;
 }
-.transfer_view .orderbox input[type="submit"]:focus {
+.dailytour_view .orderbox input[type="submit"]:focus {
 	color: white;
 }
 
-.transfer_view .adult_w {
-	display: inline;
+.dailytour_view .tabmenu .preName {
+	display: none;
 }
 
 

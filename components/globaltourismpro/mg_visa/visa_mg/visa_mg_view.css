@@ -61,4 +61,14 @@
 	display: none;
 }
 
+.visa_mg_view.lmfo img.half {
+	width: 45%;
+	display: inline-block;
+	text-align: center;
+	margin: 0 1%;
+	box-shadow: 0 0 10px rgba(0, 0, 0, .09);
+}
+.visa_mg_view.lmfo img.half:hover {
+	box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+}
 

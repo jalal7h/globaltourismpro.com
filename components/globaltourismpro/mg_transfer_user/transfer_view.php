@@ -4,25 +4,22 @@
 # 2017/01/23
 # 1.0
 
-function dailytour_view(){
+function transfer_view(){
 	
 	if(! $id = intval($_REQUEST['id']) ){
 		e();
 
-	} else if(! $rw = table('mg_dailytour',$id) ){
+	} else if(! $rw = table('mg_transfer',$id) ){
 		e();
 		
 	} else {
 
 		$v['rw'] = $rw;
 
-		echo js_print( 'mg_dailytour_user', 'dailytour_view' );
-
 		#
 		# the slider
-		$slides = dailytour_image( $id );
+		$slides = transfer_image( $id );
 		$v['the_slider'] = slideit( $slides , $the_time=4000, $thumb=true, $display_name=0, $display_desc=0, $size='570x350' );
-		// slideit( $slides , 4000, true );
 		
 		#
 		# country / city
@@ -33,30 +30,32 @@ function dailytour_view(){
 		$v['country'] = $the_parent['name'];
 
 		#
-		# price
-		$cost = mg_price_get('mg_dailytour:'.$id);
+		# price from
+		$cost = mg_price_get('mg_transfer:'.$id);
 		$cost = mg_cost_after_offrate( $cost );
 		$cost = billing_format( $cost );
 		$v['cost'] = $cost;
-		
+
 		#
-		# price list
-		foreach( cat_display('priceper') as $pp_id => $pp_name ){
-			if( $rw0_s = mg_pricelist_get( 'mg_dailytour:'.$id , $pp_id ) ){
-				$price_array[ $pp_id ]['name'] = $pp_name;
-				foreach( $rw0_s as $rw0 ){
-					$rw0['price'] = mg_cost_after_offrate( $rw0['price'] );
-					$price_array[ $pp_id ]['items'][ $rw0['more_than'] ] = $rw0['price'];
-				}
-				for( $i=0; $i<=40; $i++ ){
-					if( $price_array[ $pp_id ]['items'][ $i ] ){
-						$cost_tmp = $price_array[ $pp_id ]['items'][ $i ];
-					}
-					$price_array[ $pp_id ]['items'][ $i ] = $cost_tmp;
+		# price
+		foreach( cat_display('transfer_vehicle') as $cat_id => $cat_name ){
+			if( $rw_s_price = mg_pricelist_get( 'mg_transfer:'.$rw['id'], $cat_id ) ){
+				foreach( $rw_s_price as $rw_price ){
+					$cat_id = $rw_price['priceper_id'];
+					$name = cat_translate($rw_price['priceper_id']);
+					$v['list_of_vehicles_in_text'][] = trim( explode( '(', $name )[0] );
+					$price = $rw_price['price'];
+					$price = mg_cost_after_offrate($price);
+					$price = billing_format($price);
+					$adult_max = explode( '-', $name )[1];
+					$adult_max = intval( $adult_max );
+					$v['list_of_vehicles'][ $rw_price['id'] ] = [ 'cat_id'=>$cat_id, 'name'=>$name, 'price'=>$price, 'adult_max'=>$adult_max ];
 				}
 			}
 		}
-		$v['price_list'] = $price_array;
+		if( sizeof($v['list_of_vehicles_in_text']) ){
+			$v['list_of_vehicles_in_text'] = implode( ', ', $v['list_of_vehicles_in_text'] );
+		}
 
 		#
 		# date from
@@ -77,19 +76,15 @@ function dailytour_view(){
 
 		#
 		# fix for mobile version - add preName
-		$v['rw']['inclusions'] = '<div class="preName">Inclusions</div>' . $v['rw']['inclusions'];
 		$v['rw']['itinerary'] = '<div class="preName">Itinerary</div>' . $v['rw']['itinerary'];
 		$v['rw']['conditions'] = '<div class="preName">Conditions</div>' . $v['rw']['conditions'];
 		$v['rw']['notes'] = '<div class="preName">Notes</div>' . $v['rw']['notes'];
 
 		#
 		# template
-		echo template_engine( 'dailytour_view', $v );
+		echo template_engine( 'transfer_view', $v );
 
 	}
 
 }
-
-
-
 

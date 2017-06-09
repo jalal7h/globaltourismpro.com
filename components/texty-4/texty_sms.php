@@ -1,8 +1,8 @@
-<?
+<?php
 
 # jalal7h@gmail.com
-# 2017/03/12
-# 3.4
+# 2017/06/09
+# 3.5
 
 /*
 texty_sms( "user" , "user_register_do_sms" , array(
@@ -94,6 +94,13 @@ function texty_sms_this( $to, $content, $vars, $rw_user=null ){
 	} else if(! $content = trim( strip_tags($content) ) ){
 		return false;
 	}
+
+
+	$content = str_replace( 
+		['{tiny_title}','{main_title}'], 
+		[setting('tiny_title'),setting('main_title')], 
+		$content );
+	
 
 	if( $rw_user ){
 		$content = str_replace('{user_cell}', $to, $content);

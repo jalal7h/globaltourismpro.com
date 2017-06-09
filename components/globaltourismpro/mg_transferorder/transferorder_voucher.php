@@ -37,7 +37,7 @@ function transferorder_voucher(){
 			'website_cell'		=> setting('contact_cell') ,
 			'website_fax'		=> setting('contact_fax') ,
 			'website_email'		=> setting('contact_email_address_1') ,
-			'website_address'	=> setting('contact_address') ,
+			'website_address'	=> explode( "\n", setting('contact_address') )[0],
 			'website_logo'		=> _URL.'/'.setting('site_logo') ,
 
 			'itinerary'			=> trim($rw_tr['itinerary']) ,
