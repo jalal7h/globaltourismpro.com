@@ -6,7 +6,7 @@
 
 # table , id cost user_id mgire, va ye record tuye table invoice ezafe mikone.
 
-function billing_invoiceMake( $cost, $order_table="", $order_id=0, $user_id=null ){
+function billing_invoiceMake( $cost, $order_table="", $order_id=0, $user_id=null, $visible=0 ){
 	
 	#
 	# user check
@@ -28,7 +28,7 @@ function billing_invoiceMake( $cost, $order_table="", $order_id=0, $user_id=null
 	
 	#
 	# insert query
-	} else if(! $invoice_id = dbs( 'billing_invoice', [ 'user_id'=>$user_id, 'cost'=>$cost ] ) ){
+	} else if(! $invoice_id = dbs( 'billing_invoice', [ 'user_id'=>$user_id, 'cost'=>$cost, 'visible'=>$visible ] ) ){
 		e();
 
 	#
