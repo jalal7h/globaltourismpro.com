@@ -12,9 +12,12 @@ function listmaker_form_element_this_textarea( $info ){
 	#
 	# tinymce
 	if( strstr( " ".strtolower($info['class'])." ", ' tinymce ') ){
-		$c = '<script src="http://cdn.tinymce.com/4/tinymce.min.js"></script>'.
-			 '<script src="'._URL.'/modules/tinymce/tinymce-set.js"></script>'.
-			 $c;
+		if(! $GLOBALS['listmaker_form_element_this_textarea_include_done'] ){
+			$c = "<script src=\""._URL."/modules/tinymce/tinymce.min.js\"></script>\n".
+				 "<script src=\""._URL."/modules/tinymce/tinymce-set.js\"></script>\n".
+				 $c;
+			$GLOBALS['listmaker_form_element_this_textarea_include_done'] = true;
+		}
 	}
 
 	$id = $info['id'] ? $info['id'] : "lmfe_".$info['formName']."_".$info['name'];
