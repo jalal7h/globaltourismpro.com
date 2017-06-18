@@ -39,6 +39,7 @@ da7e1b55 Week
 354c30ea Month
 eb83e5b3 Year
 04d94563 Total
+efd23fb1 Submit new invoice for %%
 cc81d9ee zero
 ac6a95ac Payment
 2b426822 Credit
@@ -281,7 +282,10 @@ f54b8fb7 Submitting the login form you are agreeing the %%website terms%%.
 b29d0f2f List of clients
 e44ed5a6 Client invoices list
 e458c88b Are you sure to remove all related data this client?
+46c4fec8 Invoices
+8c547dcb New invoice
 6ac74e4f Client details
+e82bbb43 List of invoices
 3506048c Male
 c8f5608d Female
 ccd79fee Problem saving the changes.

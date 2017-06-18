@@ -17,7 +17,6 @@ function billing_management_user(){
 	# list
 	# --------------------------------------------
 	echo listmaker_list([
-		// 'head' => 'List of Products',
 		'table' => 'user',
 		'where' => [ 'permission'=>0 ],
 		'order' => [ 'id' => 'desc' ],

@@ -31,6 +31,9 @@ function tket_Form( $list ){
 			"rw" => table("tket", $_REQUEST["tket_id"]),
 		!]
 			
+			<div>'.__('%% جدید', [ tket_name($list['type'])[0] ]).'</div>
+			<hr>
+
 			'.( $cat_name ? '[!"select:cat*", "option"=>cat_display("'.$cat_name.'")!]' : '' ).'			
 			
 			'.( is_numeric($list['add']) 

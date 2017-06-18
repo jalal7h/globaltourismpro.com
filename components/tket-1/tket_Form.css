@@ -3,17 +3,23 @@
 	padding: 30px 0px;
 }
 .tket_Form .lmfe_tnit {
-	width: 13%;
+	width: 190px;
 	vertical-align: top;
-	padding-top: 10px;
+	padding-top: 8px;
+	font-size: 14px;
 }
 #lmfe_tket_Form_user_id {
-	width: 75%;
+	width: calc( 100% - 380px );
 }
 #lmfe_tket_Form_name {
-	width: 75%;
+	width: calc( 100% - 380px );
+	font-size: 14px;
+	padding: 10px;
+	text-transform: uppercase;
 }
 #lmfe_tket_Form_text {
-	width: 75%;
+	width: calc( 100% - 380px );
 	height: 200px;
+	font-size: 16px;
+	padding: 10px;
 }

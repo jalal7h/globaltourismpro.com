@@ -6,6 +6,16 @@
 
 function billing_management_user_invoicelist(){
 	
+	switch ($_REQUEST['do2']) {
+		
+		case 'form':
+			return billing_management_user_invoicelist_newForm();
+		
+		case 'saveEdit':
+			billing_management_user_invoicelist_saveForm();
+
+	}
+
 	$p = intval($_REQUEST['p']);
 	$tdd = 10;
 	$stt = $p * $tdd;
