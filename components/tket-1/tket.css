@@ -1,0 +1,22 @@
+
+#listmaker_list_tket_form .linkToFA.disabled {
+	/* display: none; */
+}
+#listmaker_list_tket_form div.tket_isNew {
+	font-weight: bold;
+	color: #111;
+	font-size: 13px;
+}
+
+.listmaker_list.tket td:nth-child(2) ,
+.listmaker_list.tket td:nth-child(3) ,
+.listmaker_list.tket td:nth-child(4) {
+	text-align: center;
+}
+
+.userpanel_desk_wrap .tket_view #lmfe_form8d64e0_text {
+	box-shadow: 0 0 15px rgba(0, 0, 0, 0.13);
+}
+.userpanel_desk_wrap .tket_view .post {
+	box-shadow: 0 0 15px rgba(0, 0, 0, 0.13);
+}

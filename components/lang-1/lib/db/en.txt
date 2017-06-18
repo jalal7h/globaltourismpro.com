@@ -39,13 +39,13 @@ da7e1b55 Week
 354c30ea Month
 eb83e5b3 Year
 04d94563 Total
+cc81d9ee zero
 ac6a95ac Payment
 2b426822 Credit
 4e53a284 There is no invoice for this user.
 3da08e3b Offline Payment
 824a51f6 Pay From Wallet
 0cf0ecae Online Payment
-cc81d9ee zero
 9636700d Invoices
 c311e3d4 Wallet
 7e9c1013 Payment Method
@@ -58,7 +58,6 @@ bf7338d8 The invoice #%% already paid!
 0094d1d6 Redirecting to payment gateway ...
 355d7c8d Charge Balance for
 f09bc22b Please first login
-b3c0d659 List of %%
 315f6f05 Section
 810a480e Favorites
 66d8d034 Removed
@@ -91,6 +90,7 @@ be7f4d51 Your comment ...
 29614831 Send
 af85fe78 Only members can submit comments. please %%register now%%.
 f6e88fe7 Abuse report
+b3c0d659 List of %%
 3d475b15 about the
 6cb8ef4b There is %%<b>%%</b> new comment(s)%% waiting to be confirmed.
 921c28be 0 : Disabled
@@ -98,6 +98,15 @@ f107aa4d Last comments
 489d9389 About
 f270a358 in reply to
 42b0450b said
+c7eb22b5 Please fill the form correctly
+cb6dca29 Back
+698d8496 No record found.
+8020c2e1 This option is not refundable
+6a93facb This option is refundable and amendable, please see Cancellation Policy: This service can be cancelled without any penalties %% day(s) prior to first service date.
+82cee7fd Please fill the form correctly.
+d1b3b25f Arrival
+c40031ef Departure
+24b3d7f0 Round Trip
 fbe80dcb List of keywords
 3933cdc2 Submit new keyword
 58822fec Keyword submit
@@ -158,15 +167,7 @@ ca4979c3 Modify %%
 e4966c5f All changes saved.
 955d9b64 remove file
 abc02e7a full display
-c7eb22b5 Please fill the form correctly
-cb6dca29 Back
-698d8496 No record found.
-8020c2e1 This option is not refundable
-6a93facb This option is refundable and amendable, please see Cancellation Policy: This service can be cancelled without any penalties %% day(s) prior to first service date.
-82cee7fd Please fill the form correctly.
-d1b3b25f Arrival
-c40031ef Departure
-24b3d7f0 Round Trip
+0f12fb6c Please enable the cache service.
 7f5b5876 Site news
 4e919b57 view
 c8162bc0 No news found!
@@ -221,31 +222,11 @@ a08923b5 Absent client
 98f8766a %%'s email body
 07e83fa9 %%'s SMS
 8cb85f2c Variables used in messages
+6f8c5613 List of Default Prompt
 22506e07 All changes about the messages of <b>%%</b> have been saved.
-2e8512de Select
-9c3dd9ce Ticket destination
-51b2ffd9 Message
-47823995 status
-da5862d7 Date
-e51640bb Move to archive
-8c17399e Are you sure to archive this message?
-d31a0360 Active Tickets
-d72208cd Closed Tickets
-10d22eb5 No ticket submitted.
-82331ebe Closed
-1089eac3 Awaiting reply
-6aedaf47 Replied
-cba555d3 Ask seller
-587b7bed Buyer's quiestion
-d37f2d4c my question from %%
-5b27dfe9 %%'s quiestion from me
-5a753c17 Support Ticket
-7b6302cd System
-0d43d94b Type
-bbf6a4af item
-712aec15 There is no %% with ID of #%%.
-664f9e09 You are not allowed to see this page.
-e213f2a2 Some problems on insertion.
+373c0b41 Ticket/Tickets
+2a8d503d Tickets
+10d22eb5 No new ticket found.
 25944152 months later
 9681eb70 days later
 b5d547af hours later
@@ -256,6 +237,21 @@ b5d547af hours later
 76a00a28 hours ago
 d9c05ef0 minutes ago
 0a3e6f22 seconds ago
+47823995 status
+1b1daa46 Open
+82331ebe Closed
+a6c5b796 Pull out from archive
+b9b667a5 Are you sure to pull this %% out of archive?
+e51640bb Move to archive
+2f7739fb Are you sure to archive this %%?
+da5862d7 Date
+0c61eaee Send to
+5dbc476d Content of %%
+1089eac3 Awaiting reply
+5a5086c1 Replied
+712aec15 There is no %% with ID of #%%.
+664f9e09 You are not allowed to see this page.
+e213f2a2 Some problems on insertion.
 65d21c61 List of Administrators
 3be75adb Submit a new manager
 82991df9 date of registration
@@ -324,15 +320,16 @@ ddc659a4 Accounting
 1ccc4798 Contact
 4fbe1747 FAQ
 b49ff84d comments
-a3b9cda1 Keywords
-33d10611 Layout
-74fe9d9c Link Boxes
-5cc4b7bf Sponsors
+5cdb4fd7 Custom Requests
 23b3205c Daily Tours
 1c55e92a DailyTour Bookings
 4f74e2d4 Transfers
 4fe9ced9 Transfer Bookings
 9494b053 Visa Requests
+a3b9cda1 Keywords
+33d10611 Layout
+74fe9d9c Link Boxes
+5cc4b7bf Sponsors
 9bf69a29 Position
 5b976d90 Posts
 b0cb73f9 Setting
@@ -354,7 +351,6 @@ d10c0899 List of posts
 bb3d7c0e Registration Form
 7a56609b Client ID Verification
 e290249c Dashboard
-dc77044f Tickets
 1335703e Logout
 d8cf8c26 Change password
 7539b2b2 Register in newsletter
@@ -374,7 +370,6 @@ e5b547e0 News Category
 26e1a975 Post Category
 f1baf12f Ticket categories
 0d6394da Paypal
-2a8d503d Tickets
 440ec58e ID
 6bc110d6 Client ID
 f11051b2 Order Table
@@ -395,6 +390,7 @@ aefb3531 Icon
 60787b8e Cell number
 0c05af2c Destination
 05d8c03c Title of the Ticket
+51b2ffd9 Message
 8ab5301d Date
 abce1a9b question
 bb25700d answer
@@ -434,6 +430,7 @@ cbeecc71 Post image
 bff34bff Post images
 09b157e6 slide
 99dc45e6 slides
+0d43d94b Type
 3258527f Content
 e1942777 grid
 c8fd656e Priority
@@ -443,9 +440,6 @@ c07dd5bd Email subject
 d0aaf81e Admin's email subject
 b3489827 Admin's email body
 eff3be72 Admin's SMS
-0921ab1a Ticket
-ce9bc533 Tickets
-996c9a16 Ticket Message
 86c0e83f password
 fba026ab Phone
 6c392887 Address
@@ -492,14 +486,13 @@ def0817d Order payment confirm
 78573730 Order by
 36264dfc Pay via balance credit
 76d4895f Contact us form
-dbfff9df Support ticket - send reply
-5c49b154 Message sender
+cdf224ac Ticket - Reply from Administrator
 7c470f39 Message receiver
 23718416 Support ticket - new ticket by admin
 7b1a7613 Message receiver client
 e6eebf4c Support ticket - new ticket by user
 6d72db8b Message sender client
-e8a77cf8 Client to cilent - send reply
+9f652bd7 Ticket - Reply from User
 0e6ede08 Edit client profile
 78c2e5d6 New Transfer Order
 d6fc31f4 New Daily Tour Order
@@ -522,12 +515,11 @@ c5a076d5 send to
 06a19b35 Page not found!
 cfe93a08 So sorry, but you are not allowed to view this page.
 9592af8c Home page
-fe40b196 Wrap in frame
 070fd73f Booking Info
 d53fd7f5 Service Date
 f5212458 Traveller(s)
 0cc4b6d4 Total Purchase
-7f8b03cf Daily Tour's Info
+78200b65 Traveller's Info
 17c078b6 Tour Leader's Name
 bc3b3f5a Departure Time
 be071232 Departure Point
@@ -547,7 +539,6 @@ ac5fd28c Book now
 1b40c52f Arrival Date
 df4346d8 Departure Date
 e02d9685 Adult(s)
-78200b65 Traveller's Info
 246c4f05 Arrival Detail
 951a7576 Airline / Cruise / Boat / Train Name
 308dea5e Code
@@ -558,6 +549,7 @@ ba9d0d5d Departure Detail
 ce38a19e What time do you wish to be picked up from your address/hotel ?
 aabd1f27 Price
 86f03225 Per Vehicle
+fe40b196 Wrap in frame
 44ee9f11 Please insert your email address to receive the latest updates in your mail inbox.
 3448856f Post type
 d0191765 Categories

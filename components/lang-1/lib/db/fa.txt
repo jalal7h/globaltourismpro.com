@@ -39,13 +39,13 @@ da7e1b55 هفته
 354c30ea ماه
 eb83e5b3 سال
 04d94563 کل
+cc81d9ee صفر
 ac6a95ac پرداخت
 2b426822 اعتبار
 4e53a284 هنوز صورتحسابی برای این کاربر ثبت نشده است.
 3da08e3b پرداخت فیش بانکی
 824a51f6 پرداخت از اعتبار
 0cf0ecae پرداخت آنلاین
-cc81d9ee صفر
 9636700d صورتحساب ها
 c311e3d4 کیف پول
 7e9c1013 نحوه پرداخت
@@ -58,7 +58,6 @@ bf7338d8 صورتحساب با شناسه %% قبلا اعتبار‌سنجی ش
 0094d1d6 درحال انتقال به درگاه بانک ..
 355d7c8d Charge Balance for
 f09bc22b لطفا ابتدا وارد سایت شوید.
-b3c0d659 لیست %%
 315f6f05 بخش
 810a480e علاقه مندی ها
 66d8d034 حذف شده
@@ -91,6 +90,7 @@ be7f4d51 نظر شما ...
 29614831 ارسال
 af85fe78 ثبت نظر فقط برای کاربران سایت مجاز است.<br>برای ادامه %%ثبت نام%% کنید.
 f6e88fe7 گزارش تخلف
+b3c0d659 لیست %%
 3d475b15 درباره
 6cb8ef4b درحال حاضر %% %% نظر جدید%% منتظر تایید شماست.
 921c28be مقدار 0 : غیرفعال
@@ -98,6 +98,15 @@ f107aa4d آخرین نظرات
 489d9389 در مورد
 f270a358 در جواب
 42b0450b گفت
+c7eb22b5 Please fill the form correctly
+cb6dca29 Back
+698d8496 No record found.
+8020c2e1 This option is not refundable
+6a93facb This option is refundable and amendable, please see Cancellation Policy: This service can be cancelled without any penalties %% day(s) prior to first service date.
+82cee7fd Please fill the form correctly.
+d1b3b25f Arrival
+c40031ef Departure
+24b3d7f0 Round Trip
 fbe80dcb لیست کلمات
 3933cdc2 ثبت کلمه جدید
 58822fec ثبت کلمات کلیدی !
@@ -158,15 +167,7 @@ ca4979c3 ویرایش %%
 e4966c5f تغییرات ثبت شد.
 955d9b64 حذف فایل
 abc02e7a نمایش کامل
-c7eb22b5 Please fill the form correctly
-cb6dca29 Back
-698d8496 No record found.
-8020c2e1 This option is not refundable
-6a93facb This option is refundable and amendable, please see Cancellation Policy: This service can be cancelled without any penalties %% day(s) prior to first service date.
-82cee7fd Please fill the form correctly.
-d1b3b25f Arrival
-c40031ef Departure
-24b3d7f0 Round Trip
+0f12fb6c لطفا سرویس cache را فعال کنید
 7f5b5876 اخبار سایت
 4e919b57 بازدید
 c8162bc0 خبری نیست!
@@ -221,31 +222,11 @@ a08923b5 کاربر غایب
 98f8766a متن ایمیل %%
 07e83fa9 پیامک %%
 8cb85f2c متغیرهای مورد استفاده در این پیام ها
+6f8c5613 لیست پیام‌های پیشفرض
 22506e07 تغییرات مربوط به پیام های <b>%%</b> ثبت شد
-2e8512de انتخاب کنید
-9c3dd9ce گیرنده پیام
-51b2ffd9 متن پیام
-47823995 وضعیت
-da5862d7 تاریخ
-e51640bb انتقال به آرشیو
-8c17399e آیا مایل به انتقال این پیام به آرشیو هستید؟
-d31a0360 پیامهای فعال
-d72208cd آرشیو پیام‌ها
+373c0b41 تیکت/تیکت‌ها
+2a8d503d تیکت‌ها
 10d22eb5 هنوز تیکتی ثبت نشده است.
-82331ebe بسته شده
-1089eac3 منتظر پاسخ
-6aedaf47 پاسخ‌داده
-cba555d3 سوال من از فروشنده
-587b7bed سوال خریدار از من
-d37f2d4c سوال من از %%
-5b27dfe9 سوال %% از من
-5a753c17 پشتیبانی
-7b6302cd سیستمی
-0d43d94b نوع
-bbf6a4af آیتم
-712aec15 %% با شناسه #%% ثبت نشده است.
-664f9e09 شما دسترسی لازم برای مشاهده این صفحه را ندارید.
-e213f2a2 اختلال در ثبت.
 25944152 ماه بعد
 9681eb70 روز بعد
 b5d547af ساعت بعد
@@ -256,6 +237,21 @@ b5d547af ساعت بعد
 76a00a28 ساعت قبل
 d9c05ef0 دقیقه قبل
 0a3e6f22 ثانیه قبل
+47823995 وضعیت
+1b1daa46 باز
+82331ebe بسته شده
+a6c5b796 خروج از آرشیو
+b9b667a5 آیا مایل به خارج کردن این %% از آرشیو هستید؟
+e51640bb انتقال به آرشیو
+2f7739fb آیا مایل به انتقال این %% به آرشیو هستید؟
+da5862d7 تاریخ
+0c61eaee ارسال به
+5dbc476d متن %%
+1089eac3 منتظر پاسخ
+5a5086c1 پاسخ‌ داده
+712aec15 %% با شناسه #%% ثبت نشده است.
+664f9e09 شما دسترسی لازم برای مشاهده این صفحه را ندارید.
+e213f2a2 اختلال در ثبت.
 65d21c61 لیست مدیران
 3be75adb ثبت مدیر جدید
 82991df9 زمان ثبت‌نام
@@ -324,15 +320,16 @@ ddc659a4 حسابداری
 1ccc4798 ارتباط با ما
 4fbe1747 سوالات متداول
 b49ff84d نظرات
-a3b9cda1 کلمات کلیدی
-33d10611 طرح صفحه
-74fe9d9c جعبه های پیوند
-5cc4b7bf اسپانسرها
+5cdb4fd7 Custom Requests
 23b3205c Daily Tours
 1c55e92a DailyTour Bookings
 4f74e2d4 Transfers
 4fe9ced9 Transfer Bookings
 9494b053 Visa Requests
+a3b9cda1 کلمات کلیدی
+33d10611 طرح صفحه
+74fe9d9c جعبه های پیوند
+5cc4b7bf اسپانسرها
 9bf69a29 موقعیت
 5b976d90 نوشته‌ها
 b0cb73f9 تنظيمات
@@ -354,7 +351,6 @@ d10c0899 لیست پست‌ها
 bb3d7c0e فرم ثبت نام
 7a56609b تایید شناسه کاربر
 e290249c Dashboard
-dc77044f پیام ها
 1335703e خروج
 d8cf8c26 تغییر رمز عبور
 7539b2b2 عضویت در خبرنامه
@@ -374,7 +370,6 @@ e5b547e0 دسته‌بندی خبر
 26e1a975 دسته پست‌ها
 f1baf12f دسته‌بندی پیام‌ها
 0d6394da Paypal
-2a8d503d تیکت‌ها
 440ec58e شناسه
 6bc110d6 شناسه کاربر
 f11051b2 جدول سفارش
@@ -395,6 +390,7 @@ aefb3531 آیکن
 60787b8e تلفن همراه
 0c05af2c مقصد
 05d8c03c عنوان پیام
+51b2ffd9 متن پیام
 8ab5301d زمان
 abce1a9b عنوان مسئله
 bb25700d پاسخ مسئله
@@ -434,6 +430,7 @@ cbeecc71 تصویر پست
 bff34bff تصاویر پست
 09b157e6 اسلاید
 99dc45e6 اسلاید‌ها
+0d43d94b نوع
 3258527f محتوا
 e1942777 فضا
 c8fd656e اولویت
@@ -443,9 +440,6 @@ c07dd5bd عنوان ایمیل
 d0aaf81e عنوان ایمیل مدیر
 b3489827 متن ایمیل مدیر
 eff3be72 متن پیامک مدیر
-0921ab1a پیام
-ce9bc533 پیام‌ها
-996c9a16 متن درخواست
 86c0e83f کلمه عبور
 fba026ab تلفن ثابت
 6c392887 آدرس
@@ -492,14 +486,13 @@ def0817d تایید پرداخت سفارش
 78573730 سفارش‌دهنده
 36264dfc پرداخت بواسطه کیف پول
 76d4895f فرم تماس
-dbfff9df تیکت پشتیبانی - ارسال پاسخ
-5c49b154 ارسال‌کننده پیام
+cdf224ac تیکت پشتیبانی - پاسخ از مدیریت
 7c470f39 دریافت‌کننده پیام
 23718416 تیکت پشتیبانی - ثبت توسط مدیر
 7b1a7613 کاربر گیرنده پیام
 e6eebf4c تیکت پشتیبانی - ثبت توسط کاربر
 6d72db8b کاربر ارسال‌کننده پیام
-e8a77cf8 پیام کاربر به کاربر - ارسال پاسخ
+9f652bd7 تیکت پشتیبانی - پاسخ از کاربر
 0e6ede08 ویرایش پروفایل
 78c2e5d6 New Transfer Order
 d6fc31f4 New Daily Tour Order
@@ -522,12 +515,11 @@ c5a076d5 ارتباط با
 06a19b35 صفحه مورد نظر یافت نشد
 cfe93a08 با عرض پوزش، شما به یک صفحه که وجود ندارد و یا منتقل شده دسترسی پیدا کرده اید
 9592af8c صفحه اول
-fe40b196 فريم اضافه شود
 070fd73f Booking Info
 d53fd7f5 Service Date
 f5212458 Traveller(s)
 0cc4b6d4 Total Purchase
-7f8b03cf Daily Tour's Info
+78200b65 Traveller's Info
 17c078b6 Tour Leader's Name
 bc3b3f5a Departure Time
 be071232 Departure Point
@@ -547,7 +539,6 @@ ac5fd28c Book now
 1b40c52f Arrival Date
 df4346d8 Departure Date
 e02d9685 Adult(s)
-78200b65 Traveller's Info
 246c4f05 Arrival Detail
 951a7576 Airline / Cruise / Boat / Train Name
 308dea5e Code
@@ -558,6 +549,7 @@ ba9d0d5d Departure Detail
 ce38a19e What time do you wish to be picked up from your address/hotel ?
 aabd1f27 Price
 86f03225 Per Vehicle
+fe40b196 فريم اضافه شود
 44ee9f11 ایمیل خود را در سایت ثبت کنید.<br>تا آخرین تغییرات برای شما ارسال گردد.
 3448856f نوع پست
 d0191765 دسته‌بندی ها

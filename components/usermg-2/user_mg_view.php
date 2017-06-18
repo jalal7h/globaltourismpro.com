@@ -17,6 +17,7 @@ function user_mg_view(){
 		echo "<div class=\"user_mg_view_head\"><a href=\""._URL."/admin/user\">".__('لیست کاربران')."</a> &nbsp; » &nbsp; #".$rw_user['id']." - ".$rw_user['name']."</div>";
 
 		$tabmenu_items[ "user_mg_view_main" ] = __("مشخصات کاربر");
+		
 		if( sizeof($GLOBALS['adminusertab']) ){
 			foreach( $GLOBALS['adminusertab'] as $func => $name ){
 				$tabmenu_items[ $func ] = $name;

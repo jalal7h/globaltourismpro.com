@@ -1,8 +1,8 @@
-<?
+<?php
 
 # jalal7h@gmail.com
-# 2017/05/30
-# 1.1
+# 2017/06/10
+# 1.3
 
 function billing_management_user(){
 	
@@ -15,25 +15,25 @@ function billing_management_user(){
 
 	#
 	# list
-	$list['query'] = " SELECT * FROM `user` WHERE `permission`='0' ORDER BY `id` DESC ";
-	
-	$list['target_url'] = '_URL."/admin/billing/user/".$rw["id"]';
-	$list['paging_url'] = '_URL."/?page=".$_REQUEST["page"]."&cp=".$_REQUEST["cp"]."&func=".$_REQUEST["func"]';
-	$list['addnew_url'] = false;
-	
-	$list['list_array'] = array(
-		#
-		# name
-		array( "head" => lmtc('user:name') , "content" => '"<span title=\'".$rw[\'email\']."\'>".$rw["name"]."</span>"' , "attr" => array( "width" => "200px" , "align" => 'center' , "dir" => _rtl) ),
-		#
-		# payments
-		array( "head" => __("پرداخت") , "content" => 'billing_format(intval(dbr(dbq(" SELECT SUM(`cost`) FROM `billing_invoice` WHERE `user_id`=\'".$rw[\'id\']."\' AND `date`>0 AND `method`!=\'wallet\' "),0,0)))' , "attr" => array( "align" => 'right',"dir" => _rtl) ),
-		#
-		# credit
-		array( "head" => __("اعتبار") , "content" => 'billing_format(billing_userCredit($rw["id"]))' , "attr" => array( "align" => 'right',"dir" => _rtl) ),
-	);
-
-	echo listmaker_list($list);
+	# --------------------------------------------
+	echo listmaker_list([
+		// 'head' => 'List of Products',
+		'table' => 'user',
+		'where' => [ 'permission'=>0 ],
+		'order' => [ 'id' => 'desc' ],
+		'limit' => 10,
+		'url' => [
+			'base' => '_URL."/?page=admin&cp='.$_REQUEST['cp'].'&func='.$_REQUEST['func'].'"', // *
+			'target' => '_URL."/admin/billing/user/".$rw["id"]',
+		],
+		'item' => [
+			[ '"<span title=\'".$rw[\'email\']."\'>".$rw["name"]."</span>"', "head"=>lmtc('user:name') ],
+			[ '( billing_userPayments($rw["id"]) ? billing_format(billing_userPayments($rw["id"])) : "'.__('صفر').'")', "head"=>__("پرداخت") ],
+			[ '( billing_userCredit($rw["id"]) ? billing_format(billing_userCredit($rw["id"])) : "'.__('صفر').'")', "head"=>__("اعتبار") ],
+		],
+		'search' => [ 'name', 'email' ],
+	]);
+	# --------------------------------------------
 
 }
 

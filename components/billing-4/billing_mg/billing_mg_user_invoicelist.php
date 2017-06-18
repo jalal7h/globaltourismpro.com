@@ -1,8 +1,8 @@
-<?
+<?php
 
 # jalal7h@gmail.com
-# 2017/05/30
-# 1.3
+# 2017/06/10
+# 1.4
 
 function billing_management_user_invoicelist(){
 	
@@ -24,8 +24,11 @@ function billing_management_user_invoicelist(){
 	
 	} else {
 
-		$user->credit = billing_format( billing_userCredit( $user_id ) );
-		$user->payments = billing_format( billing_userPayments( $user_id ) );
+		$user->credit = billing_userCredit( $user_id );
+		$user->credit = $user->credit ? billing_format($user->credit) : __('صفر');
+
+		$user->payments = billing_userPayments( $user_id );
+		$user->payments = $user->payments ? billing_format($user->payments) : __('صفر');
 
 		while( $rw = dbf($rs) ){
 			$invoice = (object) $rw;

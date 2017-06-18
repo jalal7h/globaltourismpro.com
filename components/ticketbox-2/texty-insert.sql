@@ -1,0 +1,12 @@
+
+INSERT INTO `texty` ( `slug`, `name`, `prompt`, `user_title`, `user_email_subject`, `user_email_content`, `user_sms`, `user2_title`, `user2_email_subject`, `user2_email_content`, `user2_sms`, `admin_email_subject`, `admin_email_content`, `admin_sms`, `flagstring`, `vars`, `flag`) VALUES
+
+( 'ticketbox_CreateNew_byAdmin', 'تیکت جدید - ثبت توسط مدیر', 'تیکت جدید با موفقیت برای {user_name} ارسال شد.', '', '', '', '', 'کاربر گیرنده پیام', 'تیکت جدید از مدیریت', 'با سلام\r\nکاربر گرامی {user_name}، \r\nاز طرف مدیریت سایت تیکت جدید با عنوان \"{ticket_name}\" برای شما ارسال شده است.\r\nبرای مشاهده تیکت از آدرس زیر اقدام نمائید.\r\n{ticket_link}\r\n\r\nبا تشکر\r\n{tiny_title}', 'تیکت جدید برای شما با عنوان \"{ticket_name}\"', '', '', '', '1001100', 'ticket_id ticket_name ticket_link', 1),
+
+( 'ticketbox_CreateNew_byUser', 'تیکت جدید - ثبت توسط کاربر', 'کاربر گرامی، تیکت شما ثبت شده و در اولین فرصت پاسخ داده خواهد شد.', 'کاربر ارسال‌کننده پیام', 'تیکت #{ticket_id}', 'با سلام،\r\nکاربر گرامی {user_name}، تیکت شما با عنوان \"{ticket_name}\" ثبت شده و درحال بررسی میباشد.\r\nلطفا منتظر پاسخ از طرف مسئولین سایت بمانید.\r\n\r\n{ticket_link}\r\n\r\nبا تشکر\r\n{tiny_title}', 'تیکت شما با شناسه #{ticket_id} ثبت شد.', '', '', '', '', 'تیکت جدید با شناسه #{ticket_id} ثبت شد.', 'با سلام، \r\nتیکت جدید با عنوان \"{ticket_name}\" از طرف \"{user_name}\" ثبت شده است.\r\n{ticket_adminlink}\r\nبا تشکر', 'تیکت جدید از \"{user_name}\" با موضوع \"{ticket_name}\"', '1110011', 'ticket_id ticket_name ticket_link ticket_adminlink', 1),
+
+( 'ticketbox_view_save_byAdmin', 'تیکت پشتیبانی - پاسخ از مدیریت', '', '', '', '', '', 'دریافت‌کننده پیام', 'پاسخ جدید برای تیکت #{ticket_id}', 'با سلام،\r\n\r\nکاربرا گرامی \"{user_name}\"، درخواست پشتیبانی شما به شناسه #{ticket_id} با موفقیت ثبت شد.\r\nلطفا منتظر دریافت پاسخ بمانید.\r\n\r\n{ticket_link}\r\n\r\nبا تشکر\r\n{tiny_title}', 'با سلام\r\nتیکت شما به شناسه #{ticket_id} ثبت شد و در اولین فرصت پاسخ داده خواهد شد.', '', '', '', '0001100', 'ticket_id ticket_name ticket_cat ticket_link', 1),
+
+( 'ticketbox_view_save_byUser', 'تیکت پشتیبانی - پاسخ از کاربر', '', '', '', '', '', '', '', '', '', 'تیکت جدید توسط {user_name}\r\n', 'با سلام،\r\n\r\nپاسخ جدید برای تیکت \"{tickt_name}\" توسط \"{user_name}\" در دسته {ticket_cat} ثبت شده است.\r\n{ticket_adminlink}\r\n\r\nبا تشکر', 'تیکت جدید، توسط {user_name}\r\nعنوان تیکت : {ticket_name}', '0000011', 'ticket_id ticket_name ticket_cat ticket_adminlink user_name', 1);
+
+--spi--

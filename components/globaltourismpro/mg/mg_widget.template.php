@@ -21,6 +21,11 @@
 		<a href="{_URL}/admin/visa" target="_blank"><b>{visa}</b> new visa request<?=( $visa>1 ? 's' : '' )?></a>
 	<?endif?>
 
+	<?if( $customrequest ):?>
+		<?if( $dailytours or $transfers or $visa ):?>and<?endif?>
+		<a href="{_URL}/admin/customrequest" target="_blank"><b>{customrequest}</b> new custom request<?=( $customrequest>1 ? 's' : '' )?></a>
+	<?endif?>
+
 	waiting for finalise.
 
 </div>
