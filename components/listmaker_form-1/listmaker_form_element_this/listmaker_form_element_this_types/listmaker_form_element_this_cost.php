@@ -22,14 +22,14 @@ function listmaker_form_element_this_cost( $info ){
 		$unit = " ".trim($unit);
 	}
 
-	$c.= $info['PreTab']."<input autocomplete=\"off\" type=\"text\" ".
+	$c.= "<input autocomplete=\"off\" type=\"text\" ".
 		"name=\"".$info['name'].( $info['ArrayInput'] ? '[]' : '' )."\" ".
 		"id=\"".$id."\" ".
 		( $info['class'] ? "class=\"".$info['class']." numeric\" " : '' ).
 		( $info['etc'] ? $info['etc']." " : '' ).
 		( $info['value'] ? "value=\"".$info['value']."\" " : '' ).
 		( $info['TitleInTag'] ? "placeholder=\"".$info['placeholder']."\" " : '' ).
-		"/>".$unit."\n";
+		"/><span class=\"lmfe_cost_unit\">".$unit."</span>\n";
 
 	return $c;
 	
