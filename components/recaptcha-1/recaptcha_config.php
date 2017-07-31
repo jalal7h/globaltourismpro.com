@@ -1,12 +1,11 @@
 <?php
 
 # jalal7h@gmail.com
-# 2017/05/11
-# 1.1
+# 2017/07/31
+# 1.2
 
 # --spi--
 
-define( 'recaptcha_public_key' , '6LcC7SAUAAAAAEttuK0ZLo3M2qtGRB1qIdt46Rit' );
-define( 'recaptcha_secred_key' , '6LcC7SAUAAAAANZY8RxgiCzIGeBHuiHq2QQp1KV6' );
-
+define( 'recaptcha_public_key' , '6LdcwCAUAAAAAAaM3SY5aOvQi_4asB9aHSbma2eg' );
+define( 'recaptcha_secred_key' , '6LdcwCAUAAAAADRkSESdpGhg89Q__uqc8xHcAm0o' );
 
