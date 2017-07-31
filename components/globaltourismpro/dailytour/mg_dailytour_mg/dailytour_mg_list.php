@@ -1,8 +1,8 @@
-<?
+<?php
 
 # jalal7h@gmail.com
-# 2017/01/22
-# 1.1
+# 2017/07/31
+# 1.2
 
 function dailytour_mg_list(){
 
@@ -38,6 +38,7 @@ function dailytour_mg_list(){
 	echo listmaker_list([
 		'head' => 'List of Daily Tours',
 		'table' => 'mg_dailytour',
+		'where' => ( is_master() ? [] : [ 'owner'=>admin_logged() ] ),
 		'order' => [ 'id' => 'desc' ],
 		'limit' => 5,
 		'url' => [

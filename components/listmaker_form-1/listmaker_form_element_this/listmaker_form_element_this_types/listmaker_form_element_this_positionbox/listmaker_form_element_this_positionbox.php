@@ -1,11 +1,11 @@
-<?
+<?php
 
 # jalal7h@gmail.com
-# 2017/06/04
-# 1.1
+# 2017/07/30
+# 1.3
 
 function listmaker_form_element_this_positionbox( $info ){
-
+// echo $info['class'];die();
 	if(! sizeof($GLOBALS['position_config']) ){
 		e();
 
@@ -18,10 +18,17 @@ function listmaker_form_element_this_positionbox( $info ){
 		add_js_footer( bysideme().'/listmaker_form_element_this_positionbox.exclude.js' );
 
 		if(! $info['value'] ){
-			$position_name = __("انتخاب")." ".$info['placeholder'];
+			if(! $info['placeholder'] ){
+				$position_name = __("انتخاب");
+			} else {
+				$position_name = $info['placeholder'];
+			}
 		} else {
 			$position_name = positionjson_get_title_serial( $info['value'] );	
 		}
+
+		$info['class'] = trim(str_replace( 'lmfe_isNeeded', '', $info['class']));
+		$info['class'].= ' lmfe_positionbox';
 
 		$c.= "
 		<span class='lmfe_positionbox_c' >
@@ -29,9 +36,10 @@ function listmaker_form_element_this_positionbox( $info ){
 				".($info['isNeeded']?'class="lmfe_isNeeded"':'')." 
 				type=\"hidden\" 
 				name=\"".$info['name'].( $info['ArrayInput'] ? '[]' : '' )."\" 
-				value=\"".( $info['value'] ? $info['value'] : '0' )."\" 
+				value=\"".( $info['value'] ? $info['value'] : '0' )."\"
+				".( $info['etc'] ? $info['etc']." " : '' )."
 				/>
-			<span class='lmfe_positionbox' lang_select='".__('انتخاب')."' lang_back='".__('بازگشت')."' >".$position_name."</span>
+			<span class='".$info['class']."' lang_select='' lang_back='".__('بازگشت')."' >".$position_name."</span>
 		</span>";
 		
 		return $c;

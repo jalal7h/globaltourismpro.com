@@ -1,8 +1,8 @@
 <?php
 
 # jalal7h@gmail.com
-# 2017/01/22
-# 1.1
+# 2017/07/31
+# 1.2
 
 function dailytour_mg_saveNew(){
 
@@ -21,7 +21,7 @@ function dailytour_mg_saveNew(){
 
     #
     # update the database
-    $id = dbs( 'mg_dailytour', ['name','position_id','serviceBasis_id','departs_id','duration','highlights','language','itinerary','inclusions','conditions','notes','date_from','date_to','departure_central_flag','departure_central_point','departure_central_time','deathline','reservation','flag'=>1] );
+    $id = dbs( 'mg_dailytour', ['name','position_id','serviceBasis_id','departs_id','duration','highlights','language','itinerary','inclusions','conditions','notes','date_from','date_to','departure_central_flag','departure_central_point','departure_central_time','deathline','reservation','flag'=>1, 'owner'=>admin_logged()] );
 
 	# 
 	# set kword

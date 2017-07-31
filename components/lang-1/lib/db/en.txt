@@ -108,14 +108,12 @@ cb6dca29 Back
 d1b3b25f Arrival
 c40031ef Departure
 24b3d7f0 Round Trip
-fbe80dcb List of keywords
-3933cdc2 Submit new keyword
 58822fec Keyword submit
 16e84f36 You can upload the some ".csv" excel file to insert new keywords.<br>also you can use ".txt" files for this purpose.
 9f706a2a Excel or txt file
 0acdc02f %% new keywords submitted.
 4fbe08c7 no new keyword submitted.
-dbe61c8b Remove all selected keywords.
+d6d279e3 List of keywords
 21debabb function %% does not exists
 21fa506e New page ..
 b1fb046e Change the layer title
@@ -130,7 +128,6 @@ fb6a6fe2 The page address should contain the site's domain.
 dbf7bd8b View page
 6b30a4d6 Modification saved successfuly. %%
 440f1f71 You are not allowed to remove this page.
-d1e47ecd Edit name
 184512f5 New layer
 f879902b enable/disable
 6cf9b4a6 Remove
@@ -138,8 +135,10 @@ f879902b enable/disable
 d501f5e9 Remove unsuccessful. Something wrong !
 514649c5 You are not allowed to remove this layer.
 a6b33b42 Error in remove.
+d1e47ecd Edit name
 256a8343 there is no way to disable this linkbox.
 fec43a50 there is no way to remove this linkbox.
+74fe9d9c Link Boxes
 19cdf577 number of links
 dbd46aba Linkbox details
 fb41eded Sublink
@@ -152,7 +151,7 @@ afc1d8a9 New %%
 6eaebca4 Enable
 c26ac248 Disable
 1434799f Are you sure?
-c2c3b78f There is no linkbox defined.
+ff98db3e There is no %% defined.
 c63ad281 Page :
 13d984b3 no record found.
 a82abea9 minumun
@@ -164,6 +163,7 @@ f8f57a27 select
 8a7894f1 Display
 ca4979c3 Modify %%
 08ec5a88 Submit new %%
+578f6f3d Submit more than
 11c134b6 Loading ...
 e4966c5f All changes saved.
 955d9b64 remove file
@@ -332,7 +332,6 @@ b49ff84d comments
 9494b053 Visa Requests
 a3b9cda1 Keywords
 33d10611 Layout
-74fe9d9c Link Boxes
 5cc4b7bf Sponsors
 9bf69a29 Position
 5b976d90 Posts
@@ -347,8 +346,8 @@ dcab0ca1 Display news
 1875752a Clientarea login form
 ff2fc9e3 Client menu
 0572f566 Contact Form
-98ae5340 Search box
 9be8c796 Top Daily Tours
+98ae5340 Search box
 a5eb7f16 News list
 d10c0899 List of posts
 03544778 Client Desk
@@ -490,13 +489,13 @@ def0817d Order payment confirm
 78573730 Order by
 36264dfc Pay via balance credit
 76d4895f Contact us form
+9f652bd7 Ticket - Reply from User
 cdf224ac Ticket - Reply from Administrator
 7c470f39 Message receiver
 23718416 Support ticket - new ticket by admin
 7b1a7613 Message receiver client
 e6eebf4c Support ticket - new ticket by user
 6d72db8b Message sender client
-9f652bd7 Ticket - Reply from User
 0e6ede08 Edit client profile
 78c2e5d6 New Transfer Order
 d6fc31f4 New Daily Tour Order
@@ -506,6 +505,7 @@ c49bfd0b Administrator
 f4c425d6 Back to home page
 f0cdeb0b Admin Dashboard
 7519991b Payments
+bc19d3d4 New invoice
 3f4505dc There is no invoice issued for you.
 97044d58 Paid
 35f12569 Not Paid

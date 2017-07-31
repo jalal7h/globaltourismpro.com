@@ -1,10 +1,15 @@
-<?
+<?php
 
 # jalal7h@gmail.com
-# 2017/05/09
-# 1.1
+# 2017/07/31
+# 1.2
 
 function dailytour_mg_form(){
+
+	if( !is_master() and (table('mg_dailytour', $_REQUEST['id'])['owner'] != admin_logged()) ){
+		echo convbox_back('Access denied');
+		return true;
+	}
 
 	echo listmaker_form('
 		

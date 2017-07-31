@@ -1,8 +1,8 @@
-<?
+<?php
 
 # jalal7h@gmail.com
-# 2016/12/26
-# 1.0
+# 2017/07/31
+# 1.1
 
 function transfer_mg_list(){
 
@@ -39,6 +39,7 @@ function transfer_mg_list(){
 	echo listmaker_list([
 		'head' => 'List of transfers',
 		'table' => 'mg_transfer',
+		'where' => ( is_master() ? [] : [ 'owner'=>admin_logged() ] ),
 		'order' => [ 'id' => 'desc' ],
 		'limit' => 5,
 		'url' => [

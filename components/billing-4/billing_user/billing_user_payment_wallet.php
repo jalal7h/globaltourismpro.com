@@ -1,8 +1,8 @@
-<?
+<?php
 
 # jalal7h@gmail.com
-# 2017/05/25
-# 1.0
+# 2017/07/09
+# 1.1
 
 $GLOBALS['billing_method']['wallet'] = 'کیف پول';
 
@@ -17,6 +17,9 @@ function billing_userpanel_payment_wallet( $invoice_id ){
 	} else if(! $rw_invoice = table("billing_invoice", $invoice_id) ){
 		e();
 	
+	} else if(! $rw_invoice['order_table'] ){
+		e();
+
 	} else if( $rw_invoice['date'] ){
 		e();
 	
@@ -26,9 +29,10 @@ function billing_userpanel_payment_wallet( $invoice_id ){
 	} else if( $cost > $credit ){
 		e();
 	
-	} else if(! billing_userCredit($user_id , -1*$cost) ){
-		e();
-	
+	// yebar dakhele settle kam mikone, niaz i nist heyne enteghal be settle ham kam beshe
+	// } else if(! billing_userCredit($user_id , -1*$cost) ){
+		// e();
+
 	} else {
 
 		// vaghti ke pardakhti az credit anjam mishe

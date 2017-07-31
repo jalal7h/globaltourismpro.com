@@ -11,6 +11,7 @@ function transferorder_mg_list(){
 		'head'	=> 'Transfer Bookings',
 		'class' => __FUNCTION__,
 		'table' => 'mg_transfer_order',
+		'where' => ( is_master() ? [] : [" `transfer_id` IN (SELECT `id` FROM `mg_transfer` WHERE `owner`='".admin_logged()."') "] ),
 		'order' => [ 'date_created' => 'desc' ],
 		'limit' => 5,
 		'url' => [

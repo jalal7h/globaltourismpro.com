@@ -1,8 +1,8 @@
-<?
+<?php
 
 # jalal7h@gmail.com
-# 2016/06/04
-# 1.3
+# 2017/07/30
+# 1.5
 
 function listmaker_form_element_this_catbox( $info ){
 
@@ -17,22 +17,30 @@ function listmaker_form_element_this_catbox( $info ){
 	add_js_footer( bysideme().'/listmaker_form_element_this_catbox.exclude.js' );
 	
 	if(! $info['value'] ){
-		$cat_name = __("انتخاب")." ".$info['placeholder'];
+		if(! $info['placeholder'] ){
+			$cat_name = __("انتخاب");
+		} else {
+			$cat_name = $info['placeholder'];
+		}
 	} else {
 		$cat_name = catjson_get_title_serial( $info['value'] );	
 	}
 
 	$cat_value = ( $info['value'] ? $info['value'] : '0' );
 
+	$info['class'] = trim(str_replace( 'lmfe_isNeeded', '', $info['class']));
+	$info['class'].= ' lmfe_catbox';
+
 	$c.= "
-	<span class='lmfe_catbox_c' cat_name=\"".$info['cat_name']."\" >
+	<span class='lmfe_catbox_c' ccf='".( $info['ccf'] ? '1' : '0' )."' cat_name=\"".$info['cat_name']."\" >
 		<input 
 			".($info['isNeeded']?'class="lmfe_isNeeded"':'')." 
 			type=\"hidden\" 
 			name=\"".$info['name'].( $info['ArrayInput'] ? '[]' : '' )."\" 
 			value=\"".$cat_value."\" 
+			".( $info['etc'] ? $info['etc']." " : '' )."
 			/>
-		<span class='lmfe_catbox' lang_select='".__('انتخاب')."' lang_back='".__('بازگشت')."' >".$cat_name."</span>
+		<span class='".$info['class']."' lang_select='' lang_back='".__('بازگشت')."' >".$cat_name."</span>
 	</span>";
 	
 	if( is_component('catcustomfield') and $info['ccf']==true ){

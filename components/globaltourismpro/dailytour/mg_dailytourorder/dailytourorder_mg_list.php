@@ -11,6 +11,7 @@ function dailytourorder_mg_list(){
 		'head'	=> 'DailyTour Bookings',
 		'class' => __FUNCTION__,
 		'table' => 'mg_dailytour_order',
+		'where' => ( is_master() ? [] : [" `dailytour_id` IN (SELECT `id` FROM `mg_dailytour` WHERE `owner`='".admin_logged()."') "] ),
 		'order' => [ 'date_created' => 'desc' ],
 		'limit' => 5,
 		'url' => [

@@ -17,7 +17,7 @@ function dailytourorder_voucher(){
 	} else if(! $rw_user = user_detail($rw_dto['user_id']) ){
 		e();
 
-	} else if(! $rw_dt = table('mg_dailytour', $rw_dto['dailytour_id']) ){
+	} else if(! $rw_dt = table('mg_dailytour*', $rw_dto['dailytour_id']) ){
 		e();
 	
 	} else {
